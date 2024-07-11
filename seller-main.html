@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONDAY</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<style>
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 16px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2020201A;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 2.1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked+.slider {
+    background-color: #2196F3;
+  }
+
+  input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked+.slider:before {
+    -webkit-transform: translateX(19px);
+    -ms-transform: translateX(19px);
+    transform: translateX(19px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .slidersss {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slides-swiperss {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 8px !important;
+    height: 8px !important;
+    background-color: #575E6A !important;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #B7C3D6 !important;
+    width: 8px;
+    height: 8px;
+  }
+</style>
+
+
+<body class="bg-[#F1F3F9]">
+
+  <header class="lg:pt-8 bg-white">
+    <div class="max-w-[1384px] px-3 mx-auto lg:flex hidden items-center justify-between">
+      <div class="flex items-center gap-2.5 max-w-[600px] w-full">
+        <a class="text-[#202020] font-bold text-base uppercase select-none" href="index.html">MONDAY
+        </a>
+        <button
+          class="py-2.5 w-full max-w-[83px] px-2.5 inline-flex items-center gap-1.5 bg-[#FAFAFC] rounded-xl text-[#B7C3D6] uppercase font-medium text-base active:opacity-80 transition-all">
+          <img src="./img/header/global.svg" alt="global">
+          <p>Uz</p>
+          <span>
+            <svg class="flex" width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.50391 1L6.00391 5L10.5039 1" stroke="#B7C3D6" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+        </button>
+        <div class="w-full relative">
+          <div class="flex items-center justify-between max-w-[316px] w-full h-11 px-4 rounded-full bg-[#FAFAFC]">
+            <input autocomplete="off" id="search" placeholder="Search for services..."
+              class="placeholder:text-[#9CA5B3] placeholder:font-medium placeholder:text-sm text-[#9CA5B3] font-medium text-sm outline-none border-none bg-transparent max-w-[250px] w-full"
+              type="search">
+            <label for="search" class="cursor-pointer flex" id="searchLabel">
+              <img src="./img/header/search.svg" alt="search" class="search-icon">
+            </label>
+          </div>
+          <div id="search__menu"
+            class="search_shadow hidden absolute bg-[#FCFCFC] top-[60px] max-w-[316px] w-full py-2.5 px-4 rounded-2xl">
+            <p class="text-[#202020] font-bold text-xs mb-2">Top services🔥</p>
+            <div class="pb-2 border-b mb-2">
+              <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">Social & SMM</a>
+              <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">SEO</a>
+              <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">Copywriting</a>
+              <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">Web Development</a>
+              <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">Scripts & Telegram
+                Bots</a>
+            </div>
+            <div>
+              <p class="text-[#B7C3D6] font-bold text-[10px]">Recent</p>
+              <a class="search_recent text-[#575E6A] font-medium text-xs flex items-center gap-1 relative" href="#"><img
+                  class="flex" src="./img/header/clock.svg" alt="clock">Wibtrix site improvements</a>
+              <a class="search_recent text-[#575E6A] font-medium text-xs flex items-center gap-1 relative" href="#"><img
+                  class="flex" src="./img/header/clock.svg" alt="clock">Seo optimisation</a>
+            </div>
+          </div>
+        </div>
+
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('search');
+            const searchMenu = document.getElementById('search__menu');
+            const searchRecentItems = document.querySelectorAll('.search_recent');
+
+            function showSearchMenu() {
+              searchMenu.classList.remove('hidden');
+              // searchMenu.classList.add('animate__animated', 'animate__fadeIn');
+            }
+
+            function hideSearchMenu() {
+              searchMenu.classList.add('hidden');
+              // searchMenu.classList.remove('animate__animated', 'animate__fadeIn');
+            }
+
+            searchInput.addEventListener('focus', showSearchMenu);
+
+            document.addEventListener('click', (event) => {
+              if (!searchInput.contains(event.target) && !searchMenu.contains(event.target)) {
+                hideSearchMenu();
+              }
+            });
+
+            window.addEventListener('resize', hideSearchMenu);
+
+            searchRecentItems.forEach(item => {
+              item.addEventListener('mouseenter', () => {
+                if (!item.querySelector('.close-button')) {
+                  const closeButton = document.createElement('span');
+                  closeButton.innerHTML = '&times;';
+                  closeButton.classList.add('absolute', 'right-0', 'text-[#9CA5B3]', 'hover:text-[#202020]', 'font-bold', 'transition-all', 'duration-200', 'ease-in-out', 'text-xl', 'close-button');
+                  closeButton.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    item.remove();
+                  });
+                  item.appendChild(closeButton);
+                }
+              });
+
+              item.addEventListener('mouseleave', () => {
+                const closeButton = item.querySelector('.close-button');
+                if (closeButton) {
+                  closeButton.remove();
+                }
+              });
+            });
+          });
+
+        </script>
+      </div>
+      <div class="flex items-center gap-10">
+        <div>
+          <ul class="flex items-center gap-6">
+            <li>
+              <a href="#" class="text-[#9CA5B3] font-bold text-base animated-underline">Orders
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-[#9CA5B3] font-bold text-base animated-underline">Projects
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-[#9CA5B3] font-bold text-base animated-underline">Sellers
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-[#9CA5B3] font-bold text-base flex items-center gap-1.5 animated-underline">
+                <span>
+                  <img class="flex" src="./img/header/lovely.svg" alt="lovely">
+                </span>Favorites
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-5">
+          <a class="relative" href="#">
+            <img src="./img/header/bag.svg" alt="bag">
+            <div
+              class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#4790FF] absolute top-[-5px] right-[-7px] border-white border">
+              2
+            </div>
+          </a>
+          <a class="relative" href="#">
+            <img src="./img/header/message.svg" alt="message">
+            <div
+              class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#FF8E8E] absolute top-[-5px] right-[-7px] border-white border">
+              2
+            </div>
+          </a>
+          <a class="relative" href="#">
+            <img src="./img/header/notification.svg" alt="notification">
+            <div
+              class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#3bbe1a] absolute top-[-5px] right-[-7px] border-white border">
+              2
+            </div>
+          </a>
+        </div>
+        <div class="flex gap-1">
+          <a class="hover:opacity-80 transition-all" href="#">
+            <img src="./img/header/wallet.svg" alt="wallet">
+          </a>
+          <button class="flex items-center relative cursor-pointer">
+            <img class="max-w-11 w-full flex" src="./img/header/avatar.png" alt="avatar">
+            <div class="w-2.5 h-2.5 rounded-full border border-white bg-[#62F94D] absolute bottom-0 right-[25px]"></div>
+            <img class="flex" src="./img/header/expand.svg" alt="expand">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-[1384px] lg:block hidden px-5 mx-auto pt-5">
+      <ul class="flex items-center justify-between">
+        <li>
+          <a id="header_item" class="header_active py-3 px-2 text-[#9CA5B3] font-medium text-base" href="#">Social & SMM
+          </a>
+        </li>
+        <li>
+          <a id="header_item" class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+            href="#">SEO
+          </a>
+        </li>
+        <li>
+          <a id="header_item" class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+            href="#">Copywriting
+          </a>
+        </li>
+        <li>
+          <a id="header_item" class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+            href="#">Web Development
+          </a>
+        </li>
+        <li>
+          <a id="header_item" class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+            href="#">Scripts & Telegram Bots
+          </a>
+        </li>
+        <li>
+          <a id="header_item" class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+            href="#">Logotypes & Branding
+          </a>
+        </li>
+        <li>
+          <a id="header_item" class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+            href="#">Web & Mobile Design
+          </a>
+        </li>
+        <li>
+          <a id="header_item" class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+            href="#">Scripts & Bots
+          </a>
+        </li>
+        <li class="flex items-center border-l pl-2">
+          <button class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent" href="#">
+            All Services
+          </button>
+          <img src="./img/header/expand.svg" alt="expand">
+        </li>
+      </ul>
+    </div>
+    <div class="lg:hidden pt-12 pb-5 max-w-[1384px] pt- px-5 mx-auto w-full flex items-center gap-2 justify-between">
+      <button>
+        <img src="./img/header/burger.svg" alt="burger">
+      </button>
+      <a class="text-[#202020] font-bold text-sm" href="#">MONDAY</a>
+      <button
+        class="flex items-center py-3 px-2 rounded-xl bg-[#FAFAFC] text-[#9CA5B3] font-medium text-xs uppercase cursor-pointer">
+        Uz
+        <img class="flex" src="./img/header/expand.svg" alt="expand">
+      </button>
+      <div class="flex items-center justify-between max-w-[143px] w-full h-11 px-4 rounded-full bg-[#FAFAFC]">
+        <input id="search" placeholder="Search..."
+          class="placeholder:text-[#9CA5B3] placeholder:font-medium placeholder:text-sm text-[#9CA5B3] font-medium text-sm outline-none border-none bg-transparent max-w-[70px] w-full"
+          type="search">
+        <label for="search" class="cursor-pointer flex">
+          <img src="./img/header/search.svg" alt="search">
+        </label>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="#">
+          <img src="./img/header/lovely.svg" alt="lovely">
+        </a>
+        <a href="#">
+          <img src="./img/header/bag.svg" alt="bag">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    let header_items = document.querySelectorAll('#header_item')
+
+    header_items.forEach(function (item, index) {
+      item.addEventListener('click', function () {
+        header_items.forEach(function (item) {
+          item.classList.remove('header_active')
+        })
+
+        item.classList.add('header_active')
+      })
+    })
+  </script>
+
+  <section class="w-full bg-[#F1F3F9] sm:pt-7 pt-[66px] pb-14">
+    <div class="max-w-[1372px] mx-auto  mt-[26px] px-3 mb-[54px]">
+
+      <div class="flex md:flex-row flex-col gap-2.5">
+        <div class="md:max-w-[371px] flex flex-col gap-2.5">
+          <main
+            class="bg-[#fff] rounded-3xl flex flex-col items-center justify-center py-9 px-[30px] sm:pt-6 pt-[165px] relative">
+            <div class="w-full mb-[10px] sm:static absolute -top-11">
+
+              <img class="mb-[10px] mx-auto p-2 bg-white rounded-[100px]"
+                src="./img/seller/seller_main_page_img_user.png" alt="MONDAY image seller_main_page_img_user"
+                width="128" height="128">
+
+              <div class="flex flex-col items-center mb-[5px]">
+                <h2 class="text-xl font-bold flex items-center gap-1">
+                  James Kilroy
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.5 13.0004C20.5 18.0004 17 20.5005 12.84 21.9505C12.6222 22.0243 12.3855 22.0207 12.17 21.9405C8 20.5005 4.5 18.0004 4.5 13.0004V6.00045C4.5 5.73523 4.60536 5.48088 4.79289 5.29334C4.98043 5.10581 5.23478 5.00045 5.5 5.00045C7.5 5.00045 10 3.80045 11.74 2.28045C11.9519 2.09945 12.2214 2 12.5 2C12.7786 2 13.0481 2.09945 13.26 2.28045C15.01 3.81045 17.5 5.00045 19.5 5.00045C19.7652 5.00045 20.0196 5.10581 20.2071 5.29334C20.3946 5.48088 20.5 5.73523 20.5 6.00045V13.0004Z"
+                      stroke="#4790FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.5 12L11.5 14L15.5 10" stroke="#4790FF" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </h2>
+                <span class="text-[#575E6A] text-sm font-bold">Seller</span>
+              </div>
+
+              <div class="flex items-center gap-3 justify-center">
+                <span class="text-[#202020]">Busy</span>
+
+                <label class="switch cursor-pointer">
+                  <input type="checkbox" name="accept_orders">
+                  <span class="slider round"></span>
+                </label>
+
+                <div class="flex items-center gap-1">
+                  <span class="text-[#9CA5B3] font-bold sm:text-base text-sm">I accept orders</span>
+
+                  <svg class="cursor-pointer" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9 16.5C13.125 16.5 16.5 13.125 16.5 9C16.5 4.875 13.125 1.5 9 1.5C4.875 1.5 1.5 4.875 1.5 9C1.5 13.125 4.875 16.5 9 16.5Z"
+                      stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9 6V9.75" stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M8.99609 12H9.00283" stroke="#B7C3D6" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="bg-[#FAFAFC] w-full flex flex-col gap-y-3 rounded-3xl p-[30px] translate-y-3 md:translate-y-0">
+              <div class="md:w-[250px]">
+                <div class="w-full flex justify-between items-center">
+                  <span class="text-[#575E6A] text-xs font-bold uppercase">Responsibility</span>
+                  <span class="text-[#202020] font-bold progress-percent">100%</span>
+                </div>
+                <div class="w-full bg-[#F1F3F9]">
+                  <span class="bg-[#4790FF] w-full h-1 flex rounded-[100px] progress-bar" data-progress="100"></span>
+                </div>
+              </div>
+
+              <div class="md:w-[250px]">
+                <div class="w-full flex justify-between items-center">
+                  <span class="text-[#575E6A] text-xs font-bold uppercase">Orders on time</span>
+                  <span class="text-[#202020] font-bold progress-percent">20%</span>
+                </div>
+                <div class="w-full bg-[#F1F3F9]">
+                  <span class="bg-[#FF8E8E] w-full h-1 flex rounded-[100px] progress-bar" data-progress="20"></span>
+                </div>
+              </div>
+
+              <div class="md:w-[250px]">
+                <div class="w-full flex justify-between items-center">
+                  <span class="text-[#575E6A] text-xs font-bold uppercase">Responses to customers</span>
+                  <span class="text-[#202020] font-bold progress-percent">50%</span>
+                </div>
+                <div class="w-full bg-[#F1F3F9]">
+                  <span class="bg-[#FFE977] w-full h-1 flex rounded-[100px] progress-bar" data-progress="50"></span>
+                </div>
+              </div>
+
+              <div class="md:w-[250px]">
+                <div class="w-full flex justify-between items-center">
+                  <span class="text-[#575E6A] text-xs font-bold uppercase">Response rate</span>
+                  <span class="text-[#202020] font-bold progress-percent">0%</span>
+                </div>
+                <div class="w-full bg-[#F1F3F9]">
+                  <span class="bg-[#62F94D] w-full h-1 flex rounded-[100px] progress-bar" data-progress="0"></span>
+                </div>
+              </div>
+            </div>
+
+            <style>
+              .progress-bar {
+                transition: width 0.6s ease-in-out;
+                /* Animation transition */
+              }
+            </style>
+
+            <script>
+              // Progress bar animation function
+              function animateProgressBar() {
+                const progressBars = document.querySelectorAll('.progress-bar');
+                progressBars.forEach(bar => {
+                  const targetWidth = bar.getAttribute('data-progress') + '%';
+                  const currentWidth = bar.style.width;
+                  bar.style.width = '0%'; // Reset width to start animation from 0%
+                  setTimeout(() => {
+                    bar.style.width = targetWidth; // Animate to the target width
+                  }, 100); // Delay for smooth animation
+                });
+
+                // Update progress percentages
+                const progressPercentages = document.querySelectorAll('.progress-percent');
+                progressPercentages.forEach(percent => {
+                  const targetPercent = parseInt(percent.textContent); // Parse target percentage from text
+                  const currentPercent = parseInt(percent.getAttribute('data-current'), 10) || 0;
+                  if (currentPercent !== targetPercent) { // Check if current percent is different
+                    percent.setAttribute('data-current', targetPercent);
+                    animateNumber(percent, currentPercent, targetPercent); // Call animateNumber with correct parameters
+                  }
+                });
+              }
+
+              // Function to animate numbers
+              function animateNumber(element, start, end) {
+                let current = start;
+                const increment = end > start ? 1 : -1;
+                const duration = 1000; // Animation duration in milliseconds
+                const stepTime = Math.abs(Math.floor(duration / Math.abs(end - start)));
+                const timer = setInterval(function () {
+                  current += increment;
+                  element.textContent = current + '%';
+                  if (current === end) {
+                    clearInterval(timer);
+                  }
+                }, stepTime);
+              }
+
+              // Animate progress bars and percentages on page load
+              animateProgressBar();
+
+            </script>
+
+          </main>
+
+          <div class="bg-[#fff] rounded-3xl flex flex-col p-3">
+            <div class="flex justify-between items-center pt-1 pl-2 pr-[10px] mb-2">
+              <div class="flex gap-2">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.375 14.25H6C3 14.25 1.5 13.5 1.5 9.75V6C1.5 3 3 1.5 6 1.5H12C15 1.5 16.5 3 16.5 6V9.75C16.5 12.75 15 14.25 12 14.25H11.625C11.3925 14.25 11.1675 14.3625 11.025 14.55L9.9 16.05C9.405 16.71 8.595 16.71 8.1 16.05L6.975 14.55C6.855 14.385 6.5775 14.25 6.375 14.25Z"
+                    stroke="#202020" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M11.9973 8.25H12.0041" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M8.99686 8.25H9.00359" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M5.99588 8.25H6.00262" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <div>
+                  <h3 class="text-[#202020] font-bold leading-5">Messages</h3>
+                  <span class="text-[#9CA5B3] font-bold text-xs">New chats</span>
+                </div>
+              </div>
+
+              <a href="#"
+                class="border-[#F2F2F2] border-[1px] text-[#202020] text-xs font-bold flex items-center gap-1 rounded-lg py-2 px-5 hover:opacity-70 active:opacity-60">
+                View all
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="bg-[#FAFAFC] flex justify-between items-start rounded-2xl p-3">
+              <div class="flex items-center gap-1">
+                <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                  width="45" height="45">
+                <div>
+                  <h3 class="text-[#202020] text-sm font-bold line-clamp-1">Michael_M</h3>
+                  <p class="text-[#9CA5B3] text-xs font-bold  line-clamp-1">Hello, nice to meet
+                    you, I
+                    want...</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <span class="text-[#9CA5B3] text-xs">15 Mar</span>
+
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.15327 2.33781L10.3266 4.68448C10.4866 5.01115 10.9133 5.32448 11.2733 5.38448L13.3999 5.73781C14.7599 5.96448 15.0799 6.95115 14.0999 7.92448L12.4466 9.57781C12.1666 9.85781 12.0133 10.3978 12.0999 10.7845L12.5733 12.8311C12.9466 14.4511 12.0866 15.0778 10.6533 14.2311L8.65994 13.0511C8.29994 12.8378 7.70661 12.8378 7.33994 13.0511L5.34661 14.2311C3.91994 15.0778 3.05327 14.4445 3.42661 12.8311L3.89994 10.7845C3.98661 10.3978 3.83327 9.85781 3.55327 9.57781L1.89994 7.92448C0.926606 6.95115 1.23994 5.96448 2.59994 5.73781L4.72661 5.38448C5.07994 5.32448 5.50661 5.01115 5.66661 4.68448L6.83994 2.33781C7.47994 1.06448 8.51994 1.06448 9.15327 2.33781Z"
+                    stroke="#9CA5B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white md:block hidden rounded-3xl p-4 relative">
+            <div class="swiper mySwiper2">
+              <div class="flex justify-between items-center pr-4 mb-4">
+                <div class="flex items-center gap-2">
+                  <div class="bg-[#FAFAFC] rounded-lg p-2">
+                    <!-- SVG Icon -->
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M14.6668 8.66927V6.0026C14.6668 2.66927 13.3335 1.33594 10.0002 1.33594H6.00016C2.66683 1.33594 1.3335 2.66927 1.3335 6.0026V10.0026C1.3335 13.3359 2.66683 14.6693 6.00016 14.6693H8.66683"
+                        stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M4.88672 9.66376L6.47339 7.60375C6.70006 7.31042 7.12006 7.25709 7.41339 7.48375L8.6334 8.44376C8.92674 8.67042 9.34672 8.61709 9.57338 8.33042L11.1134 6.34375"
+                        stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.9866 10.545L13.1733 10.925C13.2666 11.1117 13.5 11.285 13.7066 11.325L13.96 11.365C14.72 11.4917 14.9 12.0517 14.3533 12.605L14.12 12.8383C13.9666 12.9983 13.88 13.305 13.9267 13.5183L13.96 13.6583C14.1666 14.5783 13.68 14.9317 12.88 14.4517L12.7066 14.3517C12.5 14.2317 12.1666 14.2317 11.96 14.3517L11.7866 14.4517C10.98 14.9383 10.4933 14.5783 10.7066 13.6583L10.74 13.5183C10.7866 13.305 10.7 12.9983 10.5466 12.8383L10.3133 12.605C9.76664 12.0517 9.94664 11.4917 10.7066 11.365L10.96 11.325C11.16 11.2917 11.4 11.1117 11.4933 10.925L11.68 10.545C12.04 9.81833 12.6266 9.81833 12.9866 10.545Z"
+                        stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <span class="text-[#202020] font-bold">Trending articles</span>
+                </div>
+              </div>
+  
+              <div class="swiper-wrapper">
+                <div class="swiper-slide flex gap-3">
+                  <div class="bg-[#202020] w-[129px] h-[86px] rounded-2xl"></div>
+                  <div class="max-w-[148px]">
+                    <p class="text-[#575E6A] text-sm font-bold line-clamp-2 mb-4">Freelancer price list: how to
+                      estimate
+                      the cost of your work and not make a mistake</p>
+                    <a href="#" class="flex items-center gap-2 hover:opacity-70 active:opacity-60">
+                      Read article
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide flex gap-3">
+                  <div class="bg-[#202020] w-[129px] h-[86px] rounded-2xl"></div>
+                  <div class="max-w-[148px]">
+                    <p class="text-[#575E6A] text-sm font-bold line-clamp-2 mb-4">Freelancer price list: how to
+                      estimate
+                      the cost of your work and not make a mistake</p>
+                    <a href="#" class="flex items-center gap-2 hover:opacity-70 active:opacity-60">
+                      Read article
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide flex gap-3">
+                  <div class="bg-[#202020] w-[129px] h-[86px] rounded-2xl"></div>
+                  <div class="max-w-[148px]">
+                    <p class="text-[#575E6A] text-sm font-bold line-clamp-2 mb-4">Freelancer price list: how to
+                      estimate
+                      the cost of your work and not make a mistake</p>
+                    <a href="#" class="flex items-center gap-2 hover:opacity-70 active:opacity-60">
+                      Read article
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="swiper-pagination2 absolute !top-5 pr-4 flex items-center justify-end w-full h-5 z-50"></div>
+          </div>
+
+        </div>
+
+        <div class="max-w-[979px] w-full">
+          <div class="flex gap-2.5 lg:flex-nowrap flex-wrap mb-[10px]">
+            <div class="bg-[#FFFFFF] lg:max-w-[578px] w-full rounded-3xl p-4">
+              <div class="flex justify-between mb-4">
+                <div class="flex items-center gap-2">
+                  <div class="border-[#0000001A] border-[1px] rounded-[100px] p-[10px]">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.83289 15.1667H11.1662C13.8462 15.1667 14.3262 14.0933 14.4662 12.7867L14.9662 7.45333C15.1462 5.82667 14.6796 4.5 11.8329 4.5H5.16623C2.31956 4.5 1.85289 5.82667 2.03289 7.45333L2.53289 12.7867C2.67289 14.0933 3.15289 15.1667 5.83289 15.1667Z"
+                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M5.83301 4.5026V3.96927C5.83301 2.78927 5.83301 1.83594 7.96634 1.83594H9.03301C11.1663 1.83594 11.1663 2.78927 11.1663 3.96927V4.5026"
+                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M9.83366 9.16667V9.83333C9.83366 9.84 9.83366 9.84 9.83366 9.84667C9.83366 10.5733 9.82699 11.1667 8.50033 11.1667C7.18033 11.1667 7.16699 10.58 7.16699 9.85333V9.16667C7.16699 8.5 7.16699 8.5 7.83366 8.5H9.16699C9.83366 8.5 9.83366 8.5 9.83366 9.16667Z"
+                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M14.933 7.83594C13.393 8.95594 11.633 9.6226 9.83301 9.84927" stroke="#575E6A"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M2.24707 8.01562C3.74707 9.04229 5.4404 9.66229 7.16707 9.85562" stroke="#575E6A"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+
+                  <span class="text-[#202020] font-bold">My orders</span>
+                </div>
+
+                <a href="#"
+                  class="border-[#0000001A] text-[#202020] text-xs font-bold border-[1px] rounded-lg md:flex hidden items-center gap-1 px-5 py-2 hover:opacity-70 active:opacity-60">
+                  See all orders
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="flex lg:flex-nowrap flex-wrap gap-2.5">
+
+                <div
+                  class="bg-[#FAFAFC] w-full flex sm:flex-col flex-row sm:justify-start justify-between rounded-2xl md:p-[10px] px-2.5 py-2">
+                  <div class="flex items-center gap-[6px] lg:mb-7 sm:mb-8">
+                    <div class="md:border-[#0000001A] md:border-[1px] md:rounded-[100px] md:p-2">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.6668 8.0026C14.6668 11.6826 11.6802 14.6693 8.00016 14.6693C4.32016 14.6693 1.3335 11.6826 1.3335 8.0026C1.3335 4.3226 4.32016 1.33594 8.00016 1.33594C11.6802 1.33594 14.6668 4.3226 14.6668 8.0026Z"
+                          stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M10.4734 10.1211L8.40675 8.88781C8.04675 8.67448 7.75342 8.16115 7.75342 7.74115V5.00781"
+                          stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+
+                    <span class="text-[#575E6A] text-sm font-bold">In process</span>
+                  </div>
+
+                  <span class="text-[#202020] lg:text-4xl md:text-xl text-base font-bold md:leading-[43.2px]">0</span>
+                </div>
+
+                <div
+                  class="bg-[#FAFAFC] w-full flex sm:flex-col flex-row sm:justify-start justify-between rounded-2xl md:p-[10px] px-2.5 py-2">
+                  <div class="flex items-center gap-[6px] lg:mb-7 sm:mb-8">
+                    <div class="md:border-[#0000001A] md:border-[1px] md:rounded-[100px] md:p-2">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M8 10.0026C10.4853 10.0026 12.5 8.0625 12.5 5.66927C12.5 3.27604 10.4853 1.33594 8 1.33594C5.51472 1.33594 3.5 3.27604 3.5 5.66927C3.5 8.0625 5.51472 10.0026 8 10.0026Z"
+                          stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M5.01349 9.01062L5.00684 13.9306C5.00684 14.5306 5.42684 14.824 5.94684 14.5773L7.7335 13.7306C7.88017 13.6573 8.12683 13.6573 8.2735 13.7306L10.0668 14.5773C10.5802 14.8173 11.0068 14.5306 11.0068 13.9306V8.89062"
+                          stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+
+                    <span class="text-[#575E6A] text-sm font-bold">Completed</span>
+                  </div>
+
+                  <span class="text-[#202020] lg:text-4xl md:text-xl text-base font-bold md:leading-[43.2px]">12</span>
+                </div>
+
+                <div
+                  class="bg-[#FAFAFC] w-full flex sm:flex-col flex-row sm:justify-start justify-between rounded-2xl md:p-[10px] px-2.5 py-2">
+                  <div class="flex items-center gap-[6px] lg:mb-7 sm:mb-8">
+                    <div class="md:border-[#0000001A] md:border-[1px] md:rounded-[100px] md:p-2">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12.8668 5.27706V8.71041C12.8668 10.7637 11.6935 11.6437 9.93347 11.6437H4.07347C3.77347 11.6437 3.4868 11.6171 3.22013 11.5571C3.05347 11.5304 2.89347 11.4838 2.74681 11.4304C1.74681 11.0571 1.14014 10.1904 1.14014 8.71041V5.27706C1.14014 3.22373 2.31347 2.34375 4.07347 2.34375H9.93347C11.4268 2.34375 12.5001 2.97708 12.7868 4.42375C12.8335 4.69041 12.8668 4.96373 12.8668 5.27706Z"
+                          stroke="#575E6A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M14.8674 7.27519V10.7085C14.8674 12.7619 13.694 13.6418 11.934 13.6418H6.07404C5.5807 13.6418 5.13404 13.5752 4.74738 13.4285C3.95404 13.1352 3.41404 12.5286 3.2207 11.5552C3.48737 11.6152 3.77404 11.6418 4.07404 11.6418H9.93404C11.694 11.6418 12.8674 10.7619 12.8674 8.70854V5.27519C12.8674 4.96185 12.8407 4.68187 12.7874 4.42188C14.054 4.68854 14.8674 5.58185 14.8674 7.27519Z"
+                          stroke="#575E6A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M6.99927 8.75439C7.97129 8.75439 8.75928 7.96641 8.75928 6.99438C8.75928 6.02236 7.97129 5.23438 6.99927 5.23438C6.02725 5.23438 5.23926 6.02236 5.23926 6.99438C5.23926 7.96641 6.02725 8.75439 6.99927 8.75439Z"
+                          stroke="#575E6A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M3.18652 5.53125V8.4646" stroke="#575E6A" stroke-miterlimit="10" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M10.8145 5.53125V8.4646" stroke="#575E6A" stroke-miterlimit="10" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+
+                    <span class="text-[#575E6A] text-sm font-bold">Earnings (UZS)</span>
+                  </div>
+
+                  <span class="text-[#202020] md:text-xl text-base font-bold md:leading-[43.2px]">100.000.000</span>
+                </div>
+
+                <a href="#"
+                  class="border-[#0000001A] w-full justify-center text-[#202020] text-sm font-bold border rounded-lg flex md:hidden items-center gap-1 px-5 py-2 hover:opacity-70 active:opacity-60">
+                  See all orders
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+
+
+            </div>
+
+            <div class="bg-[#FFFFFF] lg:max-w-[391px]  w-full rounded-3xl p-4">
+              <div class="flex flex-wrap gap-y-2 justify-between mb-6">
+                <div class="flex items-center gap-2">
+                  <div class="border-[#0000001A] border-[1px] rounded-[100px] p-[10px]">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.8135 8.66406V11.6641C11.8135 14.1641 10.8135 15.1641 8.31348 15.1641H5.31348C2.81348 15.1641 1.81348 14.1641 1.81348 11.6641V8.66406C1.81348 6.16406 2.81348 5.16406 5.31348 5.16406H8.31348C10.8135 5.16406 11.8135 6.16406 11.8135 8.66406Z"
+                        stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M15.1468 5.5026C15.1468 7.41594 13.6868 8.9826 11.8135 9.14927V8.66927C11.8135 6.16927 10.8135 5.16927 8.3135 5.16927H7.8335C8.00016 3.29594 9.56683 1.83594 11.4802 1.83594C13.3402 1.83594 14.8735 3.21594 15.1068 5.01594C15.1335 5.16927 15.1468 5.33594 15.1468 5.5026Z"
+                        stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+
+                  <span class="text-[#202020] font-bold">My services</span>
+                </div>
+
+                <a href="#"
+                  class="border-[#0000001A]  text-[#202020] text-xs font-bold border-[1px] rounded-lg hidden md:flex items-center gap-1 px-5 py-2 hover:opacity-70 active:opacity-60">
+                  See all services
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+
+
+              <div class="flex flex-col gap-2.5">
+                <div class="bg-[#FAFAFC] w-full flex justify-between items-center rounded-2xl p-[10px]">
+                  <div class="flex items-center gap-2">
+                    <div class="bg-[#EDF4FF] rounded-[100px] p-2">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2 6.00361V4.22361C2 2.01361 3.565 1.10861 5.48 2.21361L7.025 3.10361L8.57 3.99361C10.485 5.09861 10.485 6.90861 8.57 8.01361L7.025 8.90361L5.48 9.79361C3.565 10.8986 2 9.99361 2 7.78361V6.00361Z"
+                          stroke="#202020" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <span class="text-[#575E6A] text-sm font-bold">Active services</span>
+                  </div>
+
+                  <span class="text-[#202020] text-xl font-bold">0</span>
+                </div>
+
+                <div class="bg-[#FAFAFC] w-full flex justify-between items-center rounded-2xl p-[10px]">
+                  <div class="flex items-center gap-2">
+                    <div class="bg-[#FFEEE7] rounded-[100px] p-2">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M5.325 9.555V2.445C5.325 1.77 5.04 1.5 4.32 1.5H2.505C1.785 1.5 1.5 1.77 1.5 2.445V9.555C1.5 10.23 1.785 10.5 2.505 10.5H4.32C5.04 10.5 5.325 10.23 5.325 9.555Z"
+                          stroke="#202020" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M10.4998 9.555V2.445C10.4998 1.77 10.2148 1.5 9.4948 1.5H7.6798C6.9648 1.5 6.6748 1.77 6.6748 2.445V9.555C6.6748 10.23 6.9598 10.5 7.6798 10.5H9.4948C10.2148 10.5 10.4998 10.23 10.4998 9.555Z"
+                          stroke="#202020" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <span class="text-[#575E6A] text-sm font-bold">Paused services</span>
+                  </div>
+
+                  <span class="text-[#202020] text-xl font-bold">12</span>
+                </div>
+
+                <a href="#"
+                  class="border-[#0000001A] w-full justify-center text-[#202020] text-sm font-bold border rounded-lg flex md:hidden items-center gap-1 px-5 py-2 hover:opacity-70 active:opacity-60">
+                  See all services
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="toggle_projects_exchange_button cursor-pointer  bg-[#F1F3F9] border-[#AEB5BF] border-[1px] flex items-center justify-between gap-2 rounded-3xl px-6 py-3 mb-[10px] w-full">
+            <div class="flex gap-2.5 items-center">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.5 13.1484V16.8484C18.5 19.9684 15.59 22.4984 12 22.4984C8.41 22.4984 5.5 19.9684 5.5 16.8484V13.1484C5.5 16.2684 8.41 18.4984 12 18.4984C15.59 18.4984 18.5 16.2684 18.5 13.1484Z"
+                  stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M18.5 8.15C18.5 9.06 18.25 9.9 17.81 10.62C16.74 12.38 14.54 13.5 12 13.5C9.46 13.5 7.26 12.38 6.19 10.62C5.75 9.9 5.5 9.06 5.5 8.15C5.5 6.59 6.22999 5.18 7.39999 4.16C8.57999 3.13 10.2 2.5 12 2.5C13.8 2.5 15.42 3.13 16.6 4.15C17.77 5.18 18.5 6.59 18.5 8.15Z"
+                  stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M18.5 8.15V13.15C18.5 16.27 15.59 18.5 12 18.5C8.41 18.5 5.5 16.27 5.5 13.15V8.15C5.5 5.03 8.41 2.5 12 2.5C13.8 2.5 15.42 3.13 16.6 4.15C17.77 5.18 18.5 6.59 18.5 8.15Z"
+                  stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-[#202020] sm:font-bold font-semibold sm:text-base text-sm">New
+                projects on
+                exchange</span>
+              <div class="bg-[#FAFAFC] rounded-[100px] py-2 px-3 lg:inline-block hidden">
+                <span class="text-[#575E6A] text-sm font-bold">599 new projects</span>
+              </div>
+            </div>
+
+            <button class="max-w-[136px] w-full sm:flex justify-end hidden gap-1">
+              <span class="toggle_projects_exchange_button_titles_1 text-[#202020] font-bold ">Show
+                projects</span>
+              <span class="toggle_projects_exchange_button_titles_2 text-[#202020] font-bold hidden ">Hide</span>
+              <div class="toggle_projects_exchange_button_icon transition-all duration-200">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 11L12.5 15L17 11" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </button>
+
+            <button class="sm:hidden flex gap-1 toggle_projects_exchange_button">
+              <div class="toggle_projects_exchange_button_icon transition-all duration-200">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 11L12.5 15L17 11" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </button>
+          </div>
+
+          <div
+            class="bg-transparent lg:border-[#AEB5BF] lg:border-[1px] mb-[10px] rounded-3xl transition-all duration-300 hidden"
+            id="new_projects_on_exchange">
+            <div class="lg:flex hidden justify-between text-[#AEB5BF] font-bold text-sm px-10 py-[14px]">
+              <div class="w-[320px]">
+                <span>Project</span>
+              </div>
+              <div class="max-w-[340px] w-full flex items-center justify-between">
+                <span>Seller</span>
+                <span>Amount</span>
+              </div>
+            </div>
+
+            <div class="bg-[#FAFAFC] rounded-[100px] py-2 px-3 lg:hidden inline-block mb-3">
+              <span class="text-[#575E6A] text-sm font-bold">599 new projects</span>
+            </div>
+
+            <a href="#"
+              class="flex lg:flex-row flex-col gap-4 lg:items-center justify-between lg:border-t-[#AEB5BF] lg:border-t  border-[#AEB5BF] lg:rounded-none lg:border-x-0 lg:border-b-0 rounded-3xl border-[1px] lg:px-10 px-4 lg:py-4 py-[10px] lg:mb-0 mb-3">
+              <div>
+                <h3 class=" text-[#202020] text-sm font-bold mb-1 line-clamp-1">Designer for the
+                  development of internal pages
+                  of the site. Figma</h3>
+                <p class="text-[#9CA5B3] text-xs font-bold line-clamp-1">Design > Web and mobile
+                  design > Web design</p>
+              </div>
+
+              <div class="flex items-center max-w-[355px] w-full justify-between ">
+                <div class="lg:flex hidden flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] lg:inline-block hidden font-bold">1000 UZS</span>
+              </div>
+
+
+
+              <div class="lg:hidden flex justify-between items-end mt-3">
+                <div class="flex flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] font-bold">1000 UZS</span>
+              </div>
+            </a>
+
+            <a href="#"
+              class="flex lg:flex-row flex-col gap-4 lg:items-center justify-between lg:border-t-[#AEB5BF] lg:border-t  border-[#AEB5BF] lg:rounded-none lg:border-x-0 lg:border-b-0 rounded-3xl border-[1px] lg:px-10 px-4 lg:py-4 py-[10px] lg:mb-0 mb-3">
+              <div>
+                <h3 class=" text-[#202020] text-sm font-bold mb-1 line-clamp-1">Designer for the
+                  development of internal pages
+                  of the site. Figma</h3>
+                <p class="text-[#9CA5B3] text-xs font-bold line-clamp-1">Design > Web and mobile
+                  design > Web design</p>
+              </div>
+
+              <div class="flex items-center max-w-[355px] w-full justify-between ">
+                <div class="lg:flex hidden flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] lg:inline-block hidden font-bold">1000 UZS</span>
+              </div>
+
+
+
+              <div class="lg:hidden flex justify-between items-end mt-3">
+                <div class="flex flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] font-bold">1000 UZS</span>
+              </div>
+            </a>
+
+            <a href="#"
+              class="flex lg:flex-row flex-col gap-4 lg:items-center justify-between lg:border-t-[#AEB5BF] lg:border-t  border-[#AEB5BF] lg:rounded-none lg:border-x-0 lg:border-b-0 rounded-3xl border-[1px] lg:px-10 px-4 lg:py-4 py-[10px] lg:mb-0 mb-3">
+              <div>
+                <h3 class=" text-[#202020] text-sm font-bold mb-1 line-clamp-1">Designer for the
+                  development of internal pages
+                  of the site. Figma</h3>
+                <p class="text-[#9CA5B3] text-xs font-bold line-clamp-1">Design > Web and mobile
+                  design > Web design</p>
+              </div>
+
+              <div class="flex items-center max-w-[355px] w-full justify-between ">
+                <div class="lg:flex hidden flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] lg:inline-block hidden font-bold">1000 UZS</span>
+              </div>
+
+
+
+              <div class="lg:hidden flex justify-between items-end mt-3">
+                <div class="flex flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] font-bold">1000 UZS</span>
+              </div>
+            </a>
+
+            <a href="#"
+              class="flex lg:flex-row flex-col gap-4 lg:items-center justify-between lg:border-t-[#AEB5BF] lg:border-t  border-[#AEB5BF] lg:rounded-none lg:border-x-0 lg:border-b-0 rounded-3xl border-[1px] lg:px-10 px-4 lg:py-4 py-[10px] lg:mb-0 mb-3">
+              <div>
+                <h3 class=" text-[#202020] text-sm font-bold mb-1 line-clamp-1">Designer for the
+                  development of internal pages
+                  of the site. Figma</h3>
+                <p class="text-[#9CA5B3] text-xs font-bold line-clamp-1">Design > Web and mobile
+                  design > Web design</p>
+              </div>
+
+              <div class="flex items-center max-w-[355px] w-full justify-between ">
+                <div class="lg:flex hidden flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] lg:inline-block hidden font-bold">1000 UZS</span>
+              </div>
+
+
+
+              <div class="lg:hidden flex justify-between items-end mt-3">
+                <div class="flex flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] font-bold">1000 UZS</span>
+              </div>
+            </a>
+
+            <a href="#"
+              class="flex lg:flex-row flex-col gap-4 lg:items-center justify-between lg:border-t-[#AEB5BF] lg:border-t  border-[#AEB5BF] lg:rounded-none lg:border-x-0 lg:border-b-0 rounded-3xl border-[1px] lg:px-10 px-4 lg:py-4 py-[10px] lg:mb-0 mb-3">
+              <div>
+                <h3 class=" text-[#202020] text-sm font-bold mb-1 line-clamp-1">Designer for the
+                  development of internal pages
+                  of the site. Figma</h3>
+                <p class="text-[#9CA5B3] text-xs font-bold line-clamp-1">Design > Web and mobile
+                  design > Web design</p>
+              </div>
+
+              <div class="flex items-center max-w-[355px] w-full justify-between ">
+                <div class="lg:flex hidden flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] lg:inline-block hidden font-bold">1000 UZS</span>
+              </div>
+
+
+
+              <div class="lg:hidden flex justify-between items-end mt-3">
+                <div class="flex flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] font-bold">1000 UZS</span>
+              </div>
+            </a>
+
+            <a href="#"
+              class="flex lg:flex-row flex-col gap-4 lg:items-center justify-between lg:border-t-[#AEB5BF] lg:border-t  border-[#AEB5BF] lg:rounded-none lg:border-x-0 lg:border-b-0 rounded-3xl border-[1px] lg:px-10 px-4 lg:py-4 py-[10px] lg:mb-0 mb-3">
+              <div>
+                <h3 class=" text-[#202020] text-sm font-bold mb-1 line-clamp-1">Designer for the
+                  development of internal pages
+                  of the site. Figma</h3>
+                <p class="text-[#9CA5B3] text-xs font-bold line-clamp-1">Design > Web and mobile
+                  design > Web design</p>
+              </div>
+
+              <div class="flex items-center max-w-[355px] w-full justify-between ">
+                <div class="lg:flex hidden flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] lg:inline-block hidden font-bold">1000 UZS</span>
+              </div>
+
+
+
+              <div class="lg:hidden flex justify-between items-end mt-3">
+                <div class="flex flex-col">
+                  <div class="flex gap-1 mb-1">
+                    <img src="./img/seller/seller_main_page_avatar.png" alt="MONDAY image seller_main_page_avatar"
+                      width="20" height="20">
+                    <span class="text-[#4790FF] text-sm font-bold">Michael_M</span>
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#575E6A" />
+                      <path
+                        d="M12.636 14.488L6.552 14.5V13.348L9.42 10.924C9.716 10.676 9.964 10.448 10.164 10.24C10.372 10.032 10.536 9.836 10.656 9.652C10.776 9.468 10.864 9.284 10.92 9.1C10.976 8.916 11.004 8.716 11.004 8.5C11.004 8.004 10.876 7.62 10.62 7.348C10.364 7.076 10.004 6.94 9.54 6.94C9.06 6.94 8.68 7.1 8.4 7.42C8.12 7.74 7.976 8.18 7.968 8.74H6.444C6.452 8.1 6.584 7.544 6.84 7.072C7.096 6.592 7.456 6.224 7.92 5.968C8.384 5.704 8.924 5.572 9.54 5.572C10.164 5.572 10.7 5.688 11.148 5.92C11.604 6.144 11.956 6.468 12.204 6.892C12.452 7.316 12.576 7.824 12.576 8.416C12.576 8.72 12.532 9.012 12.444 9.292C12.364 9.564 12.24 9.832 12.072 10.096C11.904 10.352 11.696 10.612 11.448 10.876C11.2 11.14 10.908 11.416 10.572 11.704L8.436 13.528L7.884 13.06H12.636V14.488Z"
+                        fill="#575E6A" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">79
+                        projects</span> on the exchange</p>
+                    <p class="text-[#575E6A] text-xs"><span class="text-xs font-bold">80%</span>
+                      hired</p>
+                  </div>
+                </div>
+
+                <span class="text-[#202020] font-bold">1000 UZS</span>
+              </div>
+            </a>
+
+          </div>
+
+
+          <div class="w-full justify-center hidden mb-5 all_projects_on_exchange_button">
+            <button
+              class="rounded-xl transition-all max-md:w-full font-medium bg-gradient-to-r from-[#6AB8FF] to-[#DEF5FF] text-[#fff] px-6 py-[14px] hover:opacity-80">See
+              all projects on exchange</button>
+          </div>
+
+
+          <div
+            class="bg-[#fff] rounded-3xl md:p-8 p-3 bg-no-repeat bg-[url('./img/seller/seller_main_page_Four_simple_steps_to_succeed_on_monday_bg_img.png')] bg-contain">
+            <div class="max-w-[611px] text-center mx-auto">
+              <div class="absolute top-0 left-0 z-0 before:content-[]"></div>
+              <h2 class="text-[#202020] text-xl font-bold mb-3">Four simple steps to succeed on Monday
+              </h2>
+              <p class="text-[#9CA5B3] text-sm font-medium mb-7">The secret to success on Monday depends
+                on getting started right and managing your ratings. Below we provide tips that will help
+                you gradually become a top seller on Monday.</p>
+
+
+            </div>
+            <div class="w-full grid xl:grid-cols-3 md:grid-cols-1 lg:grid-cols-2 gap-7">
+
+
+
+
+              <div style="box-shadow: 5px 5px 30px 1px #0000000D;"
+                class="md:max-w-[282px] bg-[#fff] md:border-[#F2F2F2] md:border-[1px] md:shadow-none shadow-md md:rounded-[36px] rounded-3xl flex flex-col mx-auto justify-center items-center md:py-5 py-[10px] md:px-[30px] px-3">
+                <img src="./img/seller/seller_main_page_pic.png" alt="MONDAY image seller_main_page_pic"
+                  class="md:inline-block hidden mb-5">
+
+                <div class="md:inline-block hidden max-w-[222px] text-center font-bold md:mb-5">
+                  <span class="text-[#575E6A] uppercase">Step:1</span>
+                  <p class="text-[#202020] mt-[6px]">Create services - the more the better</p>
+                </div>
+
+
+                <div class="flex w-full justify-between md:hidden">
+                  <img src="./img/seller/seller_main_page_pic.png" alt="MONDAY image seller_main_page_pic"
+                    class="max-w-[139px] h-[101px] md:mb-5">
+
+                  <div class="max-w-[222px] font-bold">
+                    <span class="text-[#575E6A] text-sm uppercase">Step:1</span>
+                    <p class="text-[#202020] mt-[6px] line-clamp-2">Create services - the more the
+                      better</p>
+                  </div>
+
+                </div>
+
+
+                <div class="w-full">
+                  <div class="flex items-center justify-between md:mb-1">
+                    <span class="text-[#B7C3D6] text-[10px] font-bold uppercase">active
+                      services</span>
+
+                    <p class="lg:text-[32px] md:text-[22px] sm:text-xl font-bold md:leading-[43.2px]">
+                      2<span class="text-[#B7C3D6] font-medium">/10</span></p>
+                  </div>
+
+                  <div class="bg-[#FAFAFC] w-full rounded-[100px] mb-5">
+                    <span
+                      class="w-1/4 h-[10px] block bg-gradient-to-r rounded-[100px] from-[#6AB8FF] to-[#DEF5FF] text-[#fff]"></span>
+                  </div>
+
+
+                </div>
+                <a href="#"
+                  class="md:w-4/5 w-full text-center border-[#F2F2F2] text-[#202020] rounded-xl text-sm font-bold border-[1px] py-3 hover:opacity-70 active:opacity-60">Know
+                  more</a>
+              </div>
+
+              <div style="box-shadow: 5px 5px 30px 1px #0000000D;"
+                class="md:max-w-[282px] bg-[#fff] md:border-[#F2F2F2] md:border-[1px] md:shadow-none shadow-md md:rounded-[36px] rounded-3xl flex flex-col mx-auto justify-center items-center md:py-5 py-[10px] md:px-[30px] px-3">
+                <img src="./img/seller/seller_main_page_pic.png" alt="MONDAY image seller_main_page_pic"
+                  class="md:inline-block hidden mb-5">
+
+                <div class="md:inline-block hidden max-w-[222px] text-center font-bold md:mb-5">
+                  <span class="text-[#575E6A] uppercase">Step:2</span>
+                  <p class="text-[#202020] mt-[6px]">Advertise your services - get your first orders
+                    and reviews</p>
+                </div>
+
+
+                <div class="flex w-full justify-between md:hidden">
+                  <img src="./img/seller/seller_main_page_pic.png" alt="MONDAY image seller_main_page_pic"
+                    class="max-w-[139px] h-[101px] md:mb-5">
+
+                  <div class="max-w-[222px] font-bold">
+                    <span class="text-[#575E6A] text-sm uppercase">Step:2</span>
+                    <p class="text-[#202020] mt-[6px] line-clamp-2">Advertise your services - get
+                      your first orders and reviews</p>
+                  </div>
+
+                </div>
+
+
+                <div class="w-full">
+                  <div class="flex items-center justify-between md:mb-1">
+                    <span class="text-[#B7C3D6] text-[10px] font-bold uppercase">active
+                      services</span>
+
+                    <p class="lg:text-[32px] md:text-[22px] sm:text-xl font-bold md:leading-[43.2px]">
+                      2<span class="text-[#B7C3D6] font-medium">/10</span></p>
+                  </div>
+
+                  <div class="bg-[#FAFAFC] w-full rounded-[100px] mb-5">
+                    <span
+                      class="w-1/4 h-[10px] block bg-gradient-to-r rounded-[100px] from-[#6AB8FF] to-[#DEF5FF] text-[#fff]"></span>
+                  </div>
+
+
+                </div>
+                <a href="#"
+                  class="md:w-4/5 w-full text-center border-[#F2F2F2] text-[#202020] rounded-xl text-sm font-bold border-[1px] py-3 hover:opacity-70 active:opacity-60">Know
+                  more</a>
+              </div>
+
+
+              <div style="box-shadow: 5px 5px 30px 1px #0000000D;"
+                class="md:max-w-[282px] bg-[#fff] md:border-[#F2F2F2] md:border-[1px] md:shadow-none shadow-md md:rounded-[36px] rounded-3xl flex flex-col mx-auto justify-center items-center md:py-5 py-[10px] md:px-[30px] px-3">
+                <img src="./img/seller/seller_main_page_pic.png" alt="MONDAY image seller_main_page_pic"
+                  class="md:inline-block hidden mb-5">
+
+                <div class="md:inline-block hidden max-w-[222px] text-center font-bold md:mb-5">
+                  <span class="text-[#575E6A] uppercase">Step:3</span>
+                  <p class="text-[#202020] mt-[6px]">Complete the training “How to make money on
+                    Monday”</p>
+                </div>
+
+
+                <div class="flex w-full justify-between md:hidden">
+                  <img src="./img/seller/seller_main_page_pic.png" alt="MONDAY image seller_main_page_pic"
+                    class="max-w-[139px] h-[101px] md:mb-5">
+
+                  <div class="max-w-[222px] font-bold">
+                    <span class="text-[#575E6A] text-sm uppercase">Step:3</span>
+                    <p class="text-[#202020] mt-[6px] line-clamp-2">Complete the training “How to
+                      make money on Monday”</p>
+                  </div>
+
+                </div>
+
+
+                <div class="w-full">
+                  <div class="flex items-center justify-between md:mb-1">
+                    <span class="text-[#B7C3D6] text-[10px] font-bold uppercase">active
+                      services</span>
+
+                    <p class="lg:text-[32px] md:text-[22px] sm:text-xl font-bold md:leading-[43.2px]">
+                      0<span class="text-[#B7C3D6] font-medium">/1</span></p>
+                  </div>
+
+                  <div class="bg-[#FAFAFC] w-full rounded-[100px] mb-5">
+                    <span
+                      class="w-1/4 h-[10px] block bg-gradient-to-r rounded-[100px] from-[#6AB8FF] to-[#DEF5FF] text-[#fff]"></span>
+                  </div>
+
+
+                </div>
+                <a href="#"
+                  class="md:w-4/5 w-full text-center border-[#F2F2F2] text-[#202020] rounded-xl text-sm font-bold border-[1px] py-3 hover:opacity-70 active:opacity-60">Know
+                  more</a>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-white md:hidden rounded-3xl p-4 relative">
+          <div class="swiper mySwiper">
+            <div class="flex justify-between items-center pr-4 mb-4">
+              <div class="flex items-center gap-2">
+                <div class="bg-[#FAFAFC] rounded-lg p-2">
+                  <!-- SVG Icon -->
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.6668 8.66927V6.0026C14.6668 2.66927 13.3335 1.33594 10.0002 1.33594H6.00016C2.66683 1.33594 1.3335 2.66927 1.3335 6.0026V10.0026C1.3335 13.3359 2.66683 14.6693 6.00016 14.6693H8.66683"
+                      stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M4.88672 9.66376L6.47339 7.60375C6.70006 7.31042 7.12006 7.25709 7.41339 7.48375L8.6334 8.44376C8.92674 8.67042 9.34672 8.61709 9.57338 8.33042L11.1134 6.34375"
+                      stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M12.9866 10.545L13.1733 10.925C13.2666 11.1117 13.5 11.285 13.7066 11.325L13.96 11.365C14.72 11.4917 14.9 12.0517 14.3533 12.605L14.12 12.8383C13.9666 12.9983 13.88 13.305 13.9267 13.5183L13.96 13.6583C14.1666 14.5783 13.68 14.9317 12.88 14.4517L12.7066 14.3517C12.5 14.2317 12.1666 14.2317 11.96 14.3517L11.7866 14.4517C10.98 14.9383 10.4933 14.5783 10.7066 13.6583L10.74 13.5183C10.7866 13.305 10.7 12.9983 10.5466 12.8383L10.3133 12.605C9.76664 12.0517 9.94664 11.4917 10.7066 11.365L10.96 11.325C11.16 11.2917 11.4 11.1117 11.4933 10.925L11.68 10.545C12.04 9.81833 12.6266 9.81833 12.9866 10.545Z"
+                      stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <span class="text-[#202020] font-bold">Trending articles</span>
+              </div>
+            </div>
+
+            <div class="swiper-wrapper">
+              <div class="swiper-slide flex gap-3">
+                <div class="bg-[#202020] w-[129px] h-[86px] rounded-2xl"></div>
+                <div class="max-w-[148px]">
+                  <p class="text-[#575E6A] text-sm font-bold line-clamp-2 mb-4">Freelancer price list: how to
+                    estimate
+                    the cost of your work and not make a mistake</p>
+                  <a href="#" class="flex items-center gap-2 hover:opacity-70 active:opacity-60">
+                    Read article
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide flex gap-3">
+                <div class="bg-[#202020] w-[129px] h-[86px] rounded-2xl"></div>
+                <div class="max-w-[148px]">
+                  <p class="text-[#575E6A] text-sm font-bold line-clamp-2 mb-4">Freelancer price list: how to
+                    estimate
+                    the cost of your work and not make a mistake</p>
+                  <a href="#" class="flex items-center gap-2 hover:opacity-70 active:opacity-60">
+                    Read article
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide flex gap-3">
+                <div class="bg-[#202020] w-[129px] h-[86px] rounded-2xl"></div>
+                <div class="max-w-[148px]">
+                  <p class="text-[#575E6A] text-sm font-bold line-clamp-2 mb-4">Freelancer price list: how to
+                    estimate
+                    the cost of your work and not make a mistake</p>
+                  <a href="#" class="flex items-center gap-2 hover:opacity-70 active:opacity-60">
+                    Read article
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination1 absolute !top-5 pr-4 flex items-center justify-end w-full h-5 z-50"></div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+
+  <!-- My js code here -->
+  <script>
+    document.querySelector('.toggle_projects_exchange_button').addEventListener('click', () => {
+      const new_projects_on_exchange = document.querySelector('#new_projects_on_exchange');
+      const toggle_projects_exchange_button_icon = document.querySelector('.toggle_projects_exchange_button_icon');
+      const toggle_projects_exchange_button_titles_1 = document.querySelector('.toggle_projects_exchange_button_titles_1');
+      const toggle_projects_exchange_button_titles_2 = document.querySelector('.toggle_projects_exchange_button_titles_2');
+      const all_projects_on_exchange_button = document.querySelector('.all_projects_on_exchange_button');
+
+
+      new_projects_on_exchange.classList.toggle('hidden');
+
+
+      toggle_projects_exchange_button_titles_1.classList.toggle('hidden');
+      toggle_projects_exchange_button_titles_2.classList.toggle('hidden');
+      all_projects_on_exchange_button.classList.toggle('hidden');
+      all_projects_on_exchange_button.classList.toggle('flex');
+      toggle_projects_exchange_button_icon.classList.toggle('rotate-180');
+    })
+  </script>
+
+  <footer class="bg-[#202020] lg:pt-[125px] pt-12 lg:pb-[70px] pb-[60px]">
+    <div class="max-w-[1320px] mx-auto px-5 md:block hidden">
+      <div class="lg:flex md:grid grid-cols-2 gap-20 items-center justify-between mb-16">
+        <ul>
+          <p class="text-white font-bold text-lg mb-6">About Monday</p>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+              href="#">About the project
+            </a>
+          </li>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+              href="#">Agency contract
+            </a>
+          </li>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base"
+              href="#">Privacy Policy
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <p class="text-white font-bold text-lg mb-6">Help</p>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+              href="#">Service rules
+            </a>
+          </li>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+              href="#">Question answer
+            </a>
+          </li>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base"
+              href="#">Support
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <p class="text-white font-bold text-lg mb-6">Useful</p>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+              href="#">For customers
+            </a>
+          </li>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+              href="#">For performers
+            </a>
+          </li>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base" href="#">
+              PRO account
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <p class="text-white font-bold text-lg mb-6">Community</p>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+              href="#">Blog Monday
+            </a>
+          </li>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+              href="#">Affiliate program
+            </a>
+          </li>
+          <li>
+            <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base"
+              href="#">Verification
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="justify-end flex gap-4 items-center">
+        <a class="hover:bg-white transition-all hover:text-[#202020] text-[#A6A6A6] font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+          href="#">Sign In
+        </a>
+        <a class="hover:bg-white transition-all hover:text-[#202020] text-white items-center gap-2.5 font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+          href="#">
+          Join
+          <span>
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.1654 14V12.6667C11.1654 11.9594 10.8844 11.2811 10.3843 10.781C9.88422 10.281 9.20594 10 8.4987 10H4.4987C3.79145 10 3.11318 10.281 2.61308 10.781C2.11298 11.2811 1.83203 11.9594 1.83203 12.6667V14"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M6.4987 7.33333C7.97146 7.33333 9.16536 6.13943 9.16536 4.66667C9.16536 3.19391 7.97146 2 6.4987 2C5.02594 2 3.83203 3.19391 3.83203 4.66667C3.83203 6.13943 5.02594 7.33333 6.4987 7.33333Z"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13.166 5.33203V9.33203" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M15.166 7.33203H11.166" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="md:hidden block">
+      <div class="w-full px-3">
+        <ul class="flex flex-col gap-6 mb-12">
+          <li>
+            <p class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+              About Monday
+              <span class="footer_rotate transition-height">
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </p>
+            <ul class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">About the project
+                </a>
+              </li>
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">Agency contract
+                </a>
+              </li>
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">Privacy Policy
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+              Help
+              <span class="footer_rotate transition-height">
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </p>
+            <ul class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">Service rules
+                </a>
+              </li>
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">Question answer
+                </a>
+              </li>
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">Support
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+              Useful
+              <span class="footer_rotate transition-height">
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </p>
+            <ul class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">For customers
+                </a>
+              </li>
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">For performers
+                </a>
+              </li>
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">PRO account
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+              Community
+              <span class="footer_rotate transition-height">
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </p>
+            <ul class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">Blog Monday
+                </a>
+              </li>
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">Affiliate program
+                </a>
+              </li>
+              <li>
+                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">Verification
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="flex justify-center gap-4 items-center">
+        <a class="hover:bg-white transition-all hover:text-[#202020] text-[#A6A6A6] font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+          href="#">Sign In
+        </a>
+        <a class="hover:bg-white transition-all hover:text-[#202020] text-white items-center gap-2.5 font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+          href="#">
+          Join
+          <span>
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.1654 14V12.6667C11.1654 11.9594 10.8844 11.2811 10.3843 10.781C9.88422 10.281 9.20594 10 8.4987 10H4.4987C3.79145 10 3.11318 10.281 2.61308 10.781C2.11298 11.2811 1.83203 11.9594 1.83203 12.6667V14"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M6.4987 7.33333C7.97146 7.33333 9.16536 6.13943 9.16536 4.66667C9.16536 3.19391 7.97146 2 6.4987 2C5.02594 2 3.83203 3.19391 3.83203 4.66667C3.83203 6.13943 5.02594 7.33333 6.4987 7.33333Z"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13.166 5.33203V9.33203" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M15.166 7.33203H11.166" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.btn_footer').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const infoElement = btn.nextElementSibling;
+        const footerRotate = btn.querySelector('.footer_rotate');
+
+        if (infoElement.classList.contains('h-0')) {
+          infoElement.classList.remove('h-0');
+          infoElement.style.height = `${infoElement.scrollHeight}px`;
+          footerRotate.classList.add('rotate-180');
+        } else {
+          infoElement.style.height = '0';
+          infoElement.addEventListener('transitionend', () => {
+            infoElement.classList.add('h-0');
+            footerRotate.classList.remove('rotate-180');
+          }, { once: true });
+        }
+      });
+    });
+  </script>
+
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/text.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination1",
+      },
+    });
+  </script>
+   <script>
+    var swiper = new Swiper(".mySwiper2", {
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination2",
+      },
+    });
+  </script>
+</body>
+
+</html>

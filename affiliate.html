@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONDAY</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<style>
+    .affiliate__box {
+        width: 100%;
+    }
+
+    .affiliate__box__right {
+        flex-direction: column;
+    }
+
+    .alf__right {
+        max-width: 449px;
+    }
+
+    @media(max-width:1100px) {
+        .alf__right {
+            max-width: none;
+            width: 100%;
+        }
+
+        .affiliate__box {
+            flex-direction: column;
+        }
+
+        .affiliate__box__right {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .affiliate__box__right__bottom {
+            margin-top: auto;
+        }
+    }
+
+    @media(max-width:825px) {
+        .affiliate__box {
+            flex-direction: column;
+        }
+
+        .affiliate__box__right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .affiliate__box__right__bottom {
+            margin-top: auto;
+        }
+    }
+
+    .alf__inp {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media(max-width:378px) {
+        .alf__inp {
+            display: block;
+            width: 100%;
+        }
+
+        .alf_table {
+            gap: 10px;
+        }
+    }
+
+    @media(max-width:378px) {
+        .alf__inp {
+            display: block;
+            width: 100%;
+        }
+
+        .alf_table {
+            gap: 10px;
+        }
+    }
+
+    button {
+        cursor: pointer;
+    }
+</style>
+
+<body class="bg-[#F1F3F9]">
+
+    <header class="lg:pt-8 bg-white">
+        <div class="max-w-[1384px] px-3 mx-auto lg:flex hidden items-center justify-between">
+            <div class="flex items-center gap-2.5 max-w-[600px] w-full">
+                <a class="text-[#202020] font-bold text-base uppercase select-none" href="index.html">MONDAY
+                </a>
+                <button
+                    class="py-2.5 w-full max-w-[83px] px-2.5 inline-flex items-center gap-1.5 bg-[#FAFAFC] rounded-xl text-[#B7C3D6] uppercase font-medium text-base active:opacity-80 transition-all">
+                    <img src="./img/header/global.svg" alt="global">
+                    <p>Uz</p>
+                    <span>
+                        <svg class="flex" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.50391 1L6.00391 5L10.5039 1" stroke="#B7C3D6" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="w-full relative">
+                    <div
+                        class="flex items-center justify-between max-w-[316px] w-full h-11 px-4 rounded-full bg-[#FAFAFC]">
+                        <input autocomplete="off" id="search" placeholder="Search for services..."
+                            class="placeholder:text-[#9CA5B3] placeholder:font-medium placeholder:text-sm text-[#9CA5B3] font-medium text-sm outline-none border-none bg-transparent max-w-[250px] w-full"
+                            type="search">
+                        <label for="search" class="cursor-pointer flex" id="searchLabel">
+                            <img src="./img/header/search.svg" alt="search" class="search-icon">
+                        </label>
+                    </div>
+                    <div id="search__menu"
+                        class="search_shadow hidden absolute bg-[#FCFCFC] top-[60px] max-w-[316px] w-full py-2.5 px-4 rounded-2xl">
+                        <p class="text-[#202020] font-bold text-xs mb-2">Top services🔥</p>
+                        <div class="pb-2 border-b mb-2">
+                            <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">Social &
+                                SMM</a>
+                            <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">SEO</a>
+                            <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md"
+                                href="#">Copywriting</a>
+                            <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">Web
+                                Development</a>
+                            <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">Scripts &
+                                Telegram
+                                Bots</a>
+                        </div>
+                        <div>
+                            <p class="text-[#B7C3D6] font-bold text-[10px]">Recent</p>
+                            <a class="search_recent text-[#575E6A] font-medium text-xs flex items-center gap-1 relative"
+                                href="#"><img class="flex" src="./img/header/clock.svg" alt="clock">Wibtrix site
+                                improvements</a>
+                            <a class="search_recent text-[#575E6A] font-medium text-xs flex items-center gap-1 relative"
+                                href="#"><img class="flex" src="./img/header/clock.svg" alt="clock">Seo optimisation</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const searchInput = document.getElementById('search');
+                        const searchMenu = document.getElementById('search__menu');
+                        const searchRecentItems = document.querySelectorAll('.search_recent');
+
+                        function showSearchMenu() {
+                            searchMenu.classList.remove('hidden');
+                            // searchMenu.classList.add('animate__animated', 'animate__fadeIn');
+                        }
+
+                        function hideSearchMenu() {
+                            searchMenu.classList.add('hidden');
+                            // searchMenu.classList.remove('animate__animated', 'animate__fadeIn');
+                        }
+
+                        searchInput.addEventListener('focus', showSearchMenu);
+
+                        document.addEventListener('click', (event) => {
+                            if (!searchInput.contains(event.target) && !searchMenu.contains(event.target)) {
+                                hideSearchMenu();
+                            }
+                        });
+
+                        window.addEventListener('resize', hideSearchMenu);
+
+                        searchRecentItems.forEach(item => {
+                            item.addEventListener('mouseenter', () => {
+                                if (!item.querySelector('.close-button')) {
+                                    const closeButton = document.createElement('span');
+                                    closeButton.innerHTML = '&times;';
+                                    closeButton.classList.add('absolute', 'right-0', 'text-[#9CA5B3]', 'hover:text-[#202020]', 'font-bold', 'transition-all', 'duration-200', 'ease-in-out', 'text-xl', 'close-button');
+                                    closeButton.addEventListener('click', (event) => {
+                                        event.stopPropagation();
+                                        item.remove();
+                                    });
+                                    item.appendChild(closeButton);
+                                }
+                            });
+
+                            item.addEventListener('mouseleave', () => {
+                                const closeButton = item.querySelector('.close-button');
+                                if (closeButton) {
+                                    closeButton.remove();
+                                }
+                            });
+                        });
+                    });
+
+                </script>
+            </div>
+            <div class="flex items-center gap-10">
+                <div>
+                    <ul class="flex items-center gap-6">
+                        <li>
+                            <a href="#" class="text-[#9CA5B3] font-bold text-base animated-underline">Orders
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-[#9CA5B3] font-bold text-base animated-underline">Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-[#9CA5B3] font-bold text-base animated-underline">Sellers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-[#9CA5B3] font-bold text-base flex items-center gap-1.5 animated-underline">
+                                <span>
+                                    <img class="flex" src="./img/header/lovely.svg" alt="lovely">
+                                </span>Favorites
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-5">
+                    <a class="relative" href="#">
+                        <img src="./img/header/bag.svg" alt="bag">
+                        <div
+                            class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#4790FF] absolute top-[-5px] right-[-7px] border-white border">
+                            2
+                        </div>
+                    </a>
+                    <a class="relative" href="#">
+                        <img src="./img/header/message.svg" alt="message">
+                        <div
+                            class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#FF8E8E] absolute top-[-5px] right-[-7px] border-white border">
+                            2
+                        </div>
+                    </a>
+                    <a class="relative" href="#">
+                        <img src="./img/header/notification.svg" alt="notification">
+                        <div
+                            class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#3bbe1a] absolute top-[-5px] right-[-7px] border-white border">
+                            2
+                        </div>
+                    </a>
+                </div>
+                <div class="flex gap-1">
+                    <a class="hover:opacity-80 transition-all" href="#">
+                        <img src="./img/header/wallet.svg" alt="wallet">
+                    </a>
+                    <button class="flex items-center relative cursor-pointer">
+                        <img class="max-w-11 w-full flex" src="./img/header/avatar.png" alt="avatar">
+                        <div
+                            class="w-2.5 h-2.5 rounded-full border border-white bg-[#62F94D] absolute bottom-0 right-[25px]">
+                        </div>
+                        <img class="flex" src="./img/header/expand.svg" alt="expand">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1384px] lg:block hidden px-5 mx-auto pt-5">
+            <ul class="flex items-center justify-between">
+                <li>
+                    <a id="header_item" class="header_active py-3 px-2 text-[#9CA5B3] font-medium text-base"
+                        href="#">Social & SMM
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">SEO
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Copywriting
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Web Development
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Scripts & Telegram Bots
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Logotypes & Branding
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Web & Mobile Design
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Scripts & Bots
+                    </a>
+                </li>
+                <li class="flex items-center border-l pl-2">
+                    <button class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">
+                        All Services
+                    </button>
+                    <img src="./img/header/expand.svg" alt="expand">
+                </li>
+            </ul>
+        </div>
+        <div
+            class="lg:hidden pt-12 pb-5 max-w-[1384px] pt- px-5 mx-auto w-full flex items-center gap-2 justify-between">
+            <button>
+                <img src="./img/header/burger.svg" alt="burger">
+            </button>
+            <a class="text-[#202020] font-bold text-sm" href="#">MONDAY</a>
+            <button
+                class="flex items-center py-3 px-2 rounded-xl bg-[#FAFAFC] text-[#9CA5B3] font-medium text-xs uppercase cursor-pointer">
+                Uz
+                <img class="flex" src="./img/header/expand.svg" alt="expand">
+            </button>
+            <div class="flex items-center justify-between max-w-[143px] w-full h-11 px-4 rounded-full bg-[#FAFAFC]">
+                <input id="search" placeholder="Search..."
+                    class="placeholder:text-[#9CA5B3] placeholder:font-medium placeholder:text-sm text-[#9CA5B3] font-medium text-sm outline-none border-none bg-transparent max-w-[70px] w-full"
+                    type="search">
+                <label for="search" class="cursor-pointer flex">
+                    <img src="./img/header/search.svg" alt="search">
+                </label>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="#">
+                    <img src="./img/header/lovely.svg" alt="lovely">
+                </a>
+                <a href="#">
+                    <img src="./img/header/bag.svg" alt="bag">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        let header_items = document.querySelectorAll('#header_item')
+
+        header_items.forEach(function (item, index) {
+            item.addEventListener('click', function () {
+                header_items.forEach(function (item) {
+                    item.classList.remove('header_active')
+                })
+
+                item.classList.add('header_active')
+            })
+        })
+    </script>
+
+    <a href=""
+        class="max-w-[1400px] md:hidden mx-auto px-5 flex items-center gap-0.5 max-md:bg-white max-md:pb-[15px] font-bold text-2xl text-[#202020]  md:mb-5">
+        <svg class="md:hidden" width="33" height="40" viewBox="0 0 33 40" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M19.5157 13.7563C19.1512 13.4146 18.5603 13.4146 18.1958 13.7563L18.7737 14.2981C18.1958 13.7563 18.1958 13.7562 18.1958 13.7563L18.1345 13.8139L17.9637 13.9751C17.8168 14.1141 17.6071 14.3131 17.3557 14.5537C16.8531 15.0347 16.1818 15.6837 15.5094 16.3534C14.8393 17.021 14.1586 17.7185 13.6418 18.2938C13.3851 18.5796 13.1555 18.85 12.9854 19.0792C12.9013 19.1925 12.8185 19.3135 12.7529 19.4325C12.708 19.514 12.5891 19.7335 12.5891 20C12.5891 20.2665 12.708 20.486 12.7529 20.5675C12.8185 20.6865 12.9013 20.8075 12.9854 20.9208C13.1555 21.15 13.3851 21.4204 13.6418 21.7062C14.1586 22.2815 14.8393 22.979 15.5094 23.6466C16.1818 24.3163 16.8531 24.9653 17.3557 25.4463C17.6071 25.6869 17.8168 25.8859 17.9637 26.0249L18.1345 26.1861L18.1946 26.2427L18.1957 26.2436C18.1957 26.2437 18.1958 26.2437 18.8557 25.625C19.5157 25.0063 19.5157 25.0063 19.5157 25.0063L19.4572 24.9513L19.2895 24.793C19.1447 24.6561 18.9377 24.4595 18.6891 24.2217C18.1917 23.7456 17.5297 23.1055 16.8687 22.4472C16.2055 21.7866 15.5529 21.1169 15.0697 20.579C14.8632 20.3492 14.6973 20.154 14.5775 20C14.6973 19.846 14.8632 19.6508 15.0697 19.421C15.5529 18.8831 16.2055 18.2134 16.8687 17.5528C17.5297 16.8945 18.1917 16.2544 18.6891 15.7783C18.9377 15.5405 19.1447 15.3439 19.2895 15.207L19.4572 15.0487L19.5149 14.9945C19.5149 14.9945 19.5157 14.9937 19.1557 14.6562L19.5149 14.9945C19.8794 14.6528 19.8802 14.098 19.5157 13.7563ZM14.4117 20.2351C14.4021 20.2577 14.3987 20.2588 14.4117 20.2351C14.4118 20.2348 14.4115 20.2355 14.4117 20.2351ZM19.5157 26.2437C19.8802 25.902 19.8802 25.348 19.5157 25.0063L18.8557 25.625L18.1957 26.2436C18.5602 26.5853 19.1512 26.5854 19.5157 26.2437Z"
+                fill="#202020" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.5224 19.125C13.0069 19.125 12.5891 19.5168 12.5891 20C12.5891 20.2665 12.708 20.486 12.7529 20.5675C12.8185 20.6865 12.9013 20.8075 12.9854 20.9208C13.1555 21.15 13.3851 21.4204 13.6418 21.7062C14.1586 22.2815 14.8393 22.979 15.5094 23.6466C16.1818 24.3163 16.8531 24.9653 17.3557 25.4463C17.6071 25.6869 17.8168 25.8859 17.9637 26.0249L18.1345 26.1861L18.1957 26.2436C18.1957 26.2437 18.1958 26.2437 18.8557 25.625C19.5157 25.0063 19.5157 25.0063 19.5157 25.0063L19.4572 24.9513L19.2895 24.793C19.1447 24.6561 18.9377 24.4595 18.6891 24.2217C18.1917 23.7456 17.5297 23.1055 16.8687 22.4472C16.2055 21.7866 15.5529 21.1169 15.0697 20.579C14.8264 20.3081 14.6394 20.0853 14.5177 19.9215C14.4759 19.8651 14.4478 19.8237 14.4302 19.7957C14.332 19.411 13.9628 19.125 13.5224 19.125ZM19.5157 26.2437C19.8802 25.902 19.8802 25.348 19.5157 25.0063L18.8557 25.625L18.1957 26.2436C18.5602 26.5853 19.1512 26.5854 19.5157 26.2437Z"
+                fill="#202020" />
+        </svg>
+        Affiliate program
+    </a>
+    <section class="bg-[#F1F3F9] pt-3 md:pt-6 pb-7">
+        <div class="max-w-[1400px] mx-auto px-5 text-center">
+            <h1
+                class="text-left flex max-md:hidden items-center gap-0.5 max-md:bg-white max-md:pb-[15px] font-bold text-4xl text-[#202020] mb-3 md:mb-5">
+                <svg class="md:hidden" width="33" height="40" viewBox="0 0 33 40" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.5157 13.7563C19.1512 13.4146 18.5603 13.4146 18.1958 13.7563L18.7737 14.2981C18.1958 13.7563 18.1958 13.7562 18.1958 13.7563L18.1345 13.8139L17.9637 13.9751C17.8168 14.1141 17.6071 14.3131 17.3557 14.5537C16.8531 15.0347 16.1818 15.6837 15.5094 16.3534C14.8393 17.021 14.1586 17.7185 13.6418 18.2938C13.3851 18.5796 13.1555 18.85 12.9854 19.0792C12.9013 19.1925 12.8185 19.3135 12.7529 19.4325C12.708 19.514 12.5891 19.7335 12.5891 20C12.5891 20.2665 12.708 20.486 12.7529 20.5675C12.8185 20.6865 12.9013 20.8075 12.9854 20.9208C13.1555 21.15 13.3851 21.4204 13.6418 21.7062C14.1586 22.2815 14.8393 22.979 15.5094 23.6466C16.1818 24.3163 16.8531 24.9653 17.3557 25.4463C17.6071 25.6869 17.8168 25.8859 17.9637 26.0249L18.1345 26.1861L18.1946 26.2427L18.1957 26.2436C18.1957 26.2437 18.1958 26.2437 18.8557 25.625C19.5157 25.0063 19.5157 25.0063 19.5157 25.0063L19.4572 24.9513L19.2895 24.793C19.1447 24.6561 18.9377 24.4595 18.6891 24.2217C18.1917 23.7456 17.5297 23.1055 16.8687 22.4472C16.2055 21.7866 15.5529 21.1169 15.0697 20.579C14.8632 20.3492 14.6973 20.154 14.5775 20C14.6973 19.846 14.8632 19.6508 15.0697 19.421C15.5529 18.8831 16.2055 18.2134 16.8687 17.5528C17.5297 16.8945 18.1917 16.2544 18.6891 15.7783C18.9377 15.5405 19.1447 15.3439 19.2895 15.207L19.4572 15.0487L19.5149 14.9945C19.5149 14.9945 19.5157 14.9937 19.1557 14.6562L19.5149 14.9945C19.8794 14.6528 19.8802 14.098 19.5157 13.7563ZM14.4117 20.2351C14.4021 20.2577 14.3987 20.2588 14.4117 20.2351C14.4118 20.2348 14.4115 20.2355 14.4117 20.2351ZM19.5157 26.2437C19.8802 25.902 19.8802 25.348 19.5157 25.0063L18.8557 25.625L18.1957 26.2436C18.5602 26.5853 19.1512 26.5854 19.5157 26.2437Z"
+                        fill="#202020" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.5224 19.125C13.0069 19.125 12.5891 19.5168 12.5891 20C12.5891 20.2665 12.708 20.486 12.7529 20.5675C12.8185 20.6865 12.9013 20.8075 12.9854 20.9208C13.1555 21.15 13.3851 21.4204 13.6418 21.7062C14.1586 22.2815 14.8393 22.979 15.5094 23.6466C16.1818 24.3163 16.8531 24.9653 17.3557 25.4463C17.6071 25.6869 17.8168 25.8859 17.9637 26.0249L18.1345 26.1861L18.1957 26.2436C18.1957 26.2437 18.1958 26.2437 18.8557 25.625C19.5157 25.0063 19.5157 25.0063 19.5157 25.0063L19.4572 24.9513L19.2895 24.793C19.1447 24.6561 18.9377 24.4595 18.6891 24.2217C18.1917 23.7456 17.5297 23.1055 16.8687 22.4472C16.2055 21.7866 15.5529 21.1169 15.0697 20.579C14.8264 20.3081 14.6394 20.0853 14.5177 19.9215C14.4759 19.8651 14.4478 19.8237 14.4302 19.7957C14.332 19.411 13.9628 19.125 13.5224 19.125ZM19.5157 26.2437C19.8802 25.902 19.8802 25.348 19.5157 25.0063L18.8557 25.625L18.1957 26.2436C18.5602 26.5853 19.1512 26.5854 19.5157 26.2437Z"
+                        fill="#202020" />
+                </svg>
+                Affiliate program
+            </h1>
+            <div class="text-left affiliate__box flex items-center justify-between gap-2.5 mb-2.5">
+                <div class="md:bg-white xl:w-[901px] w-full md:p-3 md:py-5 md:px-5 rounded-3xl">
+                    <div class="max-md:bg-white max-md:rounded-2xl max-md:p-3 mb-[18px] max-md:mb-2.5">
+                        <h2 class="font-bold text-base max-md:text-center md:text-xl text-[#202020] mb-0.5 md:mb-1">Copy
+                            and share your referral link</h2>
+                        <p class="font-medium text-sm text-[#575E6A] max-md:text-center mb-2.5 md:mb-[19px]">Invite
+                            people and gain money.</p>
+                        <div class="mb-[18px] hidden md:flex items-center gap-[5px]">
+                            <div
+                                class="max-w-[729px] max-h-[60px] w-full flex items-center justify-between border border-[#0000001A] rounded-xl pb-2 pt-[7px] pl-5 pr-2">
+                                <p class=" w-full line-clamp-1 font-bold text-base text-[#4790FF]">
+                                    https://monday.uz/?ref=1123602</p>
+                                <button
+                                    class="bg-[#4790FF] ml-5 max-w-[150px] w-full hover:bg-transparent border-transparent hover:text-[#4790FF] hover:border-[#4790FF] border   transition-all duration-300  rounded-xl flex items-center gap-2.5 px-6 py-3 text-white font-bold text-sm">
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.1668 9.1026V11.9026C11.1668 14.2359 10.2335 15.1693 7.90016 15.1693H5.10016C2.76683 15.1693 1.8335 14.2359 1.8335 11.9026V9.1026C1.8335 6.76927 2.76683 5.83594 5.10016 5.83594H7.90016C10.2335 5.83594 11.1668 6.76927 11.1668 9.1026Z"
+                                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M15.1668 5.1026V7.9026C15.1668 10.2359 14.2335 11.1693 11.9002 11.1693H11.1668V9.1026C11.1668 6.76927 10.2335 5.83594 7.90016 5.83594H5.8335V5.1026C5.8335 2.76927 6.76683 1.83594 9.10016 1.83594H11.9002C14.2335 1.83594 15.1668 2.76927 15.1668 5.1026Z"
+                                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Copy Link
+                                </button>
+                            </div>
+                            <a href="#" target="_blank"
+                                class="max-w-[60px] w-full p-[21px] bg-[#EDF4FF] rounded-[14px] hover:bg-[#4790FF] hover:text-[#EDF4FF] text-[#4790FF] transition-all duration-300">
+                                <svg width="18" height="16" viewBox="0 0 18 16" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.5387 0.594069L0.591585 6.77547C-0.0501506 7.06331 -0.267208 7.6398 0.436449 7.95265L4.52762 9.2595L14.4194 3.11455C14.9595 2.72877 15.5125 2.83165 15.0367 3.256L6.54093 10.9881L6.27405 14.2603C6.52125 14.7656 6.97385 14.7679 7.26255 14.5168L9.61303 12.2812L13.6386 15.3112C14.5736 15.8676 15.0823 15.5086 15.2835 14.4888L17.9239 1.9215C18.198 0.66621 17.7305 0.113133 16.5387 0.594069Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="max-w-[60px] w-full p-[21px] bg-[#EDF4FF] rounded-[14px] hover:bg-[#4790FF] hover:text-[#EDF4FF] text-[#4790FF] transition-all duration-300">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1247_21721)">
+                                        <path
+                                            d="M8.99998 1.62165C11.4031 1.62165 11.6877 1.6308 12.6367 1.6741C13.5142 1.71415 13.9908 1.86077 14.3079 1.98398C14.728 2.14725 15.0278 2.34231 15.3428 2.65723C15.6577 2.97215 15.8528 3.272 16.016 3.69206C16.1392 4.00923 16.2859 4.48577 16.3259 5.36323C16.3692 6.31228 16.3783 6.5969 16.3783 9.00002C16.3783 11.4031 16.3692 11.6878 16.3259 12.6368C16.2859 13.5143 16.1392 13.9908 16.016 14.308C15.8528 14.728 15.6577 15.0279 15.3428 15.3428C15.0278 15.6577 14.728 15.8528 14.3079 16.016C13.9908 16.1393 13.5142 16.2859 12.6367 16.3259C11.6879 16.3692 11.4032 16.3784 8.99998 16.3784C6.59672 16.3784 6.3121 16.3692 5.36323 16.3259C4.48574 16.2859 4.00919 16.1393 3.69206 16.016C3.27196 15.8528 2.97212 15.6577 2.6572 15.3428C2.34227 15.0279 2.14721 14.728 1.98398 14.308C1.86073 13.9908 1.71411 13.5143 1.67406 12.6368C1.63076 11.6878 1.62162 11.4031 1.62162 9.00002C1.62162 6.5969 1.63076 6.31228 1.67406 5.36326C1.71411 4.48577 1.86073 4.00923 1.98398 3.69206C2.14721 3.272 2.34227 2.97215 2.6572 2.65723C2.97212 2.34231 3.27196 2.14725 3.69206 1.98398C4.00919 1.86077 4.48574 1.71415 5.36319 1.6741C6.31224 1.6308 6.59687 1.62165 8.99998 1.62165ZM8.99998 0C6.55571 0 6.24926 0.0103604 5.28931 0.0541599C4.33133 0.097888 3.67712 0.250007 3.10462 0.472506C2.51279 0.702507 2.01088 1.01025 1.51055 1.51058C1.01021 2.01092 0.702472 2.51283 0.47247 3.10466C0.249972 3.67716 0.0978523 4.33137 0.0541242 5.28935C0.0103247 6.24926 0 6.55575 0 9.00002C0 11.4443 0.0103247 11.7508 0.0541242 12.7107C0.0978523 13.6687 0.249972 14.3229 0.47247 14.8954C0.702472 15.4872 1.01021 15.9891 1.51055 16.4895C2.01088 16.9898 2.51279 17.2975 3.10462 17.5275C3.67712 17.75 4.33133 17.9021 5.28931 17.9459C6.24926 17.9897 6.55571 18 8.99998 18C11.4443 18 11.7507 17.9897 12.7107 17.9459C13.6686 17.9021 14.3228 17.75 14.8953 17.5275C15.4872 17.2975 15.9891 16.9898 16.4894 16.4895C16.9898 15.9891 17.2975 15.4872 17.5275 14.8954C17.75 14.3229 17.9021 13.6687 17.9458 12.7107C17.9896 11.7508 18 11.4443 18 9.00002C18 6.55575 17.9896 6.24926 17.9458 5.28935C17.9021 4.33137 17.75 3.67716 17.5275 3.10466C17.2975 2.51283 16.9898 2.01092 16.4894 1.51058C15.9891 1.01025 15.4872 0.702507 14.8953 0.472506C14.3228 0.250007 13.6686 0.097888 12.7107 0.0541599C11.7507 0.0103604 11.4443 0 8.99998 0ZM8.99998 4.37838C6.44753 4.37838 4.37835 6.44757 4.37835 9.00002C4.37835 11.5525 6.44753 13.6217 8.99998 13.6217C11.5524 13.6217 13.6216 11.5525 13.6216 9.00002C13.6216 6.44757 11.5524 4.37838 8.99998 4.37838ZM8.99998 12C7.34314 12 5.99996 10.6569 5.99996 9.00002C5.99996 7.34317 7.34314 6 8.99998 6C10.6568 6 12 7.34317 12 9.00002C12 10.6569 10.6568 12 8.99998 12ZM14.8842 4.19579C14.8842 4.79226 14.4007 5.27581 13.8042 5.27581C13.2077 5.27581 12.7242 4.79226 12.7242 4.19579C12.7242 3.59931 13.2077 3.1158 13.8042 3.1158C14.4007 3.1158 14.8842 3.59931 14.8842 4.19579Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1247_21721">
+                                            <rect width="18" height="18" fill="currentColor" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="md:hidden   border-[#0000001A] border rounded-xl py-4 px-3 mb-1.5">
+                            <p
+                                class="  items-center justify-center font-bold text-sm text-[#4790FF] line-clamp-1 pr-5 text-center">
+                                https://monday.uz/?ref=1123602</p>
+
+                        </div>
+                        <div class="flex md:hidden items-center gap-[5px]">
+                            <button class="bg-[#4790FF] hover:bg-transparent border-transparent hover:text-[#4790FF] hover:border-[#4790FF] border  transition-all duration-300  w-full rounded-xl flex items-center justify-center gap-2.5 
+                     py-[13px] text-white font-bold text-sm">
+                                <svg width="16" height="16" viewBox="0 0 17 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.1668 9.1026V11.9026C11.1668 14.2359 10.2335 15.1693 7.90016 15.1693H5.10016C2.76683 15.1693 1.8335 14.2359 1.8335 11.9026V9.1026C1.8335 6.76927 2.76683 5.83594 5.10016 5.83594H7.90016C10.2335 5.83594 11.1668 6.76927 11.1668 9.1026Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M15.1668 5.1026V7.9026C15.1668 10.2359 14.2335 11.1693 11.9002 11.1693H11.1668V9.1026C11.1668 6.76927 10.2335 5.83594 7.90016 5.83594H5.8335V5.1026C5.8335 2.76927 6.76683 1.83594 9.10016 1.83594H11.9002C14.2335 1.83594 15.1668 2.76927 15.1668 5.1026Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                Copy Link
+                            </button>
+                            <a href="#" target="_blank"
+                                class="max-w-[60px] w-full py-3.5 px-5 bg-[#EDF4FF] rounded-[14px] hover:bg-[#4790FF] hover:text-[#EDF4FF] text-[#4790FF] transition-all duration-300">
+                                <svg width="18" height="16" viewBox="0 0 18 16" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.5387 0.594069L0.591585 6.77547C-0.0501506 7.06331 -0.267208 7.6398 0.436449 7.95265L4.52762 9.2595L14.4194 3.11455C14.9595 2.72877 15.5125 2.83165 15.0367 3.256L6.54093 10.9881L6.27405 14.2603C6.52125 14.7656 6.97385 14.7679 7.26255 14.5168L9.61303 12.2812L13.6386 15.3112C14.5736 15.8676 15.0823 15.5086 15.2835 14.4888L17.9239 1.9215C18.198 0.66621 17.7305 0.113133 16.5387 0.594069Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="max-w-[60px] w-full py-3.5 px-5 bg-[#EDF4FF] rounded-[14px] hover:bg-[#4790FF] hover:text-[#EDF4FF] text-[#4790FF] transition-all duration-300">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1247_21721)">
+                                        <path
+                                            d="M8.99998 1.62165C11.4031 1.62165 11.6877 1.6308 12.6367 1.6741C13.5142 1.71415 13.9908 1.86077 14.3079 1.98398C14.728 2.14725 15.0278 2.34231 15.3428 2.65723C15.6577 2.97215 15.8528 3.272 16.016 3.69206C16.1392 4.00923 16.2859 4.48577 16.3259 5.36323C16.3692 6.31228 16.3783 6.5969 16.3783 9.00002C16.3783 11.4031 16.3692 11.6878 16.3259 12.6368C16.2859 13.5143 16.1392 13.9908 16.016 14.308C15.8528 14.728 15.6577 15.0279 15.3428 15.3428C15.0278 15.6577 14.728 15.8528 14.3079 16.016C13.9908 16.1393 13.5142 16.2859 12.6367 16.3259C11.6879 16.3692 11.4032 16.3784 8.99998 16.3784C6.59672 16.3784 6.3121 16.3692 5.36323 16.3259C4.48574 16.2859 4.00919 16.1393 3.69206 16.016C3.27196 15.8528 2.97212 15.6577 2.6572 15.3428C2.34227 15.0279 2.14721 14.728 1.98398 14.308C1.86073 13.9908 1.71411 13.5143 1.67406 12.6368C1.63076 11.6878 1.62162 11.4031 1.62162 9.00002C1.62162 6.5969 1.63076 6.31228 1.67406 5.36326C1.71411 4.48577 1.86073 4.00923 1.98398 3.69206C2.14721 3.272 2.34227 2.97215 2.6572 2.65723C2.97212 2.34231 3.27196 2.14725 3.69206 1.98398C4.00919 1.86077 4.48574 1.71415 5.36319 1.6741C6.31224 1.6308 6.59687 1.62165 8.99998 1.62165ZM8.99998 0C6.55571 0 6.24926 0.0103604 5.28931 0.0541599C4.33133 0.097888 3.67712 0.250007 3.10462 0.472506C2.51279 0.702507 2.01088 1.01025 1.51055 1.51058C1.01021 2.01092 0.702472 2.51283 0.47247 3.10466C0.249972 3.67716 0.0978523 4.33137 0.0541242 5.28935C0.0103247 6.24926 0 6.55575 0 9.00002C0 11.4443 0.0103247 11.7508 0.0541242 12.7107C0.0978523 13.6687 0.249972 14.3229 0.47247 14.8954C0.702472 15.4872 1.01021 15.9891 1.51055 16.4895C2.01088 16.9898 2.51279 17.2975 3.10462 17.5275C3.67712 17.75 4.33133 17.9021 5.28931 17.9459C6.24926 17.9897 6.55571 18 8.99998 18C11.4443 18 11.7507 17.9897 12.7107 17.9459C13.6686 17.9021 14.3228 17.75 14.8953 17.5275C15.4872 17.2975 15.9891 16.9898 16.4894 16.4895C16.9898 15.9891 17.2975 15.4872 17.5275 14.8954C17.75 14.3229 17.9021 13.6687 17.9458 12.7107C17.9896 11.7508 18 11.4443 18 9.00002C18 6.55575 17.9896 6.24926 17.9458 5.28935C17.9021 4.33137 17.75 3.67716 17.5275 3.10466C17.2975 2.51283 16.9898 2.01092 16.4894 1.51058C15.9891 1.01025 15.4872 0.702507 14.8953 0.472506C14.3228 0.250007 13.6686 0.097888 12.7107 0.0541599C11.7507 0.0103604 11.4443 0 8.99998 0ZM8.99998 4.37838C6.44753 4.37838 4.37835 6.44757 4.37835 9.00002C4.37835 11.5525 6.44753 13.6217 8.99998 13.6217C11.5524 13.6217 13.6216 11.5525 13.6216 9.00002C13.6216 6.44757 11.5524 4.37838 8.99998 4.37838ZM8.99998 12C7.34314 12 5.99996 10.6569 5.99996 9.00002C5.99996 7.34317 7.34314 6 8.99998 6C10.6568 6 12 7.34317 12 9.00002C12 10.6569 10.6568 12 8.99998 12ZM14.8842 4.19579C14.8842 4.79226 14.4007 5.27581 13.8042 5.27581C13.2077 5.27581 12.7242 4.79226 12.7242 4.19579C12.7242 3.59931 13.2077 3.1158 13.8042 3.1158C14.4007 3.1158 14.8842 3.59931 14.8842 4.19579Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1247_21721">
+                                            <rect width="18" height="18" fill="currentColor" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="max-md:hidden font-bold text-base text-[#202020] mb-[11px]">How it works?</h3>
+                    <div class="max-md:hidden grid grid-cols-3 gap-2.5">
+                        <div
+                            class="w-full lg:max-h-[131px] border border-[#F2F2F2] py-3.5 pl-5 pr-[30px] rounded-[20px]">
+                            <div class="bg-[#EDF4FF] rounded-full max-w-[30px] p-[7px] mb-2.5">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.70656 7.29688C10.2066 8.79688 10.2066 11.2235 8.70656 12.7169C7.20656 14.2102 4.7799 14.2169 3.28656 12.7169C1.79323 11.2169 1.78656 8.79021 3.28656 7.29688"
+                                        stroke="#4790FF" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M7.06014 8.94188C5.50014 7.38188 5.50014 4.84854 7.06014 3.28188C8.62014 1.71521 11.1535 1.72188 12.7201 3.28188C14.2868 4.84188 14.2801 7.37521 12.7201 8.94188"
+                                        stroke="#4790FF" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h4 class="lg:h-[10px] font-bold text-sm text-[#202020] mb-[5px] lg:mb-2.5 ">Copy the
+                                referral link</h4>
+                            <p class="font-medium text-xs text-[#575E6A]">
+                                The link can be sent to friends, shared on social networks, or published on a website or
+                                blog.
+                            </p>
+                        </div>
+                        <div
+                            class="w-full lg:max-h-[131px] border border-[#F2F2F2] py-3.5 pl-5 pr-[30px] rounded-[20px]">
+                            <div class="bg-[#EDF4FF] rounded-full max-w-[30px] p-[7px] mb-2.5">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.3332 13H9.6665" stroke="#4790FF" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M11 14.3307V11.6641" stroke="#4790FF" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M8.10673 7.24927C8.04006 7.2426 7.96006 7.2426 7.88673 7.24927C6.30006 7.19594 5.04006 5.89594 5.04006 4.29594C5.0334 2.6626 6.36006 1.33594 7.9934 1.33594C9.62673 1.33594 10.9534 2.6626 10.9534 4.29594C10.9534 5.89594 9.68673 7.19594 8.10673 7.24927Z"
+                                        stroke="#4790FF" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M7.99336 14.5424C6.78003 14.5424 5.57336 14.2357 4.65336 13.6224C3.04003 12.5424 3.04003 10.7824 4.65336 9.70906C6.48669 8.4824 9.49336 8.4824 11.3267 9.70906"
+                                        stroke="#4790FF" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                            <h4 class="lg:h-[10px] font-bold text-sm text-[#202020] mb-[5px] lg:mb-2.5">Registration
+                            </h4>
+                            <p class="font-medium text-xs text-[#575E6A]">Let them sign up and join Monday using your
+                                referral link.</p>
+                        </div>
+                        <div
+                            class="w-full lg:max-h-[131px] border border-[#F2F2F2] py-3.5 pl-5 pr-[30px] rounded-[20px]">
+                            <div class="bg-[#EDF4FF] rounded-full max-w-[30px] p-[7px] mb-2.5">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.8668 5.28097V8.71431C12.8668 10.7676 11.6935 11.6476 9.93347 11.6476H4.07347C3.77347 11.6476 3.4868 11.621 3.22013 11.561C3.05347 11.5343 2.89347 11.4877 2.74681 11.4343C1.74681 11.061 1.14014 10.1943 1.14014 8.71431V5.28097C1.14014 3.22763 2.31347 2.34766 4.07347 2.34766H9.93347C11.4268 2.34766 12.5001 2.98099 12.7868 4.42765C12.8335 4.69432 12.8668 4.96763 12.8668 5.28097Z"
+                                        stroke="#4790FF" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M14.8674 7.283V10.7163C14.8674 12.7697 13.694 13.6497 11.934 13.6497H6.07404C5.5807 13.6497 5.13404 13.583 4.74738 13.4364C3.95404 13.143 3.41404 12.5364 3.2207 11.563C3.48737 11.623 3.77404 11.6497 4.07404 11.6497H9.93404C11.694 11.6497 12.8674 10.7697 12.8674 8.71635V5.283C12.8674 4.96967 12.8407 4.68969 12.7874 4.42969C14.054 4.69635 14.8674 5.58967 14.8674 7.283Z"
+                                        stroke="#4790FF" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M6.99878 8.76221C7.9708 8.76221 8.75879 7.97422 8.75879 7.0022C8.75879 6.03018 7.9708 5.24219 6.99878 5.24219C6.02676 5.24219 5.23877 6.03018 5.23877 7.0022C5.23877 7.97422 6.02676 8.76221 6.99878 8.76221Z"
+                                        stroke="#4790FF" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M3.18652 5.53516V8.46851" stroke="#4790FF" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M10.8145 5.53516V8.46851" stroke="#4790FF" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                            <h4 class="lg:h-[10px] font-bold text-sm text-[#202020] mb-[5px] lg:mb-2.5">You earn money
+                            </h4>
+                            <p class="font-medium text-xs text-[#575E6A]">You will receive up to 6% of the amount of
+                                each transaction made by users you
+                                attract.</p>
+                        </div>
+                    </div>
+                    <div id="alf__select"
+                        class="md:hidden mb-2 overflow-hidden h-[43px] transition-all duration-300 max-h-[800px]">
+                        <div
+                            class="flex items-center justify-between px-3 py-2 border border-[#AEB5BF] rounded-xl mb-[5px]">
+                            <h3 class="font-bold text-sm text-[#202020] ">How it works?</h3>
+                            <button id="alf__select__arrow" class="transition-all duration-300  rotate-180">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 14L12.5 10L8 14" stroke="#202020" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 gap-2.5">
+                            <div
+                                class="w-full flex items-center gap-2.5 lg:max-h-[131px] bg-white py-3.5 pl-2.5 pr-6 rounded-2xl">
+                                <div class="bg-[#EDF4FF] rounded-full max-w-10 p-3 max-h-10">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.70656 7.29688C10.2066 8.79688 10.2066 11.2235 8.70656 12.7169C7.20656 14.2102 4.7799 14.2169 3.28656 12.7169C1.79323 11.2169 1.78656 8.79021 3.28656 7.29688"
+                                            stroke="#4790FF" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7.06014 8.94188C5.50014 7.38188 5.50014 4.84854 7.06014 3.28188C8.62014 1.71521 11.1535 1.72188 12.7201 3.28188C14.2868 4.84188 14.2801 7.37521 12.7201 8.94188"
+                                            stroke="#4790FF" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="">
+                                    <h4 class="lg:h-[10px] font-bold text-xs text-[#202020] mb-1 lg:mb-2.5 ">Copy the
+                                        referral link</h4>
+                                    <p class="font-medium text-xs text-[#575E6A]">
+                                        The link can be sent to friends, shared on social networks, or published on a
+                                        website or
+                                        blog.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="w-full flex items-center gap-2.5 lg:max-h-[131px] bg-white py-3.5 pl-2.5 pr-6 rounded-2xl">
+                                <div class="bg-[#EDF4FF] rounded-full max-w-10 p-3 max-h-10">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3332 13H9.6665" stroke="#4790FF" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M11 14.3307V11.6641" stroke="#4790FF" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M8.10673 7.24927C8.04006 7.2426 7.96006 7.2426 7.88673 7.24927C6.30006 7.19594 5.04006 5.89594 5.04006 4.29594C5.0334 2.6626 6.36006 1.33594 7.9934 1.33594C9.62673 1.33594 10.9534 2.6626 10.9534 4.29594C10.9534 5.89594 9.68673 7.19594 8.10673 7.24927Z"
+                                            stroke="#4790FF" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7.99336 14.5424C6.78003 14.5424 5.57336 14.2357 4.65336 13.6224C3.04003 12.5424 3.04003 10.7824 4.65336 9.70906C6.48669 8.4824 9.49336 8.4824 11.3267 9.70906"
+                                            stroke="#4790FF" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <div class="">
+                                    <h4 class="lg:h-[10px] font-bold text-xs text-[#202020] mb-1 lg:mb-2.5">Registration
+                                    </h4>
+                                    <p class="font-medium text-xs text-[#575E6A]">Let them sign up and join Monday using
+                                        your
+                                        referral link.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="w-full flex items-center gap-2.5 lg:max-h-[131px] bg-white py-3.5 pl-2.5 pr-6 rounded-2xl">
+                                <div class="bg-[#EDF4FF] rounded-full max-w-10 p-3 max-h-10">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.8668 5.28097V8.71431C12.8668 10.7676 11.6935 11.6476 9.93347 11.6476H4.07347C3.77347 11.6476 3.4868 11.621 3.22013 11.561C3.05347 11.5343 2.89347 11.4877 2.74681 11.4343C1.74681 11.061 1.14014 10.1943 1.14014 8.71431V5.28097C1.14014 3.22763 2.31347 2.34766 4.07347 2.34766H9.93347C11.4268 2.34766 12.5001 2.98099 12.7868 4.42765C12.8335 4.69432 12.8668 4.96763 12.8668 5.28097Z"
+                                            stroke="#4790FF" stroke-miterlimit="10" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M14.8674 7.283V10.7163C14.8674 12.7697 13.694 13.6497 11.934 13.6497H6.07404C5.5807 13.6497 5.13404 13.583 4.74738 13.4364C3.95404 13.143 3.41404 12.5364 3.2207 11.563C3.48737 11.623 3.77404 11.6497 4.07404 11.6497H9.93404C11.694 11.6497 12.8674 10.7697 12.8674 8.71635V5.283C12.8674 4.96967 12.8407 4.68969 12.7874 4.42969C14.054 4.69635 14.8674 5.58967 14.8674 7.283Z"
+                                            stroke="#4790FF" stroke-miterlimit="10" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M6.99878 8.76221C7.9708 8.76221 8.75879 7.97422 8.75879 7.0022C8.75879 6.03018 7.9708 5.24219 6.99878 5.24219C6.02676 5.24219 5.23877 6.03018 5.23877 7.0022C5.23877 7.97422 6.02676 8.76221 6.99878 8.76221Z"
+                                            stroke="#4790FF" stroke-miterlimit="10" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M3.18652 5.53516V8.46851" stroke="#4790FF" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10.8145 5.53516V8.46851" stroke="#4790FF" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <div class="">
+                                    <h4 class="lg:h-[10px] font-bold text-xs text-[#202020] mb-1 lg:mb-2.5">You earn
+                                        money
+                                    </h4>
+                                    <p class="font-medium text-xs text-[#575E6A]">You will receive up to 6% of the
+                                        amount of
+                                        each transaction made by users you
+                                        attract.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="affiliate__box__right alf__right w-full flex justify-center  gap-2.5">
+                    <div class=" bg-white alf__right w-full rounded-3xl p-3 md:py-5 md:pl-5 md:pr-3.5">
+                        <div
+                            class="max-md:flex justify-between items-center max-md:w-full max-md:border-b  max-md:border-[#F2F2F2] max-md:pb-3.5 mb-2.5">
+                            <h5
+                                class="font-bold text-base md:text-xl text-[#202020] md:border-b md:border-[#F2F2F2] md:pb-3 md:mb-3">
+                                Invited referrals
+                            </h5>
+                            <div
+                                class="relative max-md:max-w-[117px]  w-full flex items-center md:border-b md:border-[#F2F2F2] md:pb-3 md:mb-3">
+                                <img src="./img/affiliate-images/avatar_1.png" alt="affiliate avatar"
+                                    class="max-w-[30px] h-[30px] absolute left-0 z-10">
+                                <img src="./img/affiliate-images/avatar_2.png" alt="affiliate avatar"
+                                    class="max-w-[30px] h-[30px] absolute left-[15px] md:left-5 z-20">
+                                <img src="./img/affiliate-images/avatar_3.png" alt="affiliate avatar"
+                                    class="max-w-[30px] h-[30px] absolute left-[30px] md:left-10 z-30">
+                                <p class="font-bold text-sm md:text-base text-[#202020] pl-[65px] md:pl-[87px]">12 users
+                                </p>
+                            </div>
+                        </div>
+                        <div class="max-md:hidden w-full grid grid-cols-4 gap-x-2.5 mb-[15px]">
+                            <div class="w-full flex items-center gap-1 ">
+                                <img src="./img/affiliate-images/avatar_3.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF]">Michael_M,</p>
+                            </div>
+                            <div class=" w-full flex items-center gap-1 pl-2.5">
+                                <img src="./img/affiliate-images/avatar_2.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF]">Linda86,</p>
+                            </div>
+                            <div class=" w-full flex items-center gap-1">
+                                <img src="./img/affiliate-images/avatar_1.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF]">Creomaster, </p>
+                            </div>
+                            <div class=" w-full  flex items-center gap-1">
+
+                            </div>
+                        </div>
+                        <div class="max-md:hidden flex items-center gap-2.5">
+                            <div class=" w-[84px] flex items-center gap-1">
+                                <img src="./img/affiliate-images/avatar_4.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF]">_paul,</p>
+                            </div>
+                            <div class=" w-[84px] flex items-center gap-1">
+                                <img src="./img/affiliate-images/avatar_4.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF]">Alex_j,</p>
+                            </div>
+                            <div class=" w-[84px] flex items-center gap-1">
+                                <img src="./img/affiliate-images/avatar_4.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF]">Filimon,</p>
+                            </div>
+                            <a href="#"
+                                class="  w-[122px] flex items-center pl-2 py-1.5 pr-1.5 border rounded-[100px] border-[#F2F2F2] gap-[5px] font-bold text-xs text-[#575E6A]">
+                                 Show all users
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="18" height="18" rx="9" fill="#F1F3F9" />
+                                    <path d="M4.96582 9.3125H12.4141H4.96582Z" fill="#202020" />
+                                    <path d="M4.96582 9.3125H12.4141" stroke="#202020" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.68945 5.58594V13.0342V5.58594Z" fill="#202020" />
+                                    <path d="M8.68945 5.58594V13.0342" stroke="#202020" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex md:hidden flex-wrap gap-[5px] w-full mb-2.5">
+                            <div class="max-w-[116px] w-full flex items-center gap-1 ">
+                                <img src="./img/affiliate-images/avatar_3.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF]">Michael_M,</p>
+                            </div>
+                            <div class="max-w-[116px]  w-full flex items-center gap-1 pl-2.5">
+                                <img src="./img/affiliate-images/avatar_2.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF]">Linda86,</p>
+                            </div>
+                            <div class="max-w-[116px]  w-full flex items-center gap-1">
+                                <img src="./img/affiliate-images/avatar_1.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF]">Creomaster, </p>
+                            </div>
+                            <div class="max-w-[116px] flex items-center gap-1">
+                                <img src="./img/affiliate-images/avatar_4.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF]">_paul,</p>
+                            </div>
+                            <div class="max-w-[116px] flex items-center gap-1">
+                                <img src="./img/affiliate-images/avatar_4.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF]">Alex_j,</p>
+                            </div>
+                            <div class="max-w-[116px] flex items-center gap-1">
+                                <img src="./img/affiliate-images/avatar_4.png" alt="affiliate avatar"
+                                    class="w-5 h-5 object-cover">
+                                <p class="font-bold text-base text-[#4790FF] max-md:hidden">Filimon,</p>
+                                <p class="md:hidden font-bold text-base text-[#4790FF]">Filimon...</p>
+
+                            </div>
+                        </div>
+                        <a href="#"
+                            class="md:hidden w-full flex items-center max-md:justify-center pl-2 py-3 md:py-1.5 pr-1.5 border rounded-[100px] border-[#F2F2F2] gap-[5px] font-bold text-sm md:text-xs text-[#575E6A]">
+                             Show all users
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="18" height="18" rx="9" fill="#F1F3F9" />
+                                <path d="M4.96582 9.3125H12.4141H4.96582Z" fill="#202020" />
+                                <path d="M4.96582 9.3125H12.4141" stroke="#202020" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.68945 5.58594V13.0342V5.58594Z" fill="#202020" />
+                                <path d="M8.68945 5.58594V13.0342" stroke="#202020" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="flex flex-col bg-white alf__right w-full rounded-3xl px-5 pt-[15px] pb-[21px]">
+                        <div
+                            class="flex items-center justify-between pb-3 md:pb-2.5 mb-[5px] md:mb-[13px] border-b border-[#F2F2F2]">
+                            <h4 class="font-bold text-base md:text-xl text-[#202020]">Your earnings</h4>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                    stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 8V13" stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M11.9946 16H12.0036" stroke="#B7C3D6" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="affiliate__box__right__bottom w-full flex items-center justify-between">
+                            <div class="flex items-center w-full gap-[9px]">
+                                <div
+                                    class="max-w-[26px] p-[5px] md:p-2 md:max-w-10 rounded-md md:rounded-xl bg-[#F1F3F9]">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.5 13.7522C9.5 14.7222 10.25 15.5022 11.17 15.5022H13.05C13.85 15.5022 14.5 14.8222 14.5 13.9722C14.5 13.0622 14.1 12.7322 13.51 12.5222L10.5 11.4722C9.91 11.2622 9.51001 10.9422 9.51001 10.0222C9.51001 9.18219 10.16 8.49219 10.96 8.49219H12.84C13.76 8.49219 14.51 9.27219 14.51 10.2422"
+                                            stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 7.5V16.5" stroke="#575E6A" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2"
+                                            stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M17 3V7H21" stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M22 2L17 7" stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <p
+                                    class="max-w-[89px] md:max-w-[79px] font-bold text-sm md:text-base text-[#9CA5B3] leading-4">
+                                    Total amount:</p>
+                            </div>
+                            <p
+                                class="text-[#202020] font-bold md:text-2xl text-xl lg:text-4xl lg:leading-[48.6px] md:leading-6 flex gap-1 items-baseline">
+                                100.000 <span
+                                    class="uppercase text-[#9CA5B3] lg:text-[20px] md:text-base text-xs font-bold leading-[16.2px]">UZS</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="text-left bg-[#F1F3F9]  border border-[#AEB5BF] rounded-3xl pt-3 md:pt-[15px] pb-[15px] md:pb-[17px] mb-2.5">
+                <div
+                    class="flex items-center   border-b border-[#AEB5BF] pb-[15px] pl-3 md:pl-10 pr-3 md:pr-10 lg:pr-[107px]">
+                    <h2 class="font-bold text-xs md:text-base text-[#575E6A] mr-2.5 md:mr-[150px]">#</h2>
+                    <h2 class="font-bold text-xs md:text-base text-[#575E6A] mr-auto md:mr-[159px] w-[101px]">Date</h2>
+                    <h2 class="font-bold text-xs md:text-base text-[#575E6A] w-[109px]">Referral</h2>
+                    <h2 class="font-bold text-xs md:text-base text-[#575E6A] ml-auto w-[104px] md:w-[140px]"> Amount
+                    </h2>
+                </div>
+                <div
+                    class="flex items-center alf_table border-b border-[#AEB5BF] pt-[3px] pb-2 md:py-[15px] pl-3 md:pl-10 pr-3 md:pr-10 lg:pr-[107px]">
+                    <p class="font-bold text-xs md:text-sm max-md:hidden text-[#575E6A] mr-[146px]">01</p>
+                    <p
+                        class="flex flex-col items-start font-bold text-xs md:text-sm text-[#575E6A] mr-auto md:mr-[159px]">
+                        <span class="md:hidden">#01</span>
+                        15 March, 10:50
+                    </p>
+                    <p
+                        class="font-bold max-md:max-w-[91px] max-w-[115px] w-full text-xs md:text-sm text-[#4790FF] flex items-center gap-1 md:gap-2">
+                        <img src="./img/affiliate-images/avatar_1.png" alt="avatar affiliate"
+                            class="md:w-[30px] w-5 h-5 md:h-[30px] object-cover">
+                        Michael_M
+                    </p>
+                    <p class="font-bold text-xs md:text-sm text-[#575E6A] ml-auto max-md:w-[104px] md:w-[140px]">
+                        <span class="max-md:hidden">+ 1000 UZS</span>
+                        <span class="md:hidden">+ 1000</span>
+                    </p>
+                </div>
+                <div
+                    class="flex items-center alf_table border-b border-[#AEB5BF] pt-[3px] pb-2 md:py-[15px] pl-3 md:pl-10 pr-3 md:pr-10 lg:pr-[107px]">
+                    <p class="font-bold text-xs md:text-sm max-md:hidden text-[#575E6A] mr-[146px]">02</p>
+                    <p
+                        class="flex flex-col items-start font-bold text-xs md:text-sm text-[#575E6A] mr-auto md:mr-[159px]">
+                        <span class="md:hidden">#02</span>
+                        15 March, 10:50
+                    </p>
+                    <p
+                        class="font-bold max-md:max-w-[91px] max-w-[115px] w-full text-xs md:text-sm text-[#4790FF] flex items-center gap-1 md:gap-2">
+                        <img src="./img/affiliate-images/avatar_2.png" a#4790FF="avatar affiliate"
+                            class="md:w-[30px] w-5 h-5 md:h-[30px] object-cover">
+                        Linda86
+                    </p>
+                    <p class="font-bold text-xs md:text-sm text-[#575E6A] ml-auto max-md:w-[104px] md:w-[140px]">
+                        <span class="max-md:hidden">+ 500 UZS</span>
+                        <span class="md:hidden">+ 100 000 000</span>
+                    </p>
+                </div>
+                <div
+                    class="flex items-center alf_table md:pt-[15px] pt-[3px]  pl-3 md:pl-10 pr-3 md:pr-10 lg:pr-[107px]">
+                    <p class="font-bold text-xs md:text-sm max-md:hidden text-[#575E6A] mr-[146px]">03</p>
+                    <p
+                        class="flex flex-col items-start font-bold text-xs md:text-sm text-[#575E6A] mr-auto md:mr-[159px]">
+                        <span class="md:hidden">#03</span>
+                        15 March, 10:50
+                    </p>
+                    <p
+                        class="font-bold max-md:max-w-[91px] max-w-[115px] w-full text-xs md:text-sm text-[#4790FF] flex items-center gap-1 md:gap-2">
+                        <img src="./img/affiliate-images/avatar_3.png" alt="avatar affiliate"
+                            class="md:w-[30px] w-5 h-5 md:h-[30px] object-cover">
+                        Creomaster
+                    </p>
+                    <p class="font-bold text-xs md:text-sm text-[#575E6A] ml-auto max-md:w-[104px] md:w-[140px]">
+                        <span class="max-md:hidden"> + 100000 UZS</span>
+                        <span class="md:hidden">+ 1000</span>
+                    </p>
+                </div>
+            </div>
+            <button
+                class="hover:bg-black max-md:hidden hover:border-transparent hover:text-white transition-all duration-300 inline-flex items-center max-md:justify-center gap-0.5  font-bold text-sm text-[#202020] border border-[#AEB5BF] rounded-xl pt-2.5 pb-[9px] pl-7 pr-3.5 mx-auto">
+                View all transactions
+                <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.67285 13.4453H18.4315" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M13.0518 8.07031V18.8289" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="hover:bg-transparent md:hidden hover:border-black hover:text-black transition-all duration-300 w-full inline-flex items-center max-md:justify-center gap-0.5 border-black  font-bold text-sm text-white border 
+         rounded-xl pt-2.5 pb-[9px] pl-7 bg-black  pr-3.5 mx-auto">
+                View all transactions
+                <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.67285 13.4453H18.4315" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M13.0518 8.07031V18.8289" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <footer class="bg-[#202020] lg:pt-[125px] pt-12 lg:pb-[70px] pb-[60px]">
+        <div class="max-w-[1320px] mx-auto px-5 md:block hidden">
+            <div class="lg:flex md:grid grid-cols-2 gap-20 items-center justify-between mb-16">
+                <ul>
+                    <p class="text-white font-bold text-lg mb-6">About Monday</p>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">About the project
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">Agency contract
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base"
+                            href="#">Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <p class="text-white font-bold text-lg mb-6">Help</p>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">Service rules
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">Question answer
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base"
+                            href="#">Support
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <p class="text-white font-bold text-lg mb-6">Useful</p>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">For customers
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">For performers
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base"
+                            href="#">
+                            PRO account
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <p class="text-white font-bold text-lg mb-6">Community</p>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">Blog Monday
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">Affiliate program
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base"
+                            href="#">Verification
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="justify-end flex gap-4 items-center">
+                <a class="hover:bg-white transition-all hover:text-[#202020] text-[#A6A6A6] font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+                    href="#">Sign In
+                </a>
+                <a class="hover:bg-white transition-all hover:text-[#202020] text-white items-center gap-2.5 font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+                    href="#">
+                    Join
+                    <span>
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.1654 14V12.6667C11.1654 11.9594 10.8844 11.2811 10.3843 10.781C9.88422 10.281 9.20594 10 8.4987 10H4.4987C3.79145 10 3.11318 10.281 2.61308 10.781C2.11298 11.2811 1.83203 11.9594 1.83203 12.6667V14"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M6.4987 7.33333C7.97146 7.33333 9.16536 6.13943 9.16536 4.66667C9.16536 3.19391 7.97146 2 6.4987 2C5.02594 2 3.83203 3.19391 3.83203 4.66667C3.83203 6.13943 5.02594 7.33333 6.4987 7.33333Z"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.166 5.33203V9.33203" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M15.166 7.33203H11.166" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="md:hidden block">
+            <div class="w-full px-3">
+                <ul class="flex flex-col gap-6 mb-12">
+                    <li>
+                        <p
+                            class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+                            About Monday
+                            <span class="footer_rotate transition-height">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </p>
+                        <ul
+                            class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">About the project
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Agency contract
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p
+                            class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+                            Help
+                            <span class="footer_rotate transition-height">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </p>
+                        <ul
+                            class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Service rules
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Question answer
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Support
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p
+                            class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+                            Useful
+                            <span class="footer_rotate transition-height">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </p>
+                        <ul
+                            class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">For
+                                    customers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">For
+                                    performers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">PRO
+                                    account
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p
+                            class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+                            Community
+                            <span class="footer_rotate transition-height">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </p>
+                        <ul
+                            class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Blog Monday
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Affiliate program
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Verification
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex justify-center gap-4 items-center">
+                <a class="hover:bg-white transition-all hover:text-[#202020] text-[#A6A6A6] font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+                    href="#">Sign In
+                </a>
+                <a class="hover:bg-white transition-all hover:text-[#202020] text-white items-center gap-2.5 font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+                    href="#">
+                    Join
+                    <span>
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.1654 14V12.6667C11.1654 11.9594 10.8844 11.2811 10.3843 10.781C9.88422 10.281 9.20594 10 8.4987 10H4.4987C3.79145 10 3.11318 10.281 2.61308 10.781C2.11298 11.2811 1.83203 11.9594 1.83203 12.6667V14"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M6.4987 7.33333C7.97146 7.33333 9.16536 6.13943 9.16536 4.66667C9.16536 3.19391 7.97146 2 6.4987 2C5.02594 2 3.83203 3.19391 3.83203 4.66667C3.83203 6.13943 5.02594 7.33333 6.4987 7.33333Z"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.166 5.33203V9.33203" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M15.166 7.33203H11.166" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.btn_footer').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const infoElement = btn.nextElementSibling;
+                const footerRotate = btn.querySelector('.footer_rotate');
+
+                if (infoElement.classList.contains('h-0')) {
+                    infoElement.classList.remove('h-0');
+                    infoElement.style.height = `${infoElement.scrollHeight}px`;
+                    footerRotate.classList.add('rotate-180');
+                } else {
+                    infoElement.style.height = '0';
+                    infoElement.addEventListener('transitionend', () => {
+                        infoElement.classList.add('h-0');
+                        footerRotate.classList.remove('rotate-180');
+                    }, { once: true });
+                }
+            });
+        });
+    </script>
+
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/affiliate.js"></script>
+</body>
+
+</html>

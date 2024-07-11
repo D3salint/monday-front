@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONDAY</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<style>
+    .black_checkbox {
+        width: 18px !important;
+        height: 18px !important;
+        accent-color: #202020;
+    }
+
+    @media (max-width: 1195px) {
+        #new_project-btns {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .max-width-318px{
+            max-width: 250px !important;
+            width: 100%;
+        }
+    }
+
+    .transition-all {
+        transition: all .3s ease-in-out;
+    }
+</style>
+
+<body class="">
+
+    <header class="lg:pt-8 bg-white">
+        <div class="max-w-[1384px] px-3 mx-auto lg:flex hidden items-center justify-between">
+            <div class="flex items-center gap-2.5 max-w-[600px] w-full">
+                <a class="text-[#202020] font-bold text-base uppercase select-none" href="index.html">MONDAY
+                </a>
+                <button
+                    class="py-2.5 w-full max-w-[83px] px-2.5 inline-flex items-center gap-1.5 bg-[#FAFAFC] rounded-xl text-[#B7C3D6] uppercase font-medium text-base active:opacity-80 transition-all">
+                    <img src="./img/header/global.svg" alt="global">
+                    <p>Uz</p>
+                    <span>
+                        <svg class="flex" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.50391 1L6.00391 5L10.5039 1" stroke="#B7C3D6" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="w-full relative">
+                    <div
+                        class="flex items-center justify-between max-w-[316px] w-full h-11 px-4 rounded-full bg-[#FAFAFC]">
+                        <input autocomplete="off" id="search" placeholder="Search for services..."
+                            class="placeholder:text-[#9CA5B3] placeholder:font-medium placeholder:text-sm text-[#9CA5B3] font-medium text-sm outline-none border-none bg-transparent max-w-[250px] w-full"
+                            type="search">
+                        <label for="search" class="cursor-pointer flex" id="searchLabel">
+                            <img src="./img/header/search.svg" alt="search" class="search-icon">
+                        </label>
+                    </div>
+                    <div id="search__menu"
+                        class="search_shadow hidden absolute bg-[#FCFCFC] top-[60px] max-w-[316px] w-full py-2.5 px-4 rounded-2xl">
+                        <p class="text-[#202020] font-bold text-xs mb-2">Top services🔥</p>
+                        <div class="pb-2 border-b mb-2">
+                            <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">Social &
+                                SMM</a>
+                            <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">SEO</a>
+                            <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md"
+                                href="#">Copywriting</a>
+                            <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">Web
+                                Development</a>
+                            <a class="text-[#8F8F8F] font-medium text-[10px] p-1 border rounded-md" href="#">Scripts &
+                                Telegram
+                                Bots</a>
+                        </div>
+                        <div>
+                            <p class="text-[#B7C3D6] font-bold text-[10px]">Recent</p>
+                            <a class="search_recent text-[#575E6A] font-medium text-xs flex items-center gap-1 relative"
+                                href="#"><img class="flex" src="./img/header/clock.svg" alt="clock">Wibtrix site
+                                improvements</a>
+                            <a class="search_recent text-[#575E6A] font-medium text-xs flex items-center gap-1 relative"
+                                href="#"><img class="flex" src="./img/header/clock.svg" alt="clock">Seo optimisation</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const searchInput = document.getElementById('search');
+                        const searchMenu = document.getElementById('search__menu');
+                        const searchRecentItems = document.querySelectorAll('.search_recent');
+
+                        function showSearchMenu() {
+                            searchMenu.classList.remove('hidden');
+                            // searchMenu.classList.add('animate__animated', 'animate__fadeIn');
+                        }
+
+                        function hideSearchMenu() {
+                            searchMenu.classList.add('hidden');
+                            // searchMenu.classList.remove('animate__animated', 'animate__fadeIn');
+                        }
+
+                        searchInput.addEventListener('focus', showSearchMenu);
+
+                        document.addEventListener('click', (event) => {
+                            if (!searchInput.contains(event.target) && !searchMenu.contains(event.target)) {
+                                hideSearchMenu();
+                            }
+                        });
+
+                        window.addEventListener('resize', hideSearchMenu);
+
+                        searchRecentItems.forEach(item => {
+                            item.addEventListener('mouseenter', () => {
+                                if (!item.querySelector('.close-button')) {
+                                    const closeButton = document.createElement('span');
+                                    closeButton.innerHTML = '&times;';
+                                    closeButton.classList.add('absolute', 'right-0', 'text-[#9CA5B3]', 'hover:text-[#202020]', 'font-bold', 'transition-all', 'duration-200', 'ease-in-out', 'text-xl', 'close-button');
+                                    closeButton.addEventListener('click', (event) => {
+                                        event.stopPropagation();
+                                        item.remove();
+                                    });
+                                    item.appendChild(closeButton);
+                                }
+                            });
+
+                            item.addEventListener('mouseleave', () => {
+                                const closeButton = item.querySelector('.close-button');
+                                if (closeButton) {
+                                    closeButton.remove();
+                                }
+                            });
+                        });
+                    });
+
+                </script>
+            </div>
+            <div class="flex items-center gap-10">
+                <div>
+                    <ul class="flex items-center gap-6">
+                        <li>
+                            <a href="#" class="text-[#9CA5B3] font-bold text-base animated-underline">Orders
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-[#9CA5B3] font-bold text-base animated-underline">Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-[#9CA5B3] font-bold text-base animated-underline">Sellers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-[#9CA5B3] font-bold text-base flex items-center gap-1.5 animated-underline">
+                                <span>
+                                    <img class="flex" src="./img/header/lovely.svg" alt="lovely">
+                                </span>Favorites
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-5">
+                    <a class="relative" href="#">
+                        <img src="./img/header/bag.svg" alt="bag">
+                        <div
+                            class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#4790FF] absolute top-[-5px] right-[-7px] border-white border">
+                            2
+                        </div>
+                    </a>
+                    <a class="relative" href="#">
+                        <img src="./img/header/message.svg" alt="message">
+                        <div
+                            class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#FF8E8E] absolute top-[-5px] right-[-7px] border-white border">
+                            2
+                        </div>
+                    </a>
+                    <a class="relative" href="#">
+                        <img src="./img/header/notification.svg" alt="notification">
+                        <div
+                            class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#3bbe1a] absolute top-[-5px] right-[-7px] border-white border">
+                            2
+                        </div>
+                    </a>
+                </div>
+                <div class="flex gap-1">
+                    <a class="hover:opacity-80 transition-all" href="#">
+                        <img src="./img/header/wallet.svg" alt="wallet">
+                    </a>
+                    <button class="flex items-center relative cursor-pointer">
+                        <img class="max-w-11 w-full flex" src="./img/header/avatar.png" alt="avatar">
+                        <div
+                            class="w-2.5 h-2.5 rounded-full border border-white bg-[#62F94D] absolute bottom-0 right-[25px]">
+                        </div>
+                        <img class="flex" src="./img/header/expand.svg" alt="expand">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1384px] lg:block hidden px-5 mx-auto pt-5">
+            <ul class="flex items-center justify-between">
+                <li>
+                    <a id="header_item" class="header_active py-3 px-2 text-[#9CA5B3] font-medium text-base"
+                        href="#">Social & SMM
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">SEO
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Copywriting
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Web Development
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Scripts & Telegram Bots
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Logotypes & Branding
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Web & Mobile Design
+                    </a>
+                </li>
+                <li>
+                    <a id="header_item"
+                        class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">Scripts & Bots
+                    </a>
+                </li>
+                <li class="flex items-center border-l pl-2">
+                    <button class="py-3 px-2 text-[#9CA5B3] font-medium text-base border-b-[2px] border-b-transparent"
+                        href="#">
+                        All Services
+                    </button>
+                    <img src="./img/header/expand.svg" alt="expand">
+                </li>
+            </ul>
+        </div>
+        <div
+            class="lg:hidden pt-12 pb-5 max-w-[1384px] pt- px-5 mx-auto w-full flex items-center gap-2 justify-between">
+            <button>
+                <img src="./img/header/burger.svg" alt="burger">
+            </button>
+            <a class="text-[#202020] font-bold text-sm" href="#">MONDAY</a>
+            <button
+                class="flex items-center py-3 px-2 rounded-xl bg-[#FAFAFC] text-[#9CA5B3] font-medium text-xs uppercase cursor-pointer">
+                Uz
+                <img class="flex" src="./img/header/expand.svg" alt="expand">
+            </button>
+            <div class="flex items-center justify-between max-w-[143px] w-full h-11 px-4 rounded-full bg-[#FAFAFC]">
+                <input id="search" placeholder="Search..."
+                    class="placeholder:text-[#9CA5B3] placeholder:font-medium placeholder:text-sm text-[#9CA5B3] font-medium text-sm outline-none border-none bg-transparent max-w-[70px] w-full"
+                    type="search">
+                <label for="search" class="cursor-pointer flex">
+                    <img src="./img/header/search.svg" alt="search">
+                </label>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="#">
+                    <img src="./img/header/lovely.svg" alt="lovely">
+                </a>
+                <a href="#">
+                    <img src="./img/header/bag.svg" alt="bag">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        let header_items = document.querySelectorAll('#header_item')
+
+        header_items.forEach(function (item, index) {
+            item.addEventListener('click', function () {
+                header_items.forEach(function (item) {
+                    item.classList.remove('header_active')
+                })
+
+                item.classList.add('header_active')
+            })
+        })
+    </script>
+
+    <section class="w-full bg-[#F1F3F9] pb-[54px]">
+        <div class="max-w-[1372px] mx-auto px-3 pt-6">
+            <h1 class="md:text-[43px] text-2xl font-bold text-center mb-5">Describe what needs to be done</h1>
+
+            <div class="flex lg:flex-row flex-col gap-[10px]">
+                <div class="lg:max-w-[318px] max-width-318px hidden lg:block w-full h-full bg-transparent border-[#0000001] border-[1px] rounded-3xl md:px-5 px-3 md:py-[15px] py-3">
+                    <h3 class="text-[#202020] text-sm font-bold  mb-3">Post your task on the exchange.</h3>
+                    <p class="text-[#202020] text-sm  mb-3">Your project will become visible to thousands of
+                        freelancers, and some of them will make you
+                        offers. Study their ratings, portfolios and choose the best of them</p>
+                    <p class="text-[#202020] text-sm font-medium"><span class="text-[#202020] text-sm font-bold">Confirm
+                            your order when you are 100% satisfied with the result.</span> Only after this the
+                        payment will be debited in favor of the selle</p>
+                </div>
+                <div class="lg:max-w-[318px]  lg:hidden w-full h-full bg-transparent border-[#0000001] border-[1px] rounded-3xl md:px-5 px-3 md:py-[15px] py-3">
+                    <h3 class="text-[#202020] text-sm font-bold  mb-3">Post your task on the exchange.</h3>
+                    <p class="text-[#202020] text-sm  mb-3">Your project will become visible to thousands of
+                        freelancers, and some of them will make you
+                        offers. Study their ratings, portfolios and choose the best of them</p>
+                    <p class="text-[#202020] text-sm font-medium"><span class="text-[#202020] text-sm font-bold">Confirm
+                            your order when you are 100% satisfied with the result.</span> Only after this the
+                        payment will be debited in favor of the selle</p>
+                </div>
+
+                <div class="lg:w-[704px] w-full">
+                    <div class="bg-[#fff] md:px-6 md:py-4 py-[10px] px-[10px] rounded-3xl mb-[10px]">
+                        <div class="flex items-center justify-between mb-[13px]">
+                            <div class="flex items-center gap-2">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.99963 16.5H11.9996C15.0146 16.5 15.5546 15.2925 15.7121 13.8225L16.2746 7.8225C16.4771 5.9925 15.9521 4.5 12.7496 4.5H5.24963C2.04713 4.5 1.52213 5.9925 1.72463 7.8225L2.28713 13.8225C2.44463 15.2925 2.98463 16.5 5.99963 16.5Z"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6 4.5V3.9C6 2.5725 6 1.5 8.4 1.5H9.6C12 1.5 12 2.5725 12 3.9V4.5"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M10.5 9.75V10.5C10.5 10.5075 10.5 10.5075 10.5 10.515C10.5 11.3325 10.4925 12 9 12C7.515 12 7.5 11.34 7.5 10.5225V9.75C7.5 9 7.5 9 8.25 9H9.75C10.5 9 10.5 9 10.5 9.75Z"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16.2375 8.25C14.505 9.51 12.525 10.26 10.5 10.515" stroke="#575E6A"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M1.96484 8.45312C3.65234 9.60813 5.55734 10.3056 7.49984 10.5231"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="text-[#202020] md:text-lg font-bold">The main task</span>
+                            </div>
+
+
+                            <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                    stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 8V13" stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M11.9941 16H12.0031" stroke="#B7C3D6" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+
+                        <div class="bg-[#FAFAFC] rounded-xl flex justify-between items-center gap-3 ">
+                            <input id="titleTextarea" autocomplete="off"
+                                class="bg-transparent text-[#202020] font-medium text-base px-4 py-4 w-full  outline-none resize-none placeholder:text-[#9CA5B3] placeholder:font-medium"
+                                placeholder="Write the title here"></input>
+                            <div class="lg:w-[300px]  md:w-[200px] text-center md:inline-block hidden">
+                                <span id="charCountDesktop" class="text-[#9CA5B3] text-sm font-medium">0 of 70
+                                    characters</span>
+                            </div>
+                        </div>
+                        <div class="w-full text-end md:hidden">
+                            <span id="charCountMobile" class="text-[#9CA5B3] text-sm font-medium">0 of 70
+                                characters</span>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-[#fff] md:px-6 md:py-4 py-[10px] px-[10px] rounded-3xl mb-[10px]">
+                        <div class="flex items-center justify-between mb-[13px]">
+                            <div class="flex items-center gap-2">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.24805 1.5H6.74805C2.99805 1.5 1.49805 3 1.49805 6.75V11.25C1.49805 15 2.99805 16.5 6.74805 16.5H11.248C14.998 16.5 16.498 15 16.498 11.25V9.75"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M12.0304 2.26592L6.1204 8.17592C5.8954 8.40092 5.6704 8.84342 5.6254 9.16592L5.3029 11.4234C5.1829 12.2409 5.7604 12.8109 6.5779 12.6984L8.8354 12.3759C9.1504 12.3309 9.5929 12.1059 9.8254 11.8809L15.7354 5.97092C16.7554 4.95092 17.2354 3.76592 15.7354 2.26592C14.2354 0.765922 13.0504 1.24592 12.0304 2.26592Z"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.1836 3.10938C11.6861 4.90188 13.0886 6.30438 14.8886 6.81438"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                                <span class="text-[#202020] md:text-lg font-bold">Detailed description of the
+                                    task</span>
+                            </div>
+
+
+                            <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                    stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 8V13" stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M11.9941 16H12.0031" stroke="#B7C3D6" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <div class="bg-[#FAFAFC] relative rounded-xl flex justify-between items-end gap-3 p-4 mb-[1px]">
+                            <textarea id="descriptionTextarea"
+                                class="bg-transparent resize-none text-[#202020] font-medium text-base outline-none w-full md:h-[222px] h-[122px] pl-2 pt-1"
+                                maxlength="500"
+                                placeholder="Describe what exactly you need, in what volume and in what time frame"></textarea>
+                            <div class="w-[157px] md:inline-block hidden absolute right-0">
+                                <span id="descCharCountDesktop" class="text-[#9CA5B3] text-sm font-medium">0 of 500
+                                    characters</span>
+                            </div>
+                        </div>
+                        <div class="w-full text-end md:hidden">
+                            <span id="descCharCountMobile" class="text-[#9CA5B3] text-sm font-medium">0 of 500
+                                characters</span>
+                        </div>
+
+
+                        <div class="text-[#FF8E8E] flex text-xs gap-3">
+                            <svg class="cursor-pointer" width="36" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                    stroke="#FF8E8E" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 8V13" stroke="#FF8E8E" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M11.9941 16H12.0031" stroke="#FF8E8E" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <p>Do not provide contacts unless absolutely necessary. Communications and orders outside of
+                                Monday carry a high risk of fraud. And inside Monday they go smoothly and safely.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bg-[#fff] lg:w-[518px] h-full p-[10px] pt-4 rounded-3xl mb-[10px] lg:hidden">
+                        <div class="flex items-center justify-between mb-[13px]">
+                            <div class="flex items-center gap-2 pl-2">
+                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17 7.5V11.25C17 15 15.5 16.5 11.75 16.5H7.25C3.5 16.5 2 15 2 11.25V6.75C2 3 3.5 1.5 7.25 1.5H11"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M17 7.5H14C11.75 7.5 11 6.75 11 4.5V1.5L17 7.5Z" stroke="#575E6A"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                                <span class="text-[#202020] md:text-lg font-bold">Attach file</span>
+                            </div>
+
+
+                            <div class="text-xs text-[#9CA5B3] flex flex-col items-end gap-y-1">
+                                <span>Up to <span class="font-medium">10 files</span></span>
+                                <span>No more than <span class="font-medium">4 MB</span></span>
+                            </div>
+                        </div>
+
+                        <div class="selected-files-mobile mb-[10px]">
+
+                        </div>
+
+
+                        <div class="flex">
+                            <input type="file" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx"
+                                class="hidden px-5 sectFileClass-mobile" id="sectFile-mobile" />
+
+                            <label for="sectFile-mobile"
+                                class=" cursor-pointer flex w-full justify-center items-center rounded-xl border-dotted border-[#575E6A] border-[1px] gap-[10px] py-3 hover:opacity-70 active:opacity-60">
+                                <svg class="" width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.00033 11.8359V7.83594L4.66699 9.16927" stroke="#575E6A"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6 7.83594L7.33333 9.16927" stroke="#575E6A" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M14.6663 7.16927V10.5026C14.6663 13.8359 13.333 15.1693 9.99967 15.1693H5.99967C2.66634 15.1693 1.33301 13.8359 1.33301 10.5026V6.5026C1.33301 3.16927 2.66634 1.83594 5.99967 1.83594H9.33301"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M14.6663 7.16927H11.9997C9.99967 7.16927 9.33301 6.5026 9.33301 4.5026V1.83594L14.6663 7.16927Z"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                Add file
+                            </label>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bg-[#fff] md:px-6 md:py-4 px-[15px] py-[15px] rounded-3xl mb-[10px]">
+                        <div class="flex items-center justify-between mb-[13px]">
+                            <div class="flex items-center gap-2">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.53 10.1625C13.215 10.47 13.035 10.9125 13.08 11.385C13.1475 12.195 13.89 12.7875 14.7 12.7875H16.125V13.68C16.125 15.2325 14.8575 16.5 13.305 16.5H4.695C3.1425 16.5 1.875 15.2325 1.875 13.68V8.63251C1.875 7.08001 3.1425 5.8125 4.695 5.8125H13.305C14.8575 5.8125 16.125 7.08001 16.125 8.63251V9.71251H14.61C14.19 9.71251 13.8075 9.87749 13.53 10.1625Z"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M1.875 9.30455V5.87709C1.875 4.98459 2.4225 4.18955 3.255 3.87455L9.21 1.62455C10.14 1.27205 11.1375 1.96208 11.1375 2.95958V5.80957"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M16.9191 10.4759V12.021C16.9191 12.4335 16.5891 12.7709 16.1691 12.7859H14.6991C13.8891 12.7859 13.1466 12.1934 13.0791 11.3834C13.0341 10.9109 13.2141 10.4684 13.5291 10.1609C13.8066 9.87592 14.1891 9.71094 14.6091 9.71094H16.1691C16.5891 9.72594 16.9191 10.0634 16.9191 10.4759Z"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M5.25 9H10.5" stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <span class="text-[#202020] md:text-lg font-bold">Price</span>
+                            </div>
+
+
+                            <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                    stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 8V13" stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M11.9941 16H12.0031" stroke="#B7C3D6" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+
+                        <div class="bg-[#FAFAFC] rounded-xl flex justify-between items-center gap-3 p-4 mb-6">
+                            <input type="text" style="accent-color: #202020;"
+                                class="bg-transparent w-full outline-none h-full pl-2  placeholder:text-[#9CA5B3] placeholder:font-medium accent-black text-black"
+                                maxlength="70" placeholder="Enter price here">
+                            <span class="text-[#9CA5B3] font-medium">UZS</span>
+                        </div>
+
+                        <div class="md:flex flex-col gap-6 px-4 mb-4">
+                            <div class="flex gap-2 items-center md:mb-0 mb-3">
+                                <div class="w-[18px] h-[18px]" >
+                                <input id="I_am_ready_to_consider" type="checkbox" class="block black_checkbox">
+                                </div>
+                                <label for="I_am_ready_to_consider" class="text-[#202020] text-sm font-bold">
+                                    I am ready to consider offers with a higher price if the level of the performer is
+                                    higher
+                                </label>
+                            </div>
+
+                           <div class="md:flex items-center gap-6" >
+                            <div class="flex gap-2 items-center md:mb-0 mb-3">
+                                <div class="w-[18px] h-[18px]" >
+                                    <input id="I_am_ready_to_consider2" type="checkbox" class="block black_checkbox">
+                                    </div>
+                                <label for="I_am_ready_to_consider2" class="text-[#202020] text-sm font-bold">
+                                    Only for PRO
+                                </label>
+                            </div>
+
+                            <div class="flex gap-2 items-center md:mb-0 mb-3">
+                                <div class="w-[18px] h-[18px]" >
+                                    <input id="I_am_ready_to_consider3" type="checkbox" class="block black_checkbox">
+                                    </div>
+                                <label for="I_am_ready_to_consider3" class=" text-[#202020] text-sm font-bold">
+                                    Only for Verified Members
+                                    <svg class="inline-block" width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.3346 9.16957C13.3346 12.5029 11.0013 14.1696 8.22797 15.1362C8.08274 15.1855 7.92499 15.1831 7.7813 15.1296C5.0013 14.1696 2.66797 12.5029 2.66797 9.16957V4.5029C2.66797 4.32609 2.73821 4.15652 2.86323 4.0315C2.98826 3.90648 3.15782 3.83624 3.33464 3.83624C4.66797 3.83624 6.33464 3.03624 7.49464 2.0229C7.63587 1.90224 7.81554 1.83594 8.0013 1.83594C8.18707 1.83594 8.36673 1.90224 8.50797 2.0229C9.67464 3.0429 11.3346 3.83624 12.668 3.83624C12.8448 3.83624 13.0143 3.90648 13.1394 4.0315C13.2644 4.15652 13.3346 4.32609 13.3346 4.5029V9.16957Z"
+                                            stroke="#4790FF" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6 8.4974L7.33333 9.83073L10 7.16406" stroke="#4790FF"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </label>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#fff] md:px-6 md:py-4 py-[10px] px-[10px] rounded-3xl mb-[10px]">
+                        <div class="flex items-center justify-between mb-[13px]">
+                            <div class="flex items-center gap-2">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.75 7.5H14.25C15.75 7.5 16.5 6.75 16.5 5.25V3.75C16.5 2.25 15.75 1.5 14.25 1.5H12.75C11.25 1.5 10.5 2.25 10.5 3.75V5.25C10.5 6.75 11.25 7.5 12.75 7.5Z"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M3.75 16.5H5.25C6.75 16.5 7.5 15.75 7.5 14.25V12.75C7.5 11.25 6.75 10.5 5.25 10.5H3.75C2.25 10.5 1.5 11.25 1.5 12.75V14.25C1.5 15.75 2.25 16.5 3.75 16.5Z"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M4.5 7.5C6.15685 7.5 7.5 6.15685 7.5 4.5C7.5 2.84315 6.15685 1.5 4.5 1.5C2.84315 1.5 1.5 2.84315 1.5 4.5C1.5 6.15685 2.84315 7.5 4.5 7.5Z"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M13.5 16.5C15.1569 16.5 16.5 15.1569 16.5 13.5C16.5 11.8431 15.1569 10.5 13.5 10.5C11.8431 10.5 10.5 11.8431 10.5 13.5C10.5 15.1569 11.8431 16.5 13.5 16.5Z"
+                                        stroke="#575E6A" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                                <span class="text-[#202020] md:text-lg font-bold">Category</span>
+                            </div>
+
+
+                            <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                    stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 8V13" stroke="#B7C3D6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M11.9941 16H12.0031" stroke="#B7C3D6" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+
+
+                        <div id="new_project-btns" class="grid lg:grid-cols-2 items-start max-md:grid-cols-1 gap-2.5">
+                            <div class="border border-[#0000001A] rounded-xl pt-2 pb-1">
+                                <button
+                                    class="catergories__bottom__select w-full text-[#202020] font-bold text-sm px-[15px] pb-1 flex items-center justify-between">
+                                    Scripts & Telegram Bots
+                                    <span class="catergories__bottom__arrow transition-all duration-700">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 11L12.5 15L17 11" stroke="#202020" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div
+                                    class=" px-5 flex flex-col gap-1 max-h-0 overflow-hidden transition-all duration-700 ">
+                                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
+                                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
+                                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
+                                </div>
+                            </div>
+
+                            <div class="border border-[#0000001A] rounded-xl pt-2 pb-1">
+                                <button
+                                    class="catergories__bottom__select w-full text-[#202020] font-bold text-sm px-[15px] pb-1  flex items-center justify-between">
+                                    Creating Telegram Bot
+                                    <span class="catergories__bottom__arrow transition-all duration-700">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 11L12.5 15L17 11" stroke="#202020" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div
+                                    class=" px-5 flex flex-col gap-1 max-h-0 overflow-hidden transition-all duration-700 ">
+                                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
+                                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
+                                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                let categoriesBottomSelect = document.querySelectorAll(".catergories__bottom__select");
+
+                                categoriesBottomSelect.forEach(function (item) {
+                                    let arrow = item.querySelector(".catergories__bottom__arrow");
+
+                                    item.addEventListener("click", function () {
+                                        let content = item.nextElementSibling;
+                                        content.classList.toggle("max-h-0");
+                                        content.classList.toggle("max-h-[900px]");
+                                        arrow.classList.toggle("rotate-180");
+                                    });
+                                });
+                            });
+                        </script>
+
+                    </div>
+
+                    <button
+                        class="w-full rounded-xl flex items-center justify-center gap-1 transition-all font-medium bg-gradient-to-r from-[#6AB8FF] to-[#DEF5FF] text-[#fff] py-[14px] hover:opacity-70 active:opacity-60">Post
+                        new task on exchange
+                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.375 9.48438V12.2594C14.375 14.5994 12.1925 16.4969 9.5 16.4969C6.8075 16.4969 4.625 14.5994 4.625 12.2594V9.48438C4.625 11.8244 6.8075 13.4969 9.5 13.4969C12.1925 13.4969 14.375 11.8244 14.375 9.48438Z"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.375 5.7375C14.375 6.42 14.1875 7.05 13.8575 7.59C13.055 8.91 11.405 9.75 9.5 9.75C7.595 9.75 5.945 8.91 5.1425 7.59C4.8125 7.05 4.625 6.42 4.625 5.7375C4.625 4.5675 5.1725 3.51 6.05 2.745C6.935 1.9725 8.15 1.5 9.5 1.5C10.85 1.5 12.065 1.9725 12.95 2.7375C13.8275 3.51 14.375 4.5675 14.375 5.7375Z"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.375 5.7375V9.4875C14.375 11.8275 12.1925 13.5 9.5 13.5C6.8075 13.5 4.625 11.8275 4.625 9.4875V5.7375C4.625 3.3975 6.8075 1.5 9.5 1.5C10.85 1.5 12.065 1.9725 12.95 2.7375C13.8275 3.51 14.375 4.5675 14.375 5.7375Z"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+
+                <div class="bg-[#fff] lg:max-w-[318px] max-width-318px w-full h-full p-[10px] pt-4 rounded-3xl lg:inline-block hidden">
+                    <div class="flex items-center justify-between mb-[13px]">
+                        <div class="flex items-center gap-2 pl-2">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17 7.5V11.25C17 15 15.5 16.5 11.75 16.5H7.25C3.5 16.5 2 15 2 11.25V6.75C2 3 3.5 1.5 7.25 1.5H11"
+                                    stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M17 7.5H14C11.75 7.5 11 6.75 11 4.5V1.5L17 7.5Z" stroke="#575E6A"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <span class="text-[#202020] md:text-lg font-bold">Attach file</span>
+                        </div>
+
+
+                        <div class="text-xs text-[#9CA5B3] flex flex-col items-end gap-y-1">
+                            <span>Up to <span class="font-medium">10 files</span></span>
+                            <span>No more than <span class="font-medium">4 MB</span></span>
+                        </div>
+                    </div>
+
+                    <div class="selected-files mb-[10px]">
+
+                    </div>
+
+
+                    <div class="flex">
+                        <input type="file" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx"
+                            class="hidden sectFileClass" id="sectFile" />
+
+                        <label for="sectFile"
+                            class=" cursor-pointer flex w-full justify-center items-center rounded-xl border-dotted border-[#575E6A] border-[1px] gap-[10px] py-3 hover:opacity-70 active:opacity-60">
+                            <svg class="" width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.00033 11.8359V7.83594L4.66699 9.16927" stroke="#575E6A" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6 7.83594L7.33333 9.16927" stroke="#575E6A" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M14.6663 7.16927V10.5026C14.6663 13.8359 13.333 15.1693 9.99967 15.1693H5.99967C2.66634 15.1693 1.33301 13.8359 1.33301 10.5026V6.5026C1.33301 3.16927 2.66634 1.83594 5.99967 1.83594H9.33301"
+                                    stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M14.6663 7.16927H11.9997C9.99967 7.16927 9.33301 6.5026 9.33301 4.5026V1.83594L14.6663 7.16927Z"
+                                    stroke="#575E6A" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                            Add file
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#202020] lg:pt-[125px] pt-12 lg:pb-[70px] pb-[60px]">
+        <div class="max-w-[1320px] mx-auto px-5 md:block hidden">
+            <div class="lg:flex md:grid grid-cols-2 gap-20 items-center justify-between mb-16">
+                <ul>
+                    <p class="text-white font-bold text-lg mb-6">About Monday</p>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">About the project
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">Agency contract
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base"
+                            href="#">Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <p class="text-white font-bold text-lg mb-6">Help</p>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">Service rules
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">Question answer
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base"
+                            href="#">Support
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <p class="text-white font-bold text-lg mb-6">Useful</p>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">For customers
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">For performers
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base"
+                            href="#">
+                            PRO account
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <p class="text-white font-bold text-lg mb-6">Community</p>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">Blog Monday
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base mb-2.5"
+                            href="#">Affiliate program
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-[#BCBCBC] hover:underline hover:opacity-70 transition-all font-medium text-base"
+                            href="#">Verification
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="justify-end flex gap-4 items-center">
+                <a class="hover:bg-white transition-all hover:text-[#202020] text-[#A6A6A6] font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+                    href="#">Sign In
+                </a>
+                <a class="hover:bg-white transition-all hover:text-[#202020] text-white items-center gap-2.5 font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+                    href="#">
+                    Join
+                    <span>
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.1654 14V12.6667C11.1654 11.9594 10.8844 11.2811 10.3843 10.781C9.88422 10.281 9.20594 10 8.4987 10H4.4987C3.79145 10 3.11318 10.281 2.61308 10.781C2.11298 11.2811 1.83203 11.9594 1.83203 12.6667V14"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M6.4987 7.33333C7.97146 7.33333 9.16536 6.13943 9.16536 4.66667C9.16536 3.19391 7.97146 2 6.4987 2C5.02594 2 3.83203 3.19391 3.83203 4.66667C3.83203 6.13943 5.02594 7.33333 6.4987 7.33333Z"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.166 5.33203V9.33203" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M15.166 7.33203H11.166" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="md:hidden block">
+            <div class="w-full px-3">
+                <ul class="flex flex-col gap-6 mb-12">
+                    <li>
+                        <p
+                            class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+                            About Monday
+                            <span class="footer_rotate transition-height">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </p>
+                        <ul
+                            class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">About the project
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Agency contract
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p
+                            class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+                            Help
+                            <span class="footer_rotate transition-height">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </p>
+                        <ul
+                            class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Service rules
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Question answer
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Support
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p
+                            class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+                            Useful
+                            <span class="footer_rotate transition-height">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </p>
+                        <ul
+                            class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">For
+                                    customers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">For
+                                    performers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all" href="#">PRO
+                                    account
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p
+                            class="btn_footer text-white cursor-pointer font-bold text-lg flex items-center justify-between">
+                            Community
+                            <span class="footer_rotate transition-height">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </p>
+                        <ul
+                            class="footer_info flex flex-col gap-2 pt-5 text-center h-0 overflow-hidden transition-height">
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Blog Monday
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Affiliate program
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white font-medium text-base hover:opacity-70 transition-all"
+                                    href="#">Verification
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex justify-center gap-4 items-center">
+                <a class="hover:bg-white transition-all hover:text-[#202020] text-[#A6A6A6] font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+                    href="#">Sign In
+                </a>
+                <a class="hover:bg-white transition-all hover:text-[#202020] text-white items-center gap-2.5 font-medium inline-flex text-base py-2.5 px-10 border rounded-xl"
+                    href="#">
+                    Join
+                    <span>
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.1654 14V12.6667C11.1654 11.9594 10.8844 11.2811 10.3843 10.781C9.88422 10.281 9.20594 10 8.4987 10H4.4987C3.79145 10 3.11318 10.281 2.61308 10.781C2.11298 11.2811 1.83203 11.9594 1.83203 12.6667V14"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M6.4987 7.33333C7.97146 7.33333 9.16536 6.13943 9.16536 4.66667C9.16536 3.19391 7.97146 2 6.4987 2C5.02594 2 3.83203 3.19391 3.83203 4.66667C3.83203 6.13943 5.02594 7.33333 6.4987 7.33333Z"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.166 5.33203V9.33203" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M15.166 7.33203H11.166" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/create-new-project.js"></script>
+    <script>
+        document.querySelectorAll('.btn_footer').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const infoElement = btn.nextElementSibling;
+                const footerRotate = btn.querySelector('.footer_rotate');
+
+                if (infoElement.classList.contains('h-0')) {
+                    infoElement.classList.remove('h-0');
+                    infoElement.style.height = `${infoElement.scrollHeight}px`;
+                    footerRotate.classList.add('rotate-180');
+                } else {
+                    infoElement.style.height = '0';
+                    infoElement.addEventListener('transitionend', () => {
+                        infoElement.classList.add('h-0');
+                        footerRotate.classList.remove('rotate-180');
+                    }, { once: true });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
