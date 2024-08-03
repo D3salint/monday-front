@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 
 <head>
    <meta charset="UTF-8" />
@@ -40,6 +40,15 @@
       font-size: 16px;
       font-weight: 900;
       color: #202020;
+   }
+
+   @media (max-width: 730px) {
+
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+         font-size: 10px;
+         font-weight: 600;
+      }
    }
 
    .swiper-pagination-current {
@@ -1901,305 +1910,331 @@
          </div>
       </div>
    </div>
-   <div id="order-modal" class="lg:bg-[#000000]/80 fixed hidden inset-0 z-[500] p-3 flex-col  bg-white pt-10 overflow-auto">
+   <div id="order-modal"
+      class="lg:bg-[#000000]/80 fixed hidden inset-0 z-[500] p-3 flex-col  bg-white py-10 overflow-auto overflow-x-hidden">
       <div class="max-w-[1089px] w-full mx-auto flex flex-col">
-        <div class="md:p-6 md:rounded-3xl md:bg-white">
-          <header class="flex justify-between items-center gap-[5px] pb-4 border-b">
-            <div class="flex items-center gap-2 ">
-              <div class="max-w-[35px] max-h-[35px] object-cover rounded-full">
-                <img class="w-full h-full object-cover rounded-full" src="./img/project/ava.png" alt="Photo profile">
-              </div>
-              <p class="text-[#202020] text-[16px]"><b>Portfolio</b> Michael_M</p>
-            </div>
-            <div>
-              <button id="modal-close-btn"
-                class="w-10 h-10 flex items-center justify-center rounded-[12px] bg-[#FAFAFC] cursor-pointer">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.5 1.5L1.5 12.5M1.5 1.5L12.5 12.5" stroke="#9CA5B3" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-          </header>
-          <div class="flex justify-between">
-            <div class="max-w-[704px] px-6 border-r pt-5">
-              <h2 class="text-[#202020] font-bold text-[22px] mb-3">Web-site improvements and optimisation for gaming
-                platform
-              </h2>
-              <p class="text-[#575E6A] font-medium text-[13px] mb-5">Lorem ipsum dolor sit amet consectetur. A sed sed
-                sed
-                sed ut
-                dolor faucibus. Elit enim integer hendrerit cras sem blandit lacus id vel. In feugiat etiam neque
-                congue
-                turpis nisl dignissim. Purus nunc dictum nisl in.</p>
-              <div>
-                <div class="flex justify-between items-center px-2 mb-2.5">
-                  <p class="font-medium text-[#9CA5B3] text-xs">Published March 20, 2023</p>
-                  <p class="font-medium text-[#9CA5B3] text-xs flex items-center gap-1">
-                    <span>
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M10.3866 7.99995C10.3866 9.31995 9.31995 10.3866 7.99995 10.3866C6.67995 10.3866 5.61328 9.31995 5.61328 7.99995C5.61328 6.67995 6.67995 5.61328 7.99995 5.61328C9.31995 5.61328 10.3866 6.67995 10.3866 7.99995Z"
-                          stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                          d="M7.9999 13.5138C10.3532 13.5138 12.5466 12.1271 14.0732 9.72713C14.6732 8.78713 14.6732 7.20713 14.0732 6.26713C12.5466 3.86713 10.3532 2.48047 7.9999 2.48047C5.64656 2.48047 3.45323 3.86713 1.92656 6.26713C1.32656 7.20713 1.32656 8.78713 1.92656 9.72713C3.45323 12.1271 5.64656 13.5138 7.9999 13.5138Z"
-                          stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </span>
-                    120
-                  </p>
-                </div>
-                <div class="swiper mySwiper relative max-w-[704px] mb-6">
-                  <button class="p-7 rounded-full bg-[#0000004F] inline-flex absolute z-10 left-5 bottom-5">
-                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21.0137 9V3H15.0137" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M3.01367 15V21H9.01367" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M21.0137 3L13.5137 10.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M10.5137 13.5L3.01367 21" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
+         <div class="md:p-6 md:rounded-3xl md:bg-white">
+            <header class="flex justify-between items-center gap-[5px] pb-4 border-b">
+               <div class="flex items-center gap-2 ">
+                  <div class="max-w-[35px] max-h-[35px] object-cover rounded-full">
+                     <img class="w-full h-full object-cover rounded-full" src="./img/project/ava.png"
+                        alt="Photo profile">
+                  </div>
+                  <p class="text-[#202020] text-[16px]"><b>Portfolio</b> Michael_M</p>
+               </div>
+               <div>
+                  <button id="modal-close-btn"
+                     class="w-10 h-10 flex items-center justify-center rounded-[12px] bg-[#FAFAFC] cursor-pointer">
+                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 1.5L1.5 12.5M1.5 1.5L12.5 12.5" stroke="#9CA5B3" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round" />
+                     </svg>
                   </button>
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
-                    <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
-                        class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png" alt="project">
-                    </div>
+               </div>
+            </header>
+            <div class="flex justify-between">
+               <div class="max-w-[704px] w-full px-6 border-r pt-5">
+                  <h2 class="text-[#202020] font-bold text-[22px] mb-3">Web-site improvements and optimisation for
+                     gaming
+                     platform
+                  </h2>
+                  <p class="text-[#575E6A] font-medium text-[13px] mb-5">Lorem ipsum dolor sit amet consectetur. A sed
+                     sed
+                     sed
+                     sed ut
+                     dolor faucibus. Elit enim integer hendrerit cras sem blandit lacus id vel. In feugiat etiam neque
+                     congue
+                     turpis nisl dignissim. Purus nunc dictum nisl in.</p>
+                  <div>
+                     <div class="flex justify-between items-center px-2 mb-2.5">
+                        <p class="font-medium text-[#9CA5B3] text-xs">Published March 20, 2023</p>
+                        <p class="font-medium text-[#9CA5B3] text-xs flex items-center gap-1">
+                           <span>
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M10.3866 7.99995C10.3866 9.31995 9.31995 10.3866 7.99995 10.3866C6.67995 10.3866 5.61328 9.31995 5.61328 7.99995C5.61328 6.67995 6.67995 5.61328 7.99995 5.61328C9.31995 5.61328 10.3866 6.67995 10.3866 7.99995Z"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                 <path
+                                    d="M7.9999 13.5138C10.3532 13.5138 12.5466 12.1271 14.0732 9.72713C14.6732 8.78713 14.6732 7.20713 14.0732 6.26713C12.5466 3.86713 10.3532 2.48047 7.9999 2.48047C5.64656 2.48047 3.45323 3.86713 1.92656 6.26713C1.32656 7.20713 1.32656 8.78713 1.92656 9.72713C3.45323 12.1271 5.64656 13.5138 7.9999 13.5138Z"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </span>
+                           120
+                        </p>
+                     </div>
+                     <div class="swiper mySwiper relative max-w-[704px] mb-6">
+                        <button class="md:p-7 p-5 rounded-full bg-[#0000004F] inline-flex absolute z-10 left-5 bottom-5">
+                           <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M21.0137 9V3H15.0137" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                              <path d="M3.01367 15V21H9.01367" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                              <path d="M21.0137 3L13.5137 10.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                              <path d="M10.5137 13.5L3.01367 21" stroke="white" stroke-width="1.5"
+                                 stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                        </button>
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                           <div class="swiper-slide max-w-[704px] max-h-[469px] object-cover rounded-xl"><img
+                                 class="w-full h-full object-cover rounded-xl" src="./img/project/project-img.png"
+                                 alt="project">
+                           </div>
+                        </div>
+                        <div
+                           class="absolute bottom-5 right-5 bg-white flex justify-between items-center z-30 h-10 max-w-[120px] w-full rounded-full">
+                           <div class="swiper-button-prev"> </div>
+                           <div class="swiper-pagination text-gray-300 z-0"></div>
+                           <div class="swiper-button-next"></div>
+                        </div>
+                     </div>
+                     <div>
+                        <div class="flex items-center gap-2">
+                           <div class="flex relative">
+                              <a href="#" class="max-w-[24px] max-h-6 rounded-full object-cover">
+                                 <img class="w-full h-full rounded-full object-cover"
+                                    src="./img/project/project__avatar.png" alt="ava">
+                              </a>
+                              <button
+                                 class="w-6 h-6 flex items-center justify-center rounded-full bg-[#4790FF] -translate-x-2">
+                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M4.25 9.5H4C2 9.5 1 9 1 6.5V4C1 2 2 1 4 1H8C10 1 11 2 11 4V6.5C11 8.5 10 9.5 8 9.5H7.75C7.595 9.5 7.445 9.575 7.35 9.7L6.6 10.7C6.27 11.14 5.73 11.14 5.4 10.7L4.65 9.7C4.57 9.59 4.385 9.5 4.25 9.5Z"
+                                       stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                                       stroke-linejoin="round" />
+                                    <path d="M3.5 4H8.5" stroke="white" stroke-linecap="round"
+                                       stroke-linejoin="round" />
+                                    <path d="M3.5 6.5H6.5" stroke="white" stroke-linecap="round"
+                                       stroke-linejoin="round" />
+                                 </svg>
+                              </button>
+                           </div>
+                           <div>
+                              <b class="text-[#202020] text-sm"> artemetmanecb</b>
+                              <p class="text-[#9CA5B3] text-xs font-medium"> 7 month ago</p>
+                           </div>
+                        </div>
+                        <p class="text-[#575E6A] font-medium text-sm">An excellent person and a high-level professional.
+                           He
+                           does
+                           everything in such a way that a mosquito won’t hurt his nose later. Completes everything
+                           within
+                           the
+                           agreed time frame. Makes new adjustments if required. </p>
+                     </div>
                   </div>
-                  <div
-                    class="absolute bottom-5 right-5 !bg-white flex justify-between items-center z-30 h-10 max-w-[120px] w-full rounded-full">
-                    <div class="swiper-button-prev"> </div>
-                    <div class="swiper-pagination text-gray-300 z-0"></div>
-                    <div class="swiper-button-next"></div>
+               </div>
+               <div
+                  class="pl-3.5 md:grid hidden grid-cols-2 gap-4  md:overflow-y-scroll max-h-[747px] h-full pt-12 pr-3.5 mr-6">
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
                   </div>
-                </div>
-                <div>
-                  <div class="flex items-center gap-2">
-                    <div class="flex relative">
-                      <a href="#" class="max-w-[24px] max-h-6 rounded-full object-cover">
-                        <img class="w-full h-full rounded-full object-cover" src="./img/project/project__avatar.png"
-                          alt="ava">
-                      </a>
-                      <button class="w-6 h-6 flex items-center justify-center rounded-full bg-[#4790FF] -translate-x-2">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M4.25 9.5H4C2 9.5 1 9 1 6.5V4C1 2 2 1 4 1H8C10 1 11 2 11 4V6.5C11 8.5 10 9.5 8 9.5H7.75C7.595 9.5 7.445 9.575 7.35 9.7L6.6 10.7C6.27 11.14 5.73 11.14 5.4 10.7L4.65 9.7C4.57 9.59 4.385 9.5 4.25 9.5Z"
-                            stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M3.5 4H8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M3.5 6.5H6.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                      </button>
-                    </div>
-                    <div>
-                      <b class="text-[#202020] text-sm"> artemetmanecb</b>
-                      <p class="text-[#9CA5B3] text-xs font-medium"> 7 month ago</p>
-                    </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
                   </div>
-                  <p class="text-[#575E6A] font-medium text-sm">An excellent person and a high-level professional. He
-                    does
-                    everything in such a way that a mosquito won’t hurt his nose later. Completes everything within
-                    the
-                    agreed time frame. Makes new adjustments if required. </p>
-                </div>
-              </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+
+                  <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
+                     <a href="#" class="">
+                        <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
+                           alt="other project">
+                     </a>
+                  </div>
+               </div>
             </div>
-            <div class="pl-3.5 grid grid-cols-2 gap-4 overflow-y-scroll max-h-[747px] h-full pt-12 pr-3.5 mr-6">
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-    
-              <div class="max-w-[139px] max-h-[94px] object-cover rounded-xl">
-                <a href="#" class="">
-                  <img class="w-full h-full object-cover rounded-xl" src="./img/project/other-projects.png"
-                    alt="other project">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
+   </div>
 
 
    <script>
       const orderModal = document.querySelector('#order-modal');
       const modalCloseBtn = document.querySelector('#modal-close-btn');
       const orderOpenModalButtons = document.querySelectorAll('#order-button');
-    
+
       orderOpenModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          orderModal.classList.remove('hidden');
-        });
+         button.addEventListener('click', () => {
+            orderModal.classList.remove('hidden');
+         });
       });
-    
+
       modalCloseBtn.addEventListener('click', () => {
-        orderModal.classList.add('hidden');
+         orderModal.classList.add('hidden');
       });
-    </script>
+   </script>
 
 
    <script>
