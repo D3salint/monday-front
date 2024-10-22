@@ -57,7 +57,7 @@
                   </button>                
                   <button 
                      class="flex items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium md:grow text-white bg-black "
-                     data-modal-button="auth"
+                     data-modal-button="login"
                      >
                      Join
                      <svg class="size-4 shrink-0 stroke-white">
@@ -774,6 +774,32 @@
                </div>
             </div>
          </div>
+      </div>
+      <!-- Login modal -->
+      <div class="fixed inset-0 bg-[#000000]/80 p-3 z-[100] items-center justify-center flex-col hidden" data-modal="login" data-block="flex">
+        <div class="max-w-[420px]  w-full min-h-20 rounded-[36px] bg-white m-auto relative overflow-hidden">
+          <button class="size-10 z-10 rounded-xl bg-gray-fafafc flex items-center justify-center absolute right-[22px] top-[22px]" data-modal-close="login">
+            <svg class="size-5 stroke-gray-c9ca5b3">
+              <use href="/img/sprite.svg#cross">
+            </svg>
+          </button>
+          <div class="px-5 py-8 flex flex-col items-center">
+            <p class="uppercase mx-auto font-Satoshi font-bold text-xs leading-tight text-gray-cb7c3d6 underline"> Monday </p>
+            <p class="mt-5 text-center font-Satoshi font-bold text-base leading-tight text-black">Login to your profile </p>
+            <form class="mt-[15px] flex flex-col gap-[10px] w-full" id="signup-form">
+              <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
+                <input class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3" placeholder="Email*" name="email" type="text">
+              </div>
+              <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
+                <input class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3" placeholder="Password*" name="password" type="password">
+                <button class="size-4 mr-5" data-type="password-btn" type="button">
+                  <img class="w-full" src="/img/icons/eye.svg" alt="">
+                </button>
+              </div>
+              <button class="mt-[5px] bg-black p-4 rounded-xl font-Satoshi font-bold text-sm leading-tight text-white" type="submit">Login</button>
+            </form>
+          </div>
+        </div>
       </div>
    </body>
 </html>

@@ -7,6 +7,9 @@ import './modules/init-auth.js'
 new Modal("auth", { 
     closeOnClickOutside: true,
 });
+new Modal("login", { 
+    closeOnClickOutside: true,
+});
 
 initSelect();
 initContainers();
