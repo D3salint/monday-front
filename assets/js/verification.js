@@ -30,14 +30,11 @@ verification__modal__close.addEventListener("click", function () {
 document.getElementById('file').addEventListener('change', function(event) {
   const file = event.target.files[0];
   if (file) {
-      // Fayl nomini ko'rsatish
       document.getElementById('fileName').textContent = `File name: ${file.name}`;
       
-      // Fayl o'lchamini ko'rsatish
       const fileSizeInMB = (file.size / (1024 * 1024)).toFixed(2);
       document.getElementById('fileSize').textContent = `File size: ${fileSizeInMB} MB`;
       
-      // Fayl formatini ko'rsatish
       document.getElementById('fileFormat').textContent = `${file.type}`;
   }
 });
