@@ -2255,6 +2255,8 @@
             class="mt-4 p-4 rounded-lg text-center w-full bg-gradient-to-r from-[#B8DDFF] to-[#6AB8FF] font-Satoshi font-medium text-base leading-none text-white md:max-w-56 md:mt-0 hover:opacity-90">
             Search
           </button>
+
+
           <div id="mainSearchMenu"
             class="search_shadow hidden !max-w-[900px] !w-full left-[-1px] absolute bg-[#fff] shadow-lg top-[60px] py-3 px-5 rounded-b-2xl z-50">
             <p class="text-[#202020] font-bold text-base mb-3">Top services🔥</p>
@@ -2265,19 +2267,28 @@
                 href="#">SEO</a>
               <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md"
                 href="#">Copywriting</a>
-              <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">Web
-                Development</a>
+              <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md"
+                href="#">Web Development</a>
               <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md"
                 href="#">Scripts & Bots</a>
             </div>
             <div class="main_search_recent">
-              <p class="text-[#B7C3D6] font-bold md:text-sm text-xs">Recent</p>
-              <a class="search_recent text-[#575E6A] font-medium md:text-sm text-xs flex items-center gap-2 mr-5" href="#">
-                <img class="w-4 h-4" src="./img/header/clock.svg" alt="clock" />
+              <p class="text-[#B7C3D6] font-bold md:text-sm text-xs mb-3">Recent</p>
+              <a class="recent-item-button text-[#575E6A] font-medium md:text-sm text-xs flex items-center gap-2 relative"
+                href="#" id="recent-item-wibtrix">
+                <img class="icon-clock w-4 h-4" src="./img/header/clock.svg" alt="clock" />
                 Wibtrix site improvements
+                <span class="delete-icon hidden absolute right-0 cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-black"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M1.646 1.646a.5.5 0 0 1 .708 0L8 7.293l5.646-5.647a.5.5 0 1 1 .708.708L8.707 8l5.647 5.646a.5.5 0 1 1-.708.708L8 8.707l-5.646 5.647a.5.5 0 0 1-.708-.708L7.293 8 1.646 2.354a.5.5 0 0 1 0-.78z" />
+                  </svg>
+                </span>
               </a>
             </div>
           </div>
+
         </div>
 
         <script>
@@ -2296,15 +2307,30 @@
             }
           });
 
-          window.addEventListener('resize', () => {
-            mainSearchMenu.classList.add('hidden');
-            if (window.innerWidth < 768) {
-              mainSearchRecent.classList.add('hidden');
-            } else {
-              mainSearchRecent.classList.remove('hidden');
-            }
+          document.querySelectorAll('.recent-item-button').forEach(btn => {
+            const deleteIcon = btn.querySelector('.delete-icon');
+
+            deleteIcon.addEventListener('click', function (e) {
+              e.preventDefault();
+              e.stopPropagation(); // Prevent the event from bubbling up
+              btn.remove();
+            });
           });
         </script>
+
+        <style>
+          .recent-item-button:hover .delete-icon {
+            display: inline;
+          }
+
+          .recent-item-button {
+            position: relative;
+          }
+
+          .delete-icon {
+            display: none;
+          }
+        </style>
 
       </div>
       <div class="mt-8 w-full md:flex md:items-center lg:max-w-[900px] lg:mx-auto">
