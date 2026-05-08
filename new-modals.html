@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New modals – Monday</title>
+    <meta name="description" content="Freelance project" />
+    <meta property="og:description" content="Freelance project" />
+    <meta property="twitter:description" content="Freelance project" />
+    <link href="/assets/css/index.0fcabdd2790f60f408b7.css" rel="stylesheet" />
+
+    <style>
+      /* Only for this preview page */
+      body {
+        padding: 24px;
+      }
+
+      .page-btns {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .page-btns-item {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 12px 16px;
+        border-radius: 4px;
+        background: #5a6f9d;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* CSS */
+    </style>
+  </head>
+  <body>
+    <div class="page-btns">
+      <button class="page-btns-item" data-target="new-message-modal">
+        Open new message modal
+      </button>
+    </div>
+
+    <!-- New Message modal -->
+
+    <div class="newMessageModal active" id="new-message-modal">
+      <div class="newMessageModal_modal">
+        <div class="newMessageModal_head">
+          <img
+            class="newMessageModal_head_logo"
+            src="/img/logo.png"
+            alt="logo"
+          />
+          <button
+            class="newMessageModal_head_btn"
+            data-target="new-message-modal"
+          >
+            <img src="/img/cross.svg" alt="Close modal" />
+          </button>
+        </div>
+
+        <div class="newMessageModal_content">
+          <h3 class="newMessageModal_content_title">
+            You have received a new message!
+          </h3>
+          <p class="newMessageModal_content_text">
+            Congratulations,
+            <br />
+            <br />
+            One of the customers has responded to your request. He is interested
+            in cooperation and wants to discuss the details of the project.
+            <br />
+            <br />
+            Please review the message and reply to continue the communication
+            and agree on the next steps.
+          </p>
+          <button class="newMessageModal_content_btn">Read message</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Only for this preview page
+      const elements = document.querySelectorAll("[data-target]");
+
+      for (const element of elements) {
+        const targetAttr = element.dataset.target;
+        const targetModal = document.getElementById(targetAttr);
+        if (!targetModal) {
+          continue;
+        }
+
+        const handleClick = () => {
+          if (targetModal.classList.contains("active")) {
+            targetModal.classList.remove("active");
+          } else {
+            targetModal.classList.add("active");
+          }
+        };
+
+        element.addEventListener("click", handleClick);
+      }
+    </script>
+  </body>
+</html>

@@ -99,7 +99,6 @@
 
 
 <body class="bg-[#F1F3F9]">
-
   <header class="lg:pt-8 bg-white">
     <div class="max-w-[1384px] px-3 mx-auto lg:flex hidden items-center justify-between mb-5">
         <div class="flex items-center gap-2.5 max-w-[600px] w-full">
@@ -496,14 +495,28 @@
                 </div>
               </div>
 
-              <a href="#"
-                class="border-[#F2F2F2] border-[1px] text-[#202020] text-xs font-bold flex items-center gap-1 rounded-lg py-2 px-5 hover:opacity-70 active:opacity-60">
-                View all
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </a>
+              <a
+  href="#"
+  class="flex items-center gap-1 rounded-lg border border-[#F2F2F2] px-5 py-2 text-xs font-bold text-[#202020] transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+>
+  View all
+
+  <svg
+    width="12"
+    height="12"
+    viewBox="0 0 12 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="stroke-current transition-all duration-300"
+  >
+    <path
+      d="M4.5 10.5L8.5 6L4.5 1.5"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</a>
             </div>
 
             <div class="bg-[#FAFAFC] flex justify-between items-start rounded-2xl p-3">
@@ -635,14 +648,28 @@
                   <span class="text-[#202020] font-bold">My orders</span>
                 </div>
 
-                <a href="#"
-                  class="border-[#0000001A] text-[#202020] text-xs font-bold border-[1px] rounded-lg md:flex hidden items-center gap-1 px-5 py-2 hover:opacity-70 active:opacity-60">
-                  See all orders
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
+                <a
+  href="#"
+  class="hidden items-center gap-1 rounded-lg border border-[#0000001A] px-5 py-2 text-xs font-bold text-[#202020] transition-all duration-300 hover:border-black hover:bg-black hover:text-white md:flex"
+>
+  See all orders
+
+  <svg
+    width="12"
+    height="12"
+    viewBox="0 0 12 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="stroke-current transition-all duration-300"
+  >
+    <path
+      d="M4.5 10.5L8.5 6L4.5 1.5"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</a>
               </div>
 
               <div class="flex lg:flex-nowrap flex-wrap gap-2.5">
@@ -744,12 +771,26 @@
                   <span class="text-[#202020] font-bold">My services</span>
                 </div>
 
-                <a href="#"
-                  class="border-[#0000001A]  text-[#202020] text-xs font-bold border-[1px] rounded-lg hidden md:flex items-center gap-1 px-5 py-2 hover:opacity-70 active:opacity-60">
+                <a
+                  href="#"
+                  class="hidden items-center gap-1 rounded-lg border border-[#0000001A] px-5 py-2 text-xs font-bold text-[#202020] transition-all duration-300 hover:border-black hover:bg-black hover:text-white md:flex"
+                >
                   See all services
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.5 10.5L8.5 6L4.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
+
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="stroke-current transition-all duration-300"
+                  >
+                    <path
+                      d="M4.5 10.5L8.5 6L4.5 1.5"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </a>
               </div>
@@ -1245,8 +1286,16 @@
 
           <div class="w-full justify-center hidden mb-5 all_projects_on_exchange_button">
             <button
-              class="rounded-xl transition-all max-md:w-full font-medium bg-gradient-to-r from-[#6AB8FF] to-[#DEF5FF] text-[#fff] px-6 py-[14px] hover:opacity-80">See
-              all projects on exchange</button>
+  class="group relative overflow-hidden rounded-xl border border-transparent bg-transparent px-6 py-[14px] font-medium text-white transition-all duration-300 hover:border-[#4790FF] hover:text-[#4790FF] max-md:w-full"
+>
+  <span
+    class="absolute inset-0 z-0 bg-gradient-to-r from-[#6AB8FF] to-[#DEF5FF] transition-opacity duration-300 group-hover:opacity-0"
+  ></span>
+
+  <span class="relative z-[1]">
+    See all projects on exchange
+  </span>
+</button>
           </div>
 
 
@@ -1307,9 +1356,12 @@
 
 
                 </div>
-                <a href="#"
-                  class="md:w-4/5 w-full text-center border-[#F2F2F2] text-[#202020] rounded-xl text-sm font-bold border-[1px] py-3 hover:opacity-70 active:opacity-60">Know
-                  more</a>
+                <a
+  href="#"
+  class="w-full rounded-xl border border-[#F2F2F2] py-3 text-center text-sm font-bold text-[#202020] transition-all duration-300 hover:border-black hover:bg-black hover:text-white md:w-4/5"
+>
+  Know more
+</a>
               </div>
 
               <div style="box-shadow: 5px 5px 30px 1px #0000000D;"
@@ -1353,9 +1405,12 @@
 
 
                 </div>
-                <a href="#"
-                  class="md:w-4/5 w-full text-center border-[#F2F2F2] text-[#202020] rounded-xl text-sm font-bold border-[1px] py-3 hover:opacity-70 active:opacity-60">Know
-                  more</a>
+                <a
+  href="#"
+  class="w-full rounded-xl border border-[#F2F2F2] py-3 text-center text-sm font-bold text-[#202020] transition-all duration-300 hover:border-black hover:bg-black hover:text-white md:w-4/5"
+>
+  Know more
+</a>
               </div>
 
 
@@ -1400,9 +1455,12 @@
 
 
                 </div>
-                <a href="#"
-                  class="md:w-4/5 w-full text-center border-[#F2F2F2] text-[#202020] rounded-xl text-sm font-bold border-[1px] py-3 hover:opacity-70 active:opacity-60">Know
-                  more</a>
+               <a
+  href="#"
+  class="w-full rounded-xl border border-[#F2F2F2] py-3 text-center text-sm font-bold text-[#202020] transition-all duration-300 hover:border-black hover:bg-black hover:text-white md:w-4/5"
+>
+  Know more
+</a>
               </div>
 
 

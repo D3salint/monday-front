@@ -37,7 +37,7 @@
                   >
                MONDAY
                </a>
-               <div class=" hidden xs:flex max-w-80 flex grow relative">
+               <div class=" hidden xs:flex max-w-80 md:flex grow relative">
                   <div class="grow px-4 py-3 rounded-[100px] bg-[#FAFAFC] flex items-center gap-2 md:[&amp;_input]:order-1 md:[&amp;_svg]:order-2">
                      <svg class="size-4 stroke-black shrink-0">
                         <use href="/img/sprite.svg#magnifier">
@@ -51,7 +51,7 @@
                </div>
                <div class="ml-auto flex items-center gap-3 md:max-w-[274px] md:w-full">
                   <button 
-                     class="flex items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black "
+                     class="items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black "
                      data-modal-button="auth"
                      >
                   Sign Up
@@ -187,20 +187,29 @@
                                  </p>
                               </div>
                               <div class="hidden xl:flex flex-col gap-[10px]">
-                                 <button class="flex items-center gap-[5px] font-Satoshi font-medium text-sm leading-tight text-blue whitespace-nowrap p-[13px_32px] bg-blue-cedf4ff rounded-[100px]">
-                                    Add to favourites
-                                    <svg class="size-[18px] stroke-blue shrink-0">
-                                       <use href="/img/sprite.svg#lovely">
-                                    </svg>
-                                 </button>
-                                 <button class="flex items-center gap-3 font-Satoshi font-medium text-sm text-gray-c9ca5b3">
-                                    Add this seller to blacklist
-                                    <span class="size-[30px] flex items-center justify-center border-[1px] border-solid border-gray-light rounded-full shrink-0">
-                                       <svg class="size-[14px] stroke-gray-c9ca5b3">
-                                          <use href="/img/sprite.svg#eye-slash">
-                                       </svg>
-                                    </span>
-                                 </button>
+                                 <button
+  class="flex items-center gap-[5px] rounded-[100px] bg-blue-cedf4ff p-[13px_32px] font-Satoshi text-sm font-medium leading-tight text-blue border border-transparent transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF]"
+>
+  Add to favourites
+
+  <svg class="size-[18px] shrink-0 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#lovely"></use>
+  </svg>
+</button>
+
+<button
+  class="group flex items-center gap-3 font-Satoshi text-sm font-medium text-gray-c9ca5b3 transition-all duration-300 hover:text-black"
+>
+  Add this seller to blacklist
+
+  <span
+    class="flex size-[30px] shrink-0 items-center justify-center rounded-full border border-solid border-gray-light text-gray-c9ca5b3 transition-all duration-300 group-hover:border-black group-hover:bg-black group-hover:text-white"
+  >
+    <svg class="size-[14px] stroke-current transition-all duration-300">
+      <use href="/img/sprite.svg#eye-slash"></use>
+    </svg>
+  </span>
+</button>
                               </div>
                            </div>
                         </div>
@@ -210,9 +219,17 @@
                         </div>
                         <div class="" data-container="rating" >
                            <div class="py-4 px-[14px] bg-white rounded-3xl mt-[14px] lg:mt-0 lg:px-5">
-                              <button class="hidden lg:flex text-center justify-center p-[14px] rounded-xl from-[#6AB8FF] to-[#DEF5FF] bg-gradient-to-r font-Satoshi font-medium text-base leading-tight text-white w-full">
-                              Message seller or offer an order
-                              </button>
+
+                              <button class="hidden lg:flex w-full text-center justify-center group relative grow overflow-hidden rounded-xl border border-transparent bg-transparent p-[14px] font-Satoshi text-base font-medium leading-tight text-white transition-all duration-300 hover:border-[#4790FF] hover:text-[#4790FF]"
+                     >
+                     <span
+                        class="absolute inset-0 z-0 bg-gradient-to-r from-[#6AB8FF] to-[#DEF5FF] transition-opacity duration-300 group-hover:opacity-0"
+                     ></span>
+
+                     <span class="relative z-[1]">
+                        Message seller or offer an order
+                     </span>
+                     </button>
                               <div class="flex items-end justify-between gap-2 lg:mt-5 lg:flex-col lg:items-center lg:gap-4">
                                  <div class="flex items-end gap-1 font-Satoshi font-bold text-xs leading-tight text-black lg:text-sm">
                                     <svg class="size-[28px] fill-yellow lg:size-[35px]">
@@ -325,12 +342,15 @@
                                  </p>
                               </li>
                            </ul>
-                           <button class="mt-3 flex items-center justify-center w-full gap-[10px] p-[10.5px] rounded-[100px] border-[1px] border-solid border-gray-light font-Satoshi font-bold text-sm leading-tight text-blue lg:mt-7 lg:bg-blue-cedf4ff">
-                              Take a note
-                              <svg class="size-4 stroke-blue">
-                                 <use href="/img/sprite.svg#edit">
-                              </svg>
-                           </button>
+                           <button
+  class="mt-3 flex w-full items-center justify-center gap-[10px] rounded-[100px] border border-solid border-gray-light p-[10.5px] font-Satoshi text-sm font-bold leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF] lg:mt-7 lg:bg-blue-cedf4ff"
+>
+  Take a note
+
+  <svg class="size-4 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#edit"></use>
+  </svg>
+</button>
                         </div>
                      </div>
                      <div class="hidden lg:block pl-6">
@@ -351,58 +371,91 @@
                                     What can I offer you:
                                     -Layout of websites of any level of complexity
                                  </p>
-                                 <button class="flex items-center gap-2 py-2 px-4 rounded-xl bg-white mt-5 lg:bg-gray-fafafc">
-                                    Read full description
-                                    <svg class="size-3 stroke-black">
-                                       <use href="/img/sprite.svg#plus">
-                                    </svg>
-                                 </button>
+                                 <button
+  class="mt-5 flex items-center gap-2 rounded-xl border border-transparent bg-white px-4 py-2 text-black transition-all duration-300 hover:border-black hover:bg-black hover:text-white lg:bg-gray-fafafc"
+>
+  Read full description
+
+  <svg class="size-3 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#plus"></use>
+  </svg>
+</button>
                                  <p class="mt-5 font-Satoshi font-bold text-black text-base leading-tight">Skills</p>
                                  <ul class="mt-[10px] flex flex-wrap gap-1">
-                                    <li class="p-[10.5px_12px] border-[1px] border-solid border-gray-cf1f3f9 rounded-[100px] whitespace-nowrap font-Satoshi font-bold text-xs text-gray-c575e6a">
-                                       Bitrix24
-                                    </li>
-                                    <li class="p-[10.5px_12px] border-[1px] border-solid border-gray-cf1f3f9 rounded-[100px] whitespace-nowrap font-Satoshi font-bold text-xs text-gray-c575e6a">
-                                       Development on 1C-Bitrix
-                                    </li>
-                                    <li class="p-[10.5px_12px] border-[1px] border-solid border-gray-cf1f3f9 rounded-[100px] whitespace-nowrap font-Satoshi font-bold text-xs text-gray-c575e6a">
-                                       Bitrix24
-                                    </li>
-                                    <li class="p-[10.5px_12px] border-[1px] border-solid border-gray-cf1f3f9 rounded-[100px] whitespace-nowrap font-Satoshi font-bold text-xs text-gray-c575e6a">
-                                       Development on 1C-Bitrix
-                                    </li>
-                                    <li class="flex items-center gap-[5px] cursor-pointer p-[10.5px_12px] border-[1px] border-solid border-gray-cf1f3f9 rounded-[100px] whitespace-nowrap font-Satoshi font-bold text-xs text-gray-c575e6a">
-                                        Show all skills (20)
-                                       <span class="size-[18px] rounded-full shrink-0 bg-gray-cf1f3f9 flex items-center justify-center">
-                                          <svg class="size-[9px] stroke-black">
-                                             <use href="/img/sprite.svg#plus">
-                                          </svg>
-                                       </span>
-                                    </li>
+                                    <li
+  class="cursor-pointer whitespace-nowrap rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+>
+  Bitrix24
+</li>
+
+<li
+  class="cursor-pointer whitespace-nowrap rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+>
+  Development on 1C-Bitrix
+</li>
+
+<li
+  class="cursor-pointer whitespace-nowrap rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+>
+  Bitrix24
+</li>
+
+<li
+  class="cursor-pointer whitespace-nowrap rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+>
+  Development on 1C-Bitrix
+</li>
+
+<li
+  class="group flex cursor-pointer items-center gap-[5px] whitespace-nowrap rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+>
+  Show all skills (20)
+
+  <span
+    class="flex size-[18px] shrink-0 items-center justify-center rounded-full bg-gray-cf1f3f9 text-black transition-all duration-300 group-hover:bg-white group-hover:text-black"
+  >
+    <svg class="size-[9px] stroke-current transition-all duration-300">
+      <use href="/img/sprite.svg#plus"></use>
+    </svg>
+  </span>
+</li>
                                  </ul>
                               </div>
-                              <button class="flex items-center gap-[5px] w-full lg:w-fit">
-                                 <svg class="size-4 stroke-gray-c575e6a">
-                                    <use href="/img/sprite.svg#tag">
-                                 </svg>
-                                 Prices for services
-                                 <span class="ml-auto size-[30px] rounded-full shrink-0 flex items-center justify-center bg-gray-fafafc">
-                                    <svg class="size-3 stroke-black">
-                                       <use href="/img/sprite.svg#plus">
-                                    </svg>
-                                 </span>
-                              </button>
-                              <button class="flex items-center gap-[5px] w-full lg:w-fit">
-                                 <svg class="size-4 stroke-gray-c575e6a">
-                                    <use href="/img/sprite.svg#medal">
-                                 </svg>
-                                 Certificates
-                                 <span class="ml-auto size-[30px] rounded-full shrink-0 flex items-center justify-center bg-gray-fafafc">
-                                    <svg class="size-3 stroke-black">
-                                       <use href="/img/sprite.svg#plus">
-                                    </svg>
-                                 </span>
-                              </button>
+                              <button
+  class="group flex w-full items-center gap-[5px] text-[#575E6A] transition-all duration-300 hover:text-black lg:w-fit"
+>
+  <svg class="size-4 shrink-0 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#tag"></use>
+  </svg>
+
+  Prices for services
+
+  <span
+    class="ml-auto flex size-[30px] shrink-0 items-center justify-center rounded-full bg-gray-fafafc text-black transition-all duration-300 group-hover:bg-black group-hover:text-white"
+  >
+    <svg class="size-3 stroke-current transition-all duration-300">
+      <use href="/img/sprite.svg#plus"></use>
+    </svg>
+  </span>
+</button>
+
+<button
+  class="group flex w-full items-center gap-[5px] text-[#575E6A] transition-all duration-300 hover:text-black lg:w-fit"
+>
+  <svg class="size-4 shrink-0 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#medal"></use>
+  </svg>
+
+  Certificates
+
+  <span
+    class="ml-auto flex size-[30px] shrink-0 items-center justify-center rounded-full bg-gray-fafafc text-black transition-all duration-300 group-hover:bg-black group-hover:text-white"
+  >
+    <svg class="size-3 stroke-current transition-all duration-300">
+      <use href="/img/sprite.svg#plus"></use>
+    </svg>
+  </span>
+</button>
                            </div>
                         </div>
                      </div>
@@ -432,13 +485,13 @@
                         </button>
                         <div class="overflow-hidden scrollbar-none" data-hs="container">
                            <div class="flex items-center shrink-0 w-fit" data-hs="wrapper">
-                              <button data-hs="item" class="min-w-[86px] p-[6px] shrink-0 rounded-[10px] text-center whitespace-nowrap first:bg-white lg:min-w-[65px]">
+                              <button data-hs="item" class="transition-all duration-300 hover:text-black hover:bg-white  min-w-[86px] p-[6px] shrink-0 rounded-[10px] text-center whitespace-nowrap first:bg-white lg:min-w-[65px]">
                               All
                               </button>
-                              <button data-hs="item" class="min-w-[86px] p-[6px] shrink-0 rounded-[10px] text-center whitespace-nowrap first:bg-white lg:min-w-[65px]">
+                              <button data-hs="item" class="transition-all duration-300 hover:text-black hover:bg-white  min-w-[86px] p-[6px] shrink-0 rounded-[10px] text-center whitespace-nowrap first:bg-white lg:min-w-[65px]">
                               Site creation
                               </button>
-                              <button data-hs="item" class="min-w-[86px] p-[6px] shrink-0 rounded-[10px] text-center whitespace-nowrap first:bg-white lg:min-w-[65px]">
+                              <button data-hs="item" class="transition-all duration-300 hover:text-black hover:bg-white  min-w-[86px] p-[6px] shrink-0 rounded-[10px] text-center whitespace-nowrap first:bg-white lg:min-w-[65px]">
                               Link building
                               </button>
                            </div>
@@ -564,14 +617,15 @@
                         </span>
                      </a>
                   </div>
-                  <button 
-                     class="flex items-center gap-[6px] font-Satoshi font-medium text-sm leading-none text-black px-[15px] py-3 rounded-xl bg-transparent text-black border-[1px] border-gray-caeb5bf w-full mt-[10px] justify-center md:max-w-[180px] md:mx-auto md:bg-black md:text-white md:[&amp;&gt;svg]:stroke-white lg:mt-6" 
-                     >
-                     Show more works
-                     <svg class="stroke-black size-3">
-                        <use href="/img/sprite.svg#plus">
-                     </svg>
-                  </button>
+                  <button
+  class="mt-[10px] flex w-full items-center justify-center gap-[6px] rounded-xl border border-black px-[15px] py-3 font-Satoshi text-sm font-medium leading-none text-black transition-all duration-300 hover:bg-black hover:text-white md:mx-auto md:max-w-[180px] md:bg-black md:text-white md:hover:bg-white md:hover:text-black lg:mt-6"
+>
+  Show more works
+
+  <svg class="size-3 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#plus"></use>
+  </svg>
+</button>
                </div>
             </div>
          </div>
@@ -590,11 +644,14 @@
                         data-href="/#"
                         >
                         <div class="h-[100px] rounded-xl relative w-[42.5%] sm:h-40 sm:rounded-2xl md:w-full">
-                           <button class="hidden size-9 rounded-full shrink-0 items-center justify-center bg-gray-fafafc md:flex md:absolute md:top-2 md:right-2 md:size-10">
-                              <svg class="size-4 stroke-blue">
-                                 <use href="/img/sprite.svg#heart">
-                              </svg>
-                           </button>
+                           <button
+                                    class="hidden size-9 shrink-0 items-center justify-center rounded-full bg-gray-fafafc text-[#4790FF] transition-all duration-300 hover:bg-[#4790FF] hover:text-white md:absolute md:right-2 md:top-2 md:flex md:size-10"
+                                  >
+                                    <svg class="size-4 stroke-current transition-all duration-300">
+                                      <use href="/img/sprite.svg#heart"></use>
+                                    </svg>
+                                  </button>
+
                            <img 
                               src="/img/temp/product.jpg" 
                               class="img-fill"
@@ -647,11 +704,13 @@
                         data-href="/#"
                         >
                         <div class="h-[100px] rounded-xl relative w-[42.5%] sm:h-40 sm:rounded-2xl md:w-full">
-                           <button class="hidden size-9 rounded-full shrink-0 items-center justify-center bg-gray-fafafc md:flex md:absolute md:top-2 md:right-2 md:size-10">
-                              <svg class="size-4 stroke-blue">
-                                 <use href="/img/sprite.svg#heart">
-                              </svg>
-                           </button>
+                           <button
+                                    class="hidden size-9 shrink-0 items-center justify-center rounded-full bg-gray-fafafc text-[#4790FF] transition-all duration-300 hover:bg-[#4790FF] hover:text-white md:absolute md:right-2 md:top-2 md:flex md:size-10"
+                                  >
+                                    <svg class="size-4 stroke-current transition-all duration-300">
+                                      <use href="/img/sprite.svg#heart"></use>
+                                    </svg>
+                                  </button>
                            <img 
                               src="/img/temp/product.jpg" 
                               class="img-fill"
@@ -704,11 +763,13 @@
                         data-href="/#"
                         >
                         <div class="h-[100px] rounded-xl relative w-[42.5%] sm:h-40 sm:rounded-2xl md:w-full">
-                           <button class="hidden size-9 rounded-full shrink-0 items-center justify-center bg-gray-fafafc md:flex md:absolute md:top-2 md:right-2 md:size-10">
-                              <svg class="size-4 stroke-blue">
-                                 <use href="/img/sprite.svg#heart">
-                              </svg>
-                           </button>
+                           <button
+                                    class="hidden size-9 shrink-0 items-center justify-center rounded-full bg-gray-fafafc text-[#4790FF] transition-all duration-300 hover:bg-[#4790FF] hover:text-white md:absolute md:right-2 md:top-2 md:flex md:size-10"
+                                  >
+                                    <svg class="size-4 stroke-current transition-all duration-300">
+                                      <use href="/img/sprite.svg#heart"></use>
+                                    </svg>
+                                  </button>
                            <img 
                               src="/img/temp/product.jpg" 
                               class="img-fill"
@@ -1281,10 +1342,21 @@
                               <p class="font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3 md:mt-[5px] md:text-base">You can make an individual order</p>
                            </div>
                         </div>
-                        <button class="from-[#6AB8FF] to-[#DEF5FF] bg-gradient-to-r p-[14px] rounded-xl font-Satoshi font-medium text-base leading-tight text-white w-full mt-3 md:mt-auto">
-                        <span class="md:hidden">Offer an Individual order</span>
-                        <span class="hidden md:block">Offer an order</span>
-                        </button>
+                        <button
+  class="group relative mt-3 w-full overflow-hidden rounded-xl border border-transparent bg-white p-[14px] font-Satoshi text-base font-medium leading-tight text-white transition-all duration-300 hover:border-[#4790FF] hover:text-[#4790FF] md:mt-auto"
+>
+  <span
+    class="absolute inset-0 z-0 bg-gradient-to-r from-[#6AB8FF] to-[#DEF5FF] transition-opacity duration-300 group-hover:opacity-0"
+  ></span>
+
+  <span class="relative z-[1] md:hidden">
+    Offer an Individual order
+  </span>
+
+  <span class="relative z-[1] hidden md:block">
+    Offer an order
+  </span>
+</button>
                      </div>
                   </div>
                </div>
@@ -1340,13 +1412,13 @@
                      <div class="" data-container="reviews-tabs" >
                         <div class="p-[15px] pt-4 -mt-2 bg-white rounded-b-[14px] xl:mt-0 xl:p-0">
                            <div class="bg-gray-fafafc rounded-xl p-[6px] flex">
-                              <button class="basis-1/3 font-Satoshi font-medium text-sm leading-tight text-gray-c575e6a p-[6px] rounded-[10px] text-center first:bg-white first:font-bold first:text-black xl:px-4 whitespace-nowrap">
+                              <button class="transition-all duration-300 hover:text-black hover:bg-white basis-1/3 font-Satoshi font-medium text-sm leading-tight text-gray-c575e6a p-[6px] rounded-[10px] text-center first:bg-white first:font-bold first:text-black xl:px-4 whitespace-nowrap">
                               All (45)
                               </button>
-                              <button class="basis-1/3 font-Satoshi font-medium text-sm leading-tight text-gray-c575e6a p-[6px] rounded-[10px] text-center first:bg-white first:font-bold first:text-black xl:px-4 whitespace-nowrap">
+                              <button class="transition-all duration-300 hover:text-black hover:bg-white basis-1/3 font-Satoshi font-medium text-sm leading-tight text-gray-c575e6a p-[6px] rounded-[10px] text-center first:bg-white first:font-bold first:text-black xl:px-4 whitespace-nowrap">
                               Positive (20)
                               </button>
-                              <button class="basis-1/3 font-Satoshi font-medium text-sm leading-tight text-gray-c575e6a p-[6px] rounded-[10px] text-center first:bg-white first:font-bold first:text-black xl:px-4 whitespace-nowrap">
+                              <button class="transition-all duration-300 hover:text-black hover:bg-white basis-1/3 font-Satoshi font-medium text-sm leading-tight text-gray-c575e6a p-[6px] rounded-[10px] text-center first:bg-white first:font-bold first:text-black xl:px-4 whitespace-nowrap">
                               Negative (10)
                               </button>
                            </div>
@@ -1512,14 +1584,17 @@
                               </div>
                            </div>
                         </div>
-                        <button 
-                           class="flex items-center gap-[6px] font-Satoshi font-medium text-sm leading-none text-black px-[15px] py-3 rounded-xl bg-black text-white justify-center md:max-w-[180px] md:mx-auto md:mt-3" 
-                           >
-                           Load more reviews
-                           <svg class="stroke-white size-3">
-                              <use href="/img/sprite.svg#plus">
-                           </svg>
-                        </button>
+                        
+
+                        <button
+  class="mt-[10px] flex w-full items-center justify-center gap-[6px] rounded-xl border border-black px-[15px] py-3 font-Satoshi text-sm font-medium leading-none text-black transition-all duration-300 hover:bg-black hover:text-white md:mx-auto md:max-w-[180px] md:bg-black md:text-white md:hover:bg-white md:hover:text-black lg:mt-6"
+>
+  Load more reviews
+
+  <svg class="size-3 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#plus"></use>
+  </svg>
+</button>
                      </div>
                   </div>
                </div>
@@ -1530,12 +1605,12 @@
                <div class="p-3 rounded-3xl border-[1px] border-solid border-gray-caeb5bf flex items-center gap-11">
                   <div class="flex items-center ">
                      <img 
-                        class="size-11 rounded-full overflow-hidden shrink-0 !size-[45px]"
+                        class="rounded-full overflow-hidden shrink-0 !size-[45px]"
                         src="/img/temp/o-5.jpg" 
                         alt=""
                         >
                      <div class="pl-2">
-                        <p class="font-Satoshi font-bold text-sm leading-tight text-black flex items-end !text-base leading-tight">
+                        <p class="font-Satoshi font-bold text-sm leading-tight text-black flex items-end ">
                            Michael_M
                         </p>
                         <span class="font-Satoshi font-medium text-base leading-tight text-gray-c9ca5b3">Advanced</span>
@@ -1544,9 +1619,19 @@
                   <p class="font-Satoshi font-bold text-xl leading-tight text-black">
                      Need something else? Message me to discuss your needs.
                   </p>
-                  <button class="ml-auto p-[14px] font-Satoshi font-medium text-base leading-tight text-white rounded-xl max-w-[327px] w-full from-[#6AB8FF] to-[#DEF5FF] bg-gradient-to-r">
+                  <!-- <button class="ml-auto p-[14px] font-Satoshi font-medium text-base leading-tight text-white rounded-xl max-w-[327px] w-full from-[#6AB8FF] to-[#DEF5FF] bg-gradient-to-r">
                   Message seller or offer an order
-                  </button>
+                  </button> -->
+                   <button class="ml-auto max-w-[327px] group relative grow overflow-hidden rounded-xl border border-transparent bg-transparent p-[14px] font-Satoshi text-base font-medium leading-tight text-white transition-all duration-300 hover:border-[#4790FF] hover:text-[#4790FF]"
+                     >
+                     <span
+                        class="absolute inset-0 z-0 bg-gradient-to-r from-[#6AB8FF] to-[#DEF5FF] transition-opacity duration-300 group-hover:opacity-0"
+                     ></span>
+
+                     <span class="relative z-[1]">
+                        Message seller or offer an order
+                     </span>
+                     </button>
                </div>
             </div>
          </div>

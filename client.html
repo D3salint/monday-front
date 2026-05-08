@@ -36,7 +36,7 @@
                   >
                MONDAY
                </a>
-               <div class=" hidden xs:flex max-w-80 flex grow relative">
+               <div class=" hidden xs:flex max-w-80 md:flex grow relative">
                   <div class="grow px-4 py-3 rounded-[100px] bg-[#FAFAFC] flex items-center gap-2 md:[&amp;_input]:order-1 md:[&amp;_svg]:order-2">
                      <svg class="size-4 stroke-black shrink-0">
                         <use href="/img/sprite.svg#magnifier">
@@ -50,7 +50,7 @@
                </div>
                <div class="ml-auto flex items-center gap-3 md:max-w-[274px] md:w-full">
                   <button 
-                     class="flex items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black "
+                     class=" items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black "
                      data-modal-button="auth"
                      >
                   Sign Up
@@ -171,23 +171,47 @@
                         </p>
                      </div>
                   </div>
-                  <button
-                     class="md:shrink-0 md:w-[190px] md:mt-0 mt-3 min-h-11 font-Satoshi font-bold text-sm leading-tight text-white flex items-center justify-center gap-2 p-[13px] rounded-xl w-full bg-gradient-to-r from-[#6AB8FF] to-[#DEF5FF]"
-                     >
-                     Create new task
-                     <svg class="size-[18px] stroke-white shrink-0">
-                        <use href="/img/sprite.svg#edit">
-                     </svg>
-                  </button>
+                 <button
+  class="group relative mt-3 flex min-h-11 w-full items-center justify-center gap-2 overflow-hidden rounded-xl border border-transparent bg-white p-[13px] font-Satoshi text-sm font-bold leading-tight text-white transition-all duration-300 hover:border-[#4790FF] hover:text-[#4790FF] md:mt-0 md:w-[190px] md:shrink-0"
+>
+  <span
+    class="absolute inset-0 z-0 rounded-xl bg-gradient-to-r from-[#6AB8FF] to-[#DEF5FF] transition-opacity duration-300 group-hover:opacity-0"
+  ></span>
+
+  <span class="relative z-[1]">Create new task</span>
+
+  <svg class="relative z-[1] size-[18px] shrink-0 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#edit"></use>
+  </svg>
+</button>
                </div>
             </div>
          </div>
          <div class="mt-8">
             <div class="app-container">
-               <div class="[&>p+div]:mt-[10px] mt-[10px]">
+               <div class="[&>p+div]:mt-[10px] mt-[10px] relative">
                   <p class="flex items-center gap-2 font-Satoshi font-bold text-base leading-tight text-black lg:text-xl lg:leading-tight xl:pl-6 xl:!px-0 md:justify-center md:!text-2xl">
                      Latest added services
                   </p>
+
+                  <div class="flex gap-1 absolute right-0 top-0">
+                     <button
+                        class="w-9 h-9 bg-white flex justify-center items-center rounded-full opacity-60"
+                        disabled
+                     >
+                        <svg class="size-2 stroke-black rotate-180">
+                           <use href="/img/sprite.svg#arrow-right" />
+                        </svg>
+                     </button>
+
+                     <button
+                        class="w-9 h-9 bg-white flex justify-center items-center rounded-full"
+                     >
+                        <svg class="size-2 stroke-black">
+                           <use href="/img/sprite.svg#arrow-right" />
+                        </svg>
+                     </button>
+                  </div>
                   <div class="md:-mx-[10px] ">
                      <div class="swiper" data-swiper="">
                         <div class="swiper-wrapper flex flex-col gap-[10px] md:flex-row md:gap-0">
@@ -392,11 +416,29 @@
             <div class="app-container">
                <div class="lg:p-[30px] lg:mx-0 md:gap-8 flex flex-col gap-6 pb-3 py-6 px-4 -mx-4 rounded-[24px] bg-gray-cf1f3f9">
                   <div>
-                     <div class="[&>p+div]:mt-[10px] mt-[10px]">
+                     <div class="[&>p+div]:mt-[10px] mt-[10px] relative">
                         <p class="flex items-center gap-2 font-Satoshi font-bold text-base leading-tight text-black lg:text-xl lg:leading-tight xl:pl-6 xl:!px-0 md:justify-center md:!text-2xl">
                            Most popular services
                         </p>
-                        <div class="md:-mx-[10px] ">
+                        <div class="flex gap-1 absolute right-0 top-0 !mt-0">
+                           <button
+                              class="w-9 h-9 bg-white flex justify-center items-center rounded-full opacity-60"
+                              disabled
+                           >
+                              <svg class="size-2 stroke-black rotate-180">
+                                 <use href="/img/sprite.svg#arrow-right" />
+                              </svg>
+                           </button>
+
+                           <button
+                              class="w-9 h-9 bg-white flex justify-center items-center rounded-full"
+                           >
+                              <svg class="size-2 stroke-black">
+                                 <use href="/img/sprite.svg#arrow-right" />
+                              </svg>
+                           </button>
+                        </div>
+                        <div class="md:-mx-[10px] mt-[15px]">
                            <div class="swiper" data-swiper="">
                               <div class="swiper-wrapper flex flex-col gap-[10px] md:flex-row md:gap-0">
                                  <div class="swiper-slide md:!w-[270px]">
@@ -596,11 +638,30 @@
                      </button>
                   </div>
                   <div>
-                     <div class="[&>p+div]:mt-[10px] mt-[10px]">
+                     <div class="[&>p+div]:mt-[10px] mt-[10px] relative">
                         <p class="flex items-center gap-2 font-Satoshi font-bold text-base leading-tight text-black lg:text-xl lg:leading-tight xl:pl-6 xl:!px-0 md:justify-center md:!text-2xl">
                            Most rated services
                         </p>
-                        <div class="md:-mx-[10px] ">
+
+                        <div class="flex gap-1 absolute right-0 top-0 !mt-0">
+                           <button
+                              class="w-9 h-9 bg-white flex justify-center items-center rounded-full opacity-60"
+                              disabled
+                           >
+                              <svg class="size-2 stroke-black rotate-180">
+                                 <use href="/img/sprite.svg#arrow-right" />
+                              </svg>
+                           </button>
+
+                           <button
+                              class="w-9 h-9 bg-white flex justify-center items-center rounded-full"
+                           >
+                              <svg class="size-2 stroke-black">
+                                 <use href="/img/sprite.svg#arrow-right" />
+                              </svg>
+                           </button>
+                        </div>
+                        <div class="md:-mx-[10px] mt-[15px]">
                            <div class="swiper" data-swiper="">
                               <div class="swiper-wrapper flex flex-col gap-[10px] md:flex-row md:gap-0">
                                  <div class="swiper-slide md:!w-[270px]">
