@@ -37,7 +37,7 @@
                   >
                MONDAY
                </a>
-               <div class=" hidden xs:flex max-w-80 flex grow relative">
+               <div class=" hidden xs:flex max-w-80 md:flex grow relative">
                   <div class="grow px-4 py-3 rounded-[100px] bg-[#FAFAFC] flex items-center gap-2 md:[&amp;_input]:order-1 md:[&amp;_svg]:order-2">
                      <svg class="size-4 stroke-black shrink-0">
                         <use href="/img/sprite.svg#magnifier">
@@ -51,7 +51,7 @@
                </div>
                <div class="ml-auto flex items-center gap-3 md:max-w-[274px] md:w-full">
                   <button 
-                     class="flex items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black "
+                     class="items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black "
                      data-modal-button="auth"
                      >
                   Sign Up
@@ -153,7 +153,7 @@
                      </p>
                   </header>
                   <div class="mt-[15px] flex items-center justify-between gap-2">
-                     <div class="flex flex-wrap gap-[6px] hidden lg:flex">
+                     <div class=" flex-wrap gap-[6px] hidden lg:flex">
                         <button class="py-2 px-5 rounded-[100px] bg-blue flex items-center gap-1 font-Satoshi font-bold text-xs text-white">
                            Sellers
                            <svg class="size-3 shrink-0 stroke-white">
@@ -206,11 +206,11 @@
                         <div class="z-50 absolute left-0 top-0 bg-white rounded-3xl w-full min-w-60 shadow-[0_5px_20px] shadow-[#000]/5 lg:left-auto lg:right-0 lg:-translate-y-[8px]" data-select="content">
                            <div class="flex items-center gap-[6px] px-5 py-3 bg-white font-Satoshi font-bold text-base text-black">
                               <svg class="size-[17px] stroke-black">
-                                 <use href="/img/sprite.svg#sort">
+                                 <use href="/img/sprite.svg#sort"/>
                               </svg>
                               <span>Sort users by</span>
                               <svg class="ml-auto size-3 stroke-black -scale-y-100">
-                                 <use href="/img/sprite.svg#arrow-down">
+                                 <use href="/img/sprite.svg#arrow-down"/>
                               </svg>
                            </div>
                            <div class="mt-2 flex flex-col gap-3 px-5 pb-6">
@@ -277,21 +277,47 @@
                                        </button>
                                        <div class="" data-accordeon="content">
                                           <div class="pt-5 flex flex-col gap-4">
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-2 cursor-pointer">
-                                                <div class="size-[18px] rounded-full shrink-0  border-[1px] border-[#AEB5BF] ">
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-full border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Only clients
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-2 cursor-pointer">
-                                                <div class="size-[18px] rounded-full shrink-0  border-[1px] border-[#AEB5BF] ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  Only clients
+                                                </span>
+                                             </label>
+
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-full border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Only Sellers
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-2 cursor-pointer">
-                                                <div class="size-[18px] rounded-full shrink-0  border-[1px] border-[#AEB5BF] ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  Only Sellers
+                                                </span>
+                                             </label>
+
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-full border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Show All
-                                             </div>
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  Show All
+                                                </span>
+                                             </label>
                                           </div>
                                        </div>
                                     </div>
@@ -313,21 +339,47 @@
                                        </button>
                                        <div class="" data-accordeon="content">
                                           <div class="pt-5 flex flex-col gap-4">
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+                                              <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Beginner
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Beginner
+                                                </span>
+                                             </label>
+
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Advanced
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Advanced
+                                                </span>
+                                             </label>
+
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Professional
-                                             </div>
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Professional
+                                                </span>
+                                             </label>
                                           </div>
                                        </div>
                                     </div>
@@ -349,21 +401,48 @@
                                        </button>
                                        <div class="" data-accordeon="content">
                                           <div class="pt-5 flex flex-col gap-4">
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Beginner
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Beginner
+                                                </span>
+                                             </label>
+
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Advanced
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Advanced
+                                                </span>
+                                             </label>
+
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Advanced
-                                             </div>
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Professional
+                                                </span>
+                                             </label>
                                           </div>
                                        </div>
                                     </div>
@@ -385,26 +464,59 @@
                                        </button>
                                        <div class="" data-accordeon="content">
                                           <div class="pt-5 flex flex-col gap-4">
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                from 1
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   from 1
+                                                </span>
+                                             </label>
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Up to 5
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Up to 5
+                                                </span>
+                                             </label>
+
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Up to 20
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Up to 20
+                                                </span>
+                                             </label>
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Up to 100
-                                             </div>
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Up to 100
+                                                </span>
+                                             </label>
                                           </div>
                                        </div>
                                     </div>
@@ -426,31 +538,73 @@
                                        </button>
                                        <div class="" data-accordeon="content">
                                           <div class="pt-5 flex flex-col gap-4">
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Online
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Online
+                                                </span>
+                                             </label>
+
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Was active up to 1 d ago
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Was active up to 1 d ago
+                                                </span>
+                                             </label>
+
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Was active up to 3 d ago
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Was active up to 3 d ago
+                                                </span>
+                                             </label>
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Was active up to 7 d ago
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Was active up to 7 d ago
+                                                </span>
+                                             </label>
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Was active up to 14 d ago
-                                             </div>
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                   Was active up to 14 d ago
+                                                </span>
+                                             </label>
                                           </div>
                                        </div>
                                     </div>
@@ -472,26 +626,58 @@
                                        </button>
                                        <div class="" data-accordeon="content">
                                           <div class="pt-5 flex flex-col gap-4">
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                24 hours
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  24 hours
+                                                </span>
+                                             </label>
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Up to 3 days
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  Up to 3 days
+                                                </span>
+                                             </label>
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Up to 7 days
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  Up to 7 days
+                                                </span>
+                                             </label>
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                From 7 or more
-                                             </div>
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  From 7 or more
+                                                </span>
+                                             </label>
                                           </div>
                                        </div>
                                     </div>
@@ -513,62 +699,137 @@
                                        </button>
                                        <div class="" data-accordeon="content">
                                           <div class="pt-5 flex flex-col gap-4">
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                No orders 
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  No orders 
+                                                </span>
+                                             </label>
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Up to 1
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  Up to 1
+                                                </span>
+                                             </label>
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Up to 3
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  Up to 3
+                                                </span>
+                                             </label>
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Up to 5
-                                             </div>
-                                             <div class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3 lg:pl-10 flex items-center gap-[6px]">
-                                                <div class="shrink-0 size-[18px] rounded-[4px] border-[0.5px] relative  border-gray-caeb5bf ">
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  Up to 5
+                                                </span>
+                                             </label>
+                                             <label class="flex items-center gap-[6px] cursor-pointer lg:pl-10 text-sm">
+                                                <input type="checkbox" class="peer hidden" />
+
+                                                <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                                                   <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10" >
+                                                      <use href="/img/sprite.svg#checked"></use>
+                                                   </svg>
                                                 </div>
-                                                Up to 8
-                                             </div>
+
+                                                <span class="font-Satoshi font-bold text-gray-c9ca5b3 transition-colors peer-checked:text-black" >
+                                                  Up to 8
+                                                </span>
+                                             </label>
                                           </div>
                                        </div>
                                     </div>
-                                    <div class="flex flex-col gap-[15px] mt-[50px]">
-                                       <div class="flex items-start gap-1 w-full w-full items-center" data-form-status="true">
-                                          <div class="font-Satoshi font-bold text-black text-sm leading-none flex items-center gap-1">
+                                    
+                                    <div class="mt-6 flex flex-col gap-[15px]">
+                                       <div
+                                          class="flex items-start gap-1 w-full"
+                                          data-form-status="true"
+                                       >
+                                          <div
+                                             class="font-Satoshi font-bold text-black text-sm leading-none flex items-center gap-1"
+                                          >
                                              PRO
                                           </div>
-                                          <div class="ml-auto w-9 h-4 rounded-xl bg-black/10 p-[2px]  bg-blue  cursor-pointer ">
+
+                                          <svg class="size-[11px] stroke-black">
+                                             <use href="/img/sprite.svg#star" />
+                                          </svg>
+                                          <div
+                                             class="ml-auto w-9 h-4 rounded-xl bg-black/10 p-[2px] bg-blue cursor-pointer"
+                                          >
                                              <div class="relative w-full h-full">
-                                                <span class="block rounded-full shadow-sm shadow-[#101828]/10 w-3 h-3 bg-white absolute left-0 top-1/2 -translate-y-1/2 transition-[left]  translate-x-5 "></span>
+                                             <span
+                                                class="block rounded-full shadow-sm shadow-[#101828]/10 w-3 h-3 bg-white absolute left-0 top-1/2 -translate-y-1/2 transition-[left] translate-x-5"
+                                             ></span>
                                              </div>
                                           </div>
                                        </div>
-                                       <div class="flex items-start gap-1 w-full w-full items-center" data-form-status="false">
-                                          <div class="font-Satoshi font-bold text-black text-sm leading-none flex items-center gap-1">
+                                       <div
+                                          class="flex items-start gap-1 w-full"
+                                          data-form-status="false"
+                                       >
+                                          <div
+                                             class="font-Satoshi font-bold text-black text-sm leading-none flex items-center gap-1"
+                                          >
                                              Verificated
                                           </div>
-                                          <div class="ml-auto w-9 h-4 rounded-xl bg-black/10 p-[2px]  cursor-pointer ">
+                                          <svg class="size-[18px]">
+                                             <use href="/img/sprite.svg#verificated" />
+                                          </svg>
+                                          <div
+                                             class="ml-auto w-9 h-4 rounded-xl bg-black/10 p-[2px] cursor-pointer"
+                                          >
                                              <div class="relative w-full h-full">
-                                                <span class="block rounded-full shadow-sm shadow-[#101828]/10 w-3 h-3 bg-white absolute left-0 top-1/2 -translate-y-1/2 transition-[left] "></span>
+                                             <span
+                                                class="block rounded-full shadow-sm shadow-[#101828]/10 w-3 h-3 bg-white absolute left-0 top-1/2 -translate-y-1/2 transition-[left]"
+                                             ></span>
                                              </div>
                                           </div>
                                        </div>
-                                       <div class="flex items-start gap-1 w-full w-full items-center" data-form-status="true">
-                                          <div class="font-Satoshi font-bold text-black text-sm leading-none flex items-center gap-1">
+                                       <div
+                                          class="flex items-start gap-1 w-full"
+                                          data-form-status="true"
+                                       >
+                                          <div
+                                             class="font-Satoshi font-bold text-black text-sm leading-none flex items-center gap-1"
+                                          >
                                              Online Now
                                           </div>
-                                          <div class="ml-auto w-9 h-4 rounded-xl bg-black/10 p-[2px]  bg-blue  cursor-pointer ">
+                                          <div
+                                             class="ml-auto w-9 h-4 rounded-xl bg-black/10 p-[2px] bg-blue cursor-pointer"
+                                          >
                                              <div class="relative w-full h-full">
-                                                <span class="block rounded-full shadow-sm shadow-[#101828]/10 w-3 h-3 bg-white absolute left-0 top-1/2 -translate-y-1/2 transition-[left]  translate-x-5 "></span>
+                                             <span
+                                                class="block rounded-full shadow-sm shadow-[#101828]/10 w-3 h-3 bg-white absolute left-0 top-1/2 -translate-y-1/2 transition-[left] translate-x-5"
+                                             ></span>
                                              </div>
                                           </div>
                                        </div>
@@ -578,9 +839,17 @@
                                     <p class="font-Satoshi font-bold text-[18px] leading-tight text-gray-c575e6a text-center">
                                        Create a service and start earning money.
                                     </p>
-                                    <button class="from-[#6AB8FF] to-[#DEF5FF] bg-gradient-to-r px-[13px] py-[10.5px] rounded-xl flex items-center gap-[5px] font-Satoshi font-medium text-sm leading-tight text-white mt-[15px] w-full justify-center p-[13px] font-bold text-sm min-h-11">
-                                    Create service
-                                    </button>    
+                                    <button
+  class="group relative mt-[15px] flex min-h-11 w-full items-center justify-center gap-[5px] overflow-hidden rounded-xl border border-transparent bg-white p-[13px] font-Satoshi text-sm font-bold leading-tight text-white transition-all duration-300 hover:border-[#4790FF] hover:text-[#4790FF]"
+>
+  <span
+    class="absolute inset-0 z-0 bg-gradient-to-r from-[#6AB8FF] to-[#DEF5FF] transition-opacity duration-300 group-hover:opacity-0"
+  ></span>
+
+  <span class="relative z-[1]">
+    Create service
+  </span>
+</button>   
                                  </div>
                                  <div class="hidden mt-2 h-[134px] rounded-xl bg-blue-cedf4ff lg:flex items-center justify-center px-[15px] text-center font-Satoshi font-bold text-[18px] leading-tight text-blue">
                                     Invite friends and earn money!
@@ -670,22 +939,34 @@
                            </p>
                         </div>
                         <ul class="mb-3 flex flex-wrap gap-1">
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Development on 1C-Bitrix
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              SEO and Traffic
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Bitrix24
-                           </li>
-                        </ul>
-                        <button class="p-[13px] w-full rounded-[100px] bg-blue-cedf4ff flex items-center justify-center gap-3 font-Satoshi font-bold text-sm leading-tight text-blue">
-                           Message Seller
-                           <svg class="size-[14px] stroke-blue shrink-0">
-                              <use href="/img/sprite.svg#message">
-                           </svg>
-                        </button>
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Development on 1C-Bitrix
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    SEO and Traffic
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Bitrix24
+  </li>
+</ul>
+
+<button
+  class="flex w-full items-center justify-center gap-3 rounded-[100px] border border-transparent bg-blue-cedf4ff p-[13px] font-Satoshi text-sm font-bold leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF]"
+>
+  Message Seller
+
+  <svg class="size-[14px] shrink-0 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#message"></use>
+  </svg>
+</button>
                      </div>
                      <div class="p-3 bg-white rounded-2xl flex flex-col">
                         <div class="flex items-center justify-between gap-2 mb-3">
@@ -757,22 +1038,34 @@
                            </p>
                         </div>
                         <ul class="mb-3 flex flex-wrap gap-1">
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Development on 1C-Bitrix
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              SEO and Traffic
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Bitrix24
-                           </li>
-                        </ul>
-                        <button class="p-[13px] w-full rounded-[100px] bg-blue-cedf4ff flex items-center justify-center gap-3 font-Satoshi font-bold text-sm leading-tight text-blue">
-                           Message Seller
-                           <svg class="size-[14px] stroke-blue shrink-0">
-                              <use href="/img/sprite.svg#message">
-                           </svg>
-                        </button>
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Development on 1C-Bitrix
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    SEO and Traffic
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Bitrix24
+  </li>
+</ul>
+
+<button
+  class="flex w-full items-center justify-center gap-3 rounded-[100px] border border-transparent bg-blue-cedf4ff p-[13px] font-Satoshi text-sm font-bold leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF]"
+>
+  Message Seller
+
+  <svg class="size-[14px] shrink-0 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#message"></use>
+  </svg>
+</button>
                      </div>
                      <div class="p-3 bg-white rounded-2xl flex flex-col">
                         <div class="flex items-center justify-between gap-2 mb-3">
@@ -844,22 +1137,34 @@
                            </p>
                         </div>
                         <ul class="mb-3 flex flex-wrap gap-1">
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Development on 1C-Bitrix
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              SEO and Traffic
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Bitrix24
-                           </li>
-                        </ul>
-                        <button class="p-[13px] w-full rounded-[100px] bg-blue-cedf4ff flex items-center justify-center gap-3 font-Satoshi font-bold text-sm leading-tight text-blue">
-                           Message Seller
-                           <svg class="size-[14px] stroke-blue shrink-0">
-                              <use href="/img/sprite.svg#message">
-                           </svg>
-                        </button>
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Development on 1C-Bitrix
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    SEO and Traffic
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Bitrix24
+  </li>
+</ul>
+
+<button
+  class="flex w-full items-center justify-center gap-3 rounded-[100px] border border-transparent bg-blue-cedf4ff p-[13px] font-Satoshi text-sm font-bold leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF]"
+>
+  Message Seller
+
+  <svg class="size-[14px] shrink-0 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#message"></use>
+  </svg>
+</button>
                      </div>
                      <div class="p-3 bg-white rounded-2xl flex flex-col">
                         <div class="flex items-center justify-between gap-2 mb-3">
@@ -931,22 +1236,34 @@
                            </p>
                         </div>
                         <ul class="mb-3 flex flex-wrap gap-1">
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Development on 1C-Bitrix
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              SEO and Traffic
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Bitrix24
-                           </li>
-                        </ul>
-                        <button class="p-[13px] w-full rounded-[100px] bg-blue-cedf4ff flex items-center justify-center gap-3 font-Satoshi font-bold text-sm leading-tight text-blue">
-                           Message Seller
-                           <svg class="size-[14px] stroke-blue shrink-0">
-                              <use href="/img/sprite.svg#message">
-                           </svg>
-                        </button>
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Development on 1C-Bitrix
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    SEO and Traffic
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Bitrix24
+  </li>
+</ul>
+
+<button
+  class="flex w-full items-center justify-center gap-3 rounded-[100px] border border-transparent bg-blue-cedf4ff p-[13px] font-Satoshi text-sm font-bold leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF]"
+>
+  Message Seller
+
+  <svg class="size-[14px] shrink-0 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#message"></use>
+  </svg>
+</button>
                      </div>
                      <div class="p-3 bg-white rounded-2xl flex flex-col">
                         <div class="flex items-center justify-between gap-2 mb-3">
@@ -1018,22 +1335,34 @@
                            </p>
                         </div>
                         <ul class="mb-3 flex flex-wrap gap-1">
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Development on 1C-Bitrix
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              SEO and Traffic
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Bitrix24
-                           </li>
-                        </ul>
-                        <button class="p-[13px] w-full rounded-[100px] bg-blue-cedf4ff flex items-center justify-center gap-3 font-Satoshi font-bold text-sm leading-tight text-blue">
-                           Message Seller
-                           <svg class="size-[14px] stroke-blue shrink-0">
-                              <use href="/img/sprite.svg#message">
-                           </svg>
-                        </button>
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Development on 1C-Bitrix
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    SEO and Traffic
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Bitrix24
+  </li>
+</ul>
+
+<button
+  class="flex w-full items-center justify-center gap-3 rounded-[100px] border border-transparent bg-blue-cedf4ff p-[13px] font-Satoshi text-sm font-bold leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF]"
+>
+  Message Seller
+
+  <svg class="size-[14px] shrink-0 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#message"></use>
+  </svg>
+</button>
                      </div>
                      <div class="p-3 bg-white rounded-2xl flex flex-col">
                         <div class="flex items-center justify-between gap-2 mb-3">
@@ -1105,32 +1434,45 @@
                            </p>
                         </div>
                         <ul class="mb-3 flex flex-wrap gap-1">
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Development on 1C-Bitrix
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              SEO and Traffic
-                           </li>
-                           <li class="p-[10.5px_12px] rounded-[100px] border-[1px] border-solid border-gray-cf1f3f9 font-Satoshi font-bold text-xs text-gray-c575e6a">
-                              Bitrix24
-                           </li>
-                        </ul>
-                        <button class="p-[13px] w-full rounded-[100px] bg-blue-cedf4ff flex items-center justify-center gap-3 font-Satoshi font-bold text-sm leading-tight text-blue">
-                           Message Seller
-                           <svg class="size-[14px] stroke-blue shrink-0">
-                              <use href="/img/sprite.svg#message">
-                           </svg>
-                        </button>
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Development on 1C-Bitrix
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    SEO and Traffic
+  </li>
+
+  <li
+    class="cursor-pointer rounded-[100px] border border-solid border-gray-cf1f3f9 p-[10.5px_12px] font-Satoshi text-xs font-bold text-gray-c575e6a transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+  >
+    Bitrix24
+  </li>
+</ul>
+
+<button
+  class="flex w-full items-center justify-center gap-3 rounded-[100px] border border-transparent bg-blue-cedf4ff p-[13px] font-Satoshi text-sm font-bold leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF]"
+>
+  Message Seller
+
+  <svg class="size-[14px] shrink-0 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#message"></use>
+  </svg>
+</button>
                      </div>
                   </div>
-                  <button 
-                     class="flex items-center gap-[6px] font-Satoshi font-medium text-sm leading-none text-black px-[15px] py-3 rounded-xl bg-black text-white mt-3 w-full justify-center md:max-w-[220px] md:mx-auto md:mt-5 md:p-4 md:border-[1px] md:border-solid md:border-gray-caeb5bf md:bg-transparent md:text-black md:[&amp;&gt;svg]:stroke-black" 
-                     >
-                     Show More
-                     <svg class="stroke-white size-3">
-                        <use href="/img/sprite.svg#plus">
-                     </svg>
-                  </button>
+                  <button
+  class="mt-3 flex w-full items-center justify-center gap-[6px] rounded-xl border border-black bg-black px-[15px] py-3 font-Satoshi text-sm font-medium leading-none text-white transition-all duration-300 hover:bg-white hover:text-black md:mx-auto md:mt-5 md:max-w-[220px] md:border-gray-caeb5bf md:bg-transparent md:p-4 md:text-black md:hover:bg-black md:hover:text-white"
+>
+  Show More
+
+  <svg class="size-3 stroke-current transition-all duration-300">
+    <use href="/img/sprite.svg#plus"></use>
+  </svg>
+</button>
                </section>
             </div>
          </div>
