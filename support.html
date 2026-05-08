@@ -37,7 +37,7 @@
                   >
                MONDAY
                </a>
-               <div class=" hidden xs:flex max-w-80 flex grow relative">
+               <div class=" hidden xs:flex max-w-80 md:flex grow relative">
                   <div class="grow px-4 py-3 rounded-[100px] bg-[#FAFAFC] flex items-center gap-2 md:[&amp;_input]:order-1 md:[&amp;_svg]:order-2">
                      <svg class="size-4 stroke-black shrink-0">
                         <use href="/img/sprite.svg#magnifier">
@@ -51,7 +51,7 @@
                </div>
                <div class="ml-auto flex items-center gap-3 md:max-w-[274px] md:w-full">
                   <button 
-                     class="flex items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black "
+                     class=" items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black "
                      data-modal-button="auth"
                      >
                   Sign Up
@@ -188,12 +188,12 @@
                   name="describe"
                   placeholder="Describe, briefly but accurately, the essence of your request to technical support..."
                   ></textarea>
-               <button 
-                  class="md:w-[190px] p-[13px] bg-black rounded-xl text-center font-Satoshi font-medium text-sm leading-tight text-white" 
-                  type="submit"
-                  >
-               Send
-               </button>
+               <button
+  class="rounded-xl border border-transparent bg-black p-[13px] text-center font-Satoshi text-sm font-medium leading-tight text-white transition-all duration-300 hover:border-black hover:bg-white hover:text-black md:w-[190px]"
+  type="submit"
+>
+  Send
+</button>
             </form>
          </div>
       </div>

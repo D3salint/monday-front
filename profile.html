@@ -37,7 +37,7 @@
                   >
                MONDAY
                </a>
-               <div class=" hidden xs:flex max-w-80 flex grow relative">
+               <div class=" hidden xs:flex max-w-80 md:flex grow relative">
                   <div class="grow px-4 py-3 rounded-[100px] bg-[#FAFAFC] flex items-center gap-2 md:[&amp;_input]:order-1 md:[&amp;_svg]:order-2">
                      <svg class="size-4 stroke-black shrink-0">
                         <use href="/img/sprite.svg#magnifier">
@@ -51,7 +51,7 @@
                </div>
                <div class="ml-auto flex items-center gap-3 md:max-w-[274px] md:w-full">
                   <button 
-                     class="flex items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black "
+                     class="items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black "
                      data-modal-button="auth"
                      >
                   Sign Up
@@ -156,16 +156,32 @@
                      Profile
                      <img class="arrow -scale-x-100 size-3 ml-auto opacity-60" src="/img/icons/arrow-left.svg" alt="">
                      </button>
-                     <button class="data-tab-button md:w-full md:text-base md:leading-tight shrink-0 whitespace-nowrap flex items-center gap-[5px] p-3 rounded-xl font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3">
-                     <img class="size-[18px] opacity-60" src="/img/icons/empty-wallet.svg" alt="">
-                     Payment
-                     <img class="arrow -scale-x-100 size-3 ml-auto opacity-60" src="/img/icons/arrow-left.svg" alt="">
+
+                     <button data-id="payment" class="data-tab-button md:w-full md:text-base md:leading-tight shrink-0 whitespace-nowrap flex items-center gap-[5px] p-3 rounded-xl font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3">
+                        <img class="size-[18px] opacity-60" src="/img/icons/empty-wallet.svg" alt="">
+                        Payment
+                        <img class="arrow -scale-x-100 size-3 ml-auto opacity-60" src="/img/icons/arrow-left.svg" alt="">
                      </button>
                   </div>
-                  <button class="md:flex hidden w-full justify-center items-center gap-2 p-[14px] border-[1px] border-solid border-black/10 rounded-xl font-Satoshi font-medium text-base leading-tight text-black">
-                  <img src="/img/icons/arrow-left.svg" alt="">
-                  Back
-                  </button>
+                  <button
+  class="hidden w-full items-center justify-center gap-2 rounded-xl border border-solid border-black/10 p-[14px] font-Satoshi text-base font-medium leading-tight text-black transition-all duration-300 hover:border-black hover:bg-black hover:text-white md:flex"
+>
+  <svg
+    class="size-[18px] stroke-current transition-all duration-300"
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M11.25 14.94L5.31 9L11.25 3.06"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+
+  Back
+</button>
                </div>
                <div class="md:mt-0 md:w-[calc(100%-270px)] mt-4">
                   <form id="main">
@@ -277,24 +293,27 @@
                               </div>
                               <div class="mt-[5px] flex items-center gap-4 justify-between">
                                  <button
-                                    class="md:text-base md:leading-tight p-[13px_24px] min-h-11 rounded-xl bg-blue-cedf4ff flex items-center gap-[5px] font-Satoshi font-medium text-sm leading-tight text-blue"
+                                    class="flex min-h-11 items-center gap-[5px] rounded-xl border border-transparent bg-[#EDF4FF] p-[13px_24px] font-Satoshi text-sm font-medium leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF] md:text-base md:leading-tight"
                                     type="submit"
                                     >
-                                 <img
-                                    class="size-[18px]"
-                                    src="/img/icons/settings-blue.svg"
-                                    alt=""
+                                    <img
+                                       class="size-[18px] transition-all duration-300"
+                                       src="/img/icons/settings-blue.svg"
+                                       alt=""
                                     />
-                                 Save Changes
+
+                                    Save Changes
                                  </button>
+
                                  <button
-                                    class="px-[5px] flex items-center gap-[10px] font-Satoshi font-medium text-sm leading-tight text-[#FF8E8E]"
+                                    class="flex items-center gap-[10px] px-[5px] font-Satoshi text-sm font-medium leading-tight text-[#FF8E8E] transition-all duration-300 hover:text-[#ff6b6b]"
                                     >
-                                 Delete Account
-                                 <img
-                                    class="size-[18px]"
-                                    src="/img/icons/trash-red.svg"
-                                    alt=""
+                                    Delete Account
+
+                                    <img
+                                       class="size-[18px] transition-all duration-300"
+                                       src="/img/icons/trash-red.svg"
+                                       alt=""
                                     />
                                  </button>
                               </div>
@@ -340,15 +359,16 @@
                               </div>
                            </div>
                            <button
-                              class="md:text-base md:leading-tight mt-[10px] w-full min-h-11 p-[13px_24px] rounded-xl bg-blue-cedf4ff flex items-center justify-center gap-[5px] font-Satoshi font-medium text-sm leading-tight text-blue"
+                              class="md:text-base md:leading-tight mt-[10px] w-full min-h-11 p-[13px_24px] rounded-xl border border-transparent bg-blue-cedf4ff flex items-center justify-center gap-[5px] font-Satoshi font-medium text-sm leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF]"
                               >
                            <img
-                              class="size-[18px]"
+                              class="size-[18px] transition-all duration-300"
                               src="/img/icons/settings-blue.svg"
                               alt=""
                               />
                            Save Changes
                            </button>
+
                         </div>
                      </div>
                   </form>
@@ -499,21 +519,22 @@
                                  class="md:mt-[10px] mt-[5px] flex items-center gap-4 justify-between"
                                  >
                                  <button
-                                    class="md:text-base md:leading-tight whitespace-nowrap p-[13px_24px] min-h-11 rounded-xl bg-blue-cedf4ff flex items-center gap-[5px] font-Satoshi font-medium text-sm leading-tight text-blue"
+                                    class="flex min-h-11 items-center gap-[5px] rounded-xl border border-transparent bg-[#EDF4FF] p-[13px_24px] font-Satoshi text-sm font-medium leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF] md:text-base md:leading-tight"
                                     type="submit"
                                     >
-                                 <img
-                                    class="size-[18px]"
-                                    src="/img/icons/settings-blue.svg"
-                                    alt=""
+                                    <img
+                                       class="size-[18px] transition-all duration-300"
+                                       src="/img/icons/settings-blue.svg"
+                                       alt=""
                                     />
-                                 Save Changes
+
+                                    Save Changes
                                  </button>
                                  <button
-                                    class="rounded-xl p-[13px] max-w-[247px] w-full font-Satoshi font-medium text-sm leading-tight text-white bg-black"
-                                    >
-                                 Preview your profile
-                                 </button>
+  class="w-full max-w-[247px] rounded-xl border border-transparent bg-black p-[13px] font-Satoshi text-sm font-medium leading-tight text-white transition-all duration-300 hover:border-black hover:bg-white hover:text-black"
+>
+  Preview your profile
+</button>
                               </div>
                            </div>
                         </div>
@@ -559,19 +580,82 @@
                               </div>
                               <div class="mx-auto max-w-[280px] mt-4 grid grid-cols-2 gap-4">
                                  <button
-                                    class="bg-blue-cedf4ff text-blue font-Satoshi font-medium text-base leading-tight p-3 min-h-11 rounded-xl border-[1px] border-solid border-gray-light flex items-center justify-center gap-1"
-                                    type="button"
-                                    >
-                                 <img src="/img/icons/upload-blue.svg" alt="" />
-                                 Upload
-                                 </button>
-                                 <button
-                                    class="text-[#FF8E8E] font-Satoshi font-medium text-base leading-tight p-3 min-h-11 rounded-xl border-[1px] border-solid border-gray-light flex items-center justify-center gap-1"
-                                    type="button"
-                                    >
-                                 Delete
-                                 <img src="/img/icons/trash-red.svg" alt="" />
-                                 </button>
+  class="flex min-h-11 items-center justify-center gap-1 rounded-xl border border-solid border-gray-light bg-blue-cedf4ff p-3 font-Satoshi text-base font-medium leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF]"
+  type="button"
+>
+  <svg
+    class="size-[18px] stroke-current transition-all duration-300"
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9 12V6"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M6.75 8.25L9 6L11.25 8.25"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M16.5 11.25V12.75C16.5 15 15 16.5 12.75 16.5H5.25C3 16.5 1.5 15 1.5 12.75V11.25"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+
+  Upload
+</button>
+
+<button
+  class="flex min-h-11 items-center justify-center gap-1 rounded-xl border border-solid border-gray-light p-3 font-Satoshi text-base font-medium leading-tight text-[#FF8E8E] transition-all duration-300 hover:border-[#FF8E8E] hover:bg-[#FF8E8E] hover:text-white"
+  type="button"
+>
+  Delete
+
+  <svg
+    class="size-[18px] stroke-current transition-all duration-300"
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15.75 5.04688C13.2525 4.79937 10.74 4.67188 8.235 4.67188C6.75 4.67188 5.265 4.74687 3.78 4.89687L2.25 5.04688"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M6.375 4.28906L6.54 3.30656C6.66 2.59406 6.75 2.0625 8.0175 2.0625H9.9825C11.25 2.0625 11.3475 2.625 11.46 3.31406L11.625 4.28906"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M14.2871 7.42969L13.7996 14.9797C13.7171 16.1572 13.6496 17.0722 11.5571 17.0722H6.74211C4.64961 17.0722 4.58211 16.1572 4.49961 14.9797L4.01211 7.42969"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M7.90625 12.9375H10.4062"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M7.28125 9.9375H11.0312"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</button>
                               </div>
                            </div>
                            <div class="flex items-center justify-center mt-[10px] min-h-[150px] relative rounded-3xl overflow-hidden">
@@ -581,11 +665,205 @@
                                  alt=""
                                  >
                               <button
-                                 class="relative z-10 flex items-center gap-1 p-[13px_22px] rounded-xl bg-white/80 backdrop-blur-[8px] font-Satoshi font-bold text-sm leading-tight text-gray-c575e6a"
-                                 >
-                              <img class="size-[18px]" src="/img/icons/camera-gray.svg" alt="">
-                              Edit cover image
-                              </button>
+  class="relative z-10 flex items-center gap-1 rounded-xl bg-white/80 p-[13px_22px] font-Satoshi text-sm font-bold leading-tight text-gray-c575e6a backdrop-blur-[8px] transition-all duration-300 hover:bg-black hover:text-white"
+>
+  <svg
+    class="size-[18px] stroke-current transition-all duration-300"
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5.07 16H12.93C15 16 15.825 14.7325 15.9225 13.1875L16.3125 6.9925C16.4175 5.3725 15.1275 4 13.5 4C13.0425 4 12.6225 3.7375 12.4125 3.3325L11.8725 2.245C11.5275 1.5625 10.6275 1 9.8625 1H8.145C7.3725 1 6.4725 1.5625 6.1275 2.245L5.5875 3.3325C5.3775 3.7375 4.9575 4 4.5 4C2.8725 4 1.5825 5.3725 1.6875 6.9925L2.0775 13.1875C2.1675 14.7325 3 16 5.07 16Z"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M7.875 5.5H10.125"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M9 13C10.3425 13 11.4375 11.905 11.4375 10.5625C11.4375 9.22 10.3425 8.125 9 8.125C7.6575 8.125 6.5625 9.22 6.5625 10.5625C6.5625 11.905 7.6575 13 9 13Z"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+
+  Edit cover image
+</button>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+                  <form class="hidden" id="payment">
+                     <h2 class="hidden md:block font-Satoshi font-bold text-[32px] leading-tight text-black">
+                        Payment settings
+                     </h2>
+
+                     <div class="xl:flex xl:justify-between md:mx-0 md:mt-3 -mx-4 p-4 bg-gray-cf1f3f9 rounded-[24px] gap-[10px]">
+                        <!-- Wallets -->
+                        <div class="xl:w-[calc(100%-392px)] p-4 md:px-6 md:py-5 rounded-3xl bg-white">
+                           <header class="md:text-xl md:leading-tight flex items-center gap-[7px] font-Satoshi font-bold text-base leading-tight text-black pb-4 border-b-[1px] border-b-solid border-b-gray-light">
+                           <svg class="size-4 stroke-gray-c575e6a">
+                              <use href="/img/sprite.svg#empty-wallet"></use>
+                           </svg>
+                           Wallets
+                           </header>
+
+                           <div class="mt-4 flex flex-col gap-[12px]">
+                           <div>
+                              <p class="mb-[6px] font-Satoshi font-bold text-sm text-black">
+                                 WebMoney <span class="text-gray-c9ca5b3">Wallet</span>
+                              </p>
+                              <div class="flex items-center gap-[10px]">
+                                 <img class="size-8 shrink-0" src="img/payment/WebMoney.png" alt="" />
+                                 <div class="flex items-center rounded-xl bg-gray-fafafc px-4 w-full">
+                                 <input
+                                    class="min-h-[50px] w-full bg-transparent outline-none font-Satoshi font-medium text-sm text-black placeholder:text-gray-c9ca5b3"
+                                    placeholder="Enter your wallet number. For example: R000000"
+                                    type="text"
+                                    name="webmoney"
+                                 />
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div>
+                              <p class="mb-[6px] font-Satoshi font-bold text-sm text-black">
+                                 ЮMoney <span class="text-gray-c9ca5b3">Wallet</span>
+                              </p>
+                              <div class="flex items-center gap-[10px]">
+                                 <img class="size-8 shrink-0" src="img/payment/UMoney.png" alt="" />
+                                 <div class="flex items-center rounded-xl bg-gray-fafafc px-4 w-full">
+                                 <input
+                                    class="min-h-[50px] w-full bg-transparent outline-none font-Satoshi font-medium text-sm text-black placeholder:text-gray-c9ca5b3"
+                                    placeholder="Enter your wallet number. For example: R000000"
+                                    type="text"
+                                    name="yoomoney"
+                                 />
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div>
+                              <p class="mb-[6px] font-Satoshi font-bold text-sm text-black">
+                                 Qiwi <span class="text-gray-c9ca5b3">Wallet</span>
+                              </p>
+                              <div class="flex items-center gap-[10px]">
+                                 <img class="size-8 shrink-0" src="img/payment/qiwi.png" alt="" />
+                                 <div class="flex items-center rounded-xl bg-gray-fafafc px-4 w-full">
+                                 <input
+                                    class="min-h-[50px] w-full bg-transparent outline-none font-Satoshi font-medium text-sm text-black placeholder:text-gray-c9ca5b3"
+                                    placeholder="Enter your phone number. For example: 9182318239"
+                                    type="text"
+                                    name="qiwi"
+                                 />
+                                 </div>
+                              </div>
+                           </div>
+
+                           <!-- <button
+                              class="mt-1 md:text-base md:leading-tight w-fit min-w-[236px] min-h-11 p-[13px_24px] rounded-xl bg-blue-cedf4ff flex items-center justify-center gap-[5px] font-Satoshi font-medium text-sm leading-tight text-blue"
+                              type="submit"
+                           >
+                              <img class="size-[18px]" src="/img/icons/settings-blue.svg" alt="" />
+                              Save Your Wallets
+                           </button> -->
+
+                           <button
+                                    class="flex w-fit min-h-11 items-center gap-[5px] rounded-xl border border-transparent bg-[#EDF4FF] p-[13px_24px] font-Satoshi text-sm font-medium leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF] md:text-base md:leading-tight"
+                                    type="submit"
+                                    >
+                                    <img
+                                       class="size-[18px] transition-all duration-300"
+                                       src="/img/icons/settings-blue.svg"
+                                       alt=""
+                                    />
+                                    Save Your Wallets
+                                   
+                                 </button>
+                           </div>
+                        </div>
+
+                        <!-- Bank card -->
+                        <div class="xl:w-[382px] xl:mt-0 mt-[10px] p-4 md:px-6 md:py-5 rounded-3xl bg-white">
+                           <header class="md:text-xl md:leading-tight flex items-center gap-[7px] font-Satoshi font-bold text-base leading-tight text-black pb-4 border-b-[1px] border-b-solid border-b-gray-light">
+                           <svg class="size-4 stroke-gray-c575e6a">
+                              <use href="/img/sprite.svg#card"></use>
+                           </svg>
+                           Bank card
+                           </header>
+
+                           <div class="mt-6">
+                           <p class="font-Satoshi font-bold text-sm leading-tight text-gray-c9ca5b3">
+                              Enter your <span class="text-black">valid name, surname</span> and
+                              <span class="text-black">card number.</span>
+                           </p>
+
+                           <div class="mt-5">
+                              <p class="mb-[6px] font-Satoshi font-bold text-sm text-gray-c575e6a">
+                                 Add your name
+                              </p>
+
+                              <div class="grid grid-cols-2 gap-[5px]">
+                                 <div class="flex items-center rounded-xl bg-gray-fafafc px-4">
+                                 <input
+                                    class="min-h-[50px] w-full bg-transparent outline-none font-Satoshi font-medium text-sm text-black placeholder:text-gray-c9ca5b3"
+                                    placeholder="Name"
+                                    type="text"
+                                    name="card_name"
+                                 />
+                                 </div>
+
+                                 <div class="flex items-center rounded-xl bg-gray-fafafc px-4">
+                                 <input
+                                    class="min-h-[50px] w-full bg-transparent outline-none font-Satoshi font-medium text-sm text-black placeholder:text-gray-c9ca5b3"
+                                    placeholder="Surname"
+                                    type="text"
+                                    name="card_surname"
+                                 />
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="mt-5">
+                              <p class="mb-[6px] font-Satoshi font-bold text-sm text-gray-c575e6a">
+                                 Add card number
+                              </p>
+
+                              <div class="flex items-center gap-[10px]">
+                                 <img class="w-[44px] shrink-0" src="img/payment/Visa-MC.png" alt="" />
+
+                                 <div class="flex items-center gap-[10px] rounded-xl bg-gray-fafafc px-4 w-full">
+                                 <svg class="size-4 shrink-0 stroke-gray-c9ca5b3">
+                                    <use href="/img/sprite.svg#card"></use>
+                                 </svg>
+                                 <input
+                                    class="min-h-[50px] w-full bg-transparent outline-none font-Satoshi font-medium text-sm text-black placeholder:text-gray-c9ca5b3"
+                                    placeholder="Enter your card number"
+                                    type="text"
+                                    name="card_number"
+                                 />
+                                 </div>
+                              </div>
+                           </div>
+
+                           <button
+                                    class="mt-10 flex w-fit min-h-11 items-center gap-[5px] rounded-xl border border-transparent bg-[#EDF4FF] p-[13px_24px] font-Satoshi text-sm font-medium leading-tight text-blue transition-all duration-300 hover:border-[#4790FF] hover:bg-white hover:text-[#4790FF] md:text-base md:leading-tight"
+                                    type="submit"
+                                    >
+                                    <img
+                                       class="size-[18px] transition-all duration-300"
+                                       src="/img/icons/settings-blue.svg"
+                                       alt=""
+                                    />
+                                    Save Your Card
+                                   
+                                 </button>
                            </div>
                         </div>
                      </div>

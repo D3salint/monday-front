@@ -32,7 +32,7 @@
                         <span class="w-full h-[2px] rounded-sm bg-black block absolute -translate-y-full top-full left-0"></span>
                     </button>
                     <a class="font-Satoshi font-bold text-black uppercase text-sm md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2" href="/"> MONDAY </a>
-                    <div class=" hidden xs:flex max-w-80 flex grow relative">
+                    <div class="hidden xs:flex max-w-80 md:flex grow relative">
                         <div class="grow px-4 py-3 rounded-[100px] bg-[#FAFAFC] flex items-center gap-2 md:[&amp;_input]:order-1 md:[&amp;_svg]:order-2">
                             <svg class="size-4 stroke-black shrink-0">
                                 <use href="/img/sprite.svg#magnifier">
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="ml-auto flex items-center gap-3 md:max-w-[274px] md:w-full">
-                        <button class="flex items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black " data-modal-button="auth"> Sign Up </button>
+                        <button class=" items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium hidden md:flex md:grow  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black " data-modal-button="auth"> Sign Up </button>
                         <button class="flex items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium md:grow text-white bg-black " data-modal-button="login"> Join <svg class="size-4 shrink-0 stroke-white">
                                 <use href="/img/sprite.svg#join">
                             </svg>
@@ -93,7 +93,12 @@
             <div class="mt-2 py-3 px-6 rounded-2xl bg-white">
                 <p class="md:text-xl md:leading-tight font-Satoshi font-bold text-base leading-tight text-black"> Leave a comment </p>
                 <textarea class="md:h-[142px] mt-4 rounded-2xl bg-gray-fafafc resize-none p-3 h-[93px] font-Satoshi font-medium text-sm overflow-hidden leading-tight text-black outline-none w-full"></textarea>
-                <button class="flex items-center gap-[6px] font-Satoshi font-medium text-sm leading-none text-black px-[15px] py-3 rounded-xl bg-black text-white md:max-w-[190px] w-full mt-4 justify-center"> Send </button>
+                <button
+                class="flex items-center justify-center gap-[6px] w-full px-[15px] py-3 mt-4 rounded-xl bg-black text-white border border-transparent hover:bg-white hover:text-black hover:border-black transition-all duration-300 md:max-w-[190px]"
+                >
+                Send
+                </button>        
+                 
             </div>
         </div>
         <footer class="pt-12 pb-16 bg-black lg:pt-32 lg:pb-20">
@@ -102,7 +107,7 @@
                     <div class="w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto" data-accordeon="" data-accordeon-smooth="true" data-accordeon-adaptive="true" data-accordeon-media="(max-width: 767px)">
                         <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button"> About Monday <span data-accordeon="arrow">
                                 <svg class="size-4 shrink-00 md:hidden stroke-white">
-                                    <use href="/img/sprite.svg#arrow-down">
+                                    <use href="/img/sprite.svg#arrow-down"/>
                                 </svg>
                             </span>
                         </p>
@@ -117,7 +122,7 @@
                     <div class="w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto" data-accordeon="" data-accordeon-smooth="true" data-accordeon-adaptive="true" data-accordeon-media="(max-width: 767px)">
                         <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button"> Help <span data-accordeon="arrow">
                                 <svg class="size-4 shrink-00 md:hidden stroke-white">
-                                    <use href="/img/sprite.svg#arrow-down">
+                                    <use href="/img/sprite.svg#arrow-down"/>
                                 </svg>
                             </span>
                         </p>
@@ -132,7 +137,7 @@
                     <div class="w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto" data-accordeon="" data-accordeon-smooth="true" data-accordeon-adaptive="true" data-accordeon-media="(max-width: 767px)">
                         <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button"> Useful <span data-accordeon="arrow">
                                 <svg class="size-4 shrink-00 md:hidden stroke-white">
-                                    <use href="/img/sprite.svg#arrow-down">
+                                    <use href="/img/sprite.svg#arrow-down"/>
                                 </svg>
                             </span>
                         </p>
@@ -148,7 +153,7 @@
                     <div class="w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto" data-accordeon="" data-accordeon-smooth="true" data-accordeon-adaptive="true" data-accordeon-media="(max-width: 767px)">
                         <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button"> Community <span data-accordeon="arrow">
                                 <svg class="size-4 shrink-00 md:hidden stroke-white">
-                                    <use href="/img/sprite.svg#arrow-down">
+                                    <use href="/img/sprite.svg#arrow-down"/>
                                 </svg>
                             </span>
                         </p>
@@ -165,7 +170,7 @@
                 <div class="mt-12 flex items-center gap-3 md:max-w-96 lg:max-w-72 lg:ml-auto lg:mt-16">
                     <button class="flex items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium h-12 text-white text-opacity-60 grow border-white border-opacity-30  text-black border-solid border-[1px] text-opacity-60 border-opacity-20 border-black "> Sign In </button>
                     <button class="flex items-center gap-2 px-4 py-2 justify-center rounded-xl transition-opacity duration-200 hover:opacity-80 font-Satoshi font-medium grow border-white border-[1px] border-solid h-12 text-white bg-black "> Join <svg class="size-4 shrink-0 stroke-white">
-                            <use href="/img/sprite.svg#join">
+                            <use href="/img/sprite.svg#join"/>
                         </svg>
                     </button>
                 </div>
@@ -175,7 +180,7 @@
             <div class="max-w-[420px]  w-full min-h-20 rounded-[36px] bg-white m-auto relative overflow-hidden">
                 <button class="size-10 z-10 rounded-xl bg-gray-fafafc flex items-center justify-center absolute right-[22px] top-[22px]" data-modal-close="auth">
                     <svg class="size-5 stroke-gray-c9ca5b3">
-                        <use href="/img/sprite.svg#cross">
+                        <use href="/img/sprite.svg#cross"/>
                     </svg>
                 </button>
                 <div class="swiper h-full" id="auth-swiper">
@@ -184,7 +189,7 @@
                             <div class="p-[34px] flex flex-col">
                                 <p class="uppercase mx-auto font-Satoshi font-bold text-xs leading-tight text-gray-cb7c3d6 underline"> Monday </p>
                                 <p class="max-w-[290px] mx-auto text-center mt-10 font-Satoshi font-bold text-[32px] leading-tight text-black"> Welcome to Monday </p>
-                                <p class="mt-4 mx-auto max-w-[255px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3 text-center"> Choose which account you want create </p>
+                                <p class="mt-4 mx-auto max-w-[255px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3 text-center"> Choose which account you want create </p>
                                 <div class="mt-6 grid grid-cols-2 gap-5">
                                     <button class="auth-choose rounded-[20px] border-[1px] border-solid border-gray-light p-[18.5px_9.5px] flex flex-col items-center" data-type="client">
                                         <svg class="size-6 stroke-gray-cb7c3d6">
