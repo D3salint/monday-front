@@ -226,6 +226,19 @@
 }
 
 /* Footer */
+.footer-matchbox {
+  min-height: 100vh;
+}
+
+.footer-lid {
+  will-change: transform;
+}
+
+.footer-bottom-layer {
+  opacity: 1;
+  pointer-events: none;
+}
+
 .footer-column,
 .footer-actions {
   opacity: 0;
@@ -237,5 +250,11 @@
   display: inline-block;
   opacity: 0;
   transform: translateY(-120px) rotate(8deg);
+  will-change: transform, opacity;
+}
+
+.footer-copyright {
+  opacity: 0;
+  transform: translateY(20px);
   will-change: transform, opacity;
 }
