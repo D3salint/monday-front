@@ -1,0 +1,253 @@
+.main-search-box {
+  box-shadow: 90px 234px 100px rgba(49, 98, 173, 0.01), 51px 131px 84px rgba(49, 98, 173, 0.05), 23px 58px 63px rgba(49, 98, 173, 0.09), 6px 15px 34px rgba(49, 98, 173, 0.1);
+}
+
+.main_search_service,
+.recent-item-button {
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.main_search_service:hover {
+  color: #202020;
+  border-color: #202020;
+}
+
+.recent-item-button {
+  padding: 8px 32px 8px 8px;
+  border-radius: 10px; 
+}
+
+.recent-item-button:hover {
+  color: #202020;
+  background-color: #f6f9ff;
+}
+
+.recent-item-button:hover .delete-icon {
+  display: inline-flex;
+}
+
+.delete-icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.delete-icon:hover {
+  transform: scale(1.15);
+}
+
+.top-service-link {
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.top-service-link:hover {
+  border-color: #202020;
+  color: #202020;
+  opacity: 1;
+}
+
+/* Ordered cards */
+.ordered-card {
+  align-items: center;
+  gap: 0;
+  width: 128px;
+  max-width: 128px;
+  height: 128px;
+  padding: 16px;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 9px 7px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 0.45s ease, max-width 0.45s ease, gap 0.45s ease;
+}
+
+.ordered-card:hover {
+  width: 430px;
+  max-width: 430px;
+  gap: 28px;
+  z-index: 30;
+}
+
+.ordered-card-img {
+  width: 70px;
+  height: 70px;
+  flex: 0 0 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.ordered-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 230px;
+  opacity: 0;
+  transform: translateX(-12px);
+
+  white-space: nowrap;
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease 0.12s,
+    transform 0.3s ease 0.12s;
+}
+
+.ordered-card:hover .ordered-card-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ordered-card-label {
+  padding: 6px 16px;
+  border-radius: 100px;
+  background: #fbfafa;
+
+  font-family: Satoshi, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+}
+
+.ordered-card-title {
+  margin-top: 4px;
+
+  font-family: Satoshi, sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #000;
+}
+
+.ordered-card-price {
+  margin-top: 4px;
+
+  font-family: Satoshi, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #b7c3d6;
+}
+
+.ordered-card-price strong {
+  font-size: 20px;
+  color: #4790ff;
+}
+
+.ordered-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(22px);
+  will-change: transform, opacity;
+}
+
+.ordered-button {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.ordered-orbit-card {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+@media (min-width: 768px) {
+  .ordered-card-img {
+    width: 96px;
+    height: 96px;
+    flex-basis: 96px;
+  }
+
+  .ordered-card {
+    width: 128px;
+    /* min-width: 128px; */
+    max-width: 128px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ordered-motion-path {
+    display: none;
+  }
+
+  .ordered-card {
+    width: 78px;
+    max-width: 78px;
+    height: 78px;
+    padding: 4px;
+    gap: 0;
+  }
+
+  .ordered-card-img {
+    width: 70px;
+    height: 70px;
+    flex: 0 0 70px;
+  }
+
+  .ordered-card-content {
+    display: none;
+  }
+
+  .ordered-card:hover {
+    width: 78px;
+    max-width: 78px;
+    gap: 0;
+  }
+
+  .ordered-card-active {
+    width: 300px;
+    max-width: 300px;
+    height: 78px;
+    gap: 12px;
+    z-index: 20;
+  }
+
+  .ordered-card-active .ordered-card-content {
+    display: flex;
+    min-width: 190px;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .ordered-card-active .ordered-card-label {
+    padding: 4px 12px;
+    font-size: 10px;
+  }
+
+  .ordered-card-active .ordered-card-title {
+    margin-top: 2px;
+    font-size: 16px;
+  }
+
+  .ordered-card-active .ordered-card-price {
+    margin-top: 2px;
+    font-size: 13px;
+  }
+
+  .ordered-card-active .ordered-card-price strong {
+    font-size: 16px;
+  }
+
+  .ordered-mobile-card-1 {
+    left: 40%;
+    top: 4%;
+    transform: translateX(-50%);
+  }
+
+  .ordered-mobile-card-2 {
+    right: 0;
+    top: 18%;
+  }
+
+  .ordered-mobile-card-3 {
+    left: 2%;
+    bottom: 10%;
+  }
+
+  .ordered-mobile-card-4 {
+    right: 7%;
+    bottom: 0;
+  }
+}
