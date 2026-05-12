@@ -1,0 +1,241 @@
+/* Hero section */
+.hero-word,
+.hero-subtitle-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(18px);
+  will-change: transform, opacity;
+}
+
+.hero-search,
+.hero-search-sub {
+  opacity: 0;
+  transform: translateY(36px);
+  will-change: transform, opacity;
+}
+
+.hero-subtitle,
+.hero-label {
+  opacity: 0;
+  will-change: opacity;
+}
+
+.hero-glow {
+  opacity: 0;
+  animation: heroGlow 4s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.hero-glow:nth-of-type(2) {
+  animation-delay: 0.8s;
+}
+
+.hero-glow:nth-of-type(3) {
+  animation-delay: 1.6s;
+}
+
+.hero-glow:nth-of-type(4) {
+  animation-delay: 2.4s;
+}
+
+@keyframes heroGlow {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px) translateY(-50%) rotate(-30deg);
+  }
+
+  15% {
+    opacity: 0.9;
+  }
+
+  40% {
+    opacity: 0.7;
+    transform: translateX(0px) translateY(-50%) rotate(-30deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(40px) translateY(-50%) rotate(-30deg);
+  }
+}
+
+/* Services section */
+.services-bg-circle,
+.services-bg-pattern,
+.services-bg-illustration {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.label-services,
+.title-services {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+}
+
+.service-card {
+  --service-shift-y: 0px;
+  --service-anim-y: 70px;
+
+  opacity: 0;
+  transform: translateY(calc(var(--service-shift-y) + var(--service-anim-y)));
+  will-change: transform, opacity;
+  transition: box-shadow 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .service-card:nth-child(1),
+  .service-card:nth-child(3),
+  .service-card:nth-child(4),
+  .service-card:nth-child(6) {
+    --service-shift-y: 112px;
+  }
+}
+
+.service-card:hover {
+  box-shadow: 0 24px 70px rgba(50, 102, 180, 0.18);
+}
+
+/* Quick Start section */
+.quick-start-label,
+.quick-start-title,
+.quick-start-tabs {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, opacity;
+}
+
+.quick-start-card {
+  opacity: 0;
+  transform: translateX(90px);
+  will-change: transform, opacity;
+}
+
+/* Try Banner section */
+.try-banner-card {
+  opacity: 0;
+  transform: scale(0.94);
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.try-banner-label {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: transform, opacity;
+}
+
+.try-banner-button {
+  opacity: 0;
+  will-change: opacity;
+}
+
+.try-banner-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(22px);
+  will-change: transform, opacity;
+}
+
+.try-rect {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Project section */
+.projects-label,
+.projects-title {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: transform, opacity;
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateX(90px);
+  will-change: transform, opacity;
+}
+
+/* News section */
+.news-title,
+.news-more {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: transform, opacity;
+}
+
+.news-card {
+  opacity: 0;
+  transform: scale(0.92);
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+/* Saves Money */
+.saves-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(18px);
+  will-change: transform, opacity;
+}
+
+.saves-head,
+.saves-cell,
+.saves-stats,
+.saves-button {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Journey */
+.journey-card {
+  opacity: 0;
+  transform: scale(0.92);
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.journey-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(18px);
+  will-change: transform, opacity;
+}
+
+.journey-button {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: transform, opacity;
+}
+
+.journey-messages {
+  pointer-events: none;
+}
+
+.journey-message {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: auto;
+
+  will-change: transform, opacity;
+  transform-origin: center bottom;
+}
+
+/* Footer */
+.footer-column,
+.footer-actions {
+  opacity: 0;
+  transform: translateY(28px);
+  will-change: transform, opacity;
+}
+
+.footer-logo-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-120px) rotate(8deg);
+  will-change: transform, opacity;
+}

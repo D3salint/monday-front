@@ -10,8 +10,13 @@ export const initSwipers = () => {
             options = JSON.parse(el.dataset.swiperOptions);
         } catch (error) {
             options = {
-                slidesPerView: "auto",
+                 slidesPerView: "auto",
+                spaceBetween: 0,
                 grabCursor: true,
+                preventClicks: false,
+                preventClicksPropagation: false,
+                touchStartPreventDefault: false,
+                threshold: 8,
             };
         }
 
