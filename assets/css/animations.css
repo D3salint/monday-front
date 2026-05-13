@@ -232,3 +232,28 @@
   transform: translateY(28px);
   will-change: transform, opacity;
 }
+
+.footer {
+  height: 880px;
+  background: linear-gradient(135deg, #B8DDFF, #6AB8FF);
+}
+
+.footer-top {
+  height: 425px;
+  background: #000;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-bottom-sticky {
+  position: sticky;
+  bottom: 0;
+  height: 455px;
+  overflow: hidden;
+}
+
+.footer-bottom {
+  height: 455px;
+  background: linear-gradient(135deg, #B8DDFF, #6AB8FF);
+}

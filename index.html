@@ -1375,7 +1375,7 @@
       <div class="max-w-[1384px] px-3 mx-auto lg:flex hidden items-center justify-between">
         <div class="flex items-center gap-2.5 w-full">
           <a class="flex items-center gap-2" href="index.html">
-            <img src="img/Logo.svg" alt="Logo" />
+            <!-- <img src="img/Logo.svg" alt="Logo" /> -->
             <a class="text-[#202020] font-bold text-base uppercase select-none" href="index.html">MONDAY </a>
           </a>
 
@@ -1477,31 +1477,42 @@
               </li>
               <li>
                 <a href="#" class="text-[#9CA5B3] font-bold text-base flex items-center gap-1.5 animated-underline">
-                  <span> <img class="flex" src="./img/header/lovely.svg" alt="lovely" /> </span>Favorites
+                  <span class="flex w-[18px] h-[18px]"> <img src="./img/header/lovely.svg" alt="lovely" /> </span>Favorites
                 </a>
               </li>
             </ul>
           </div>
-          <div class="flex items-center gap-5">
-            <button id="header__shop__btn" class="relative">
-              <img class="w-[18px] h-[18px]" src="./img/header/bag.svg" alt="bag" />
-              <div class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#4790FF] absolute top-[-5px] right-[-7px] border-white border">
+
+          <div class="flex items-center gap-[10px]">
+            <button id="header__shop__btn" class="relative w-[35px] h-[35px] flex items-center justify-center">
+              <img class="w-[18px] h-[18px] hover:scale-[1.2] transition-transform duration-200" src="./img/header/bag.svg" alt="bag" />
+
+              <div
+                class="rounded-full text-white font-bold text-[8px] px-1 w-fit min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#4790FF] absolute top-[1px] right-[1px] border-white border"
+              >
                 2
               </div>
             </button>
-            <a id="messages_button" class="relative" href="#">
-              <img class="w-[18px] h-[18px]" src="./img/header/message.svg" alt="message" />
-              <div class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#FF8E8E] absolute top-[-5px] right-[-7px] border-white border">
-                2
+
+            <a id="messages_button" class="relative w-[35px] h-[35px] flex items-center justify-center" href="#">
+              <img class="w-[18px] h-[18px] hover:scale-[1.2] transition-transform duration-200" src="./img/header/message.svg" alt="message" />
+              <div
+                class="rounded-full text-white font-bold text-[8px] px-1 w-fit min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#FF8E8E] absolute top-[1px] right-[1px] border-white border"
+              >
+                12
               </div>
             </a>
-            <a id="notification_button" class="relative" href="#">
-              <img class="w-[18px] h-[18px]" src="./img/header/notification.svg" alt="notification" />
-              <div class="rounded-full text-white font-bold text-[8px] min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#3bbe1a] absolute top-[-5px] right-[-7px] border-white border">
+
+            <a id="notification_button" class="relative w-[35px] h-[35px] flex items-center justify-center" href="#">
+              <img class="w-[18px] h-[18px] hover:scale-[1.2] transition-transform duration-200" src="./img/header/notification.svg" alt="notification" />
+              <div
+                class="rounded-full text-white font-bold text-[8px] px-1 w-fit min-w-[14px] min-h-[14px] flex items-center justify-center bg-[#3bbe1a] absolute top-[1px] right-[1px] border-white border"
+              >
                 2
               </div>
             </a>
           </div>
+
           <div class="relative">
             <div>
               <button id="header__profile__change_box__open" class="avatar-button flex items-center gap-1">
@@ -3065,7 +3076,7 @@
 
       <div
         id="header__shop__modal"
-        class="hidden w-[auto] z-30 bg-white rounded-[14px] absolute right-5 top-[90px] lg:top-20 lg:right-[300px] px-[15px] py-3"
+        class="hidden flex flex-col w-[auto] z-30 bg-white rounded-[14px] absolute right-5 top-[90px] lg:top-20 lg:right-[300px] px-[15px] py-3"
         style="box-shadow: 5px 10px 40px 10px #0000000d"
       >
         <div class="flex items-center border-b border-[#F2F2F2] pb-3 pr-[92px]">
@@ -3141,7 +3152,14 @@
             </button>
           </div>
         </div>
-        <p class="w-[280px] ml-auto rounded-xl font-medium text-base text-white px-8 py-3.5" style="background: linear-gradient(90deg, #6ab8ff 0%, #def5ff 136.52%)">Order now for 220.000 UZS</p>
+        <button
+          class="group relative ml-auto w-fit overflow-hidden rounded-lg border border-transparent bg-white px-8 py-3.5 text-center font-Satoshi text-base font-medium leading-none text-white transition-all duration-300 hover:border-[#4790FF] hover:text-[#4790FF]"
+        >
+          <span class="absolute inset-0 z-0 bg-gradient-to-r from-[#6AB8FF] to-[#B8DDFF] transition-opacity duration-300 group-hover:opacity-0"></span>
+
+          <span class="relative z-[1]"> Order now for 220.000 UZS </span>
+        </button>
+        <!-- <p class="w-[280px] ml-auto rounded-xl font-medium text-base text-white px-8 py-3.5" style="background: linear-gradient(90deg, #6ab8ff 0%, #def5ff 136.52%)">Order now for 220.000 UZS</p> -->
       </div>
 
       <div class="hidden header__shop__modal__null absolute z-30 right-5 lg:right-[555px] top-[90px] lg:top-20 flex-col items-center bg-white max-w-[227px] w-full p-6">
@@ -4016,7 +4034,7 @@
               <div class="pb-2 border-b mb-3 flex flex-wrap gap-3">
                 <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">Social & SMM</a>
                 <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">SEO</a>
-                <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">Copywriting</a>
+                <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">Telegram</a>
                 <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">Web Development</a>
                 <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">Scripts & Bots</a>
               </div>
@@ -4050,7 +4068,7 @@
                   <a href="#" class="top-service-link font-Satoshi font-500 text-[12px] text-opacity-50 whitespace-nowrap py-[6px] px-4 rounded-lg border-[1px] border-black/10 block"> SEO </a>
                 </li>
                 <li>
-                  <a href="#" class="top-service-link font-Satoshi font-500 text-[12px] text-opacity-50 whitespace-nowrap py-[6px] px-4 rounded-lg border-[1px] border-black/10 block"> Copywriting </a>
+                  <a href="#" class="top-service-link font-Satoshi font-500 text-[12px] text-opacity-50 whitespace-nowrap py-[6px] px-4 rounded-lg border-[1px] border-black/10 block"> Telegram </a>
                 </li>
                 <li>
                   <a href="#" class="top-service-link font-Satoshi font-500 text-[12px] text-opacity-50 whitespace-nowrap py-[6px] px-4 rounded-lg border-[1px] border-black/10 block">
@@ -4064,7 +4082,7 @@
       </div>
     </section>
 
-    <section id="services" class="services-section py-9 lg:pt-10 lg:pb-20 relative overflow-hidden">
+   <section id="services" class="services-section py-9 lg:pt-10 lg:pb-20 relative overflow-hidden">
       <div
         class="services-bg-circle pointer-events-none absolute left-1/2 top-[80px] z-[2] h-[1300px] w-[1300px] -translate-x-1/2 rounded-full border border-[#F2F2F2] bg-gradient-to-b from-[#EDF4FF] to-[#F1F7FF]"
       ></div>
@@ -4096,7 +4114,7 @@
                     <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
                   </div>
 
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-black/50 sm:text-sm md:text-sm">Social &amp; SMM, Essays, News, and more</p>
+                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">Social &amp; SMM, Essays, News, and more</p>
                 </div>
               </div>
             </li>
@@ -4114,25 +4132,25 @@
                     <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
                   </div>
 
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-black/50 sm:text-sm md:text-sm">Social &amp; SMM, Essays, News, and more</p>
+                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">Telegram bots, automation, parsers, and more</p>
                 </div>
               </div>
             </li>
 
             <li class="service-card basis-[calc(50%-4px)] max-w-[360px] lg:basis-[360px]">
               <div class="rounded-xl bg-white p-2 shadow-[5px_10px_10px_2px] shadow-[#000]/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_24px_70px_rgba(50,102,180,0.18)] lg:pb-5">
-                <a href="/services/copywriting" class="block h-44 overflow-hidden rounded-2xl bg-gradient-to-b from-[#B9DDFF] to-transparent sm:h-72 md:h-96">
+                <a href="/services/ai" class="block h-44 overflow-hidden rounded-2xl bg-gradient-to-b from-[#B9DDFF] to-transparent sm:h-72 md:h-96">
                   <img class="img-fill object-top transition-transform duration-500 hover:scale-[1.04]" src="img/temp/copyright-category.png" alt="" />
                 </a>
 
                 <div class="mt-4 lg:px-2">
                   <div class="flex items-center gap-1">
-                    <a href="/services/copywriting" class="overflow-line-1 font-Satoshi font-bold text-[12px] hover:underline sm:text-lg md:text-xl"> Copywriting</a>
+                    <a href="/services/ai" class="overflow-line-1 font-Satoshi font-bold text-[12px] hover:underline sm:text-lg md:text-xl"> AI Services</a>
 
-                    <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
+                    <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Popular 🔥</p>
                   </div>
 
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-black/50 sm:text-sm md:text-sm">Social &amp; SMM, Essays, News, and more</p>
+                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">AI-generated content &amp; automation, chatbots, and more</p>
                 </div>
               </div>
             </li>
@@ -4150,7 +4168,7 @@
                     <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
                   </div>
 
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-black/50 sm:text-sm md:text-sm">Social &amp; SMM, Essays, News, and more</p>
+                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">Websites &amp; interfaces, APIs, and more</p>
                 </div>
               </div>
             </li>
@@ -4168,7 +4186,7 @@
                     <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
                   </div>
 
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-black/50 sm:text-sm md:text-sm">Social &amp; SMM, Essays, News, and more</p>
+                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">Optimization, audit, link building, and more</p>
                 </div>
               </div>
             </li>
@@ -4186,7 +4204,7 @@
                     <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
                   </div>
 
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-black/50 sm:text-sm md:text-sm">Social &amp; SMM, Essays, News, and more</p>
+                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">Logos &amp; corporate identity, UI/UX, and more</p>
                 </div>
               </div>
             </li>
@@ -4204,7 +4222,7 @@
                     <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
                   </div>
 
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-black/50 sm:text-sm md:text-sm">Social &amp; SMM, Essays, News, and more</p>
+                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">UI/UX, mobile apps, landing pages, and more</p>
                 </div>
               </div>
             </li>
@@ -4301,7 +4319,7 @@
 
     <section
       id="try-banner"
-      class="try-banner-section relative after:bg-white after:z-0 after:absolute after:top-12 after:h-[calc(100%-48px)] after:w-full md:after:top-0 md:after:h-[calc(100%-300px)]"
+      class="try-banner-section relative "
     >
       <div class="app-container">
         <div class="try-banner-card relative h-[450px] lg:h-[410px] z-10 overflow-hidden">
@@ -4346,7 +4364,7 @@
             <div class="swiper-wrapper flex flex-wrap gap-2 md:gap-0 md:flex-nowrap">
               <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
                 <div class="project-card">
-                  <div class="project-card-inner bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
+                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
                     <div class="h-32 rounded-t-xl relative sm:h-40">
                       <a href="/projects/project-1" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
                         <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="/img/temp/project-1.jpg" alt="" />
@@ -4375,7 +4393,7 @@
                       </div>
                     </div>
 
-                    <div class="p-2">
+                    <div class="p-4">
                       <a href="/projects/project-1" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> Make you a full brand book... </a>
                       <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
                         From
@@ -4408,13 +4426,20 @@
                         </div>
                       </div>
                     </div>
+
+                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
+                      <p class="text-[#B7C3D6] font-bold text-sm">28</p>
+                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
+                        <use href="/img/sprite.svg#eye" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </div>
 
               <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
                 <div class="project-card">
-                  <div class="project-card-inner bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
+                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
                     <div class="h-32 rounded-t-xl relative sm:h-40">
                       <a href="/projects/project-2" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
                         <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="/img/temp/project-2.jpg" alt="" />
@@ -4444,7 +4469,7 @@
                       </div>
                     </div>
 
-                    <div class="p-2">
+                    <div class="p-4">
                       <a href="/projects/project-2" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> SEO promotion for your business... </a>
 
                       <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
@@ -4483,12 +4508,20 @@
                         </div>
                       </div>
                     </div>
+
+                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
+                      <p class="text-[#B7C3D6] font-bold text-sm">16</p>
+                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
+                        <use href="/img/sprite.svg#eye" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </div>
+
               <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
                 <div class="project-card">
-                  <div class="project-card-inner bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
+                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
                     <div class="h-32 rounded-t-xl relative sm:h-40">
                       <a href="/projects/project-3" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
                         <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="/img/temp/project-3.jpg" alt="" />
@@ -4518,7 +4551,7 @@
                       </div>
                     </div>
 
-                    <div class="p-2">
+                    <div class="p-4">
                       <a href="/projects/project-3" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> Creative landing page design... </a>
 
                       <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
@@ -4557,12 +4590,20 @@
                         </div>
                       </div>
                     </div>
+
+                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
+                      <p class="text-[#B7C3D6] font-bold text-sm">55</p>
+                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
+                        <use href="/img/sprite.svg#eye" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </div>
+
               <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
                 <div class="project-card">
-                  <div class="project-card-inner bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
+                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
                     <div class="h-32 rounded-t-xl relative sm:h-40">
                       <a href="/projects/project-4" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
                         <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="/img/temp/project-2.jpg" alt="" />
@@ -4592,7 +4633,7 @@
                       </div>
                     </div>
 
-                    <div class="p-2">
+                    <div class="p-4">
                       <a href="/projects/project-4" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> SEO audit & strategy for websites... </a>
 
                       <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
@@ -4631,6 +4672,177 @@
                         </div>
                       </div>
                     </div>
+
+                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
+                      <p class="text-[#B7C3D6] font-bold text-sm">3</p>
+                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
+                        <use href="/img/sprite.svg#eye" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
+                <div class="project-card">
+                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
+                    <div class="h-32 rounded-t-xl relative sm:h-40">
+                      <a href="/projects/project-3" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
+                        <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="img/temp/web-category.png" alt="" />
+                      </a>
+
+                      <div class="p-2 absolute left-0 top-0 right-0 w-full flex items-center justify-between gap-1 sm:items-start">
+                        <button
+                          href="/projects/design"
+                          class="bg-white py-[6px] px-3 rounded-lg font-Satoshi font-bold text-[6px] text-black/50 transition-all duration-300 hover:scale-[1.03] hover:text-black hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] sm:text-xs"
+                        >
+                          AI Design
+                        </button>
+
+                        <div class="relative group/favorite">
+                          <button class="size-5 rounded-full bg-white/80 opacity-50 flex items-center justify-center transition-all duration-300 hover:opacity-100 hover:bg-white sm:size-11">
+                            <svg class="w-1/2 h-1/2 fill-[#202020] transition-colors duration-300 group-hover/favorite:fill-[#4790FF] sm:size-1/3">
+                              <use href="/img/sprite.svg#star" />
+                            </svg>
+                          </button>
+
+                          <div
+                            class="pointer-events-none absolute right-0 top-full z-[80] mt-2 whitespace-nowrap rounded-lg bg-[#202020] px-3 py-[6px] opacity-0 transition-all duration-300 group-hover/favorite:opacity-100"
+                          >
+                            <span class="font-Satoshi text-xs leading-none font-medium text-white"> Add to <span class="text-[#4790FF]">favorites</span> </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="p-4">
+                      <a href="/projects/project-3" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> AI-generated website concept... </a>
+
+                      <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
+                        From
+                        <strong class="font-bold text-blue md:text-xl md:uppercase">150 000 UZS</strong>
+                      </p>
+
+                      <div class="flex items-start justify-between gap-1 mt-[6px]">
+                        <div class="flex flex-col items-start sm:flex-row sm:gap-2 md:mt-3">
+                          <div class="flex items-center gap-1 sm:gap-2">
+                            <img class="size-5 img-fill rounded-full sm:size-8 md:size-12" src="img/seller/seller_main_page_none_avatar.png" alt="" />
+
+                            <div class="flex flex-col">
+                              <a href="/profile/paul" class="overflow-line-1 font-Satoshi font-bold text-[10px] text-black hover:underline sm:text-base md:text-lg"> Alex Carter </a>
+
+                              <p class="overflow-line-1 font-Satoshi font-medium text-[6px] text-black/50 sm:text-xs md:text-base">Expert</p>
+                            </div>
+                          </div>
+
+                          <p
+                            class="flex items-center gap-[2px] font-Satoshi font-bold text-[6px] text-black mt-1 px-3 py-[2px] rounded-md border-[1px] border-black/5 sm:text-xs sm:rounded-[100px] sm:bg-blue sm:text-white sm:px-2"
+                          >
+                            Pro
+                            <svg class="size-[5px] sm:size-3 sm:fill-white">
+                              <use href="/img/sprite.svg#star" />
+                            </svg>
+                          </p>
+                        </div>
+
+                        <div class="flex items-center gap-[2px] whitespace-nowrap sm:hidden">
+                          <svg class="size-2 fill-blue">
+                            <use href="/img/sprite.svg#star" />
+                          </svg>
+                          <span class="font-Satoshi font-bold text-[10px] text-blue">4.8</span>
+                          <span class="font-Satoshi font-normal text-[10px] text-black/20">(92)</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
+                      <p class="text-[#B7C3D6] font-bold text-sm">4</p>
+                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
+                        <use href="/img/sprite.svg#eye" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
+                <div class="project-card">
+                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
+                    <div class="h-32 rounded-t-xl relative sm:h-40">
+                      <a href="/projects/project-4" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
+                        <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="/img/temp/project-2.jpg" alt="" />
+                      </a>
+
+                      <div class="p-2 absolute left-0 top-0 right-0 w-full flex items-center justify-between gap-1 sm:items-start">
+                        <button
+                          href="/projects/seo"
+                          class="bg-white py-[6px] px-3 rounded-lg font-Satoshi font-bold text-[6px] text-black/50 transition-all duration-300 hover:scale-[1.03] hover:text-black hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] sm:text-xs"
+                        >
+                          Marketing
+                        </button>
+
+                        <div class="relative group/favorite">
+                          <button class="size-5 rounded-full bg-white/80 opacity-50 flex items-center justify-center transition-all duration-300 hover:opacity-100 hover:bg-white sm:size-11">
+                            <svg class="w-1/2 h-1/2 fill-[#202020] transition-colors duration-300 group-hover/favorite:fill-[#4790FF] sm:size-1/3">
+                              <use href="/img/sprite.svg#star" />
+                            </svg>
+                          </button>
+
+                          <div
+                            class="pointer-events-none absolute right-0 top-full z-[80] mt-2 whitespace-nowrap rounded-lg bg-[#202020] px-3 py-[6px] opacity-0 transition-all duration-300 group-hover/favorite:opacity-100"
+                          >
+                            <span class="font-Satoshi text-xs leading-none font-medium text-white"> Add to <span class="text-[#4790FF]">favorites</span> </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="p-4">
+                      <a href="/projects/project-4" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> Social media campaign strategy... </a>
+
+                      <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
+                        From
+                        <strong class="font-bold text-blue md:text-xl md:uppercase">80 000 UZS</strong>
+                      </p>
+
+                      <div class="flex items-start justify-between gap-1 mt-[6px]">
+                        <div class="flex flex-col items-start sm:flex-row sm:gap-2 md:mt-3">
+                          <div class="flex items-center gap-1 sm:gap-2">
+                            <img class="size-5 img-fill rounded-full sm:size-8 md:size-12" src="img/project/avatar.png" alt="" />
+
+                            <div class="flex flex-col">
+                              <a href="/profile/elizabeth-smith" class="overflow-line-1 font-Satoshi font-bold text-[10px] text-black hover:underline sm:text-base md:text-lg"> Tode Smith </a>
+
+                              <p class="overflow-line-1 font-Satoshi font-medium text-[6px] text-black/50 sm:text-xs md:text-base">Newbie</p>
+                            </div>
+                          </div>
+
+                          <p
+                            class="flex items-center gap-[2px] font-Satoshi font-bold text-[6px] text-black mt-1 px-3 py-[2px] rounded-md border-[1px] border-black/5 sm:text-xs sm:rounded-[100px] sm:bg-blue sm:text-white sm:px-2"
+                          >
+                            Pro
+                            <svg class="size-[5px] sm:size-3 sm:fill-white">
+                              <use href="/img/sprite.svg#star" />
+                            </svg>
+                          </p>
+                        </div>
+
+                        <div class="flex items-center gap-[2px] whitespace-nowrap sm:hidden">
+                          <svg class="size-2 fill-blue">
+                            <use href="/img/sprite.svg#star" />
+                          </svg>
+                          <span class="font-Satoshi font-bold text-[10px] text-blue">4.8</span>
+                          <span class="font-Satoshi font-normal text-[10px] text-black/20">(45)</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
+                      <p class="text-[#B7C3D6] font-bold text-sm">22</p>
+                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
+                        <use href="/img/sprite.svg#eye" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -4643,6 +4855,7 @@
     <section id="ordered" class="py-12">
       <div class="app-container relative">
         <img class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[510px] md:w-[1030px] md:h-auto" src="/img/rings.svg" alt="" />
+
         <div class="h-[510px] max-w-[1030px] mx-auto relative z-10 flex flex-col items-center justify-center md:h-[650px]">
           <svg class="ordered-motion-path absolute inset-0 w-full h-full pointer-events-none opacity-0" viewBox="0 0 940 625" fill="none">
             <path
@@ -4749,17 +4962,17 @@
             <div class="hidden md:flex pb-6 border-b-[1px] border-b-black/10 xl:pb-10">
               <div class="shrink-0 w-52 xl:w-[300px]"></div>
               <ul class="flex grow">
-                <li class="saves-head font-Satoshi font-bold text-2xl leading-none basis-1/2 xl:text-[32px]">Web Studios</li>
-                <li class="saves-head font-Satoshi font-bold text-2xl leading-none text-blue basis-1/2 xl:text-[32px]">Monday</li>
+                <li class="saves-head font-Satoshi font-bold text-xl leading-none basis-1/2 xl:text-[28px]">Web Studios</li>
+                <li class="saves-head font-Satoshi font-bold text-xl leading-none text-blue basis-1/2 xl:text-[28px]">Monday</li>
               </ul>
             </div>
             <div class="flex flex-col items-center md:flex-row md:border-b-[1px] md:border-black/10">
-              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-2xl xl:w-[300px] xl:pr-[100px]">Execution speed</p>
+              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-xl xl:w-[300px] xl:pr-[100px]">Execution speed</p>
               <ul class="mt-2 py-1 px-5 rounded-2xl bg-white w-full md:flex md:mt-0 md:px-0">
                 <li class="saves-cell py-3 flex items-center md:w-1/2">
                   <p class="w-24 shrink-0 font-Satoshi font-bold text-xs text-blue md:hidden">Monday</p>
-                  <div class="flex items-start gap-1 grow md:gap-2 xl:gap-3">
-                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-2xl xl:mt-0" data-replace="">
+                  <div class="flex items-center gap-1 grow md:gap-2 xl:gap-3">
+                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-xl xl:mt-0" data-replace="">
                       On average &lt;strong&gt;1 day 8 hours&lt;/strong&gt;
                     </p>
                     <img class="size-[18px] shrink-0 ml-auto md:-order-1 md:ml-0 lg:size-[32px]" src="/img/save-marks.svg" alt="" />
@@ -4767,17 +4980,17 @@
                 </li>
                 <li class="saves-cell py-3 flex items-center border-t-[1px] border-t-black/5 md:w-1/2 md:-order-1 md:border-none md:pr-4">
                   <p class="w-24 shrink-0 font-Satoshi font-bold text-xs md:hidden">Web Studios</p>
-                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-2xl">7 - 30 days</p>
+                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-xl">7 - 30 days</p>
                 </li>
               </ul>
             </div>
             <div class="flex flex-col items-center md:flex-row md:border-b-[1px] md:border-black/10">
-              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-2xl xl:w-[300px] xl:pr-[100px]">Price</p>
+              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-xl xl:w-[300px] xl:pr-[100px]">Price</p>
               <ul class="mt-2 py-1 px-5 rounded-2xl bg-white w-full md:flex md:mt-0 md:px-0">
                 <li class="saves-cell py-3 flex items-center md:w-1/2">
                   <p class="w-24 shrink-0 font-Satoshi font-bold text-xs text-blue md:hidden">Monday</p>
-                  <div class="flex items-start gap-1 grow md:gap-2 xl:gap-3">
-                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-2xl xl:mt-0" data-replace="">
+                  <div class="flex items-center gap-1 grow md:gap-2 xl:gap-3">
+                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-xl xl:mt-0" data-replace="">
                       From &lt;strong&gt;100.000 uzs.&lt;/strong&gt;
                     </p>
                     <img class="size-[18px] shrink-0 ml-auto md:-order-1 md:ml-0 lg:size-[32px]" src="/img/save-marks.svg" alt="" />
@@ -4785,17 +4998,17 @@
                 </li>
                 <li class="saves-cell py-3 flex items-center border-t-[1px] border-t-black/5 md:w-1/2 md:-order-1 md:border-none md:pr-4">
                   <p class="w-24 shrink-0 font-Satoshi font-bold text-xs md:hidden">Web Studios</p>
-                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-2xl">From 2.500.000 uzs.</p>
+                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-xl">From 2.500.000 uzs.</p>
                 </li>
               </ul>
             </div>
             <div class="flex flex-col items-center md:flex-row md:border-b-[1px] md:border-black/10">
-              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-2xl xl:w-[300px] xl:pr-[100px]">Artist selection</p>
+              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-xl xl:w-[300px] xl:pr-[100px]">Artist selection</p>
               <ul class="mt-2 py-1 px-5 rounded-2xl bg-white w-full md:flex md:mt-0 md:px-0">
                 <li class="saves-cell py-3 flex items-center md:w-1/2">
                   <p class="w-24 shrink-0 font-Satoshi font-bold text-xs text-blue md:hidden">Monday</p>
                   <div class="flex items-start gap-1 grow md:gap-2 xl:gap-3">
-                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-2xl xl:mt-0" data-replace="">
+                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-xl xl:mt-0" data-replace="">
                       From &lt;strong&gt;10,000+ performers&lt;/strong&gt; sorted by responsibility and reviews
                     </p>
                     <img class="size-[18px] shrink-0 ml-auto md:-order-1 md:ml-0 lg:size-[32px]" src="/img/save-marks.svg" alt="" />
@@ -4803,17 +5016,17 @@
                 </li>
                 <li class="saves-cell py-3 flex items-center border-t-[1px] border-t-black/5 md:w-1/2 md:-order-1 md:border-none md:pr-4">
                   <p class="w-24 shrink-0 font-Satoshi font-bold text-xs md:hidden">Web Studios</p>
-                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-2xl">3 - 20 employees</p>
+                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-xl">3 - 20 employees</p>
                 </li>
               </ul>
             </div>
             <div class="flex flex-col items-center md:flex-row md:border-b-[1px] md:border-black/10">
-              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-2xl xl:w-[300px] xl:pr-[100px]">Easy to order</p>
+              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-xl xl:w-[300px] xl:pr-[100px]">Easy to order</p>
               <ul class="mt-2 py-1 px-5 rounded-2xl bg-white w-full md:flex md:mt-0 md:px-0">
                 <li class="saves-cell py-3 flex items-center md:w-1/2">
                   <p class="w-24 shrink-0 font-Satoshi font-bold text-xs text-blue md:hidden">Monday</p>
                   <div class="flex items-start gap-1 grow md:gap-2 xl:gap-3">
-                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-2xl xl:mt-0" data-replace="">
+                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-xl xl:mt-0" data-replace="">
                       A &lt;strong&gt;couple of clicks&lt;/strong&gt; - your order is ready! Minimum discussions
                     </p>
                     <img class="size-[18px] shrink-0 ml-auto md:-order-1 md:ml-0 lg:size-[32px]" src="/img/save-marks.svg" alt="" />
@@ -4821,19 +5034,19 @@
                 </li>
                 <li class="saves-cell py-3 flex items-center border-t-[1px] border-t-black/5 md:w-1/2 md:-order-1 md:border-none md:pr-4">
                   <p class="w-24 shrink-0 font-Satoshi font-bold text-xs md:hidden">Web Studios</p>
-                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-2xl">
+                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-xl">
                     Long approvals, long technical specifications, signing an agreement and other headaches
                   </p>
                 </li>
               </ul>
             </div>
             <div class="flex flex-col items-center md:flex-row md:border-b-[1px] md:border-black/10">
-              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-2xl xl:w-[300px] xl:pr-[100px]">Refund in case of delay</p>
+              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-xl xl:w-[300px] xl:pr-[100px]">Refund in case of delay</p>
               <ul class="mt-2 py-1 px-5 rounded-2xl bg-white w-full md:flex md:mt-0 md:px-0">
                 <li class="saves-cell py-3 flex items-center md:w-1/2">
                   <p class="w-24 shrink-0 font-Satoshi font-bold text-xs text-blue md:hidden">Monday</p>
-                  <div class="flex items-start gap-1 grow md:gap-2 xl:gap-3">
-                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-2xl xl:mt-0" data-replace="">
+                  <div class="flex items-center gap-1 grow md:gap-2 xl:gap-3">
+                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-xl xl:mt-0" data-replace="">
                       &lt;strong&gt;100%&lt;/strong&gt; 1-click money back guarantee
                     </p>
                     <img class="size-[18px] shrink-0 ml-auto md:-order-1 md:ml-0 lg:size-[32px]" src="/img/save-marks.svg" alt="" />
@@ -4841,27 +5054,27 @@
                 </li>
                 <li class="saves-cell py-3 flex items-center border-t-[1px] border-t-black/5 md:w-1/2 md:-order-1 md:border-none md:pr-4">
                   <p class="w-24 shrink-0 font-Satoshi font-bold text-xs md:hidden">Web Studios</p>
-                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-2xl">The probability approaches zero</p>
+                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-xl">The probability approaches zero</p>
                 </li>
               </ul>
             </div>
           </div>
           <div class="mt-6 bg-white w-full rounded-3xl px-5 py-7 md:mt-0 md:rounded-t-none lg:pb-16">
             <ul class="saves-stats flex gap-5 justify-between">
-              <li class="flex flex-col items-center gap-1 text-center min-w-16 lg:min-w-64 xl:gap-3">
+              <li class="flex flex-col items-center gap-1 text-center min-w-16 lg:w-64 xl:gap-3">
                 <img class="size-6" src="/img/save-active.svg" alt="" />
-                <p class="font-Satoshi font-medium text-sm text-blue sm:text-2xl xl:text-[32px]">5 342</p>
-                <p class="font-Satoshi font-medium text-[8px] text-black/60 sm:text-lg xl:text-2xl">Active freelancers</p>
+                <p class="font-Satoshi font-medium text-sm text-blue sm:text-xl xl:text-[28px]">5 342</p>
+                <p class="font-Satoshi font-medium text-[8px] text-black/60 sm:text-lg xl:text-xl">Active freelancers</p>
               </li>
-              <li class="flex flex-col items-center gap-1 text-center min-w-16 lg:min-w-64 xl:gap-3">
+              <li class="flex flex-col items-center gap-1 text-center min-w-16 lg:w-64 xl:gap-3">
                 <img class="size-6" src="/img/save-smile.svg" alt="" />
-                <p class="font-Satoshi font-medium text-sm text-blue sm:text-2xl xl:text-[32px]">389</p>
-                <p class="font-Satoshi font-medium text-[8px] text-black/60 sm:text-lg xl:text-2xl">New freelancers this week</p>
+                <p class="font-Satoshi font-medium text-sm text-blue sm:text-xl xl:text-[28px]">389</p>
+                <p class="font-Satoshi font-medium text-[8px] text-black/60 sm:text-lg xl:text-xl">New freelancers this week</p>
               </li>
-              <li class="flex flex-col items-center gap-1 text-center min-w-16 lg:min-w-64 xl:gap-3">
+              <li class="flex flex-col items-center gap-1 text-center min-w-16 lg:w-64 xl:gap-3">
                 <img class="size-6" src="/img/save-clock.svg" alt="" />
-                <p class="font-Satoshi font-medium text-sm text-blue sm:text-2xl xl:text-[32px]">1 day 8 h</p>
-                <p class="font-Satoshi font-medium text-[8px] text-black/60 sm:text-lg xl:text-2xl">Average order lead time</p>
+                <p class="font-Satoshi font-medium text-sm text-blue sm:text-xl xl:text-[28px]">1 day 8 h</p>
+                <p class="font-Satoshi font-medium text-[8px] text-black/60 sm:text-lg xl:text-xl">Average order lead time</p>
               </li>
             </ul>
             <button
@@ -5039,6 +5252,30 @@
                     </p>
                   </div>
                 </div>
+
+                <div class="swiper-slide news-card w-[322px] px-[10px] md:w-[422px] md:px-6 !h-auto">
+                  <div class="news-card-inner rounded-2xl">
+                    <a href="/news/ai-tools-for-business" class="block h-[254px] rounded-2xl bg-white overflow-hidden">
+                      <img class="img-fill transition-transform duration-500 hover:scale-[1.04]" alt="" src="img/temp/web-category.png" />
+                    </a>
+
+                    <a href="/news/ai-tools-for-business" class="mt-3 block font-Satoshi font-bold text-base hover:underline"> Best AI Tools for Modern Businesses </a>
+
+                    <p class="mt-1 font-Satoshi font-medium text-sm text-black/50">Explore powerful AI tools for automation, content creation, customer support, and business growth.</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide news-card w-[322px] px-[10px] md:w-[422px] md:px-6 !h-auto">
+                  <div class="news-card-inner rounded-2xl">
+                    <a href="/news/improve-website-conversion" class="block h-[254px] rounded-2xl bg-white overflow-hidden">
+                      <img class="img-fill transition-transform duration-500 hover:scale-[1.04]" alt="" src="img/project/project-img.png" />
+                    </a>
+
+                    <a href="/news/improve-website-conversion" class="mt-3 block font-Satoshi font-bold text-base hover:underline"> How to Improve Website Conversion </a>
+
+                    <p class="mt-1 font-Satoshi font-medium text-sm text-black/50">Simple strategies to improve user experience, increase engagement, and generate more leads online.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -5054,17 +5291,10 @@
     </section>
 
     <!--footer-->
-    <footer class="footer-parallax relative h-[150vh] lg:h-[100vh] bg-gradient-to-br from-[#B8DDFF] to-[#6AB8FF]">
-      <div class="footer-parallax-sticky sticky top-0 h-screen overflow-hidden">
-        <div class="footer-parallax-component absolute inset-x-0 bottom-0 z-[1] h-[520px] md:h-[655px]">
-          <p class="footer-logo m-0 text-center font-Satoshi font-bold leading-[0.9] text-white/60 text-[32vw] lg:text-[28vw] tracking-[-0.06em]">Monday</p>
-
-          <p class="footer-copyright mt-4 text-center font-Satoshi font-bold text-base leading-tight text-white/50">@2026 Monday</p>
-        </div>
-
-        <div class="footer-parallax-hat absolute inset-x-0 top-0 z-[2] min-h-[425px] h-auto bg-black rounded-b-3xl pt-10 pb-12 md:pt-12 md:pb-16 lg:pt-24 lg:pb-16">
-          <div class="app-container lg:max-w-[1290px]">
-            <nav class="footer-nav flex flex-col gap-6 md:flex-row md:justify-between md:flex-wrap md:gap-x-0 md:gap-y-12">
+    <footer class="footer h-fit md:h-[880px] bg-gradient-to-br from-[#B8DDFF] to-[#6AB8FF]">
+      <div class="footer-top relative z-[2] h-fit md:h-[425px] bg-black rounded-b-[48px] pt-10 pb-12 md:pt-12 md:pb-16 lg:pt-24 lg:pb-16">
+        <div class="app-container lg:max-w-[1290px]">
+          <nav class="footer-nav flex flex-col gap-6 md:flex-row md:justify-between md:flex-wrap md:gap-x-0 md:gap-y-12">
               <div
                 class="footer-column w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto"
                 data-accordeon=""
@@ -5248,305 +5478,310 @@
                 </svg>
               </button>
             </div>
-          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-sticky sticky bottom-0 h-[200px] md:h-[465px] overflow-hidden">
+        <div class="footer-bottom h-[200px] md:h-[465px] flex flex-col items-center justify-end pb-14 py-[20px]">
+          <p class="footer-logo m-0 text-center font-Satoshi font-bold leading-[0.9] text-white/60 text-[28vw] tracking-[-0.06em]">Monday</p>
+
+          <p class="footer-copyright mt-4 text-center font-Satoshi font-bold text-base leading-tight text-white/50">@2026 Monday</p>
         </div>
       </div>
 
       <div class="fixed inset-0 bg-[#000000]/80 p-3 z-[100] items-center justify-center flex-col hidden" data-modal="auth" data-block="flex">
-          <div class="max-w-[420px] w-full min-h-20 rounded-[36px] bg-white m-auto relative overflow-hidden">
-            <button class="size-10 z-10 rounded-xl bg-gray-fafafc flex items-center justify-center absolute right-[22px] top-[22px]" data-modal-close="auth">
-              <svg class="size-5 stroke-gray-c9ca5b3">
-                <use href="/img/sprite.svg#cross" />
-              </svg>
-            </button>
-            <div class="swiper h-full" id="auth-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="p-[34px] flex flex-col">
-                    <p class="uppercase mx-auto font-Satoshi font-bold text-xs leading-tight text-gray-cb7c3d6 underline">Monday</p>
-                    <p class="max-w-[290px] mx-auto text-center mt-10 font-Satoshi font-bold text-[32px] leading-tight text-black">Welcome to Monday</p>
-                    <p class="mt-4 mx-auto max-w-[255px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3 text-center">Choose which account you want create</p>
-                    <div class="mt-6 grid grid-cols-2 gap-5">
-                      <button class="auth-choose rounded-[20px] border-[1px] border-solid border-gray-light p-[18.5px_9.5px] flex flex-col items-center" data-type="client">
-                        <svg class="size-6 stroke-gray-cb7c3d6">
-                          <use href="/img/sprite.svg#briefcase" />
-                        </svg>
-                        <span class="mt-4 font-Satoshi font-bold text-base leading-tight text-gray-cb7c3d6"> I am a client </span>
-                        <span class="mt-[5px] font-Satoshi font-medium text-sm leading-tight text-gray-cb7c3d6 max-w-[135px] mx-auto"> Lorem ipsum dolor sit amet consectetur. </span>
-                      </button>
-                      <button class="auth-choose rounded-[20px] border-[1px] border-solid border-gray-light p-[18.5px_9.5px] flex flex-col items-center" data-type="seller">
-                        <svg class="size-6 stroke-gray-cb7c3d6">
-                          <use href="/img/sprite.svg#brush" />
-                        </svg>
-                        <span class="mt-4 font-Satoshi font-bold text-base leading-tight text-gray-cb7c3d6"> I am a seller </span>
-                        <span class="mt-[5px] font-Satoshi font-medium text-sm leading-tight text-gray-cb7c3d6 max-w-[135px] mx-auto"> Lorem ipsum dolor sit amet consectetur. </span>
-                      </button>
-                    </div>
-                    <button
-                      class="auth-create-btn mt-10 flex items-center justify-center gap-2 font-Satoshi font-bold text-sm leading-tight text-white max-w-[240px] w-full mx-auto p-4 rounded-xl bg-black"
-                      id="auth-create"
-                    >
-                      Create client account
-                      <svg class="size-3 stroke-white">
-                        <use href="/img/sprite.svg#arrow-right" />
+        <div class="max-w-[420px] w-full min-h-20 rounded-[36px] bg-white m-auto relative overflow-hidden">
+          <button class="size-10 z-10 rounded-xl bg-gray-fafafc flex items-center justify-center absolute right-[22px] top-[22px]" data-modal-close="auth">
+            <svg class="size-5 stroke-gray-c9ca5b3">
+              <use href="/img/sprite.svg#cross" />
+            </svg>
+          </button>
+          <div class="swiper h-full" id="auth-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="p-[34px] flex flex-col">
+                  <p class="uppercase mx-auto font-Satoshi font-bold text-xs leading-tight text-gray-cb7c3d6 underline">Monday</p>
+                  <p class="max-w-[290px] mx-auto text-center mt-10 font-Satoshi font-bold text-[32px] leading-tight text-black">Welcome to Monday</p>
+                  <p class="mt-4 mx-auto max-w-[255px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3 text-center">Choose which account you want create</p>
+                  <div class="mt-6 grid grid-cols-2 gap-5">
+                    <button class="auth-choose rounded-[20px] border-[1px] border-solid border-gray-light p-[18.5px_9.5px] flex flex-col items-center" data-type="client">
+                      <svg class="size-6 stroke-gray-cb7c3d6">
+                        <use href="/img/sprite.svg#briefcase" />
                       </svg>
+                      <span class="mt-4 font-Satoshi font-bold text-base leading-tight text-gray-cb7c3d6"> I am a client </span>
+                      <span class="mt-[5px] font-Satoshi font-medium text-sm leading-tight text-gray-cb7c3d6 max-w-[135px] mx-auto"> Lorem ipsum dolor sit amet consectetur. </span>
+                    </button>
+                    <button class="auth-choose rounded-[20px] border-[1px] border-solid border-gray-light p-[18.5px_9.5px] flex flex-col items-center" data-type="seller">
+                      <svg class="size-6 stroke-gray-cb7c3d6">
+                        <use href="/img/sprite.svg#brush" />
+                      </svg>
+                      <span class="mt-4 font-Satoshi font-bold text-base leading-tight text-gray-cb7c3d6"> I am a seller </span>
+                      <span class="mt-[5px] font-Satoshi font-medium text-sm leading-tight text-gray-cb7c3d6 max-w-[135px] mx-auto"> Lorem ipsum dolor sit amet consectetur. </span>
                     </button>
                   </div>
+                  <button
+                    class="auth-create-btn mt-10 flex items-center justify-center gap-2 font-Satoshi font-bold text-sm leading-tight text-white max-w-[240px] w-full mx-auto p-4 rounded-xl bg-black"
+                    id="auth-create"
+                  >
+                    Create client account
+                    <svg class="size-3 stroke-white">
+                      <use href="/img/sprite.svg#arrow-right" />
+                    </svg>
+                  </button>
                 </div>
-                <div class="swiper-slide">
-                  <div data-type="client" class="auth-card hidden from-[#EDF4FF] to-white bg-gradient-to-b">
-                    <div class="swiper" id="client-swiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <div class="w-full h-[306px]"></div>
-                          <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
-                            <p class="font-Satoshi font-bold text-xl leading-tight text-black">Choose services and best performers</p>
-                            <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
-                              Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
-                            </p>
-                            <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
-                              <button
-                                class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
-                                data-type="prev"
-                              >
-                                Previous
-                              </button>
-                              <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
-                                next
-                                <svg class="size-3 stroke-white">
-                                  <use href="/img/sprite.svg#arrow-right" />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="w-full h-[306px]"></div>
-                          <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
-                            <p class="font-Satoshi font-bold text-xl leading-tight text-black">Reserve payment</p>
-                            <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
-                              Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
-                            </p>
-                            <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
-                              <button
-                                class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
-                                data-type="prev"
-                              >
-                                Previous
-                              </button>
-                              <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
-                                next
-                                <svg class="size-3 stroke-white">
-                                  <use href="/img/sprite.svg#arrow-right" />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="w-full h-[306px]"></div>
-                          <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
-                            <p class="font-Satoshi font-bold text-xl leading-tight text-black">Pay only when the service is done well</p>
-                            <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
-                              Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
-                            </p>
-                            <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
-                              <button
-                                class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
-                                data-type="prev"
-                              >
-                                Previous
-                              </button>
-                              <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
-                                next
-                                <svg class="size-3 stroke-white">
-                                  <use href="/img/sprite.svg#arrow-right" />
-                                </svg>
-                              </button>
-                            </div>
+              </div>
+              <div class="swiper-slide">
+                <div data-type="client" class="auth-card hidden from-[#EDF4FF] to-white bg-gradient-to-b">
+                  <div class="swiper" id="client-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="w-full h-[306px]"></div>
+                        <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
+                          <p class="font-Satoshi font-bold text-xl leading-tight text-black">Choose services and best performers</p>
+                          <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
+                            Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
+                          </p>
+                          <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
+                            <button
+                              class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
+                              data-type="prev"
+                            >
+                              Previous
+                            </button>
+                            <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
+                              next
+                              <svg class="size-3 stroke-white">
+                                <use href="/img/sprite.svg#arrow-right" />
+                              </svg>
+                            </button>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div data-type="seller" class="auth-card hidden from-[#EDF4FF] to-white bg-gradient-to-b">
-                    <div class="swiper" id="seller-swiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <div class="w-full h-[306px]"></div>
-                          <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
-                            <p class="font-Satoshi font-bold text-xl leading-tight text-black">Create your profile</p>
-                            <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
-                              Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
-                            </p>
-                            <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
-                              <button
-                                class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
-                                data-type="prev"
-                              >
-                                Previous
-                              </button>
-                              <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
-                                next
-                                <svg class="size-3 stroke-white">
-                                  <use href="/img/sprite.svg#arrow-right" />
-                                </svg>
-                              </button>
-                            </div>
+                      <div class="swiper-slide">
+                        <div class="w-full h-[306px]"></div>
+                        <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
+                          <p class="font-Satoshi font-bold text-xl leading-tight text-black">Reserve payment</p>
+                          <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
+                            Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
+                          </p>
+                          <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
+                            <button
+                              class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
+                              data-type="prev"
+                            >
+                              Previous
+                            </button>
+                            <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
+                              next
+                              <svg class="size-3 stroke-white">
+                                <use href="/img/sprite.svg#arrow-right" />
+                              </svg>
+                            </button>
                           </div>
                         </div>
-                        <div class="swiper-slide">
-                          <div class="w-full h-[306px]"></div>
-                          <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
-                            <p class="font-Satoshi font-bold text-xl leading-tight text-black">Place an order</p>
-                            <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
-                              Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
-                            </p>
-                            <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
-                              <button
-                                class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
-                                data-type="prev"
-                              >
-                                Previous
-                              </button>
-                              <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
-                                next
-                                <svg class="size-3 stroke-white">
-                                  <use href="/img/sprite.svg#arrow-right" />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="w-full h-[306px]"></div>
-                          <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
-                            <p class="font-Satoshi font-bold text-xl leading-tight text-black">Start earning money!</p>
-                            <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
-                              Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
-                            </p>
-                            <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
-                              <button
-                                class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
-                                data-type="prev"
-                              >
-                                Previous
-                              </button>
-                              <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
-                                next
-                                <svg class="size-3 stroke-white">
-                                  <use href="/img/sprite.svg#arrow-right" />
-                                </svg>
-                              </button>
-                            </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="w-full h-[306px]"></div>
+                        <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
+                          <p class="font-Satoshi font-bold text-xl leading-tight text-black">Pay only when the service is done well</p>
+                          <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
+                            Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
+                          </p>
+                          <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
+                            <button
+                              class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
+                              data-type="prev"
+                            >
+                              Previous
+                            </button>
+                            <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
+                              next
+                              <svg class="size-3 stroke-white">
+                                <use href="/img/sprite.svg#arrow-right" />
+                              </svg>
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="p-5 pt-8 flex flex-col items-center">
-                    <p class="uppercase mx-auto font-Satoshi font-bold text-xs leading-tight text-gray-cb7c3d6 underline">Monday</p>
-                    <p class="mt-5 text-center font-Satoshi font-bold text-base leading-tight text-black">Let’s create your profile</p>
-                    <form class="mt-[15px] flex flex-col gap-[10px] w-full" id="signup-form">
-                      <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
-                        <input
-                          class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3"
-                          placeholder="Email*"
-                          name="email"
-                          type="text"
-                        />
+                <div data-type="seller" class="auth-card hidden from-[#EDF4FF] to-white bg-gradient-to-b">
+                  <div class="swiper" id="seller-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="w-full h-[306px]"></div>
+                        <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
+                          <p class="font-Satoshi font-bold text-xl leading-tight text-black">Create your profile</p>
+                          <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
+                            Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
+                          </p>
+                          <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
+                            <button
+                              class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
+                              data-type="prev"
+                            >
+                              Previous
+                            </button>
+                            <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
+                              next
+                              <svg class="size-3 stroke-white">
+                                <use href="/img/sprite.svg#arrow-right" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                      <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
-                        <input
-                          class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3"
-                          placeholder="Write your username (visible for all)*"
-                          name="username"
-                          type="text"
-                        />
+                      <div class="swiper-slide">
+                        <div class="w-full h-[306px]"></div>
+                        <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
+                          <p class="font-Satoshi font-bold text-xl leading-tight text-black">Place an order</p>
+                          <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
+                            Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
+                          </p>
+                          <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
+                            <button
+                              class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
+                              data-type="prev"
+                            >
+                              Previous
+                            </button>
+                            <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
+                              next
+                              <svg class="size-3 stroke-white">
+                                <use href="/img/sprite.svg#arrow-right" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                      <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
-                        <input
-                          class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3"
-                          placeholder="Password*"
-                          name="password"
-                          type="password"
-                        />
-                        <button class="size-4 mr-5" data-type="password-btn" type="button">
-                          <img class="w-full" src="/img/icons/eye.svg" alt="" />
-                        </button>
+                      <div class="swiper-slide">
+                        <div class="w-full h-[306px]"></div>
+                        <div class="p-[24px_10.5px_35px] flex flex-col items-center gap-[15px] text-center">
+                          <p class="font-Satoshi font-bold text-xl leading-tight text-black">Start earning money!</p>
+                          <p class="max-w-[308px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3">
+                            Lorem ipsum dolor sit amet consectetur. Amet eu vitae cursus amet condimentum facilisi enim.
+                          </p>
+                          <div class="mt-[15px] max-w-[295px] w-full grid grid-cols-2 gap-7">
+                            <button
+                              class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl border-[1px] border-solid border-gray-light text-gray-c575e6a"
+                              data-type="prev"
+                            >
+                              Previous
+                            </button>
+                            <button class="capitalize font-Satoshi font-bold text-sm leading-tight flex items-center justify-center gap-2 p-[13.5px] rounded-xl text-white bg-black" data-type="next">
+                              next
+                              <svg class="size-3 stroke-white">
+                                <use href="/img/sprite.svg#arrow-right" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                      <p class="mt-[15px] flex items-center gap-[5px] font-Satoshi font-bold text-sm leading-tight text-gray-c575e6a">
-                        <svg class="size-4 stroke-gray-c575e6a">
-                          <use href="/img/sprite.svg#ticket-discount" />
-                        </svg>
-                        I have got a promo-code
-                      </p>
-                      <button class="mt-[5px] bg-black p-4 rounded-xl font-Satoshi font-bold text-sm leading-tight text-white" type="submit">Create account</button>
-                    </form>
-                    <p
-                      class="w-full mt-[15px] flex items-center gap-[10px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3 capitalize before:grow before:h-[1px] before:bg-gray-light after:grow after:h-[1px] after:bg-gray-light"
-                    >
-                      <span>or</span>
-                    </p>
-                    <div class="mt-[10px] grid grid-cols-2 gap-[10px] w-full">
-                      <button class="p-2 rounded-xl border-[1px] border-solid border-black/10 flex items-center justify-center">
-                        <img class="size-6" src="/img/icons/vk.svg" alt="" />
-                      </button>
-                      <button class="p-2 rounded-xl border-[1px] border-solid border-black/10 flex items-center justify-center">
-                        <img class="size-6" src="/img/icons/fb.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="p-5 pt-8 flex flex-col items-center">
+                  <p class="uppercase mx-auto font-Satoshi font-bold text-xs leading-tight text-gray-cb7c3d6 underline">Monday</p>
+                  <p class="mt-5 text-center font-Satoshi font-bold text-base leading-tight text-black">Let’s create your profile</p>
+                  <form class="mt-[15px] flex flex-col gap-[10px] w-full" id="signup-form">
+                    <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
+                      <input
+                        class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3"
+                        placeholder="Email*"
+                        name="email"
+                        type="text"
+                      />
+                    </div>
+                    <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
+                      <input
+                        class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3"
+                        placeholder="Write your username (visible for all)*"
+                        name="username"
+                        type="text"
+                      />
+                    </div>
+                    <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
+                      <input
+                        class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3"
+                        placeholder="Password*"
+                        name="password"
+                        type="password"
+                      />
+                      <button class="size-4 mr-5" data-type="password-btn" type="button">
+                        <img class="w-full" src="/img/icons/eye.svg" alt="" />
                       </button>
                     </div>
-                    <p class="mt-5 max-w-[230px] mx-auto w-full font-Satoshi font-medium text-xs leading-tight text-gray-c9ca5b3 text-center [&>a]:font-bold [&>a]:underline">
-                      I agree with the
-                      <a href="#">Terms &amp; Conditions</a> and
-                      <a href="#">The contract offer.</a>
+                    <p class="mt-[15px] flex items-center gap-[5px] font-Satoshi font-bold text-sm leading-tight text-gray-c575e6a">
+                      <svg class="size-4 stroke-gray-c575e6a">
+                        <use href="/img/sprite.svg#ticket-discount" />
+                      </svg>
+                      I have got a promo-code
                     </p>
+                    <button class="mt-[5px] bg-black p-4 rounded-xl font-Satoshi font-bold text-sm leading-tight text-white" type="submit">Create account</button>
+                  </form>
+                  <p
+                    class="w-full mt-[15px] flex items-center gap-[10px] font-Satoshi font-medium text-sm leading-tight text-gray-c9ca5b3 capitalize before:grow before:h-[1px] before:bg-gray-light after:grow after:h-[1px] after:bg-gray-light"
+                  >
+                    <span>or</span>
+                  </p>
+                  <div class="mt-[10px] grid grid-cols-2 gap-[10px] w-full">
+                    <button class="p-2 rounded-xl border-[1px] border-solid border-black/10 flex items-center justify-center">
+                      <img class="size-6" src="/img/icons/vk.svg" alt="" />
+                    </button>
+                    <button class="p-2 rounded-xl border-[1px] border-solid border-black/10 flex items-center justify-center">
+                      <img class="size-6" src="/img/icons/fb.svg" alt="" />
+                    </button>
                   </div>
+                  <p class="mt-5 max-w-[230px] mx-auto w-full font-Satoshi font-medium text-xs leading-tight text-gray-c9ca5b3 text-center [&>a]:font-bold [&>a]:underline">
+                    I agree with the
+                    <a href="#">Terms &amp; Conditions</a> and
+                    <a href="#">The contract offer.</a>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Login modal -->
-        <div class="fixed inset-0 bg-[#000000]/80 p-3 z-[100] items-center justify-center flex-col hidden" data-modal="login" data-block="flex">
-          <div class="max-w-[420px] w-full min-h-20 rounded-[36px] bg-white m-auto relative overflow-hidden">
-            <button class="size-10 z-10 rounded-xl bg-gray-fafafc flex items-center justify-center absolute right-[22px] top-[22px]" data-modal-close="login">
-              <svg class="size-5 stroke-gray-c9ca5b3">
-                <use href="/img/sprite.svg#cross" />
-              </svg>
-            </button>
-            <div class="px-5 py-8 flex flex-col items-center">
-              <p class="uppercase mx-auto font-Satoshi font-bold text-xs leading-tight text-gray-cb7c3d6 underline">Monday</p>
-              <p class="mt-5 text-center font-Satoshi font-bold text-base leading-tight text-black">Login to your profile</p>
-              <form class="mt-[15px] flex flex-col gap-[10px] w-full" id="signup-form">
-                <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
-                  <input
-                    class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3"
-                    placeholder="Email*"
-                    name="email"
-                    type="text"
-                  />
-                </div>
-                <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
-                  <input
-                    class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3"
-                    placeholder="Password*"
-                    name="password"
-                    type="password"
-                  />
-                  <button class="size-4 mr-5" data-type="password-btn" type="button">
-                    <img class="w-full" src="/img/icons/eye.svg" alt="" />
-                  </button>
-                </div>
-                <button class="mt-[5px] bg-black p-4 rounded-xl font-Satoshi font-bold text-sm leading-tight text-white" type="submit">Login</button>
-              </form>
-            </div>
+      </div>
+      <!-- Login modal -->
+      <div class="fixed inset-0 bg-[#000000]/80 p-3 z-[100] items-center justify-center flex-col hidden" data-modal="login" data-block="flex">
+        <div class="max-w-[420px] w-full min-h-20 rounded-[36px] bg-white m-auto relative overflow-hidden">
+          <button class="size-10 z-10 rounded-xl bg-gray-fafafc flex items-center justify-center absolute right-[22px] top-[22px]" data-modal-close="login">
+            <svg class="size-5 stroke-gray-c9ca5b3">
+              <use href="/img/sprite.svg#cross" />
+            </svg>
+          </button>
+          <div class="px-5 py-8 flex flex-col items-center">
+            <p class="uppercase mx-auto font-Satoshi font-bold text-xs leading-tight text-gray-cb7c3d6 underline">Monday</p>
+            <p class="mt-5 text-center font-Satoshi font-bold text-base leading-tight text-black">Login to your profile</p>
+            <form class="mt-[15px] flex flex-col gap-[10px] w-full" id="signup-form">
+              <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
+                <input
+                  class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3"
+                  placeholder="Email*"
+                  name="email"
+                  type="text"
+                />
+              </div>
+              <div class="flex items-center rounded-[14px] border-[1px] border-solid border-black/10 overflow-hidden">
+                <input
+                  class="min-h-[50px] border-none bg-none outline-none w-full max-w-full overflow-hidden px-4 font-Satoshi font-medium text-sm leading-tight text-black placeholder:text-gray-c9ca5b3"
+                  placeholder="Password*"
+                  name="password"
+                  type="password"
+                />
+                <button class="size-4 mr-5" data-type="password-btn" type="button">
+                  <img class="w-full" src="/img/icons/eye.svg" alt="" />
+                </button>
+              </div>
+              <button class="mt-[5px] bg-black p-4 rounded-xl font-Satoshi font-bold text-sm leading-tight text-white" type="submit">Login</button>
+            </form>
           </div>
         </div>
+      </div>
     </footer>
   </body>
 </html>
-
-

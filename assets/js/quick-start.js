@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
               <div class="relative z-[1] py-4 px-5 rounded-2xl bg-white md:flex md:items-center md:gap-16">
                 <div class="flex flex-col items-start gap-4 md:gap-6">
-                  <p class="w-9 h-6 rounded-lg bg-[#FAFAFC] text-center font-Satoshi font-bold text-[12px] text-black/50 flex items-center justify-center">
+                  <p class="w-9 h-6 rounded-lg bg-[#FAFAFC] text-center font-Satoshi font-bold text-[12px] text-black flex items-center justify-center">
                     ${item.step}
                   </p>
 

@@ -3,50 +3,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const component = document.querySelector(".footer-parallax-component");
-  const mm = gsap.matchMedia();
+  const logo = document.querySelector(".footer-logo");
 
-  mm.add("(min-width: 768px)", () => {
-    gsap.set(component, { y: 260 });
+  if (logo) {
+    const text = logo.textContent.trim();
 
-    gsap.to(component, {
-      y: 50,
-      ease: "none",
+    logo.innerHTML = text
+      .split("")
+      .map((char) => `<span class="footer-logo-char">${char}</span>`)
+      .join("");
+
+    gsap.set(".footer-logo-char", {
+      display: "inline-block",
+      y: -180,
+      opacity: 0,
+    });
+
+    gsap.to(".footer-logo-char", {
+      y: 0,
+      opacity: 1,
+      duration: 0.9,
+      ease: "back.out(1.8)",
+      stagger: 0.08,
       scrollTrigger: {
-        trigger: ".footer-parallax",
-        start: "top 95%",
-        end: "bottom bottom",
-        scrub: 1.2,
+        trigger: ".footer-bottom-sticky",
+        start: "top 30%",
+        once: true,
         markers: false,
       },
     });
-  });
-
-  mm.add("(max-width: 767px)", () => {
-    gsap.set(component, { y: 580 });
-
-    gsap.to(component, {
-      y: 280,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".footer-parallax",
-        start: "top 95%",
-        end: "bottom bottom",
-        scrub: 1.2,
-        markers: false,
-      },
-    });
-  });
-
-  gsap.set(".footer-column", {
-    opacity: 0,
-    y: 28,
-  });
-
-  gsap.set(".footer-actions", {
-    opacity: 0,
-    y: 28,
-  });
+  }
 
   gsap.to(".footer-column", {
     opacity: 1,
@@ -55,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.12,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: ".footer-parallax-hat",
+      trigger: ".footer-top",
       start: "top 80%",
       once: true,
     },
@@ -68,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power3.out",
     delay: 0.25,
     scrollTrigger: {
-      trigger: ".footer-parallax-hat",
+      trigger: ".footer-top",
       start: "top 80%",
       once: true,
     },
