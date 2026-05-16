@@ -68,6 +68,11 @@
         <path d="M6.75 9.49805L8.25 10.998L11.25 7.99805" stroke="#4790FF" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
+     <symbol id="verify2" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.88867 6.99956L6.29451 8.41122L9.11201 5.58789" stroke="#4790FF" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.27117 1.43C6.67367 1.08583 7.33284 1.08583 7.74117 1.43L8.66284 2.22333C8.83784 2.375 9.16451 2.4975 9.39784 2.4975H10.3895C11.0078 2.4975 11.5153 3.005 11.5153 3.62333V4.615C11.5153 4.8425 11.6378 5.175 11.7895 5.35L12.5828 6.27167C12.927 6.67417 12.927 7.33333 12.5828 7.74167L11.7895 8.66333C11.6378 8.83833 11.5153 9.165 11.5153 9.39833V10.39C11.5153 11.0083 11.0078 11.5158 10.3895 11.5158H9.39784C9.17034 11.5158 8.83784 11.6383 8.66284 11.79L7.74117 12.5833C7.33867 12.9275 6.6795 12.9275 6.27117 12.5833L5.34951 11.79C5.17451 11.6383 4.84784 11.5158 4.6145 11.5158H3.60534C2.98701 11.5158 2.47951 11.0083 2.47951 10.39V9.3925C2.47951 9.165 2.35701 8.83833 2.21117 8.66333L1.42367 7.73583C1.08534 7.33333 1.08534 6.68 1.42367 6.2775L2.21117 5.35C2.35701 5.175 2.47951 4.84833 2.47951 4.62083V3.6175C2.47951 2.99917 2.98701 2.49167 3.60534 2.49167H4.6145C4.842 2.49167 5.17451 2.36917 5.34951 2.2175L6.27117 1.43Z" stroke="#4790FF" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
     <symbol id="cross" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.5 3.5L3.5 9.5M3.5 3.5L9.5 9.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
@@ -335,6 +340,18 @@
     <symbol id="document" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M17 8V11.75C17 15.5 15.5 17 11.75 17H7.25C3.5 17 2 15.5 2 11.75V7.25C2 3.5 3.5 2 7.25 2H11" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M17 8H14C11.75 8 11 7.25 11 5V2L17 8Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="document-empty" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 5V7.5C11 10 10 11 7.5 11H4.5C2 11 1 10 1 7.5V4.5C1 2 2 1 4.5 1H7"  stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 5H9C7.5 5 7 4.5 7 3V1L11 5Z" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="document-upload" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.99935 11.334V7.33398L4.66602 8.66732" stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 7.33398L7.33333 8.66732" stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14.6673 6.66732V10.0007C14.6673 13.334 13.334 14.6673 10.0007 14.6673H6.00065C2.66732 14.6673 1.33398 13.334 1.33398 10.0007V6.00065C1.33398 2.66732 2.66732 1.33398 6.00065 1.33398H9.33398" stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14.6673 6.66732H12.0007C10.0007 6.66732 9.33398 6.00065 9.33398 4.00065V1.33398L14.6673 6.66732Z" stroke="#575E6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
     <symbol id="document-download" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

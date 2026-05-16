@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Monday</title>
+    <title>Success - Monday</title>
     <meta property="og:title" content="Home - Monday" />
     <meta property="twitter:title" content="Home - Monday" />
     <meta name="description" content="Monday, the freelance marketplace for all your needs" />
     <meta property="og:description" content="Monday, the freelance marketplace for all your needs" />
     <meta property="twitter:description" content="Monday, the freelance marketplace for all your needs" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="/assets/js/tailwind.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/vendor/swiper.min.js"></script>
+    <script src="/assets/js/tailwind.js"></script>
     <script src="/assets/js/vendor/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/MotionPathPlugin.min.js"></script>
@@ -20,16 +20,6 @@
     <script src="/assets/js/index.js" type="module" defer></script>
     <script src="/assets/js/header-dropdowns.js" type="module" defer></script>
     <script src="/assets/js/header-modals.js" type="module" defer></script>
-    <script src="/assets/js/search-input.js" type="module" defer></script>
-    <script src="/assets/js/services.js" defer></script>
-    <script src="/assets/js/hero.js" defer></script>
-    <script src="/assets/js/quick-start.js" defer></script>
-    <script src="/assets/js/try-banner.js" defer></script>
-    <script src="/assets/js/popular-projects.js" defer></script>
-    <script src="/assets/js/news.js" defer></script>
-    <script src="/assets/js/saves-money.js" defer></script>
-    <script src="/assets/js/ordered.js" defer></script>
-    <script src="/assets/js/journey.js" defer></script>
     <script src="/assets/js/footer.js" defer></script>
     <link href="/assets/js/vendor/swiper.min.css" rel="stylesheet" />
     <link href="/assets/css/index.0fcabdd2790f60f408b7.css" rel="stylesheet" />
@@ -38,7 +28,7 @@
     <link href="/assets/css/styles.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-[#FAFAFC]">
+  <body class="bg-[#F1F3F9]">
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const mobileButton = document.getElementById("mobile_button");
@@ -58,6 +48,14 @@
             body.classList.remove("h-screen");
             body.classList.remove("overflow-hidden");
           });
+        });
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll(".file-remove").forEach((button) => {
+        button.addEventListener("click", () => {
+          button.closest(".file-item").remove();
         });
       });
     </script>
@@ -1370,13 +1368,13 @@
         });
       </script>
     </div>
-
+    <!--header-->
     <header class="lg:pt-8 bg-white z-50 relative">
       <div class="max-w-[1384px] px-3 mx-auto lg:flex hidden items-center justify-between">
         <div class="flex items-center gap-2.5 w-full">
           <a class="flex items-center gap-2" href="index.html">
             <!-- <img src="img/Logo.svg" alt="Logo" /> -->
-            <a class="text-[#202020] font-bold text-[24px] uppercase select-none" href="index.html">MONDAY </a>
+            <a class="text-[#202020] font-bold text-base uppercase select-none" href="index.html">MONDAY </a>
           </a>
 
           <div class="relative inline-block">
@@ -1480,37 +1478,10 @@
                   <span class="flex w-[18px] h-[18px]"> <img src="./img/header/lovely.svg" alt="lovely" /> </span>Favorites
                 </a>
               </li>
-              
             </ul>
           </div>
 
           <div class="flex items-center gap-[10px]">
-            <!--For Client-->
-            <button
-                  class="group relative flex items-center justify-center gap-2 w-fit overflow-hidden rounded-xl border border-transparent bg-white px-3 h-[35px] text-center font-Satoshi text-xs font-bold leading-none text-white transition-all duration-300 hover:border-[#4790FF]"
-                >
-                <span class="absolute inset-0 z-0 bg-gradient-to-r from-[#6AB8FF] to-[#B8DDFF] transition-opacity duration-300 group-hover:opacity-0"></span>
-
-                <span class="relative z-[1] transition-colors duration-300 group-hover:text-[#4790FF] text-nowrap"> Create new task </span>
-
-                <svg class="relative z-[1] size-[18px] shrink-0 stroke-white transition-colors duration-300 group-hover:stroke-[#4790FF]" fill="none">
-                  <use href="/img/sprite.svg#edit"></use>
-                </svg>
-            </button>
-
-            <!--For Seller-->
-            <!-- <button
-                  class="group relative flex items-center justify-center gap-2 w-fit overflow-hidden rounded-xl border border-transparent bg-white px-3 h-[35px] text-center font-Satoshi text-xs font-bold leading-none text-white transition-all duration-300 hover:border-[#4790FF]"
-                >
-                <span class="absolute inset-0 z-0 bg-gradient-to-r from-[#6AB8FF] to-[#B8DDFF] transition-opacity duration-300 group-hover:opacity-0"></span>
-
-                <span class="relative z-[1] transition-colors duration-300 group-hover:text-[#4790FF] text-nowrap"> Add Service </span>
-
-                <svg class="relative z-[1] size-[12px] shrink-0 stroke-white transition-colors duration-300 group-hover:stroke-[#4790FF]" fill="none">
-                  <use href="/img/sprite.svg#plus "></use>
-                </svg>
-            </button> -->
-
             <button id="header__shop__btn" class="relative w-[35px] h-[35px] flex items-center justify-center">
               <img class="w-[18px] h-[18px] hover:scale-[1.2] transition-transform duration-200" src="./img/header/bag.svg" alt="bag" />
 
@@ -3973,1346 +3944,432 @@
       </div>
     </div>
 
-    <section id="hero" class="pt-8 pb-[100px] lg:pt-20 relative">
-      <img src="img/hero-bg-illustration.png" alt="" class="object-contain absolute w-[1440px] h-full -top-14 left-1/2 -translate-x-1/2 pointer-events-none z-0" />
+    <!--post-->
+    <section class="pt-[24px] pb-[40px]">
+      <div class="max-w-[1372px] mx-auto px-4">
+        <h1 class="text-[#202020] font-bold text-4xl text-center mb-6 max-md:text-[28px]">Your Profile Is Ready!</h1>
 
-      <div class="app-container relative z-10">
-        <div class="flex flex-col items-center lg:max-w-[1100px] lg:mx-auto">
-          <div class="hero-label flex items-center rounded-lg border-[1px] border-black/10 px-2 py-1">
-            <div class="flex items-center">
-              <img src="/img/temp/active-1.jpg" alt="" class="rounded-full size-[18px]" />
-              <img src="/img/temp/active-2.jpg" alt="" class="rounded-full size-[18px] -ml-1" />
-              <img src="/img/temp/active-3.jpg" alt="" class="rounded-full size-[18px] -ml-1" />
-            </div>
-            <span class="ml-2 whitespace-nowrap font-Satoshi font-medium text-xs leading-tight text-black">4k active users</span>
-            <svg class="size-3 stroke-black ml-1">
-              <use href="/img/sprite.svg#arrow-up" />
-            </svg>
-          </div>
+        <div class="grid grid-cols-[278px_1fr_278px] gap-2.5 max-lg:grid-cols-1">
+          <!--left slider-->
+          <aside class="rounded-3xl border border-black/10 p-5 h-fit overflow-hidden">
+            <div class="swiper profile_steps_slider">
+              <div class="swiper-wrapper">
+                <!--slide-->
+                <div class="swiper-slide">
+                  <h3 class="text-[#202020] text-base font-bold leading-[22px] mb-4">Create your first service and start receiving orders</h3>
 
-          <h1
-            class="mt-8 mx-auto max-w-[370px] font-Satoshi font-medium [-webkit-text-stroke:1px_rgba(0,0,0,0.1)] text-black text-center text-2xl leading-tight sm:text-4xl sm:max-w-screen-sm lg:text-5xl lg:max-w-screen-md xl:text-[64px] xl:max-w-[1400px]"
-          >
-            <span class="hero-word">Welcome</span>
-            <span class="hero-word">to</span>
+                  <p class="text-[#575E6A] text-sm font-medium leading-[20px]">Turn your skills into professional offers and connect with clients on Monday.</p>
+                </div>
 
-            <span class="hero-word relative inline overflow-visible">
-              <strong class="relative z-[1]">Monday,</strong>
-              <span
-                class="hero-glow pointer-events-none absolute left-[30%] top-1/2 z-[2] h-[10px] w-[148px] rotate-[-35deg] rounded-full bg-[linear-gradient(90deg,#FAFAFA00_0%,#FAFAFA_50%,#FAFAFA00_100%)] blur-[2px]"
-              ></span>
-            </span>
+                <!--slide-->
+                <div class="swiper-slide">
+                  <h3 class="text-[#202020] text-base font-bold leading-[22px] mb-4">Add portfolio examples to attract more clients</h3>
 
-            <span class="hero-word">the</span>
+                  <p class="text-[#575E6A] text-sm font-medium leading-[20px]">Showcase your best work so customers can quickly understand your experience and style.</p>
+                </div>
 
-            <span class="hero-word relative inline overflow-visible">
-              <span class="relative z-[1]">freelance</span>
-              <span
-                class="hero-glow pointer-events-none absolute left-[20%] top-1/2 z-[2] h-[10px] w-[148px] rotate-[-30deg] rounded-full bg-[linear-gradient(90deg,#FAFAFA00_0%,#FAFAFA_50%,#FAFAFA00_100%)] blur-[2px]"
-              ></span>
-            </span>
+                <!--slide-->
+                <div class="swiper-slide">
+                  <h3 class="text-[#202020] text-base font-bold leading-[22px] mb-4">Complete verification and increase trust</h3>
 
-            <span class="relative inline overflow-visible">
-              <span class="hero-word relative z-[1]">marketplace</span>
-              <span
-                class="hero-glow pointer-events-none absolute left-[60%] top-[70%] z-[2] h-[10px] w-[148px] rotate-[-30deg] rounded-full bg-[linear-gradient(90deg,#FAFAFA00_0%,#FAFAFA_50%,#FAFAFA00_100%)] blur-[2px]"
-              ></span>
-            </span>
-
-            <span class="hero-word">for</span>
-            <span class="hero-word">all</span>
-
-            <span class="relative inline overflow-visible">
-              <span class="hero-word relative z-[1]">your</span>
-              <span
-                class="hero-glow pointer-events-none absolute left-[75%] top-1/2 z-[2] h-[10px] w-[148px] rotate-[-30deg] rounded-full bg-[linear-gradient(90deg,#FAFAFA00_0%,#FAFAFA_50%,#FAFAFA00_100%)] blur-[2px]"
-              ></span>
-            </span>
-
-            <span class="hero-word">needs</span>
-          </h1>
-
-          <p class="hero-subtitle mt-4 font-Satoshi font-medium text-center text-[#9CA5B3] text-sm lg:text-xl lg:leading-tight lg:mt-5">Find the best performer for your task right now</p>
-
-          <div class="hero-search main-search-box mt-14 relative w-full md:flex md:items-center md:bg-white md:px-1 md:rounded-lg">
-            <div class="flex items-center gap-2 px-4 py-5 rounded-lg bg-white md:grow relative">
-              <svg class="size-4 stroke-black shrink-0 font-Satoshi font-medium text-black placeholder:text-black/50">
-                <use href="/img/sprite.svg#magnifier"></use>
-              </svg>
-              <input
-                id="mainSearchInput"
-                type="text"
-                class="grow max-w-full w-full overflow-hidden focus:outline-none text-[#202020] placeholder:text-[#B7C3D6]"
-                placeholder="What type of service do you need?"
-              />
-            </div>
-
-            <button
-              class="group relative mt-4 w-full overflow-hidden rounded-lg border border-transparent bg-white p-4 text-center font-Satoshi text-base font-medium leading-none text-white transition-all duration-300 hover:border-[#4790FF] hover:text-[#4790FF] md:mt-0 md:max-w-56"
-            >
-              <span class="absolute inset-0 z-0 bg-gradient-to-r from-[#6AB8FF] to-[#B8DDFF] transition-opacity duration-300 group-hover:opacity-0"></span>
-
-              <span class="relative z-[1]"> Search </span>
-            </button>
-
-            <div id="mainSearchMenu" class="hidden !max-w-[900px] !w-full left-[-1px] absolute bg-[#fff] shadow-lg top-[60px] py-3 px-5 rounded-b-2xl z-[80]">
-              <p class="text-[#202020] font-bold text-base mb-3">Top services🔥</p>
-
-              <div class="pb-2 border-b mb-3 flex flex-wrap gap-3">
-                <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">Social & SMM</a>
-                <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">SEO</a>
-                <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">Telegram</a>
-                <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">Web Development</a>
-                <a class="text-[#8F8F8F] main_search_service font-medium md:text-sm text-xs px-3 py-2 border rounded-md" href="#">Scripts & Bots</a>
+                  <p class="text-[#575E6A] text-sm font-medium leading-[20px]">Verified profiles receive more attention and help clients feel safer when placing orders.</p>
+                </div>
               </div>
 
-              <div class="main_search_recent">
-                <p class="text-[#B7C3D6] font-bold md:text-sm text-xs mb-3">Recent</p>
-                <a class="recent-item-button text-[#575E6A] font-medium md:text-sm text-xs flex items-center gap-2 relative" href="#" id="recent-item-wibtrix">
-                  <img class="icon-clock w-4 h-4" src="./img/header/clock.svg" alt="clock" />
-                  Wibtrix site improvements
-                  <span class="delete-icon hidden absolute right-3 cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-black" viewBox="0 0 16 16">
-                      <path
-                        d="M1.646 1.646a.5.5 0 0 1 .708 0L8 7.293l5.646-5.647a.5.5 0 1 1 .708.708L8.707 8l5.647 5.646a.5.5 0 1 1-.708.708L8 8.707l-5.646 5.647a.5.5 0 0 1-.708-.708L7.293 8 1.646 2.354a.5.5 0 0 1 0-.78z"
-                      />
+              <!--pagination-->
+              <div class="flex items-center gap-1 mt-4 profile_steps_pagination"></div>
+            </div>
+          </aside>
+
+          <style>
+            .profile_steps_pagination .swiper-pagination-bullet {
+              width: 6px;
+              height: 6px;
+              margin: 0 !important;
+              opacity: 1;
+              background: #b7c3d6;
+              transition: all 0.3s ease;
+            }
+
+            .profile_steps_pagination .swiper-pagination-bullet-active {
+              background: #575e6a;
+            }
+          </style>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              if (typeof Swiper === "undefined") return;
+
+              new Swiper(".profile_steps_slider", {
+                slidesPerView: 1,
+                spaceBetween: 16,
+                speed: 600,
+                loop: true,
+
+                autoplay: {
+                  delay: 3000,
+                  disableOnInteraction: false,
+                },
+
+                pagination: {
+                  el: ".profile_steps_pagination",
+                  clickable: true,
+                },
+              });
+            });
+          </script>
+
+          <div class="flex flex-col gap-2.5">
+            <div class="rounded-3xl bg-white p-5">
+              <div class="flex items-center justify-between gap-3 mb-3">
+                <div class="flex items-center justify-between gap-1">
+                  <svg class="w-[18px] h-[18px] shrink-0 stroke-[#575E6A]">
+                    <use href="/img/sprite.svg#briefcase" />
+                  </svg>
+                  <h3 class="text-[#202020] text-base font-bold">The main task</h3>
+                </div>
+                <button class="w-5 h-5 rounded-full text-[#B7C3D6] text-xs font-bold flex items-center justify-center"><img src="img/icons/info-circle.svg" alt="info" /></button>
+              </div>
+
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="Enter the main task"
+                  maxlength="70"
+                  class="w-full h-[58px] rounded-xl bg-[#FAFAFC] px-4 pr-[150px] text-[#202020] text-base font-medium outline-none border border-transparent transition-all duration-300 placeholder:text-[#9CA5B3] focus:border-[#4790FF]"
+                />
+
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-[#9CA5B3] text-sm font-medium pointer-events-none"> 70 of 70 characters </span>
+              </div>
+            </div>
+
+            <div class="rounded-3xl bg-white p-5">
+              <div class="flex items-center justify-between gap-3 mb-3">
+                <div class="flex items-center gap-1">
+                  <svg class="w-[18px] h-[18px] shrink-0 stroke-[#575E6A]">
+                    <use href="/img/sprite.svg#edit" />
+                  </svg>
+                  <h3 class="text-[#202020] text-base font-bold">Detailed description of the task</h3>
+                </div>
+                <button class="w-5 h-5 rounded-full text-[#B7C3D6] text-xs font-bold flex items-center justify-center"><img src="img/icons/info-circle.svg" alt="info" /></button>
+              </div>
+
+              <div class="relative">
+                <textarea
+                  placeholder="Describe your task in detail"
+                  maxlength="500"
+                  class="w-full min-h-[194px] resize-none rounded-xl bg-[#FAFAFC] px-4 py-4 pb-10 text-[#202020] text-base font-medium leading-[22px] outline-none border border-transparent transition-all duration-300 placeholder:text-[#9CA5B3] focus:border-[#4790FF]"
+                ></textarea>
+
+                <span class="absolute right-4 bottom-4 text-[#9CA5B3] text-sm font-medium pointer-events-none"> 500 of 500 characters </span>
+              </div>
+
+              <div class="flex items-start gap-2 mt-3">
+                <svg class="cursor-pointer" width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#FF8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12 8V13" stroke="#FF8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M11.9941 16H12.0031" stroke="#FF8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="text-[#FF8E8E] text-xs font-medium leading-[16px]">
+                  Do not provide contacts unless absolutely necessary. Communications and orders outside<br />
+                  of Monday carry a high risk of fraud.
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-3xl bg-white p-5">
+              <div class="flex items-center gap-1 mb-3">
+                <svg class="w-[18px] h-[18px] shrink-0 stroke-[#575E6A]">
+                  <use href="/img/sprite.svg#empty-wallet" />
+                </svg>
+                <h3 class="text-[#202020] text-base font-bold">Price</h3>
+              </div>
+
+              <div class="relative mb-4">
+                <input
+                  type="text"
+                  placeholder="Enter your price"
+                  class="w-full h-[58px] rounded-xl bg-[#FAFAFC] px-4 pr-16 text-[#202020] text-base font-bold outline-none border border-transparent transition-all duration-300 placeholder:text-[#9CA5B3] focus:border-[#4790FF]"
+                />
+
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-[#9CA5B3] text-sm font-medium pointer-events-none"> UZS </span>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <label class="flex items-center gap-2 text-[#202020] text-sm font-bold">
+                  <input type="checkbox" class="peer hidden" />
+                  <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                    <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10">
+                      <use href="/img/sprite.svg#checked"></use>
                     </svg>
-                  </span>
-                </a>
+                  </div>
+                  I am ready to consider offers with a higher price if the level of the performer is higher
+                </label>
+
+                <div class="flex items-center gap-5 max-sm:flex-col max-sm:items-start max-sm:gap-3">
+                  <label class="flex items-center gap-2 text-[#202020] text-sm font-bold">
+                    <input type="checkbox" class="peer hidden" />
+                    <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                      <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10">
+                        <use href="/img/sprite.svg#checked"></use>
+                      </svg>
+                    </div>
+                    Only for PRO
+                  </label>
+
+                  <label class="flex items-center gap-2 text-[#202020] text-sm font-bold">
+                    <input type="checkbox" class="peer hidden" />
+                    <div class="shrink-0 relative size-[18px] rounded-[4px] border-[0.5px] border-gray-caeb5bf transition-all peer-checked:border-transparent peer-checked:bg-[#202020]">
+                      <svg class="absolute left-1/2 top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 text-white peer-checked:block z-10">
+                        <use href="/img/sprite.svg#checked"></use>
+                      </svg>
+                    </div>
+                    Only for Verified Members <img src="/img/verify.svg" alt="" />
+                  </label>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="hero-search-sub mt-8 w-full md:flex md:items-center lg:max-w-[900px] lg:mr-auto">
-            <p class="font-Satoshi font-bold text-[12px] leading-tight">🔥 Top services:</p>
-
-            <div class="-mx-4 px-4 mt-4 overflow-auto [&::-webkit-scrollbar]:hidden md:mt-0">
-              <ul class="flex items-start gap-[10px] flex-wrap md:ml-6">
-                <li>
-                  <a href="#" class="top-service-link font-Satoshi font-500 text-[12px] text-opacity-50 whitespace-nowrap py-[6px] px-4 rounded-lg border border-black/10 block"> Social & SMM </a>
-                </li>
-                <li>
-                  <a href="#" class="top-service-link font-Satoshi font-500 text-[12px] text-opacity-50 whitespace-nowrap py-[6px] px-4 rounded-lg border-[1px] border-black/10 block"> SEO </a>
-                </li>
-                <li>
-                  <a href="#" class="top-service-link font-Satoshi font-500 text-[12px] text-opacity-50 whitespace-nowrap py-[6px] px-4 rounded-lg border-[1px] border-black/10 block"> Telegram </a>
-                </li>
-                <li>
-                  <a href="#" class="top-service-link font-Satoshi font-500 text-[12px] text-opacity-50 whitespace-nowrap py-[6px] px-4 rounded-lg border-[1px] border-black/10 block">
-                    Web Development
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-   <section id="services" class="services-section py-9 lg:pt-10 lg:pb-20 relative overflow-hidden">
-      <div
-        class="services-bg-circle pointer-events-none absolute left-1/2 top-[80px] z-[2] h-[1300px] w-[1300px] -translate-x-1/2 rounded-full border border-[#F2F2F2] bg-gradient-to-b from-[#EDF4FF] to-[#F1F7FF]"
-      ></div>
-
-      <img src="/img/category-bg.png" alt="" class="services-bg-pattern pointer-events-none absolute inset-0 z-[2] h-full w-full object-contain" />
-
-      <img
-        src="/img/category-bg-illustration.png"
-        alt=""
-        class="services-bg-illustration pointer-events-none absolute left-1/2 -translate-x-1/2 -bottom-[200px] z-[0] h-[1000] w-[1440px] object-cover"
-      />
-
-      <div class="app-container relative z-[2]">
-        <div class="flex flex-col items-center">
-          <p class="label-services py-[6px] px-4 rounded-lg border-[1px] border-opacity-50 font-Satoshi font-medium text-[12px] hidden md:block">Popular services</p>
-          <h2 class="title-services font-Satoshi font-medium text-2xl leading-tight text-center sm:text-3xl md:mt-5 md:text-5xl text-[#202020]">Choose category to start</h2>
-
-          <ul class="services-list w-full mt-7 flex flex-wrap justify-center gap-2 lg:gap-5 lg:mt-12 xl:gap-10">
-            <li class="service-card basis-[calc(50%-4px)] max-w-[360px] lg:basis-[360px]">
-              <div class="rounded-xl bg-white p-2 shadow-[5px_10px_10px_2px] shadow-[#000]/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_24px_70px_rgba(50,102,180,0.18)] lg:pb-5">
-                <a href="/services/smm" class="block h-44 overflow-hidden rounded-2xl bg-gradient-to-b from-[#B9DDFF] to-transparent sm:h-72 md:h-96">
-                  <img class="img-fill object-top transition-transform duration-500 hover:scale-[1.04]" src="img/temp/smm-category.png" alt="" />
-                </a>
-
-                <div class="mt-4 lg:px-2">
-                  <div class="flex items-center gap-1">
-                    <a href="/services/smm" class="overflow-line-1 font-Satoshi font-bold text-[12px] hover:underline sm:text-lg md:text-xl"> Social &amp; SMM </a>
-
-                    <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
-                  </div>
-
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">Social &amp; SMM, Essays, News, and more</p>
+            <div class="rounded-3xl bg-white p-5">
+              <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center justify-between gap-3 mb-3">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.75 7.5H14.25C15.75 7.5 16.5 6.75 16.5 5.25V3.75C16.5 2.25 15.75 1.5 14.25 1.5H12.75C11.25 1.5 10.5 2.25 10.5 3.75V5.25C10.5 6.75 11.25 7.5 12.75 7.5Z"
+                      stroke="#575E6A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.75 16.5H5.25C6.75 16.5 7.5 15.75 7.5 14.25V12.75C7.5 11.25 6.75 10.5 5.25 10.5H3.75C2.25 10.5 1.5 11.25 1.5 12.75V14.25C1.5 15.75 2.25 16.5 3.75 16.5Z"
+                      stroke="#575E6A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4.5 7.5C6.15685 7.5 7.5 6.15685 7.5 4.5C7.5 2.84315 6.15685 1.5 4.5 1.5C2.84315 1.5 1.5 2.84315 1.5 4.5C1.5 6.15685 2.84315 7.5 4.5 7.5Z"
+                      stroke="#575E6A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M13.5 16.5C15.1569 16.5 16.5 15.1569 16.5 13.5C16.5 11.8431 15.1569 10.5 13.5 10.5C11.8431 10.5 10.5 11.8431 10.5 13.5C10.5 15.1569 11.8431 16.5 13.5 16.5Z"
+                      stroke="#575E6A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <h3 class="text-[#202020] text-base font-bold">Category</h3>
                 </div>
+
+                <button class="w-5 h-5 rounded-full text-[#B7C3D6] text-xs font-bold flex items-center justify-center"><img src="img/icons/info-circle.svg" alt="info" /></button>
               </div>
-            </li>
 
-            <li class="service-card basis-[calc(50%-4px)] max-w-[360px] lg:basis-[360px]">
-              <div class="rounded-xl bg-white p-2 shadow-[5px_10px_10px_2px] shadow-[#000]/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_24px_70px_rgba(50,102,180,0.18)] lg:pb-5">
-                <a href="/services/..." class="block h-44 overflow-hidden rounded-2xl bg-gradient-to-b from-[#B9DDFF] to-transparent sm:h-72 md:h-96">
-                  <img class="img-fill object-top transition-transform duration-500 hover:scale-[1.04]" src="/img/temp/scripts-category.png" alt="" />
-                </a>
-
-                <div class="mt-4 lg:px-2">
-                  <div class="flex items-center gap-1">
-                    <a href="/services/..." class="overflow-line-1 font-Satoshi font-bold text-[12px] hover:underline sm:text-lg md:text-xl"> Scripts &amp; Telegram Bots </a>
-
-                    <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
-                  </div>
-
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">Telegram bots, automation, parsers, and more</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="service-card basis-[calc(50%-4px)] max-w-[360px] lg:basis-[360px]">
-              <div class="rounded-xl bg-white p-2 shadow-[5px_10px_10px_2px] shadow-[#000]/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_24px_70px_rgba(50,102,180,0.18)] lg:pb-5">
-                <a href="/services/ai" class="block h-44 overflow-hidden rounded-2xl bg-gradient-to-b from-[#B9DDFF] to-transparent sm:h-72 md:h-96">
-                  <img class="img-fill object-top transition-transform duration-500 hover:scale-[1.04]" src="img/temp/copyright-category.png" alt="" />
-                </a>
-
-                <div class="mt-4 lg:px-2">
-                  <div class="flex items-center gap-1">
-                    <a href="/services/ai" class="overflow-line-1 font-Satoshi font-bold text-[12px] hover:underline sm:text-lg md:text-xl"> AI Services</a>
-
-                    <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Popular 🔥</p>
-                  </div>
-
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">AI-generated content &amp; automation, chatbots, and more</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="service-card basis-[calc(50%-4px)] max-w-[360px] lg:basis-[360px]">
-              <div class="rounded-xl bg-white p-2 shadow-[5px_10px_10px_2px] shadow-[#000]/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_24px_70px_rgba(50,102,180,0.18)] lg:pb-5">
-                <a href="/services/web" class="block h-44 overflow-hidden rounded-2xl bg-gradient-to-b from-[#B9DDFF] to-transparent sm:h-72 md:h-96">
-                  <img class="img-fill object-top transition-transform duration-500 hover:scale-[1.04]" src="img/temp/web-category.png" alt="" />
-                </a>
-
-                <div class="mt-4 lg:px-2">
-                  <div class="flex items-center gap-1">
-                    <a href="/services/web" class="overflow-line-1 font-Satoshi font-bold text-[12px] hover:underline sm:text-lg md:text-xl"> Web Development</a>
-
-                    <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
-                  </div>
-
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">Websites &amp; interfaces, APIs, and more</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="service-card basis-[calc(50%-4px)] max-w-[360px] lg:basis-[360px]">
-              <div class="rounded-xl bg-white p-2 shadow-[5px_10px_10px_2px] shadow-[#000]/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_24px_70px_rgba(50,102,180,0.18)] lg:pb-5">
-                <a href="/services/seo" class="block h-44 overflow-hidden rounded-2xl bg-gradient-to-b from-[#B9DDFF] to-transparent sm:h-72 md:h-96">
-                  <img class="img-fill object-top transition-transform duration-500 hover:scale-[1.04]" src="img/temp/seo-category.png" alt="" />
-                </a>
-
-                <div class="mt-4 lg:px-2">
-                  <div class="flex items-center gap-1">
-                    <a href="/services/seo" class="overflow-line-1 font-Satoshi font-bold text-[12px] hover:underline sm:text-lg md:text-xl"> SEO</a>
-
-                    <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
-                  </div>
-
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">Optimization, audit, link building, and more</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="service-card basis-[calc(50%-4px)] max-w-[360px] lg:basis-[360px]">
-              <div class="rounded-xl bg-white p-2 shadow-[5px_10px_10px_2px] shadow-[#000]/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_24px_70px_rgba(50,102,180,0.18)] lg:pb-5">
-                <a href="/services/logo" class="block h-44 overflow-hidden rounded-2xl bg-gradient-to-b from-[#B9DDFF] to-transparent sm:h-72 md:h-96">
-                  <img class="img-fill object-top transition-transform duration-500 hover:scale-[1.04]" src="img/temp/logo-category.png" alt="" />
-                </a>
-
-                <div class="mt-4 lg:px-2">
-                  <div class="flex items-center gap-1">
-                    <a href="/services/logo" class="overflow-line-1 font-Satoshi font-bold text-[12px] hover:underline sm:text-lg md:text-xl"> Logotypes &amp; Branding</a>
-
-                    <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
-                  </div>
-
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">Logos &amp; corporate identity, UI/UX, and more</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="service-card basis-[calc(50%-4px)] max-w-[360px] lg:basis-[360px]">
-              <div class="rounded-xl bg-white p-2 shadow-[5px_10px_10px_2px] shadow-[#000]/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_24px_70px_rgba(50,102,180,0.18)] lg:pb-5">
-                <a href="/services/mobile" class="block h-44 overflow-hidden rounded-2xl bg-gradient-to-b from-[#B9DDFF] to-transparent sm:h-72 md:h-96">
-                  <img class="img-fill object-top transition-transform duration-500 hover:scale-[1.04]" src="img/temp/mob-category.png" alt="" />
-                </a>
-
-                <div class="mt-4 lg:px-2">
-                  <div class="flex items-center gap-1">
-                    <a href="/services/mobile" class="overflow-line-1 font-Satoshi font-bold text-[12px] hover:underline sm:text-lg md:text-xl"> Web &amp; Mobile Design</a>
-
-                    <p class="rounded-[100px] bg-[#FBFAFA] px-4 py-[6px] font-Satoshi text-[6px] font-medium whitespace-nowrap sm:text-[12px]">Top 🔥</p>
-                  </div>
-
-                  <p class="mt-1 font-Satoshi text-[8px] font-medium text-[#575E6A] sm:text-sm md:text-sm">UI/UX, mobile apps, landing pages, and more</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="quick-start" class="pt-7 pb-16 z-[3] relative overflow-hidden">
-      <img src="img/temp/quick-start-bg-illustration.png" alt="" class="pointer-events-none absolute left-1/2 -translate-x-1/2 -bottom-[200px] z-[0] h-[1000] w-[1440px] object-cover" />
-
-      <div class="app-container z-[3] relative">
-        <div class="flex flex-col items-center">
-          <p class="quick-start-label py-[6px] px-4 rounded-lg border-[1px] border-opacity-50 font-Satoshi font-medium text-[12px]">Quick start</p>
-          <h2 class="quick-start-title mt-6 font-Satoshi font-medium text-2xl leading-tight text-center sm:text-3xl md:text-5xl">How Monday works?</h2>
-
-          <ul class="quick-start-tabs flex p-1 rounded-[100px] bg-white mt-7">
-            <li data-tab="clients" class="quick-start-tab cursor-pointer py-2 px-4 rounded-full text-[#B7C3D6] flex items-center gap-1 transition-all">
-              <span>
-                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M5.33332 15.1667H10.6667C13.3467 15.1667 13.8267 14.0933 13.9667 12.7867L14.4667 7.45333C14.6467 5.82667 14.18 4.5 11.3333 4.5H4.66665C1.81999 4.5 1.35332 5.82667 1.53332 7.45333L2.03332 12.7867C2.17332 14.0933 2.65332 15.1667 5.33332 15.1667Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5.33331 4.49992V3.96659C5.33331 2.78659 5.33331 1.83325 7.46665 1.83325H8.53331C10.6666 1.83325 10.6666 2.78659 10.6666 3.96659V4.49992"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M9.33335 9.16667V9.83333C9.33335 9.84 9.33335 9.84 9.33335 9.84667C9.33335 10.5733 9.32669 11.1667 8.00002 11.1667C6.68002 11.1667 6.66669 10.58 6.66669 9.85333V9.16667C6.66669 8.5 6.66669 8.5 7.33335 8.5H8.66669C9.33335 8.5 9.33335 8.5 9.33335 9.16667Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M14.4333 7.83325C12.8933 8.95325 11.1333 9.61992 9.33331 9.84659"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M1.74664 8.01343C3.24664 9.04009 4.93998 9.66009 6.66664 9.85343"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </span>
-              For clients
-            </li>
-
-            <li data-tab="sellers" class="quick-start-tab cursor-pointer py-2 px-4 rounded-full text-[#B7C3D6] flex items-center gap-1 transition-all">
-              <span>
-                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M14.54 3.12658C13.5133 5.68658 10.94 9.16658 8.78666 10.8933L7.47333 11.9466C7.30666 12.0666 7.13999 12.1733 6.95333 12.2466C6.95333 12.1266 6.94666 11.9933 6.92666 11.8666C6.85333 11.3066 6.59999 10.7866 6.15333 10.3399C5.69999 9.88658 5.14666 9.61992 4.57999 9.54658C4.44666 9.53992 4.31333 9.52658 4.17999 9.53992C4.25333 9.33325 4.36666 9.13992 4.50666 8.97992L5.54666 7.66658C7.26666 5.51325 10.76 2.92658 13.3133 1.90658C13.7067 1.75992 14.0867 1.86658 14.3267 2.11325C14.58 2.35992 14.7 2.73992 14.54 3.12658Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M6.95331 12.2468C6.95331 12.9801 6.67331 13.6801 6.14665 14.2134C5.73998 14.6201 5.18665 14.9001 4.52665 14.9868L2.88665 15.1668C1.99331 15.2668 1.22665 14.5068 1.33331 13.6001L1.51331 11.9601C1.67331 10.5001 2.89331 9.56678 4.18665 9.54012C4.31998 9.53345 4.45998 9.54011 4.58665 9.54678C5.15331 9.62011 5.70665 9.88011 6.15998 10.3401C6.60665 10.7868 6.85998 11.3068 6.93331 11.8668C6.93998 11.9934 6.95331 12.1201 6.95331 12.2468Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path d="M9.49336 10.1467C9.49336 8.40674 8.08003 6.99341 6.34003 6.99341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
-              For sellers
-            </li>
-          </ul>
-
-          <ul id="quick-start-list" class="quick-start-cards-list mt-7 flex flex-col gap-5 w-full mx-auto md:max-w-[800px] transition-all duration-300"></ul>
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="try-banner"
-      class="try-banner-section relative "
-    >
-      <div class="app-container">
-        <div class="try-banner-card relative h-[450px] lg:h-[410px] z-10 overflow-hidden">
-          <picture>
-            <source srcset="/img/try-banner@mobile.jpg" media="(max-width: 991px)" type="image/jpg" />
-            <img src="/img/try-banner-new.png" class="img-fill rounded-xl absolute inset-0 z-0 lg:rounded-3xl" alt="" />
-          </picture>
-
-          <div class="relative z-10 p-5 text-center flex flex-col items-center justify-center h-full">
-            <p class="try-banner-label font-Satoshi font-bold text-base lg:text-2xl">Try PROFI</p>
-            <h2 class="try-banner-title mt-4 font-Satoshi font-medium text-[32px] leading-tight max-w-[335px] lg:text-[56px] lg:max-w-[580px] lg:leading-[1.2]">
-              The best freelancers of our platform
-            </h2>
-
-            <a
-              class="try-banner-button mt-7 flex w-full max-w-60 items-center justify-center rounded-lg border border-transparent bg-black p-4 font-Satoshi text-base font-semibold leading-tight text-white transition-colors duration-300 hover:border-black hover:bg-transparent hover:text-black"
-              href="/#"
-              target="_blank"
-            >
-              Explore
-            </a>
-          </div>
-
-          <img src="img/try-rect-left.png" alt="rect1" class="try-rect try-rect-left absolute -top-[200px] -left-[80px] hidden lg:block" />
-          <img src="img/try-rect-right.png" alt="rect2" class="try-rect try-rect-right absolute -bottom-[20px] right-[130px] hidden lg:block" />
-          <img src="img/try-rect-right.png" alt="rect3" class="try-rect try-rect-right absolute -bottom-[120px] -right-[10px] hidden lg:block" />
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="py-12 md:overflow-hidden">
-      <div class="app-container">
-        <div class="flex flex-col items-center">
-          <p class="projects-label py-[6px] px-4 rounded-lg border-[1px] border-opacity-50 font-Satoshi font-medium text-[12px]">Popular projects</p>
-          <h2 class="projects-title mt-4 font-Satoshi font-medium text-2xl leading-tight max-w-[350px] mx-auto text-center sm:text-3xl sm:max-w-full md:text-5xl">
-            Popular projects by our freelancers
-          </h2>
-        </div>
-
-        <div class="w-full mt-7 lg:mt-16">
-          <div class="swiper md:-mx-3 md:overflow-visible" id="projects-swiper">
-            <div class="swiper-wrapper flex flex-wrap gap-2 md:gap-0 md:flex-nowrap">
-              <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
-                <div class="project-card">
-                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
-                    <div class="h-32 rounded-t-xl relative sm:h-40">
-                      <a href="/projects/project-1" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
-                        <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="/img/temp/project-1.jpg" alt="" />
-                      </a>
-                      <div class="p-2 absolute left-0 top-0 right-0 w-full flex items-center justify-between gap-1 sm:items-start">
-                        <button
-                          href="/projects/design"
-                          class="bg-white py-[6px] px-3 rounded-lg font-Satoshi font-bold text-[6px] text-black/50 transition-all duration-300 hover:scale-[1.03] hover:text-black hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] sm:text-xs"
-                        >
-                          Design
-                        </button>
-
-                        <div class="relative group/favorite">
-                          <button class="size-5 rounded-full bg-white/80 opacity-50 flex items-center justify-center transition-all duration-300 hover:opacity-100 hover:bg-white sm:size-11">
-                            <svg class="w-1/2 h-1/2 fill-[#202020] transition-colors duration-300 group-hover/favorite:fill-[#4790FF] sm:size-1/3">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </button>
-
-                          <div
-                            class="pointer-events-none absolute right-0 top-full z-[80] mt-2 whitespace-nowrap rounded-lg bg-[#202020] px-3 py-[6px] opacity-0 transition-all duration-300 group-hover/favorite:opacity-100"
-                          >
-                            <span class="font-Satoshi text-xs leading-none font-medium text-white"> Add to <span class="text-[#4790FF]">favorites</span> </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="p-4">
-                      <a href="/projects/project-1" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> Make you a full brand book... </a>
-                      <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
-                        From
-                        <strong class="font-bold text-blue md:text-xl md:uppercase">100 000 UZS</strong>
-                      </p>
-                      <div class="flex items-start justify-between gap-1 mt-[6px]">
-                        <div class="flex flex-col items-start sm:flex-row sm:gap-2 md:mt-3">
-                          <div class="flex items-center gap-1 sm:gap-2">
-                            <img class="size-5 img-fill rounded-full sm:size-8 md:size-12" src="/img/temp/person.jpg" alt="" />
-                            <div class="flex flex-col">
-                              <a href="/profile/james-k" class="overflow-line-1 font-Satoshi font-bold text-[10px] text-black hover:underline sm:text-base md:text-lg"> James K. </a>
-                              <p class="overflow-line-1 font-Satoshi font-medium text-[6px] text-black/50 sm:text-xs md:text-base">Newbie</p>
-                            </div>
-                          </div>
-                          <p
-                            class="flex items-center gap-[2px] font-Satoshi font-bold text-[6px] text-black mt-1 px-3 py-[2px] rounded-md border-[1px] border-black/5 sm:text-xs sm:rounded-[100px] sm:bg-blue sm:text-white sm:px-2"
-                          >
-                            Pro
-                            <svg class="size-[5px] sm:size-3 sm:fill-white">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </p>
-                        </div>
-                        <div class="flex items-center gap-[2px] whitespace-nowrap sm:hidden">
-                          <svg class="size-2 fill-blue">
-                            <use href="/img/sprite.svg#star" />
-                          </svg>
-                          <span class="font-Satoshi font-bold text-[10px] text-blue">4.8</span>
-                          <span class="font-Satoshi font-normal text-[10px] text-black/20">(45)</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
-                      <p class="text-[#B7C3D6] font-bold text-sm">28</p>
-                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
-                        <use href="/img/sprite.svg#eye" />
+              <div class="grid grid-cols-2 gap-2.5 max-sm:grid-cols-1">
+                <div class="border border-[#0000001A] rounded-xl pt-2 pb-1">
+                  <button class="catergories__bottom__select w-full text-[#202020] font-bold text-sm px-[15px] pb-1 flex items-center justify-between">
+                    Scripts & Telegram Bots
+                    <span class="catergories__bottom__arrow transition-all duration-700">
+                      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 11L12.5 15L17 11" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </span>
+                  </button>
+                  <div class="px-5 flex flex-col gap-1 max-h-0 overflow-hidden transition-all duration-700">
+                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
+                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
+                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
                   </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
-                <div class="project-card">
-                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
-                    <div class="h-32 rounded-t-xl relative sm:h-40">
-                      <a href="/projects/project-2" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
-                        <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="/img/temp/project-2.jpg" alt="" />
-                      </a>
-
-                      <div class="p-2 absolute left-0 top-0 right-0 w-full flex items-center justify-between gap-1 sm:items-start">
-                        <button
-                          href="/projects/seo"
-                          class="bg-white py-[6px] px-3 rounded-lg font-Satoshi font-bold text-[6px] text-black/50 transition-all duration-300 hover:scale-[1.03] hover:text-black hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] sm:text-xs"
-                        >
-                          SEO
-                        </button>
-
-                        <div class="relative group/favorite">
-                          <button class="size-5 rounded-full bg-white/80 opacity-50 flex items-center justify-center transition-all duration-300 hover:opacity-100 hover:bg-white sm:size-11">
-                            <svg class="w-1/2 h-1/2 fill-[#202020] transition-colors duration-300 group-hover/favorite:fill-[#4790FF] sm:size-1/3">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </button>
-
-                          <div
-                            class="pointer-events-none absolute right-0 top-full z-[80] mt-2 whitespace-nowrap rounded-lg bg-[#202020] px-3 py-[6px] opacity-0 transition-all duration-300 group-hover/favorite:opacity-100"
-                          >
-                            <span class="font-Satoshi text-xs leading-none font-medium text-white"> Add to <span class="text-[#4790FF]">favorites</span> </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="p-4">
-                      <a href="/projects/project-2" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> SEO promotion for your business... </a>
-
-                      <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
-                        From
-                        <strong class="font-bold text-blue md:text-xl md:uppercase">80 000 UZS</strong>
-                      </p>
-
-                      <div class="flex items-start justify-between gap-1 mt-[6px]">
-                        <div class="flex flex-col items-start sm:flex-row sm:gap-2 md:mt-3">
-                          <div class="flex items-center gap-1 sm:gap-2">
-                            <img class="size-5 img-fill rounded-full sm:size-8 md:size-12" src="img/project/avatar.png" alt="" />
-
-                            <div class="flex flex-col">
-                              <a href="/profile/elizabeth-smith" class="overflow-line-1 font-Satoshi font-bold text-[10px] text-black hover:underline sm:text-base md:text-lg"> Tode Smith </a>
-
-                              <p class="overflow-line-1 font-Satoshi font-medium text-[6px] text-black/50 sm:text-xs md:text-base">Newbie</p>
-                            </div>
-                          </div>
-
-                          <p
-                            class="flex items-center gap-[2px] font-Satoshi font-bold text-[6px] text-black mt-1 px-3 py-[2px] rounded-md border-[1px] border-black/5 sm:text-xs sm:rounded-[100px] sm:bg-blue sm:text-white sm:px-2"
-                          >
-                            Pro
-                            <svg class="size-[5px] sm:size-3 sm:fill-white">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </p>
-                        </div>
-
-                        <div class="flex items-center gap-[2px] whitespace-nowrap sm:hidden">
-                          <svg class="size-2 fill-blue">
-                            <use href="/img/sprite.svg#star" />
-                          </svg>
-                          <span class="font-Satoshi font-bold text-[10px] text-blue">4.8</span>
-                          <span class="font-Satoshi font-normal text-[10px] text-black/20">(45)</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
-                      <p class="text-[#B7C3D6] font-bold text-sm">16</p>
-                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
-                        <use href="/img/sprite.svg#eye" />
+                <div class="border border-[#0000001A] rounded-xl pt-2 pb-1">
+                  <button class="catergories__bottom__select w-full text-[#202020] font-bold text-sm px-[15px] pb-1 flex items-center justify-between">
+                    Creating Telegram Bot
+                    <span class="catergories__bottom__arrow transition-all duration-700">
+                      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 11L12.5 15L17 11" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </span>
+                  </button>
+                  <div class="px-5 flex flex-col gap-1 max-h-0 overflow-hidden transition-all duration-700">
+                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
+                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
+                    <p class="text-[#575E6A] font-bold text-sm">Lorem ipsum dolor sit.</p>
                   </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
-                <div class="project-card">
-                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
-                    <div class="h-32 rounded-t-xl relative sm:h-40">
-                      <a href="/projects/project-3" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
-                        <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="/img/temp/project-3.jpg" alt="" />
-                      </a>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    let categoriesBottomSelect = document.querySelectorAll(".catergories__bottom__select");
 
-                      <div class="p-2 absolute left-0 top-0 right-0 w-full flex items-center justify-between gap-1 sm:items-start">
-                        <button
-                          href="/projects/design"
-                          class="bg-white py-[6px] px-3 rounded-lg font-Satoshi font-bold text-[6px] text-black/50 transition-all duration-300 hover:scale-[1.03] hover:text-black hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] sm:text-xs"
-                        >
-                          Design
-                        </button>
+                    categoriesBottomSelect.forEach(function (item) {
+                      let arrow = item.querySelector(".catergories__bottom__arrow");
 
-                        <div class="relative group/favorite">
-                          <button class="size-5 rounded-full bg-white/80 opacity-50 flex items-center justify-center transition-all duration-300 hover:opacity-100 hover:bg-white sm:size-11">
-                            <svg class="w-1/2 h-1/2 fill-[#202020] transition-colors duration-300 group-hover/favorite:fill-[#4790FF] sm:size-1/3">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </button>
-
-                          <div
-                            class="pointer-events-none absolute right-0 top-full z-[80] mt-2 whitespace-nowrap rounded-lg bg-[#202020] px-3 py-[6px] opacity-0 transition-all duration-300 group-hover/favorite:opacity-100"
-                          >
-                            <span class="font-Satoshi text-xs leading-none font-medium text-white"> Add to <span class="text-[#4790FF]">favorites</span> </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="p-4">
-                      <a href="/projects/project-3" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> Creative landing page design... </a>
-
-                      <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
-                        From
-                        <strong class="font-bold text-blue md:text-xl md:uppercase">120 000 UZS</strong>
-                      </p>
-
-                      <div class="flex items-start justify-between gap-1 mt-[6px]">
-                        <div class="flex flex-col items-start sm:flex-row sm:gap-2 md:mt-3">
-                          <div class="flex items-center gap-1 sm:gap-2">
-                            <img class="size-5 img-fill rounded-full sm:size-8 md:size-12" src="img/project/ava.png" alt="" />
-
-                            <div class="flex flex-col">
-                              <a href="/profile/paul" class="overflow-line-1 font-Satoshi font-bold text-[10px] text-black hover:underline sm:text-base md:text-lg"> _paul </a>
-
-                              <p class="overflow-line-1 font-Satoshi font-medium text-[6px] text-black/50 sm:text-xs md:text-base">Newbie</p>
-                            </div>
-                          </div>
-
-                          <p
-                            class="flex items-center gap-[2px] font-Satoshi font-bold text-[6px] text-black mt-1 px-3 py-[2px] rounded-md border-[1px] border-black/5 sm:text-xs sm:rounded-[100px] sm:bg-blue sm:text-white sm:px-2"
-                          >
-                            Pro
-                            <svg class="size-[5px] sm:size-3 sm:fill-white">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </p>
-                        </div>
-
-                        <div class="flex items-center gap-[2px] whitespace-nowrap sm:hidden">
-                          <svg class="size-2 fill-blue">
-                            <use href="/img/sprite.svg#star" />
-                          </svg>
-                          <span class="font-Satoshi font-bold text-[10px] text-blue">4.8</span>
-                          <span class="font-Satoshi font-normal text-[10px] text-black/20">(45)</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
-                      <p class="text-[#B7C3D6] font-bold text-sm">55</p>
-                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
-                        <use href="/img/sprite.svg#eye" />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
-                <div class="project-card">
-                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
-                    <div class="h-32 rounded-t-xl relative sm:h-40">
-                      <a href="/projects/project-4" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
-                        <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="/img/temp/project-2.jpg" alt="" />
-                      </a>
-
-                      <div class="p-2 absolute left-0 top-0 right-0 w-full flex items-center justify-between gap-1 sm:items-start">
-                        <button
-                          href="/projects/seo"
-                          class="bg-white py-[6px] px-3 rounded-lg font-Satoshi font-bold text-[6px] text-black/50 transition-all duration-300 hover:scale-[1.03] hover:text-black hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] sm:text-xs"
-                        >
-                          SEO
-                        </button>
-
-                        <div class="relative group/favorite">
-                          <button class="size-5 rounded-full bg-white/80 opacity-50 flex items-center justify-center transition-all duration-300 hover:opacity-100 hover:bg-white sm:size-11">
-                            <svg class="w-1/2 h-1/2 fill-[#202020] transition-colors duration-300 group-hover/favorite:fill-[#4790FF] sm:size-1/3">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </button>
-
-                          <div
-                            class="pointer-events-none absolute right-0 top-full z-[80] mt-2 whitespace-nowrap rounded-lg bg-[#202020] px-3 py-[6px] opacity-0 transition-all duration-300 group-hover/favorite:opacity-100"
-                          >
-                            <span class="font-Satoshi text-xs leading-none font-medium text-white"> Add to <span class="text-[#4790FF]">favorites</span> </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="p-4">
-                      <a href="/projects/project-4" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> SEO audit & strategy for websites... </a>
-
-                      <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
-                        From
-                        <strong class="font-bold text-blue md:text-xl md:uppercase">90 000 UZS</strong>
-                      </p>
-
-                      <div class="flex items-start justify-between gap-1 mt-[6px]">
-                        <div class="flex flex-col items-start sm:flex-row sm:gap-2 md:mt-3">
-                          <div class="flex items-center gap-1 sm:gap-2">
-                            <img class="size-5 img-fill rounded-full sm:size-8 md:size-12" src="img/project/avatar.png" alt="" />
-
-                            <div class="flex flex-col">
-                              <a href="/profile/elizabeth-smith" class="overflow-line-1 font-Satoshi font-bold text-[10px] text-black hover:underline sm:text-base md:text-lg"> Tode Smith </a>
-
-                              <p class="overflow-line-1 font-Satoshi font-medium text-[6px] text-black/50 sm:text-xs md:text-base">Newbie</p>
-                            </div>
-                          </div>
-
-                          <p
-                            class="flex items-center gap-[2px] font-Satoshi font-bold text-[6px] text-black mt-1 px-3 py-[2px] rounded-md border-[1px] border-black/5 sm:text-xs sm:rounded-[100px] sm:bg-blue sm:text-white sm:px-2"
-                          >
-                            Pro
-                            <svg class="size-[5px] sm:size-3 sm:fill-white">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </p>
-                        </div>
-
-                        <div class="flex items-center gap-[2px] whitespace-nowrap sm:hidden">
-                          <svg class="size-2 fill-blue">
-                            <use href="/img/sprite.svg#star" />
-                          </svg>
-                          <span class="font-Satoshi font-bold text-[10px] text-blue">4.8</span>
-                          <span class="font-Satoshi font-normal text-[10px] text-black/20">(45)</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
-                      <p class="text-[#B7C3D6] font-bold text-sm">3</p>
-                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
-                        <use href="/img/sprite.svg#eye" />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
-                <div class="project-card">
-                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
-                    <div class="h-32 rounded-t-xl relative sm:h-40">
-                      <a href="/projects/project-3" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
-                        <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="img/temp/web-category.png" alt="" />
-                      </a>
-
-                      <div class="p-2 absolute left-0 top-0 right-0 w-full flex items-center justify-between gap-1 sm:items-start">
-                        <button
-                          href="/projects/design"
-                          class="bg-white py-[6px] px-3 rounded-lg font-Satoshi font-bold text-[6px] text-black/50 transition-all duration-300 hover:scale-[1.03] hover:text-black hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] sm:text-xs"
-                        >
-                          AI Design
-                        </button>
-
-                        <div class="relative group/favorite">
-                          <button class="size-5 rounded-full bg-white/80 opacity-50 flex items-center justify-center transition-all duration-300 hover:opacity-100 hover:bg-white sm:size-11">
-                            <svg class="w-1/2 h-1/2 fill-[#202020] transition-colors duration-300 group-hover/favorite:fill-[#4790FF] sm:size-1/3">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </button>
-
-                          <div
-                            class="pointer-events-none absolute right-0 top-full z-[80] mt-2 whitespace-nowrap rounded-lg bg-[#202020] px-3 py-[6px] opacity-0 transition-all duration-300 group-hover/favorite:opacity-100"
-                          >
-                            <span class="font-Satoshi text-xs leading-none font-medium text-white"> Add to <span class="text-[#4790FF]">favorites</span> </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="p-4">
-                      <a href="/projects/project-3" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> AI-generated website concept... </a>
-
-                      <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
-                        From
-                        <strong class="font-bold text-blue md:text-xl md:uppercase">150 000 UZS</strong>
-                      </p>
-
-                      <div class="flex items-start justify-between gap-1 mt-[6px]">
-                        <div class="flex flex-col items-start sm:flex-row sm:gap-2 md:mt-3">
-                          <div class="flex items-center gap-1 sm:gap-2">
-                            <img class="size-5 img-fill rounded-full sm:size-8 md:size-12" src="img/seller/seller_main_page_none_avatar.png" alt="" />
-
-                            <div class="flex flex-col">
-                              <a href="/profile/paul" class="overflow-line-1 font-Satoshi font-bold text-[10px] text-black hover:underline sm:text-base md:text-lg"> Alex Carter </a>
-
-                              <p class="overflow-line-1 font-Satoshi font-medium text-[6px] text-black/50 sm:text-xs md:text-base">Expert</p>
-                            </div>
-                          </div>
-
-                          <p
-                            class="flex items-center gap-[2px] font-Satoshi font-bold text-[6px] text-black mt-1 px-3 py-[2px] rounded-md border-[1px] border-black/5 sm:text-xs sm:rounded-[100px] sm:bg-blue sm:text-white sm:px-2"
-                          >
-                            Pro
-                            <svg class="size-[5px] sm:size-3 sm:fill-white">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </p>
-                        </div>
-
-                        <div class="flex items-center gap-[2px] whitespace-nowrap sm:hidden">
-                          <svg class="size-2 fill-blue">
-                            <use href="/img/sprite.svg#star" />
-                          </svg>
-                          <span class="font-Satoshi font-bold text-[10px] text-blue">4.8</span>
-                          <span class="font-Satoshi font-normal text-[10px] text-black/20">(92)</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
-                      <p class="text-[#B7C3D6] font-bold text-sm">4</p>
-                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
-                        <use href="/img/sprite.svg#eye" />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide basis-[calc(50%-4px)] md:basis-auto md:w-96 md:px-3">
-                <div class="project-card">
-                  <div class="project-card-inner relative bg-white rounded-xl transition-transform duration-300 hover:scale-[1.02]" style="box-shadow: 5px 10px 30px 2px #0000001a">
-                    <div class="h-32 rounded-t-xl relative sm:h-40">
-                      <a href="/projects/project-4" class="block h-32 rounded-t-xl relative overflow-hidden sm:h-40">
-                        <img class="relative z-0 img-fill transition-transform duration-500 hover:scale-[1.04]" src="/img/temp/project-2.jpg" alt="" />
-                      </a>
-
-                      <div class="p-2 absolute left-0 top-0 right-0 w-full flex items-center justify-between gap-1 sm:items-start">
-                        <button
-                          href="/projects/seo"
-                          class="bg-white py-[6px] px-3 rounded-lg font-Satoshi font-bold text-[6px] text-black/50 transition-all duration-300 hover:scale-[1.03] hover:text-black hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] sm:text-xs"
-                        >
-                          Marketing
-                        </button>
-
-                        <div class="relative group/favorite">
-                          <button class="size-5 rounded-full bg-white/80 opacity-50 flex items-center justify-center transition-all duration-300 hover:opacity-100 hover:bg-white sm:size-11">
-                            <svg class="w-1/2 h-1/2 fill-[#202020] transition-colors duration-300 group-hover/favorite:fill-[#4790FF] sm:size-1/3">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </button>
-
-                          <div
-                            class="pointer-events-none absolute right-0 top-full z-[80] mt-2 whitespace-nowrap rounded-lg bg-[#202020] px-3 py-[6px] opacity-0 transition-all duration-300 group-hover/favorite:opacity-100"
-                          >
-                            <span class="font-Satoshi text-xs leading-none font-medium text-white"> Add to <span class="text-[#4790FF]">favorites</span> </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="p-4">
-                      <a href="/projects/project-4" class="block font-Satoshi font-bold text-xs leading-tight hover:underline sm:text-lg md:text-xl"> Social media campaign strategy... </a>
-
-                      <p class="mt-1 font-Satoshi font-medium text-xs text-[#B7C3D6] sm:text-base md:text-xl md:lowercase">
-                        From
-                        <strong class="font-bold text-blue md:text-xl md:uppercase">80 000 UZS</strong>
-                      </p>
-
-                      <div class="flex items-start justify-between gap-1 mt-[6px]">
-                        <div class="flex flex-col items-start sm:flex-row sm:gap-2 md:mt-3">
-                          <div class="flex items-center gap-1 sm:gap-2">
-                            <img class="size-5 img-fill rounded-full sm:size-8 md:size-12" src="img/project/avatar.png" alt="" />
-
-                            <div class="flex flex-col">
-                              <a href="/profile/elizabeth-smith" class="overflow-line-1 font-Satoshi font-bold text-[10px] text-black hover:underline sm:text-base md:text-lg"> Tode Smith </a>
-
-                              <p class="overflow-line-1 font-Satoshi font-medium text-[6px] text-black/50 sm:text-xs md:text-base">Newbie</p>
-                            </div>
-                          </div>
-
-                          <p
-                            class="flex items-center gap-[2px] font-Satoshi font-bold text-[6px] text-black mt-1 px-3 py-[2px] rounded-md border-[1px] border-black/5 sm:text-xs sm:rounded-[100px] sm:bg-blue sm:text-white sm:px-2"
-                          >
-                            Pro
-                            <svg class="size-[5px] sm:size-3 sm:fill-white">
-                              <use href="/img/sprite.svg#star" />
-                            </svg>
-                          </p>
-                        </div>
-
-                        <div class="flex items-center gap-[2px] whitespace-nowrap sm:hidden">
-                          <svg class="size-2 fill-blue">
-                            <use href="/img/sprite.svg#star" />
-                          </svg>
-                          <span class="font-Satoshi font-bold text-[10px] text-blue">4.8</span>
-                          <span class="font-Satoshi font-normal text-[10px] text-black/20">(45)</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <span class="absolute bottom-[12px] right-[22px] flex items-center gap-1">
-                      <p class="text-[#B7C3D6] font-bold text-sm">22</p>
-                      <svg class="w-[18px] h-[18px] stroke-[#B7C3D6]">
-                        <use href="/img/sprite.svg#eye" />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
+                      item.addEventListener("click", function () {
+                        let content = item.nextElementSibling;
+                        content.classList.toggle("max-h-0");
+                        content.classList.toggle("max-h-[900px]");
+                        arrow.classList.toggle("rotate-180");
+                      });
+                    });
+                  });
+                </script>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="ordered" class="py-12">
-      <div class="app-container relative">
-        <img class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[510px] md:w-[1030px] md:h-auto" src="/img/rings.svg" alt="" />
-
-        <div class="h-[510px] max-w-[1030px] mx-auto relative z-10 flex flex-col items-center justify-center md:h-[650px]">
-          <svg class="ordered-motion-path absolute inset-0 w-full h-full pointer-events-none opacity-0" viewBox="0 0 940 625" fill="none">
-            <path
-              id="orderedPath"
-              d="M546.418 26.3177C674.316 60.5767 781.499 123.611 851.405 197.804C921.316 272.003 953.891 357.296 932.763 436.121C911.635 514.945 840.765 572.529 743.108 601.843C645.459 631.154 521.108 632.17 393.21 597.911C265.312 563.652 158.129 500.617 88.2239 426.424C18.3123 352.225 -14.2624 266.932 6.86535 188.108C27.9932 109.283 98.8639 51.6997 196.521 22.3856C294.169 -6.92581 418.52 -7.94135 546.418 26.3177Z"
-            />
-          </svg>
-
-          <div class="ordered-card ordered-orbit-card absolute hidden md:flex">
-            <div class="ordered-card-img">
-              <img class="img-fill" src="/img/temp/o-1.jpg" alt="" />
-            </div>
-
-            <div class="ordered-card-content">
-              <p class="ordered-card-label">New ✨</p>
-              <p class="ordered-card-title">I will make a website</p>
-              <p class="ordered-card-price">from <strong>100 000 UZS</strong></p>
-            </div>
-          </div>
-
-          <div class="ordered-card ordered-orbit-card absolute hidden md:flex">
-            <div class="ordered-card-img">
-              <img class="img-fill" src="/img/temp/o-2.jpg" alt="" />
-            </div>
-
-            <div class="ordered-card-content">
-              <p class="ordered-card-label">Popular 🔥</p>
-              <p class="ordered-card-title">I will edit your video</p>
-              <p class="ordered-card-price">from <strong>120 000 UZS</strong></p>
-            </div>
-          </div>
-
-          <div class="ordered-card ordered-orbit-card ordered-card-active absolute flex ordered-mobile-card-1">
-            <div class="ordered-card-img">
-              <img class="img-fill" src="/img/temp/o-3.jpg" alt="" />
-            </div>
-
-            <div class="ordered-card-content">
-              <p class="ordered-card-label">Fast ⚡</p>
-              <p class="ordered-card-title">I will design a logo</p>
-              <p class="ordered-card-price">from <strong>80 000 UZS</strong></p>
-            </div>
-          </div>
-
-          <div class="ordered-card ordered-orbit-card absolute flex ordered-mobile-card-2">
-            <div class="ordered-card-img">
-              <img class="img-fill" src="/img/temp/o-4.jpg" alt="" />
-            </div>
-
-            <div class="ordered-card-content">
-              <p class="ordered-card-label">Top rated ⭐</p>
-              <p class="ordered-card-title">I will write a text</p>
-              <p class="ordered-card-price">from <strong>60 000 UZS</strong></p>
-            </div>
-          </div>
-
-          <div class="ordered-card ordered-orbit-card absolute flex ordered-mobile-card-3">
-            <div class="ordered-card-img">
-              <img class="img-fill" src="/img/temp/o-5.jpg" alt="" />
-            </div>
-
-            <div class="ordered-card-content">
-              <p class="ordered-card-label">New ✨</p>
-              <p class="ordered-card-title">I will create banners</p>
-              <p class="ordered-card-price">from <strong>90 000 UZS</strong></p>
-            </div>
-          </div>
-
-          <div class="ordered-card ordered-orbit-card absolute flex ordered-mobile-card-4">
-            <div class="ordered-card-img">
-              <img class="img-fill" src="/img/temp/o-6.jpg" alt="" />
-            </div>
-
-            <div class="ordered-card-content">
-              <p class="ordered-card-label">Trending 🚀</p>
-              <p class="ordered-card-title">I will setup ads</p>
-              <p class="ordered-card-price">from <strong>150 000 UZS</strong></p>
-            </div>
-          </div>
-
-          <div class="flex flex-col items-center relative z-10">
-            <h2 class="font-Satoshi font-medium text-[32px] leading-[1.2] text-center mx-auto max-w-[310px] md:max-w-[440px] md:text-[40px] lg:text-[56px] lg:max-w-[590px]">
-              What&#x27;s being ordered on <strong>Monday </strong>right now?
-            </h2>
             <button
-              class="ordered-button group relative mt-5 w-full max-w-60 overflow-hidden rounded-lg border border-transparent bg-white p-[14px] font-Satoshi font-semibold text-white transition-color duration-300 hover:border-[#4790FF] hover:text-[#4790FF]"
+              class="group relative flex w-full items-center justify-center gap-1 overflow-hidden rounded-xl border border-transparent bg-transparent py-[14px] font-medium text-white transition-all duration-300 hover:border-[#4790FF] hover:text-[#4790FF]"
             >
-              <span class="absolute inset-0 z-0 bg-gradient-to-r from-[#6AB8FF] to-[#B8DDFF] transition-opacity duration-300 group-hover:opacity-0"></span>
+              <span class="absolute inset-0 z-0 bg-gradient-to-r from-[#6AB8FF] to-[#DEF5FF] transition-opacity duration-300 group-hover:opacity-0"></span>
 
-              <span class="relative z-[1]"> See all projects </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+              <span class="relative z-[1]"> Post new task on exchange </span>
 
-    <section id="saves-money" class="py-12 overflow-hidden">
-      <div class="app-container">
-        <h2 class="saves-title text-center font-Satoshi font-medium text-2xl max-w-[370px] mx-auto sm:text-3xl sm:max-w-[740px] md:text-5xl">
-          See how <strong>Monday </strong> saves money, time and nerves!
-        </h2>
-        <div class="mt-7 lg:mt-14">
-          <div class="flex flex-col gap-4 md:bg-white md:p-9 md:gap-0">
-            <div class="hidden md:flex pb-6 border-b-[1px] border-b-black/10 xl:pb-10">
-              <div class="shrink-0 w-52 xl:w-[300px]"></div>
-              <ul class="flex grow">
-                <li class="saves-head font-Satoshi font-bold text-xl leading-none basis-1/2 xl:text-[28px]">Web Studios</li>
-                <li class="saves-head font-Satoshi font-bold text-xl leading-none text-blue basis-1/2 xl:text-[28px]">Monday</li>
-              </ul>
-            </div>
-            <div class="flex flex-col items-center md:flex-row md:border-b-[1px] md:border-black/10">
-              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-xl xl:w-[300px] xl:pr-[100px]">Execution speed</p>
-              <ul class="mt-2 py-1 px-5 rounded-2xl bg-white w-full md:flex md:mt-0 md:px-0">
-                <li class="saves-cell py-3 flex items-center md:w-1/2">
-                  <p class="w-24 shrink-0 font-Satoshi font-bold text-xs text-blue md:hidden">Monday</p>
-                  <div class="flex items-center gap-1 grow md:gap-2 xl:gap-3">
-                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-xl xl:mt-0" data-replace="">
-                      On average &lt;strong&gt;1 day 8 hours&lt;/strong&gt;
-                    </p>
-                    <img class="size-[18px] shrink-0 ml-auto md:-order-1 md:ml-0 lg:size-[32px]" src="/img/save-marks.svg" alt="" />
-                  </div>
-                </li>
-                <li class="saves-cell py-3 flex items-center border-t-[1px] border-t-black/5 md:w-1/2 md:-order-1 md:border-none md:pr-4">
-                  <p class="w-24 shrink-0 font-Satoshi font-bold text-xs md:hidden">Web Studios</p>
-                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-xl">7 - 30 days</p>
-                </li>
-              </ul>
-            </div>
-            <div class="flex flex-col items-center md:flex-row md:border-b-[1px] md:border-black/10">
-              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-xl xl:w-[300px] xl:pr-[100px]">Price</p>
-              <ul class="mt-2 py-1 px-5 rounded-2xl bg-white w-full md:flex md:mt-0 md:px-0">
-                <li class="saves-cell py-3 flex items-center md:w-1/2">
-                  <p class="w-24 shrink-0 font-Satoshi font-bold text-xs text-blue md:hidden">Monday</p>
-                  <div class="flex items-center gap-1 grow md:gap-2 xl:gap-3">
-                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-xl xl:mt-0" data-replace="">
-                      From &lt;strong&gt;100.000 uzs.&lt;/strong&gt;
-                    </p>
-                    <img class="size-[18px] shrink-0 ml-auto md:-order-1 md:ml-0 lg:size-[32px]" src="/img/save-marks.svg" alt="" />
-                  </div>
-                </li>
-                <li class="saves-cell py-3 flex items-center border-t-[1px] border-t-black/5 md:w-1/2 md:-order-1 md:border-none md:pr-4">
-                  <p class="w-24 shrink-0 font-Satoshi font-bold text-xs md:hidden">Web Studios</p>
-                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-xl">From 2.500.000 uzs.</p>
-                </li>
-              </ul>
-            </div>
-            <div class="flex flex-col items-center md:flex-row md:border-b-[1px] md:border-black/10">
-              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-xl xl:w-[300px] xl:pr-[100px]">Artist selection</p>
-              <ul class="mt-2 py-1 px-5 rounded-2xl bg-white w-full md:flex md:mt-0 md:px-0">
-                <li class="saves-cell py-3 flex items-center md:w-1/2">
-                  <p class="w-24 shrink-0 font-Satoshi font-bold text-xs text-blue md:hidden">Monday</p>
-                  <div class="flex items-start gap-1 grow md:gap-2 xl:gap-3">
-                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-xl xl:mt-0" data-replace="">
-                      From &lt;strong&gt;10,000+ performers&lt;/strong&gt; sorted by responsibility and reviews
-                    </p>
-                    <img class="size-[18px] shrink-0 ml-auto md:-order-1 md:ml-0 lg:size-[32px]" src="/img/save-marks.svg" alt="" />
-                  </div>
-                </li>
-                <li class="saves-cell py-3 flex items-center border-t-[1px] border-t-black/5 md:w-1/2 md:-order-1 md:border-none md:pr-4">
-                  <p class="w-24 shrink-0 font-Satoshi font-bold text-xs md:hidden">Web Studios</p>
-                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-xl">3 - 20 employees</p>
-                </li>
-              </ul>
-            </div>
-            <div class="flex flex-col items-center md:flex-row md:border-b-[1px] md:border-black/10">
-              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-xl xl:w-[300px] xl:pr-[100px]">Easy to order</p>
-              <ul class="mt-2 py-1 px-5 rounded-2xl bg-white w-full md:flex md:mt-0 md:px-0">
-                <li class="saves-cell py-3 flex items-center md:w-1/2">
-                  <p class="w-24 shrink-0 font-Satoshi font-bold text-xs text-blue md:hidden">Monday</p>
-                  <div class="flex items-start gap-1 grow md:gap-2 xl:gap-3">
-                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-xl xl:mt-0" data-replace="">
-                      A &lt;strong&gt;couple of clicks&lt;/strong&gt; - your order is ready! Minimum discussions
-                    </p>
-                    <img class="size-[18px] shrink-0 ml-auto md:-order-1 md:ml-0 lg:size-[32px]" src="/img/save-marks.svg" alt="" />
-                  </div>
-                </li>
-                <li class="saves-cell py-3 flex items-center border-t-[1px] border-t-black/5 md:w-1/2 md:-order-1 md:border-none md:pr-4">
-                  <p class="w-24 shrink-0 font-Satoshi font-bold text-xs md:hidden">Web Studios</p>
-                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-xl">
-                    Long approvals, long technical specifications, signing an agreement and other headaches
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="flex flex-col items-center md:flex-row md:border-b-[1px] md:border-black/10">
-              <p class="saves-cell shrink-0 font-Satoshi font-bold text-sm text-center md:text-lg w-52 pr-4 md:text-left xl:text-xl xl:w-[300px] xl:pr-[100px]">Refund in case of delay</p>
-              <ul class="mt-2 py-1 px-5 rounded-2xl bg-white w-full md:flex md:mt-0 md:px-0">
-                <li class="saves-cell py-3 flex items-center md:w-1/2">
-                  <p class="w-24 shrink-0 font-Satoshi font-bold text-xs text-blue md:hidden">Monday</p>
-                  <div class="flex items-center gap-1 grow md:gap-2 xl:gap-3">
-                    <p class="mt-1 font-Satoshi font-medium text-xs leading-[1.1] text-black/60 [&_strong]:text-blue md:text-lg md:-mt-1 t xl:text-xl xl:mt-0" data-replace="">
-                      &lt;strong&gt;100%&lt;/strong&gt; 1-click money back guarantee
-                    </p>
-                    <img class="size-[18px] shrink-0 ml-auto md:-order-1 md:ml-0 lg:size-[32px]" src="/img/save-marks.svg" alt="" />
-                  </div>
-                </li>
-                <li class="saves-cell py-3 flex items-center border-t-[1px] border-t-black/5 md:w-1/2 md:-order-1 md:border-none md:pr-4">
-                  <p class="w-24 shrink-0 font-Satoshi font-bold text-xs md:hidden">Web Studios</p>
-                  <p class="font-Satoshi font-medium text-xs leading-[1.1] text-black/60 md:text-lg xl:text-xl">The probability approaches zero</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-6 bg-white w-full rounded-3xl px-5 py-7 md:mt-0 md:rounded-t-none lg:pb-16">
-            <ul class="saves-stats flex gap-5 justify-between">
-              <li class="flex flex-col items-center gap-1 text-center min-w-16 lg:w-64 xl:gap-3">
-                <img class="size-6" src="/img/save-active.svg" alt="" />
-                <p class="font-Satoshi font-medium text-sm text-blue sm:text-xl xl:text-[28px]">5 342</p>
-                <p class="font-Satoshi font-medium text-[8px] text-black/60 sm:text-lg xl:text-xl">Active freelancers</p>
-              </li>
-              <li class="flex flex-col items-center gap-1 text-center min-w-16 lg:w-64 xl:gap-3">
-                <img class="size-6" src="/img/save-smile.svg" alt="" />
-                <p class="font-Satoshi font-medium text-sm text-blue sm:text-xl xl:text-[28px]">389</p>
-                <p class="font-Satoshi font-medium text-[8px] text-black/60 sm:text-lg xl:text-xl">New freelancers this week</p>
-              </li>
-              <li class="flex flex-col items-center gap-1 text-center min-w-16 lg:w-64 xl:gap-3">
-                <img class="size-6" src="/img/save-clock.svg" alt="" />
-                <p class="font-Satoshi font-medium text-sm text-blue sm:text-xl xl:text-[28px]">1 day 8 h</p>
-                <p class="font-Satoshi font-medium text-[8px] text-black/60 sm:text-lg xl:text-xl">Average order lead time</p>
-              </li>
-            </ul>
-            <button
-              class="saves-button mx-auto mt-7 flex w-full max-w-[380px] items-center justify-center gap-2 rounded-lg border border-transparent bg-black p-5 font-Satoshi text-sm font-medium leading-none text-white transition-colors duration-300 hover:border-black hover:bg-white hover:text-black lg:mt-16"
-            >
-              <svg class="size-4 stroke-current transition-all duration-300">
-                <use href="/img/sprite.svg#magnifier"></use>
+              <svg class="relative z-[1]" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.375 9.48438V12.2594C14.375 14.5994 12.1925 16.4969 9.5 16.4969C6.8075 16.4969 4.625 14.5994 4.625 12.2594V9.48438C4.625 11.8244 6.8075 13.4969 9.5 13.4969C12.1925 13.4969 14.375 11.8244 14.375 9.48438Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.375 5.7375C14.375 6.42 14.1875 7.05 13.8575 7.59C13.055 8.91 11.405 9.75 9.5 9.75C7.595 9.75 5.945 8.91 5.1425 7.59C4.8125 7.05 4.625 6.42 4.625 5.7375C4.625 4.5675 5.1725 3.51 6.05 2.745C6.935 1.9725 8.15 1.5 9.5 1.5C10.85 1.5 12.065 1.9725 12.95 2.7375C13.8275 3.51 14.375 4.5675 14.375 5.7375Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.375 5.7375V9.4875C14.375 11.8275 12.1925 13.5 9.5 13.5C6.8075 13.5 4.625 11.8275 4.625 9.4875V5.7375C4.625 3.3975 6.8075 1.5 9.5 1.5C10.85 1.5 12.065 1.9725 12.95 2.7375C13.8275 3.51 14.375 4.5675 14.375 5.7375Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
-
-              Find freelance service right now
             </button>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="journey" class="py-12">
-      <div class="app-container">
-        <div class="max-w-[800px] w-full mx-auto">
-          <div class="flex gap-2 h-72 sm:h-96 md:h-[430px] md:gap-5">
-            <div class="w-[45%] shrink-0 flex flex-col gap-2 md:gap-5">
-              <div class="journey-card relative grow overflow-hidden rounded-3xl">
-                <div class="journey-messages absolute bottom-[6px] left-1/2 z-10 h-[180px] md:w-[260px] w-[156px] -translate-x-1/2">
-                  <div
-                    class="journey-message max-w-[240px] flex items-center gap-[6px] rounded-full bg-white py-[6px] pr-[10px] pl-[4px] shadow-[0_8px_20px_rgba(0,0,0,0.08)] md:gap-2 md:py-[10px] md:pr-4 md:pl-2"
-                  >
-                    <span class="z-10 flex size-[30px] shrink-0 items-center justify-center rounded-full border-2 border-white bg-[#EDF4FF] md:size-[34px]">
-                      <svg class="size-[14px] stroke-[#4790FF] md:size-4">
-                        <use href="/img/sprite.svg#message-text"></use>
-                      </svg>
-                    </span>
+          <aside class="rounded-3xl bg-white p-4 h-fit">
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <h3 class="text-[#202020] text-base font-bold">Attach file</h3>
 
-                    <div class="size-[30px] shrink-0 overflow-hidden rounded-full -ml-[20px] md:size-[34px] md:-ml-6">
-                      <img class="img-fill" src="img/temp/o-7.png" alt="" />
-                    </div>
-
-                    <p class="max-w-[86px] font-Satoshi text-[9px] leading-none font-bold text-[#B7C3D6] md:max-w-[98px] md:text-[14px]">Great job,keep it up 🤝</p>
-
-                    <div class="ml-auto flex items-center gap-[2px] font-Satoshi text-xs leading-none font-bold text-black md:gap-[3px] md:text-sm">
-                      <span>⭐</span>
-                      <strong>5.0</strong>
-                    </div>
-                  </div>
-
-                  <div
-                    class="journey-message max-w-[240px] flex items-center gap-[6px] rounded-full bg-white py-[6px] pr-[10px] pl-[4px] shadow-[0_8px_20px_rgba(0,0,0,0.08)] md:gap-2 md:py-[10px] md:pr-4 md:pl-2"
-                  >
-                    <span class="z-10 flex size-[30px] shrink-0 items-center justify-center rounded-full border-2 border-white bg-[#EDF4FF] md:size-[34px]">
-                      <svg class="size-[14px] stroke-[#4790FF] md:size-4">
-                        <use href="/img/sprite.svg#message-text"></use>
-                      </svg>
-                    </span>
-
-                    <div class="size-[30px] shrink-0 overflow-hidden rounded-full -ml-[20px] md:size-[34px] md:-ml-6">
-                      <img class="img-fill" src="img/temp/o-5.jpg" alt="" />
-                    </div>
-
-                    <p class="max-w-[86px] font-Satoshi text-[9px] leading-none font-bold text-[#B7C3D6] md:max-w-[98px] md:text-[14px]">Great collab, thanks 🚀</p>
-                    <div class="ml-auto flex items-center gap-[2px] font-Satoshi text-xs leading-none font-bold text-black md:gap-[3px] md:text-sm">
-                      <span>⭐</span>
-                      <strong>5.0</strong>
-                    </div>
-                  </div>
-
-                  <div
-                    class="journey-message max-w-[240px] flex items-center gap-[6px] rounded-full bg-white py-[6px] pr-[10px] pl-[4px] shadow-[0_8px_20px_rgba(0,0,0,0.08)] md:gap-2 md:py-[10px] md:pr-4 md:pl-2"
-                  >
-                    <span class="z-10 flex size-[30px] shrink-0 items-center justify-center rounded-full border-2 border-white bg-[#EDF4FF] md:size-[34px]">
-                      <svg class="size-[14px] stroke-[#4790FF] md:size-4">
-                        <use href="/img/sprite.svg#message-text"></use>
-                      </svg>
-                    </span>
-
-                    <div class="size-[30px] shrink-0 overflow-hidden rounded-full -ml-[20px] md:size-[34px] md:-ml-6">
-                      <img class="img-fill" src="img/temp/o-4.jpg" alt="" />
-                    </div>
-
-                    <p class="max-w-[86px] font-Satoshi text-[9px] leading-none font-bold text-[#B7C3D6] md:max-w-[98px] md:text-[14px]">Thanks for the great results!</p>
-
-                    <div class="ml-auto flex items-center gap-[2px] font-Satoshi text-xs leading-none font-bold text-black md:gap-[3px] md:text-sm">
-                      <span>⭐</span>
-                      <strong>5.0</strong>
-                    </div>
-                  </div>
-                </div>
-
-                <img class="absolute inset-0 h-full w-full object-cover object-center" src="/img/temp/journey-1.png" alt="" />
-              </div>
-
-              <div class="journey-card relative grow overflow-hidden rounded-3xl">
-                <img class="absolute inset-0 h-full w-full object-cover object-center" src="/img/temp/journey-2.jpg" alt="" />
-              </div>
+              <p class="text-[#9CA5B3] text-xs font-medium text-right leading-[16px]">
+                Up to 10 files<br />
+                No more than <strong>4 MB</strong>
+              </p>
             </div>
 
-            <div class="grow flex flex-col">
-              <div class="journey-card relative grow overflow-hidden rounded-3xl">
-                <img class="absolute inset-0 h-full w-full object-cover object-center" src="img/temp/journey-3.png" alt="" />
-                <div class="absolute bottom-[2px] right-[10px] w-fit h-fit">
-                  <img src="img/temp/journey-3-count.png" alt="" />
-                  <div class="absolute md:bottom-[80px] md:left-[55px] bottom-[40px] left-[25px]">
-                    <p class="text-[#4790FF] font-Satoshi font-medium md:text-base text-[9px]">+ <span class="journey-counter">95.000</span> UZS</p>
-                  </div>
-                </div>
+            <div class="flex flex-col gap-1.5">
+              <div class="file-item group relative h-[36px] rounded-lg bg-white hover:bg-[#F1F3F9] px-3 flex items-center gap-2 text-[#202020] text-sm font-bold transition-all duration-300">
+                <span class="w-[30px] h-[30px] rounded-lg border border-[#DDE3EE] group-hover:border-transparent shrink-0 flex items-center justify-center transition-all duration-300">
+                  <svg class="w-[12px] shrink-0 stroke-[#9CA5B3]">
+                    <use href="/img/sprite.svg#document-empty"></use>
+                  </svg>
+                </span>
+
+                <span class="truncate pr-10"> Brief_for_landing_page.pdf </span>
+
+                <button
+                  class="file-remove opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 flex items-center justify-center absolute w-[30px] h-[30px] right-[5px] top-1/2 -translate-y-1/2 bg-[#FAFAFC] rounded-lg"
+                >
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M9 1L1 9M1 1L9 9" stroke="#9CA5B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
               </div>
-            </div>
-          </div>
 
-          <div class="journey-card journey-cta-card mt-3 overflow-hidden rounded-3xl relative">
-            <img class="absolute inset-0 h-full w-full rounded-3xl object-cover" src="/img/journey-bg.jpg" alt="" />
+              <div class="file-item group relative h-[36px] rounded-lg bg-white hover:bg-[#F1F3F9] px-3 flex items-center gap-2 text-[#202020] text-sm font-bold transition-all duration-300">
+                <span class="w-[30px] h-[30px] rounded-lg border border-[#DDE3EE] group-hover:border-transparent shrink-0 flex items-center justify-center transition-all duration-300">
+                  <svg class="w-[12px] shrink-0 stroke-[#9CA5B3]">
+                    <use href="/img/sprite.svg#document-empty"></use>
+                  </svg>
+                </span>
 
-            <div class="relative z-10 flex flex-col items-center justify-center px-7 py-40 sm:py-20">
-              <p class="journey-title font-Satoshi font-medium text-2xl leading-tight max-w-80 text-center sm:text-[32px] sm:max-w-[330px]">Start your professional journey on Monday</p>
+                <span class="truncate pr-10"> Refs.zip </span>
+
+                <button
+                  class="file-remove opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 flex items-center justify-center absolute w-[30px] h-[30px] right-[5px] top-1/2 -translate-y-1/2 bg-[#FAFAFC] rounded-lg"
+                >
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M9 1L1 9M1 1L9 9" stroke="#9CA5B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="file-item group relative h-[36px] rounded-lg bg-white hover:bg-[#F1F3F9] px-3 flex items-center gap-2 text-[#202020] text-sm font-bold transition-all duration-300">
+                <span class="w-[30px] h-[30px] rounded-lg border border-[#DDE3EE] group-hover:border-transparent shrink-0 flex items-center justify-center transition-all duration-300">
+                  <svg class="w-[12px] shrink-0 stroke-[#9CA5B3]">
+                    <use href="/img/sprite.svg#document-empty"></use>
+                  </svg>
+                </span>
+
+                <span class="truncate pr-10"> Refs.zip </span>
+
+                <button
+                  class="file-remove opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 flex items-center justify-center absolute w-[30px] h-[30px] right-[5px] top-1/2 -translate-y-1/2 bg-[#FAFAFC] rounded-lg"
+                >
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M9 1L1 9M1 1L9 9" stroke="#9CA5B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="file-item group relative h-[36px] rounded-lg bg-white hover:bg-[#F1F3F9] px-3 flex items-center gap-2 text-[#202020] text-sm font-bold transition-all duration-300">
+                <span class="w-[30px] h-[30px] rounded-lg border border-[#DDE3EE] group-hover:border-transparent shrink-0 flex items-center justify-center transition-all duration-300">
+                  <svg class="w-[12px] shrink-0 stroke-[#9CA5B3]">
+                    <use href="/img/sprite.svg#document-empty"></use>
+                  </svg>
+                </span>
+
+                <span class="truncate pr-10"> Refs.zip </span>
+
+                <button
+                  class="file-remove opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 flex items-center justify-center absolute w-[30px] h-[30px] right-[5px] top-1/2 -translate-y-1/2 bg-[#FAFAFC] rounded-lg"
+                >
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M9 1L1 9M1 1L9 9" stroke="#9CA5B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="file-item group relative h-[36px] rounded-lg bg-white hover:bg-[#F1F3F9] px-3 flex items-center gap-2 text-[#202020] text-sm font-bold transition-all duration-300">
+                <span class="w-[30px] h-[30px] rounded-lg border border-[#DDE3EE] group-hover:border-transparent shrink-0 flex items-center justify-center transition-all duration-300">
+                  <svg class="w-[12px] shrink-0 stroke-[#9CA5B3]">
+                    <use href="/img/sprite.svg#document-empty"></use>
+                  </svg>
+                </span>
+
+                <span class="truncate pr-10"> Refs.zip </span>
+
+                <button
+                  class="file-remove opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 flex items-center justify-center absolute w-[30px] h-[30px] right-[5px] top-1/2 -translate-y-1/2 bg-[#FAFAFC] rounded-lg"
+                >
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M9 1L1 9M1 1L9 9" stroke="#9CA5B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
 
               <button
-                class="journey-button mt-7 flex w-fit items-center justify-center gap-2 rounded-lg border border-transparent bg-black p-3 font-Satoshi text-base font-semibold whitespace-nowrap text-white transition-colors duration-300 hover:border-black hover:bg-transparent hover:text-black"
+                class="group h-[40px] mt-2 rounded-xl border border-dashed border-[#B7C3D6] flex items-center justify-center gap-2 text-[#575E6A] text-sm font-bold transition-all duration-300 hover:border-[#4790FF] hover:text-[#4790FF]"
               >
-                Join the community
-
-                <svg class="size-4 stroke-current transition-all duration-300">
-                  <use href="/img/sprite.svg#smile"></use>
+                <svg class="w-[16px] shrink-0 stroke-[#575E6A] transition-all duration-300 group-hover:stroke-[#4790FF]">
+                  <use href="/img/sprite.svg#document-upload"></use>
                 </svg>
+
+                Add File
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="news" class="py-16 overflow-hidden">
-      <div class="app-container">
-        <h2 class="news-title mx-auto font-Satoshi font-medium text-2xl md:text-[32px] md:text-center">News &amp; Guides</h2>
-
-        <div class="mt-7 flex flex-col md:-mt-14">
-          <div class="-mx-5 md:mt-14 md:-mx-6">
-            <div class="swiper overflow-visible" id="news-swiper">
-              <div class="swiper-wrapper items-stretch">
-                <div class="swiper-slide news-card w-[322px] px-[10px] md:w-[422px] md:px-6 !h-auto">
-                  <div class="news-card-inner rounded-2xl">
-                    <a href="/news/start-a-side-business" class="block h-[254px] rounded-2xl bg-white overflow-hidden">
-                      <img class="img-fill transition-transform duration-500 hover:scale-[1.04]" alt="" src="img/temp/blog-1.jpg" />
-                    </a>
-
-                    <a href="/news/start-a-side-business" class="mt-3 block font-Satoshi font-bold text-base hover:underline"> Start a side business </a>
-
-                    <p class="mt-1 font-Satoshi font-medium text-sm text-black/50">
-                      How to quickly start a side business, find your first clients, and turn a simple idea into a steady source of income.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide news-card w-[322px] px-[10px] md:w-[422px] md:px-6 !h-auto">
-                  <div class="news-card-inner rounded-2xl">
-                    <a href="/news/build-a-website-from-scratch" class="block h-[254px] rounded-2xl bg-white overflow-hidden">
-                      <img class="img-fill transition-transform duration-500 hover:scale-[1.04]" alt="" src="img/temp/blog-2.jpg" />
-                    </a>
-
-                    <a href="/news/build-a-website-from-scratch" class="mt-3 block font-Satoshi font-bold text-base hover:underline"> Build a website from scratch </a>
-
-                    <p class="mt-1 font-Satoshi font-medium text-sm text-black/50">
-                      Building a website from scratch for your needs, from choosing a structure to launching a clean and useful final page.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide news-card w-[322px] px-[10px] md:w-[422px] md:px-6 !h-auto">
-                  <div class="news-card-inner rounded-2xl">
-                    <a href="/news/start-online-business" class="block h-[254px] rounded-2xl bg-white overflow-hidden">
-                      <img class="img-fill transition-transform duration-500 hover:scale-[1.04]" alt="" src="img/temp/blog-3.jpg" />
-                    </a>
-
-                    <a href="/news/start-online-business" class="mt-3 block font-Satoshi font-bold text-base hover:underline"> Start an online business in 11 steps </a>
-
-                    <p class="mt-1 font-Satoshi font-medium text-sm text-black/50">
-                      11 essential steps to start an online business, test your idea, prepare your offer, and grow without wasting time.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide news-card w-[322px] px-[10px] md:w-[422px] md:px-6 !h-auto">
-                  <div class="news-card-inner rounded-2xl">
-                    <a href="/news/ai-tools-for-business" class="block h-[254px] rounded-2xl bg-white overflow-hidden">
-                      <img class="img-fill transition-transform duration-500 hover:scale-[1.04]" alt="" src="img/temp/web-category.png" />
-                    </a>
-
-                    <a href="/news/ai-tools-for-business" class="mt-3 block font-Satoshi font-bold text-base hover:underline"> Best AI Tools for Modern Businesses </a>
-
-                    <p class="mt-1 font-Satoshi font-medium text-sm text-black/50">Explore powerful AI tools for automation, content creation, customer support, and business growth.</p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide news-card w-[322px] px-[10px] md:w-[422px] md:px-6 !h-auto">
-                  <div class="news-card-inner rounded-2xl">
-                    <a href="/news/improve-website-conversion" class="block h-[254px] rounded-2xl bg-white overflow-hidden">
-                      <img class="img-fill transition-transform duration-500 hover:scale-[1.04]" alt="" src="img/project/project-img.png" />
-                    </a>
-
-                    <a href="/news/improve-website-conversion" class="mt-3 block font-Satoshi font-bold text-base hover:underline"> How to Improve Website Conversion </a>
-
-                    <p class="mt-1 font-Satoshi font-medium text-sm text-black/50">Simple strategies to improve user experience, increase engagement, and generate more leads online.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <a class="news-more mt-7 ml-auto font-Satoshi font-medium text-base text-blue flex items-center gap-1 whitespace-nowrap md:-order-1" href="#" target="_blank">
-            Read more
-            <svg class="shrink-0 size-4 stroke-blue -rotate-90">
-              <use href="/img/sprite.svg#arrow-down" />
-            </svg>
-          </a>
+          </aside>
         </div>
       </div>
     </section>
@@ -5322,189 +4379,189 @@
       <div class="footer-top relative z-[2] h-fit md:h-[425px] bg-black rounded-b-[48px] pt-10 pb-12 md:pt-12 md:pb-16 lg:pt-24 lg:pb-16">
         <div class="app-container lg:max-w-[1290px]">
           <nav class="footer-nav flex flex-col gap-6 md:flex-row md:justify-between md:flex-wrap md:gap-x-0 md:gap-y-12">
-              <div
-                class="footer-column w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto"
-                data-accordeon=""
-                data-accordeon-smooth="true"
-                data-accordeon-adaptive="true"
-                data-accordeon-media="(max-width: 767px)"
-              >
-                <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button">
-                  About Monday
-                  <span data-accordeon="arrow">
-                    <svg class="size-4 shrink-00 md:hidden stroke-white">
-                      <use href="/img/sprite.svg#arrow-down" />
-                    </svg>
-                  </span>
-                </p>
-                <div class="md:block" data-accordeon="content">
-                  <div class="flex flex-col gap-[10px] pt-6 items-start">
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      About the project
-                    </a>
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      Agency contract
-                    </a>
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      Privacy Policy
-                    </a>
-                  </div>
+            <div
+              class="footer-column w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto"
+              data-accordeon=""
+              data-accordeon-smooth="true"
+              data-accordeon-adaptive="true"
+              data-accordeon-media="(max-width: 767px)"
+            >
+              <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button">
+                About Monday
+                <span data-accordeon="arrow">
+                  <svg class="size-4 shrink-00 md:hidden stroke-white">
+                    <use href="/img/sprite.svg#arrow-down" />
+                  </svg>
+                </span>
+              </p>
+              <div class="md:block" data-accordeon="content">
+                <div class="flex flex-col gap-[10px] pt-6 items-start">
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    About the project
+                  </a>
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    Agency contract
+                  </a>
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    Privacy Policy
+                  </a>
                 </div>
               </div>
-              <div
-                class="footer-column w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto"
-                data-accordeon=""
-                data-accordeon-smooth="true"
-                data-accordeon-adaptive="true"
-                data-accordeon-media="(max-width: 767px)"
-              >
-                <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button">
-                  Help
-                  <span data-accordeon="arrow">
-                    <svg class="size-4 shrink-00 md:hidden stroke-white">
-                      <use href="/img/sprite.svg#arrow-down" />
-                    </svg>
-                  </span>
-                </p>
-                <div class="md:block" data-accordeon="content">
-                  <div class="flex flex-col gap-[10px] pt-6 items-start">
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      Service rules
-                    </a>
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      Question answer
-                    </a>
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      Support
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="footer-column w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto"
-                data-accordeon=""
-                data-accordeon-smooth="true"
-                data-accordeon-adaptive="true"
-                data-accordeon-media="(max-width: 767px)"
-              >
-                <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button">
-                  Useful
-                  <span data-accordeon="arrow">
-                    <svg class="size-4 shrink-00 md:hidden stroke-white">
-                      <use href="/img/sprite.svg#arrow-down" />
-                    </svg>
-                  </span>
-                </p>
-                <div class="md:block" data-accordeon="content">
-                  <div class="flex flex-col gap-[10px] pt-6 items-start">
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      For customers
-                    </a>
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      For performers
-                    </a>
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      PRO account <img src="/img/pro.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="footer-column w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto"
-                data-accordeon=""
-                data-accordeon-smooth="true"
-                data-accordeon-adaptive="true"
-                data-accordeon-media="(max-width: 767px)"
-              >
-                <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button">
-                  Community
-                  <span data-accordeon="arrow">
-                    <svg class="size-4 shrink-00 md:hidden stroke-white">
-                      <use href="/img/sprite.svg#arrow-down" />
-                    </svg>
-                  </span>
-                </p>
-                <div class="md:block" data-accordeon="content">
-                  <div class="flex flex-col gap-[10px] pt-6 items-start">
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      Blog Monday
-                    </a>
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      Affiliate program
-                    </a>
-                    <a
-                      class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
-                      href="#"
-                      target="_blank"
-                    >
-                      Verification <img src="/img/verify.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </nav>
-
-            <div class="mt-12 flex items-center gap-3 md:max-w-96 lg:max-w-72 lg:ml-auto lg:mt-16">
-              <button
-                class="footer-actions flex h-12 grow items-center justify-center gap-2 rounded-xl border border-solid border-white border-opacity-30 px-4 py-2 font-Satoshi font-medium text-white text-opacity-60 transition-all duration-300 hover:border-white hover:bg-white hover:text-black"
-              >
-                Sign In
-              </button>
-
-              <button
-                class="footer-actions flex h-12 grow items-center justify-center gap-2 rounded-xl border border-solid border-white bg-black px-4 py-2 font-Satoshi font-medium text-white transition-all duration-300 hover:bg-white hover:text-black"
-              >
-                Join
-
-                <svg class="size-4 shrink-0 stroke-current transition-all duration-300">
-                  <use href="/img/sprite.svg#join"></use>
-                </svg>
-              </button>
             </div>
+            <div
+              class="footer-column w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto"
+              data-accordeon=""
+              data-accordeon-smooth="true"
+              data-accordeon-adaptive="true"
+              data-accordeon-media="(max-width: 767px)"
+            >
+              <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button">
+                Help
+                <span data-accordeon="arrow">
+                  <svg class="size-4 shrink-00 md:hidden stroke-white">
+                    <use href="/img/sprite.svg#arrow-down" />
+                  </svg>
+                </span>
+              </p>
+              <div class="md:block" data-accordeon="content">
+                <div class="flex flex-col gap-[10px] pt-6 items-start">
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    Service rules
+                  </a>
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    Question answer
+                  </a>
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    Support
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="footer-column w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto"
+              data-accordeon=""
+              data-accordeon-smooth="true"
+              data-accordeon-adaptive="true"
+              data-accordeon-media="(max-width: 767px)"
+            >
+              <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button">
+                Useful
+                <span data-accordeon="arrow">
+                  <svg class="size-4 shrink-00 md:hidden stroke-white">
+                    <use href="/img/sprite.svg#arrow-down" />
+                  </svg>
+                </span>
+              </p>
+              <div class="md:block" data-accordeon="content">
+                <div class="flex flex-col gap-[10px] pt-6 items-start">
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    For customers
+                  </a>
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    For performers
+                  </a>
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    PRO account <img src="/img/pro.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="footer-column w-full flex flex-col md:w-auto md:basis-1/2 lg:basis-auto"
+              data-accordeon=""
+              data-accordeon-smooth="true"
+              data-accordeon-adaptive="true"
+              data-accordeon-media="(max-width: 767px)"
+            >
+              <p class="flex items-center justify-between gap-2 font-Satoshi font-bold text-[18px] leading-tight text-white" data-accordeon="button">
+                Community
+                <span data-accordeon="arrow">
+                  <svg class="size-4 shrink-00 md:hidden stroke-white">
+                    <use href="/img/sprite.svg#arrow-down" />
+                  </svg>
+                </span>
+              </p>
+              <div class="md:block" data-accordeon="content">
+                <div class="flex flex-col gap-[10px] pt-6 items-start">
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    Blog Monday
+                  </a>
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    Affiliate program
+                  </a>
+                  <a
+                    class="font-Satoshi font-medium text-base leading-tight text-white text-opacity-70 relative lg:after:transition-transform lg:after:duration-500 lg:after:absolute lg:after:left-0 lg:after:-bottom-1 lg:after:h-[1px] lg:after:w-full lg:after:bg-white lg:after:bg-opacity-45 lg:after:scale-x-0 lg:hover:after:scale-x-100 lg:after:origin-left flex items-center gap-2"
+                    href="#"
+                    target="_blank"
+                  >
+                    Verification <img src="/img/verify.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div class="mt-12 flex items-center gap-3 md:max-w-96 lg:max-w-72 lg:ml-auto lg:mt-16">
+            <button
+              class="footer-actions flex h-12 grow items-center justify-center gap-2 rounded-xl border border-solid border-white border-opacity-30 px-4 py-2 font-Satoshi font-medium text-white text-opacity-60 transition-all duration-300 hover:border-white hover:bg-white hover:text-black"
+            >
+              Sign In
+            </button>
+
+            <button
+              class="footer-actions flex h-12 grow items-center justify-center gap-2 rounded-xl border border-solid border-white bg-black px-4 py-2 font-Satoshi font-medium text-white transition-all duration-300 hover:bg-white hover:text-black"
+            >
+              Join
+
+              <svg class="size-4 shrink-0 stroke-current transition-all duration-300">
+                <use href="/img/sprite.svg#join"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
