@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration - Monday</title>
+    <meta property="og:title" content="Home - Monday" />
+    <meta property="twitter:title" content="Home - Monday" />
+    <meta name="description" content="Monday, the freelance marketplace for all your needs" />
+    <meta property="og:description" content="Monday, the freelance marketplace for all your needs" />
+    <meta property="twitter:description" content="Monday, the freelance marketplace for all your needs" />
+    <link href="/assets/css/index.0fcabdd2790f60f408b7.css" rel="stylesheet" />
+
+    <style>
+      /* Only for this preview page */
+      body {
+        padding: 24px;
+      }
+
+      .page-btns {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .page-btns-item {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 12px 16px;
+        border-radius: 4px;
+        background: #5a6f9d;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* CSS */
+    </style>
+  </head>
+
+  <body>
+    <button class="page-btns-item" data-target="create-profile-modal">Open create profile modal</button>
+
+    <div class="profile_modal active" id="create-profile-modal">
+      <div class="profile_modal_content">
+        <div class="profile_modal_head">
+          <div class="profile_modal_logo">MONDAY</div>
+
+          <button class="profile_modal_close" data-target="create-profile-modal" type="button">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="profile_modal_body">
+          <h3>Let’s create your profile</h3>
+
+          <p class="profile_modal_subtitle">
+            Join the platform and start working<br />
+            with clients.
+          </p>
+
+          <button class="profile_modal_tg" type="button">
+            Continue with Telegram
+
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_2714_48875)">
+                <path
+                  d="M10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0ZM14.0879 6.01953C13.7118 6.02617 13.1344 6.22678 10.3574 7.38184C9.38473 7.78642 7.44045 8.62351 4.52539 9.89355C4.05235 10.0817 3.80495 10.2663 3.78223 10.4463C3.73889 10.792 4.23615 10.9 4.8623 11.1035C5.37288 11.2695 6.05993 11.464 6.41699 11.4717C6.74087 11.4787 7.10286 11.3444 7.50195 11.0703C10.2254 9.23191 11.6315 8.30226 11.7197 8.28223C11.782 8.2681 11.8684 8.25084 11.9268 8.30273C11.9851 8.35473 11.9788 8.4531 11.9727 8.47949C11.9226 8.691 9.36543 11.0176 9.21777 11.1709C8.65514 11.7553 8.01489 12.1131 9.00195 12.7637C9.85627 13.3267 10.3542 13.6858 11.2344 14.2627C11.7967 14.6313 12.2378 15.0681 12.8184 15.0146C13.0854 14.9899 13.3618 14.7391 13.502 13.9902C13.8332 12.2194 14.4842 8.38227 14.6348 6.80078C14.648 6.66224 14.6315 6.48408 14.6182 6.40625C14.6048 6.32845 14.5766 6.21771 14.4756 6.13574C14.3558 6.03852 14.1706 6.01807 14.0879 6.01953Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2714_48875">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+
+          <div class="profile_modal_notice">
+            <img src="img/icons/tick-circle.svg" alt="check" />
+
+            <p>We’ll use Telegram to message you about projectsand updated</p>
+          </div>
+
+          <div class="profile_modal_divider">
+            <span></span>
+            Or
+            <span></span>
+          </div>
+
+          <div class="profile_modal_actions">
+            <button type="button" class="profile_modal_google">
+              <img src="img/icons/google-original.png" alt="google" />
+            </button>
+
+            <button type="button" class="profile_modal_manual">Continue manually</button>
+          </div>
+
+          <p class="profile_modal_terms">
+            I agree with the <a href="#">Terms & Conditions</a><br />
+            and <a href="#">The contract offer.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .profile_modal {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        background: rgba(32, 32, 32, 0.75);
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden auto;
+        transition: 250ms ease;
+        transition-property: opacity, visibility;
+      }
+
+      .profile_modal.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .profile_modal_content {
+        width: 100%;
+        max-width: 420px;
+        border-radius: 36px;
+        background: #fff;
+        padding: 20px;
+        margin: auto;
+      }
+
+      .profile_modal_head {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0 20px;
+      }
+
+      .profile_modal_logo {
+        color: #b7c3d6;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
+        border-bottom: 1px solid #b7c3d6;
+        padding-bottom: 4px;
+      }
+
+      .profile_modal_close {
+        position: absolute;
+        right: 0;
+        top: -12px;
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: #fafafc;
+        border: none;
+        cursor: pointer;
+        transition: background 150ms ease;
+      }
+
+      .profile_modal_close:hover {
+        background: #efefef;
+      }
+
+      .profile_modal_close span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 16px;
+        height: 2px;
+        border-radius: 10px;
+        background: #9ca5b3;
+      }
+
+      .profile_modal_close span:first-child {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      .profile_modal_close span:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      .profile_modal_body {
+        text-align: center;
+      }
+
+      .profile_modal_body h3 {
+        margin: 0 0 15px;
+        color: #202020;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+
+      .profile_modal_subtitle {
+        margin: 0 0 20px;
+        color: #9ca5b3;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+      }
+
+      .profile_modal_tg {
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 12px;
+        background: #4790ff;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: 0.3s;
+      }
+
+      .profile_modal_tg:hover {
+        background: #2f7df0;
+      }
+
+      .profile_modal_notice {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        margin: 12px 0 16px;
+        text-align: left;
+      }
+
+      .profile_modal_check {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid #4790ff;
+        flex-shrink: 0;
+      }
+
+      .profile_modal_notice p {
+        margin: 0;
+        color: #9ca5b3;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+      .profile_modal_divider {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #9ca5b3;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+
+      .profile_modal_divider span {
+        flex: 1;
+        border-top: 1px dashed #e4e8ef;
+      }
+
+      .profile_modal_actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .profile_modal_google,
+      .profile_modal_manual {
+        height: 40px;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .profile_modal_google:hover,
+      .profile_modal_manual:hover {
+        border-color: #4790ff;
+      }
+
+      .profile_modal_google img {
+        margin: 0 auto;
+      }
+
+      .profile_modal_manual {
+        color: #4790ff;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .profile_modal_terms {
+        margin: 0;
+        color: #9ca5b3;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.3;
+      }
+
+      .profile_modal_terms a {
+        color: #9ca5b3;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        transition: 0.3s;
+      }
+
+      .profile_modal_terms a:hover {
+        color: #4790ff;
+      }
+    </style>
+
+    <script>
+      document.querySelectorAll("[data-target]").forEach((element) => {
+        const targetModal = document.getElementById(element.dataset.target);
+
+        if (!targetModal) return;
+
+        element.addEventListener("click", () => {
+          targetModal.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>
